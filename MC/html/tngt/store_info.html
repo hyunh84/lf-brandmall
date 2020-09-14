@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/swiper.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/ui_style.js"></script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/layout.js"></script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<div class="header_inner">
+			<script>headerFn('.header_inner', '매장개설안내');</script>
+		</div>
+		
+		<article class="topSearchWrap">
+			<script>createSearch('.topSearchWrap');</script>
+		</article>
+	</header>
+	<!-- //header -->
+
+	<!-- quick menu -->
+	<nav class="quickNavWrap">
+		<script>createQuickNavFn('.quickNavWrap');</script>
+	</nav>
+	<!-- // quick menu -->
+
+	<!-- GNB -->
+	<nav class="tngtGnbWrap">
+		<script>createGnbFn('.tngtGnbWrap');</script>
+	</nav>
+	<!-- // GNB -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="cateSwipeWrap02">
+				<div class="cmtSlideWrap">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><a href="#">매장찾기</a></li>
+						<li class="swiper-slide active"><a href="#">매장개설안내</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="visualTopWrap">
+				<div class="visualCopy">라이프 스타일 브랜드<br>TNGT와 함께 할<br>가두대리점을 모집합니다.</div>
+				<span class="img"><img src="http://m.tngt.co.kr/static/brandmall/images/common/img_store_info.png"></span>
+			</div>
+
+			<div class="store_info">
+				<h3>개설조건</h3>
+				<div>
+					<table>
+						<colgroup>
+							<col style="width: 100px">
+							<col style="width: auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>입지조건</th>
+								<td>본사 희망 지역 및 인구 15만 이상의 남성브랜드 상권(상권에 따라 변동 가능)</td>
+							</tr>
+							<tr>
+								<th>자격조건</th>
+								<td>의류브랜드 경력자 / 지역연고자(지역활동 많으신 분 우대)</td>
+							</tr>
+							<tr>
+								<th>담보조건</th>
+								<td>위탁판매 (반품가능)</td>
+							</tr>
+							<tr>
+								<th>매장조건</th>
+								<td>전면 6M 이상 / 30평 이상 (상권별 조정 가능)</td>
+							</tr>
+							<tr>
+								<th>공급유형</th>
+								<td>위탁판매 (반품가능)</td>
+							</tr>
+							<tr>
+								<th>인테리어</th>
+								<td>평당 200만원 ~ 220만원</td>
+							</tr>
+							<tr>
+								<th>대금결제</th>
+								<td>월 3회 입금</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h3>담당자</h3>
+				<div>
+					<strong>강병국 차장</strong>
+					<dl>
+						<dt>HP</dt>
+						<dd>010 - 8033 - 0047</dd>
+						<dt>E-mail</dt>
+						<dd>
+							<a href="mailto:lgfkbk@lfcorp.com">lgfkbk@lfcorp.com</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>footerFn('#footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script>
+var subCateMenu = new cmtSwiperFn02('.cateSwipeWrap02 .cmtSlideWrap');
+var idx = $('.cateSwipeWrap02').find('li.active').index();
+subCateMenu.slideTo(idx);
+</script>
+
+</body>
+</html>

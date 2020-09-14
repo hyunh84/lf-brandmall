@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/* noto-sans-kr-300 - latin */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		url('../../font/noto-sans-kr-v11-korean_latin-300.woff') format('woff'), /* Modern Browsers */
+		url('../../font/noto-sans-kr-v11-korean_latin-300.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-regular - latin */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url('../../font/noto-sans-kr-v11-korean_latin-regular.woff') format('woff'), /* Modern Browsers */
+		url('../../font/noto-sans-kr-v11-korean_latin-regular.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-500 - latin */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 500;
+	src: 
+		url('../../font/noto-sans-kr-v11-korean_latin-500.woff') format('woff'), /* Modern Browsers */
+		url('../../font/noto-sans-kr-v11-korean_latin-500.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-700 - latin */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		url('../../font/noto-sans-kr-v11-korean_latin-700.woff') format('woff'), /* Modern Browsers */
+		url('../../font/noto-sans-kr-v11-korean_latin-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+
+/* Montserrat Light */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Montserrat Light'), 
+		url('../../font/Montserrat-Light.woff') format('woff');
+}
+/* Montserrat Regular */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Montserrat Regular'), 
+		url('../../font/Montserrat-Regular.woff') format('woff');
+}
+/* Montserrat Medium */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Montserrat Medium'), 
+		url('../../font/Montserrat-Medium.woff') format('woff');
+}
+/* Montserrat Bold */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Montserrat Bold'), 
+		url('../../font/Montserrat-Bold.woff') format('woff');
+}
+/* Montserrat Black */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Montserrat Black'), 
+		url('../../font/Montserrat-Black.woff') format('woff');
+}
+
+
+/* Nanum Gothic 400 */
+@font-face {
+font-family: 'Nanum Gothic';
+font-style: normal;
+font-weight: 400;
+src: url('../../font/NanumGothic-Regular.eot'); /* IE9 Compat Modes */
+src: local('Nanum Gothic Regular'), local('NanumGothic-Regular'),
+	url('../../font/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../../font/NanumGothic-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../../font/NanumGothic-Regular.woff') format('woff'), /* Modern Browsers */
+	url('../../font/NanumGothic-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../../font/NanumGothic-Regular.svg#NanumGothic') format('svg'); /* Legacy iOS */
+}

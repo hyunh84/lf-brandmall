@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/hazzys/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/hazzys/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/hazzys/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/hazzys/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/hazzys/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/hazzys/slick.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/hazzys/ui_style.js"></script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/hazzys/layout.js"></script>
+	<!-- // 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header" class="v02">
+		<div class="header_inner">
+			<script>headerFn('.header_inner', 'en')</script>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="main_area">
+				<div class="full_slide">
+					<button type="button" class="slick-swipe-prev"><span>PREV</span></button>
+					<div class="inner">
+						<div class="slideItem"><a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/img_main_slide01.jpg"/></span></a></div>
+						<div class="slideItem"><a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/img_main_slide02.jpg"/></span></a></div>
+						<div class="slideItem"><a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/img_main_slide03.jpg"/></span></a></div>
+						<div class="slideItem"><a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/img_main_slide04.jpg"/></span></a></div>
+					</div>
+					<button type="button" class="slick-swipe-next"><span>NEXT</span></button>
+				</div>
+			</div>
+
+			<div class="main_area">
+				<div class="full_banner">
+					<div class="video_box">
+						<div class="inner">
+							<span class="playerBox"><iframe src="https://www.youtube.com/embed/0-rEoXv81_4?showinfo=0&autoplay=1&rel=0&controls=0&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main_area">
+				<div class="full_banner">
+					<a href="#"><span class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main02.jpg"></span></a>
+				</div>
+			</div>
+
+			<div class="main_area">
+				<div class="full_banner">
+					<a href="#"><span class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main03.jpg"></span></a>
+				</div>
+			</div>
+
+			<div class="main_area">
+				<div class="full_banner">
+					<a href="#"><span class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main04.jpg"></span></a>
+				</div>
+			</div>
+
+			<div class="main_area">
+				<div class="full_banner">
+					<a href="#"><span class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main03.jpg"></span></a>
+				</div>
+			</div>
+
+			<div class="main_area">
+				<div class="main_bot_banner">
+					<ul>
+						<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main05_01.jpg"></a></li>
+						<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main05_03.jpg"></a></li>
+						<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main05_02.jpg"></a></li>
+						<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main05_04.jpg"></a></li>
+						<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main05_05.jpg"></a></li>
+						<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main05_06.jpg"></a></li>
+						<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main05_07.jpg"></a></li>
+						<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_main05_08.jpg"></a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+
+	<!-- footer -->
+	<footer id="footer" class="eng">
+		<script>footerFn('#footer', 'en');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+var mainTopSlideFn = new slickFnc('.main_area .full_slide .inner', {
+	prevArrow: ".main_area .slick-swipe-prev",
+	nextArrow: ".main_area .slick-swipe-next",
+	infinite: true,
+	slidesToShow: 1,
+	autoplay: true
+});
+customSlideBannerFn();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/swiper.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/ui_style.js"></script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/layout.js"></script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<div class="top_banner">
+			<a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_top_banner.png" onload="mainTopBanner(this);"></span></a>
+		</div>
+
+		<div class="header_inner">
+			<script>headerFn('.header_inner');</script>
+		</div>
+		
+		<article class="topSearchWrap">
+			<script>createSearch('.topSearchWrap');</script>
+		</article>
+	</header>
+	<!-- //header -->
+
+	<!-- quick menu -->
+	<nav class="quickNavWrap">
+		<script>createQuickNavFn('.quickNavWrap');</script>
+	</nav>
+	<!-- // quick menu -->
+
+	<!-- GNB -->
+	<nav class="tngtGnbWrap">
+		<script>createGnbFn('.tngtGnbWrap');</script>
+	</nav>
+	<!-- // GNB -->
+
+	<!-- container -->
+	<div id="container" class="mainSect">
+		<div class="content">
+
+			<div class="main_area">
+				<div class="cardSwiper">
+					<div class="cmtSlideWrap">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/img_main_slide01.png"/></a></li>
+							<li class="swiper-slide"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/img_main_slide02.png"/></a></li>
+							<li class="swiper-slide"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/img_main_slide03.png"/></a></li>
+							<li class="swiper-slide"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/img_main_slide04.png"/></a></li>
+						</ul>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main_area">
+				<h2 class="area_tit">RECOMMEND ITEM</h2>
+				<div class="full_banner">
+					<a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main01.png"></a>
+				</div>
+			</div>
+
+			<div class="main_area02">
+				<div class="cateSwipeWrap">
+					<div class="cmtSlideWrap">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<a href="#" class="cateItem">
+									<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/img_cate_01.png">
+									<span>OUTER</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#" class="cateItem">
+									<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/img_cate_02.png">
+									<span>TOP</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#" class="cateItem">
+									<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/img_cate_03.png">
+									<span>BOTTOM</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#" class="cateItem">
+									<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/img_cate_04.png">
+									<span>ACC</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#" class="cateItem">
+									<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/img_cate_05.png">
+									<span>SUIT</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="main_area03">
+				<div class="full_banner">
+					<a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main02.png"></a>
+				</div>
+			</div>
+
+			<div class="main_area">
+				<h2 class="area_tit">BEST SELLER</h2>
+				<div class="cardSwiperV02">
+					<div class="cmtSlideWrap">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main03.png">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> / <span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main03.png">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> / <span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main03.png">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> / <span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main03.png">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> / <span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main_area">
+				<div class="videoWrap">
+					<div class="inner">
+						<iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/qC-OOtQPyKM"></iframe>
+					</div>
+				</div>
+			</div>
+
+			<div class="main_area">
+				<h2 class="area_tit">MAGAZINE</h2>
+				
+				<div class="prmtListWrap">
+					<ul>
+						<li>
+							<a href="#" class="cardBox">
+								<span class="img">
+									<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main04.png">
+								</span>
+								<div class="info">
+									<em class="cate">TNGT LOOK</em>
+									<span class="name">시티 레트로 무드 코트<br>WITH BELIER 19SS</span>
+									<span class="desc">완전한 봄날 외출 준비를 하시는 여러분들을 위한 심플한 가디건 스타일링 팁!</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="cardBox">
+								<span class="img">
+									<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main04.png">
+								</span>
+								<div class="info">
+									<em class="cate">TNGT LOOK</em>
+									<span class="name">시티 레트로 무드 코트<br>WITH BELIER 19SS</span>
+									<span class="desc">완전한 봄날 외출 준비를 하시는 여러분들을 위한 심플한 가디건 스타일링 팁!</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="main_area04">
+				<h2 class="area_tit">SNS</h2>
+				
+				<div class="sns_wrap">
+					<ul>
+						<li class="insta"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main05.png"></a></li>
+						<li class="fbook"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main05.png"></a></li>
+						<li class="blog"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main05.png"></a></li>
+						<li class="insta"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main05.png"></a></li>
+						<li class="fbook"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main05.png"></a></li>
+						<li class="blog"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_main05.png"></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>footerFn('#footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script>
+
+cmtSwiperFn01('.cardSwiper .cmtSlideWrap');
+cmtSwiperFn02('.cateSwipeWrap .cmtSlideWrap');
+cmtSwiperFn01('.cardSwiperV02 .cmtSlideWrap', {
+	centeredSlides: true,
+	slidesPerView: 'auto'
+});
+</script>
+
+</body>
+</html>

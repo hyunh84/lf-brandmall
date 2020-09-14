@@ -1,0 +1,833 @@
+@charset "utf-8";
+
+.hazzys-container-box {width:1200px;margin:0 auto}
+
+.hazzys-artist {color:#000;text-align:center}
+.hazzys-artist .hazzys-sub__header {height:628px;background-repeat:no-repeat;background-position:top;}
+.hazzys-artist .hazzys-sub__header-title {padding:240px 0 0;text-align:center}
+.hazzys-artist .hazzys-sub__header-title--big {padding-bottom:15px;color:#fff;font-size:65px;line-height:67px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:700;letter-spacing:.05em}
+.hazzys-artist .hazzys-sub__header-title--small {color:#fff;font-size:26px;line-height:24px;font-weight:400;font-family:'Noto Sans KR', 'Nanum Gothic';letter-spacing:.08em}
+.hazzys-artist__title-main {color:#211c2f;font-size:45px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:700}
+.hazzys-artist__title-sub {padding-top:15px;color:#211c2f;font-size:22px;font-weight:700;line-height:27px;letter-spacing:-.075em}
+.hazzys-artist__summary {color:#000;font-size:16px;font-family:'Noto Sans KR', 'Nanum Gothic';font-weight:300;line-height:30px;letter-spacing:-.025em}
+.hazzys-artist__slide {padding-bottom:180px;background:#f5f5f5}
+.hazzys-artist__slide:last-child {margin:0 0 -140px;}
+.hazzys-artist__slide:after {display:block;clear:both;content:""}
+.hazzys-artist__slide-title {padding:80px 0;color:#211c2f;font-size:40px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:700}
+.hazzys-artist__slide-text {position:relative;padding-right:55px}
+.hazzys-artist__slide-text:before {-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+.hazzys-artist__slide-text:after,
+.hazzys-artist__slide-text:before {position:absolute;right:27px;top:9px;width:1px;height:34px;background:#091431;content:""}
+.hazzys-artist__slide-text:after {-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.hazzys-artist .artist-banner {position:relative;width:600px;height:840px;margin:0 auto}
+.hazzys-artist .artist-banner img {width:100%;height:100%;}
+.hazzys-artist .artist-banner__slide-btn {position:absolute;bottom:-80px;right:-1px;background:url(/static/renewal/images/hazzys/common/btn-lookbook-slider.gif) no-repeat 0 0}
+.hazzys-artist .artist-banner__slide-btn:after {display:block;clear:both;content:""}
+.hazzys-artist .artist-banner__slide-next,
+.hazzys-artist .artist-banner__slide-prev {display:block;float:left;width:88px;height:80px;text-indent:-9999px}
+.hazzys-artist .brand-ramdane {position:relative;padding-top:150px}
+.hazzys-artist .brand-ramdane__text-option {position:relative;padding-right:65px}
+.hazzys-artist .brand-ramdane__text-option:before {position:absolute;right:30px;top:9px;width:1px;height:40px;background:#091431;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);content:""}
+.hazzys-artist .brand-ramdane__text-option:after {position:absolute;right:30px;top:9px;width:1px;height:40px;background:#091431;-webkit-transform:rotate(45deg);transform:rotate(45deg);content:""}
+.hazzys-artist .brand-ramdane__summary {margin:40px 0 -20px}
+.hazzys-artist .brand-ramdane__movie {padding:80px 0}
+.hazzys-artist .brand-ramdane__movie-box {display:block;position:relative;padding-bottom:56.25%}
+.hazzys-artist .brand-ramdane__movie-item {position:absolute;top:0;left:0;width:100%;height:100%}
+.hazzys-artist .brand-todd {position:relative;padding:150px 0 100px;background:url(/static/renewal/images/hazzys/common/img_brand_artist_bg_1.png) no-repeat center 0}
+.hazzys-artist .brand-todd__bus {position:absolute;bottom:-19px;left:50%;margin-left:350px}
+.hazzys-artist .brand-todd__summary {margin:40px 0 -20px}
+.hazzys-artist .brand-todd__movie {padding:80px 0}
+.hazzys-artist .brand-todd__movie-box {display:block;position:relative;padding-bottom:56.25%}
+.hazzys-artist .brand-todd__movie-item {position:absolute;top:0;left:0;width:100%;height:100%}
+.hazzys-artist .new-video {padding:150px 0}
+.hazzys-artist .new-video .hazzys-artist__title-main {margin-bottom:-60px}
+.hazzys-artist .new-video .hazzys-artist__summary {padding:100px 0 60px}
+.hazzys-artist .new-video .brand-ramdane__movie {padding:0}
+.hazzys-artist .product-slide {display:block;background:#f5f5f5}
+.hazzys-artist .product-slide:last-child {margin:0 0 -140px;}/* 2020-06-18 추가 */
+.hazzys-artist .product-slide:after {display:block;clear:both;content:""}
+.hazzys-artist .product-slide .hazzys-container-box {padding:60px 0 200px;text-align:center}
+.hazzys-artist .product-slide .hazzys-container-box:after {display:block;clear:both;content:""}
+.hazzys-artist .product-slide__title {padding:80px 0 20px;color:#211c2f;font-size:40px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:700}
+.hazzys-artist .product-slide__figure {height:382px;line-height:382px;}
+.hazzys-artist .product-slide__image {display:inline-block;max-width:100%;max-height:100%;vertical-align:middle;}
+.hazzys-artist .product-slide__summary {display:block;color:#333;font-size:18px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.hazzys-artist .product-slide__shop {display:inline-block;color:#333;font-size:12px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';margin-top:18px;padding-bottom:2px;border-bottom:1px solid #444}
+.hazzys-artist .product-slide__back {margin-top:150px;padding-bottom:100px;text-align:left;border-top:1px solid #000}
+.hazzys-artist .product-slide__back-link {display:block;position:relative;padding:5px 0 5px 20px;color:#000;font-size:14px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:700}
+.hazzys-artist .product-slide__back-link:before {position:absolute;top:8px;left:2px;width:7px;height:7px;border-top:1px solid #000;border-left:1px solid #000;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);content:""}
+.hazzys-artist .product-slide .slick-arrow {position:absolute;bottom:-120px;left:50%;width:88px;height:80px;border:none;background-image:url(/static/renewal/images/hazzys/common/btn_common_slider-gray.png);font-size:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+.hazzys-artist .product-slide .slick-prev {margin-left:-88px;background-position:0 0}
+.hazzys-artist .product-slide .slick-next {margin-left:0;background-position:-88px 0}
+.hazzys-artist .brand-timcoppens {position:relative;padding:130px 0 150px}
+.hazzys-artist .brand-timcoppens .hazzys-artist__title-main {padding-bottom:60px}
+.hazzys-artist .brand-timcoppens .hazzys-artist__title-info {padding:25px 0;color:#000;font-size:16px;letter-spacing:-.5px;font-weight:500}
+.hazzys-artist .brand-timcoppens .hazzys-artist__title-sub {padding-bottom:20px;font-size:30px;line-height:30px}
+.hazzys-artist .info-content {background-color:#f5f5f5}
+.hazzys-artist .info-content .hazzys-container-box {position:relative;padding:125px 0 165px}
+.hazzys-artist .info-content .hazzys-artist__title-sub {padding:0 0 20px;font-size:30px;line-height:30px}
+.hazzys-artist .info-content .hazzys-artist__title-info {position:absolute;top:1186px;left:592px;color:#000;font-size:16px;letter-spacing:-.5px;font-weight:500}
+.hazzys-artist .info-content .hazzys-artist__info-list {text-align:left}
+.hazzys-artist .info-content .hazzys-artist__info-list-1 {padding-left:590px}
+.hazzys-artist .info-content .hazzys-artist__info-list-1 .hazzys-artist__info-img {position:absolute;top:125px;left:0}
+.hazzys-artist .info-content .hazzys-artist__info-list-2 {padding-top:345px}
+.hazzys-artist .info-content .hazzys-artist__info-list-2 .hazzys-artist__info-img {position:absolute;top:535px;left:592px}
+
+.hazzys-about .hazzys-sub__header {height:628px;background-repeat:no-repeat;background-position:top}
+.hazzys-about .hazzys-sub__header-title {padding:280px 0 0;text-align:center}
+.hazzys-about .hazzys-sub__header-title--big {padding-bottom:15px;font-size:65px;line-height:67px;font-weight:700;letter-spacing:.05em}
+.hazzys-about .hazzys-sub__header-title--big,
+.hazzys-about .hazzys-sub__header-title--small {color:#fff;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic'}
+.hazzys-about .hazzys-sub__header-title--small {font-size:16px;line-height:24px;font-weight:600;letter-spacing:.08em}
+.hazzys-about .brand-concept {position:relative;height:3000px;padding-top:120px}
+.hazzys-about .brand-concept__title-main {color:#211c2f;font-size:45px;font-weight:700;text-align:center}
+.hazzys-about .brand-concept__sex {position:absolute;top:315px;left:655px}
+.hazzys-about .brand-concept__sex:before {display:block;position:absolute;bottom:-600px;left:-655px;width:588px;height:520px;background:#f4e8da;z-index:-1;content:""}
+.hazzys-about .brand-concept__acc {position:absolute;top:1253px;left:0}
+.hazzys-about .brand-concept__golf {position:absolute;top:2013px;left:666px}
+.hazzys-about .brand-concept__golf:after {display:block;position:absolute;bottom:-170px;left:0;width:101px;height:102px;content:""}
+.hazzys-about .brand-concept__beauty {position:absolute;top:2740px;left:0}
+.hazzys-about .brand-concept__title {color:#211c2f;font-size:24px;font-weight:700;margin-bottom:25px}
+.hazzys-about .brand-concept__summary {color:#5a5a5a;font-size:16px;font-family:'Noto Sans KR', 'Nanum Gothic';font-weight:300;line-height:30px;letter-spacing:-.025em}
+.hazzys-about .brand-concept__img-1 {position:absolute;top:283px;left:215px}
+.hazzys-about .brand-concept__img-2 {position:absolute;top:584px;left:605px}
+.hazzys-about .brand-concept__img-3 {position:absolute;top:1192px;left:605px}
+.hazzys-about .brand-concept__img-4 {position:absolute;top:1938px;left:0;}
+.hazzys-about .brand-concept__img-5 {position:absolute;top:2680px;left:605px}
+.hazzys-about .brand-identity {position:relative;height:2391px;padding-top:120px}
+.hazzys-about .brand-identity__title-main {padding-bottom:70px;color:#211c2f;font-size:45px;font-weight:700;text-align:center}
+.hazzys-about .brand-identity__banner {height:400px;background-repeat:no-repeat;background-position:top}
+.hazzys-about .brand-identity__banner-title {padding:120px 0 0;color:#fff;font-size:60px;font-weight:700;line-height:80px;text-align:center;letter-spacing:.5em}
+.hazzys-about .brand-identity__life {position:absolute;top:220px;left:0}
+.hazzys-about .brand-identity__day {position:absolute;top:920px;left:659px}
+.hazzys-about .brand-identity__week {position:absolute;top:1540px;left:60px}
+.hazzys-about .brand-identity__week .brand-identity__summary {color:#fff}
+.hazzys-about .brand-identity__week:before {display:block;position:absolute;bottom:-60px;left:-60px;width:588px;height:520px;background:#0b253e;z-index:-1;content:""}
+.hazzys-about .brand-identity__title {color:#211c2f;font-size:24px;font-weight:700;margin-bottom:25px}
+.hazzys-about .brand-identity__summary {color:#5a5a5a;font-size:16px;font-family:'Noto Sans KR', 'Nanum Gothic';font-weight:300;line-height:30px;letter-spacing:-.025em}
+.hazzys-about .brand-identity__img-1 {position:absolute;top:100px;left:600px}
+.hazzys-about .brand-identity__img-2 {position:absolute;top:894px;left:216px}
+.hazzys-about .brand-identity__img-3 {position:absolute;top:1192px;left:607px}
+.hazzys-about .hazzys-container-box {position:relative}
+
+.hazzys-history .brand-history {text-align:center}
+.hazzys-history .brand-history__title {padding:180px 0 20px;color:#000;margin-bottom:10px;font-size:65px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:700;line-height:67px;letter-spacing:.05em}
+.hazzys-history .brand-history__text {color:#5a5a5a;font-size:18px;font-family:'Noto Sans KR', 'Nanum Gothic';font-weight:300;line-height:34px;letter-spacing:-.025em}
+.hazzys-history .brand-history__container {margin-top:300px;padding-bottom:150px;background:#f2f2f2}
+.hazzys-history .brand-history__container:last-child {margin:300px 0 -140px;}
+.hazzys-history .brand-history__content {display:inline-block;margin-top:-120px}
+.hazzys-history .brand-history__inner {position:relative}
+.hazzys-history .brand-history__year-summary {position:absolute;text-align:left}
+.hazzys-history .brand-history__year {color:#000;font-size:80px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:300;line-height:80px;letter-spacing:-.06em}
+.hazzys-history .brand-history__summary {color:#444;font-size:16px;font-family:'Noto Sans KR', 'Nanum Gothic';line-height:28px;letter-spacing:-.01em}
+.hazzys-history .brand-history__year--white {color:#fff;font-size:80px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:300;line-height:80px;letter-spacing:-.06em}
+.hazzys-history .brand-history__summary--white {color:#fff;font-size:16px;font-family:'Noto Sans KR', 'Nanum Gothic';line-height:28px;letter-spacing:-.01em}
+.hazzys-history .brand-history .year-summary--2000 {top:50px;left:430px}
+.hazzys-history .brand-history .year-summary--2005 {top:70px;left:50px}
+.hazzys-history .brand-history .year-summary--2007 {top:50px;left:430px}
+.hazzys-history .brand-history .year-summary--2009 {top:190px;left:50px}
+.hazzys-history .brand-history .year-summary--2013 {top:50px;left:430px}
+.hazzys-history .brand-history .year-summary--2015 {top:50px;left:50px}
+.hazzys-history .brand-history .year-summary--2014 {top:50px;left:600px}
+.hazzys-history .brand-history .year-summary--2017 {top:290px;left:430px}
+.hazzys-history .brand-history .year-summary--2018 {bottom:50px;left:50px}
+.hazzys-history .brand-history .year-summary--2018 .brand-history__year--white {padding-bottom:7px}
+
+.brand-campaign .hazzys-sub__header {background-repeat:no-repeat;background-position:top}
+.brand-campaign .hazzys-sub__header-title {text-align:center}
+.brand-campaign .hazzys-sub__header-title--small {padding-bottom:5px;color:#fff;font-size:20px;font-weight:700;letter-spacing:.05em}
+.brand-campaign .hazzys-sub__header-title--big {color:#fff;font-size:60px;line-height:60px;font-weight:700;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign .hazzys-sub__header-title-text {color:#fff;font-size:16px;line-height:30px;font-family:'Noto Sans KR', 'Nanum Gothic';font-weight:300;letter-spacing:-.075em}
+.brand-campaign__content-box--white {padding:100px 0}
+.brand-campaign__content-box--gray {padding:100px 0;background:#f2f2f2}
+.brand-campaign .hazzys-container-box {position:relative}
+.brand-campaign__content-summary {padding-top:80px;text-align:center}
+.brand-campaign__content-summary-title {padding-bottom:10px;color:#f7afaa;font-size:38px;font-weight:700;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';letter-spacing:.03em}
+.brand-campaign__content-summary-summary {color:#091431;font-size:22px;font-weight:700;line-height:34px;letter-spacing:-.055em}
+.brand-campaign__content-summary-text {color:#091431;padding-top:20px;font-size:16px;line-height:30px;letter-spacing:-.075em}
+.brand-campaign .campaign-banner {position:relative;width:1150px;margin:100px auto}
+.brand-campaign .campaign-banner__slide-btn {position:absolute;bottom:-78px;left:0;background:url(/static/renewal/images/hazzys/common/btn-lookbook-slider.gif) no-repeat 0 0;z-index:2}
+.brand-campaign .campaign-banner__slide-btn:after {display:block;clear:both;content:""}
+.brand-campaign .campaign-banner__slide-next,
+.brand-campaign .campaign-banner__slide-prev {display:block;float:left;width:88px;height:80px;font-size:0}
+.brand-campaign__content-title {font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign__content-title,
+.brand-campaign__content-title-kr {color:#091431;font-size:38px;line-height:42px;letter-spacing:.03em;font-weight:700}
+.brand-campaign__content-title--bold {color:#091431;font-size:28px;line-height:36px;letter-spacing:-.075em;font-weight:700}
+.brand-campaign__content-title-small {display:block;padding-top:20px;color:#091431;font-size:22px;line-height:28px;letter-spacing:.03em;font-weight:700}
+.brand-campaign__content-text {padding-top:50px;color:#000;font-size:16px;line-height:30px;letter-spacing:-.075em}
+.brand-campaign__recom-link {display:inline-block;margin-left:15px}
+.brand-campaign .campaign-selectbox {position:relative;display:inline-block;height:30px;margin:50px auto 0;line-height:30px;text-align:left}
+.brand-campaign .campaign-selectbox__title {display:block;position:relative;width:100%;padding:0 20px 0 5px;color:#fff;font-size:14px;font-weight:800;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';border-bottom:1px solid #e0e3e4;-webkit-box-sizing:border-box;box-sizing:border-box}
+.brand-campaign .campaign-selectbox__title:before {position:absolute;top:calc(50% - 4px);right:0;width:11px;height:7px;background:url(/static/renewal/images/hazzys/common/icon_arrow_campaign_xsmall.png);content:"";-webkit-transition:-webkit-transform .3s ease;transition:-webkit-transform .3s ease;transition:transform .3s ease;transition:transform .3s ease, -webkit-transform .3s ease}
+.brand-campaign .campaign-selectbox__ul {display:none;position:absolute;right:0;top:100%;left:0;width:100%;border-bottom:1px solid #e0e3e4}
+.brand-campaign .campaign-selectbox__item {opacity:.6}
+.brand-campaign .campaign-selectbox__item:hover {opacity:1}
+.brand-campaign .campaign-selectbox__link {display:block;padding:0 5px;color:#fff;font-size:14px;font-weight:800;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.brand-campaign .campaign-selectbox:hover .campaign-selectbox__title:before {-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}
+.brand-campaign .campaign-selectbox:hover .campaign-selectbox__ul {display:block}
+.brand-campaign .campaign-video {padding:145px 0 0;text-align:center}
+.brand-campaign .campaign-video__title {color:#1d1d1d;margin-bottom:15px;font-size:22px;font-weight:700;line-height:34px;letter-spacing:-.055em}
+.brand-campaign .campaign-video__summary {color:#1d1d1d;font-size:38px;font-weight:700;line-height:50px;etter-spacing:-.055em}
+.brand-campaign .campaign-video__movie {padding:50px 0 150px}
+.brand-campaign .campaign-video__movie-box {display:block;position:relative;padding-bottom:56.25%}
+.brand-campaign .campaign-video__movie-item {position:absolute;top:0;left:0;width:100%;height:100%}
+.brand-campaign .campaign-men .hazzys-sub__header {height:802px}
+.brand-campaign .campaign-men .hazzys-sub__header-title {padding:310px 0 0}
+.brand-campaign .campaign-men .hazzys-sub__header-title-summary {display:block;padding:45px 0 15px;color:#fff;font-size:20px;line-height:27px;font-family:'Noto Sans KR', 'Nanum Gothic';font-weight:400}
+.brand-campaign .campaign-men__list-item {position:relative;padding-bottom:40px}
+.brand-campaign .campaign-men__list-etc {position:absolute;bottom:10px;left:0;text-align:center}
+.brand-campaign .campaign-men__list-etc-category {display:block;color:#000;font-size:14px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';letter-spacing:.05em}
+.brand-campaign .campaign-men__list-etc-title {color:#000;font-size:20px;font-weight:700;letter-spacing:.02em}
+.brand-campaign .campaign-men__list-etc-shop {display:inline-block;padding:35px 0 2px;border-bottom:1px solid #000;color:#000;font-size:13px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:800;letter-spacing:.02em}
+.brand-campaign .campaign-men__list-etc--right {right:0;left:inherit}
+.brand-campaign .campaign-men__slide {position:relative}
+.brand-campaign .campaign-men__slide-1 {position:relative;margin-left:600px}
+.brand-campaign .campaign-men__slide-1 .campaign-men__list-item {padding-bottom:0}
+.brand-campaign .campaign-men__slide-2 {position:relative;width:600px}
+.brand-campaign .campaign-men__slide-2 .campaign-men__list-item {padding-bottom:0}
+.brand-campaign .campaign-men__slide-2 .campaign-banner__slide-btn {right:0;left:inherit}
+.brand-campaign .campaign-men__text-1 {padding-top:170px;width:600px;float:left}
+.brand-campaign .campaign-men__text-2 {position:absolute;top:170px;left:700px;width:600px}
+.brand-campaign .campaign-men__item-1 {width:502px;margin-top:-50px}
+.brand-campaign .campaign-men__item-2 {width:461px;margin-top:-260px;margin-left:739px}
+.brand-campaign .campaign-men__item-3 {width:501px}
+.brand-campaign .campaign-men__item-4 {width:551px;margin-top:-200px;margin-left:649px}
+.brand-campaign .campaign-men__item-5 {width:428px;margin-top:-250px}
+.brand-campaign .campaign-men__item-6 {width:554px;margin-top:50px}
+.brand-campaign .campaign-men__item-7 {width:492px;margin-top:-750px;margin-left:708px}
+.brand-campaign .campaign-men__item-8 {width:492px;margin-top:50px;margin-left:708px}
+.brand-campaign .campaign-men__item-9 {width:492px;margin-top:-100px}
+.brand-campaign .campaign-men__item-10 {width:551px;margin-top:-200px}
+.brand-campaign .campaign-men__item-11 {width:424px;margin-top:-250px;margin-left:649px}
+.brand-campaign .campaign-men__item-12 {width:552px;margin-top:-110px}
+.brand-campaign .campaign-men__item-13 {width:486px;margin-top:-250px;margin-left:708px}
+.brand-campaign .campaign-men__item-14 {width:448px;margin-top:-100px}
+.brand-campaign .campaign-men__item-15 {width:488px;margin-top:-150px;margin-left:708px}
+.brand-campaign .campaign-women .hazzys-sub__header {height:629px}
+.brand-campaign .campaign-women .hazzys-sub__header-title {padding:115px 0 0}
+.brand-campaign .campaign-women .hazzys-sub__header-title-summary {display:block;padding:45px 0 15px;color:#fff;font-size:20px;line-height:27px;font-family:'Noto Sans KR', 'Nanum Gothic';font-weight:400}
+.brand-campaign .campaign-women .brand-campaign__recom-link {display:inline-block;position:relative}
+.brand-campaign .campaign-women .brand-campaign__recom-link .campaign-women__list-etc {bottom:20px}
+.brand-campaign .campaign-women .campaign-banner__slide-btn {position:absolute;bottom:100px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);background:url(/static/renewal/images/hazzys/common/btn_common_slider-white.png) no-repeat 0 0;z-index:2}
+.brand-campaign .campaign-women .campaign-banner__slide-btn:after {display:block;clear:both;content:""}
+.brand-campaign .campaign-women__list-item {position:relative;padding:0 7px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.brand-campaign .campaign-women__list-etc {position:absolute;bottom:30px;left:0;width:100%;text-align:center}
+.brand-campaign .campaign-women__list-etc-shop {display:inline-block;padding:35px 0 2px;border-bottom:1px solid #000;color:#000;font-size:13px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:800;letter-spacing:.02em}
+.brand-campaign .campaign-women__image {max-width:100%}
+.brand-campaign .campaign-women .item-box-1 {position:relative}
+.brand-campaign .campaign-women .item-box-1 .brand-campaign__content-recom {position:absolute;top:463px;right:0}
+.brand-campaign .campaign-women .item-box-2 {position:relative}
+.brand-campaign .campaign-women .item-box-2 .brand-campaign__content-recom-2 {position:absolute;top:423px;right:0}
+.brand-campaign .campaign-women .item-box-2 .brand-campaign__content-recom-3 {position:absolute;top:1256px;left:0}
+.brand-campaign .campaign-women .item-box-2 .brand-campaign__content-recom-4 {position:absolute;top:2167px;right:0}
+.brand-campaign .campaign-women__slide {position:relative}
+.brand-campaign .campaign-women__image-2 {float:left}
+.brand-campaign .campaign-women__image-3 {clear:both;float:right;margin-top:60px}
+.brand-campaign .campaign-women__image-4 {clear:both;margin-top:80px}
+.brand-campaign .campaign-women__image-6 {float:left}
+.brand-campaign .campaign-women__image-7 {clear:both;float:right;margin-top:60px}
+.brand-campaign .campaign-women__image-8 {clear:both;pading-top:80px}
+.brand-campaign .campaign-women__image-10 {float:left}
+.brand-campaign .campaign-women__image-11 {margin-top:80px;text-align:right}
+.brand-campaign .campaign-women__slide-1,
+.brand-campaign .campaign-women__slide-2,
+.brand-campaign .campaign-women__slide-3 {position:relative;padding-top:80px;padding-bottom:230px}
+.brand-campaign .campaign-women__text-1 {padding-top:60px}
+.brand-campaign .campaign-women__text-2 {margin-left:650px;padding-top:100px}
+.brand-campaign .campaign-women__text-3 {margin-top:400px}
+.brand-campaign .campaign-women__text-3 .brand-campaign__content-text {padding:50px 0}
+.brand-campaign .campaign-women__text-4 {float:left;margin-top:-450px;margin-left:650px}
+.brand-campaign .campaign-women__text-5 {padding-top:60px}
+.brand-campaign .campaign-women__text-6 {margin-left:650px;padding-top:100px}
+.brand-campaign .campaign-women__text-7 {margin-top:460px}
+.brand-campaign .campaign-women__text-7 .brand-campaign__content-text {padding:50px 0}
+.brand-campaign .campaign-women__text-8 {float:left;margin-top:-680px;margin-left:650px}
+.brand-campaign .campaign-women__text-9 {padding-top:60px}
+.brand-campaign .campaign-women__text-10 {margin-left:650px;padding-top:100px}
+.brand-campaign .campaign-women__text-11 {float:left;margin-top:-500px}
+.brand-campaign .campaign-women__text-11 .brand-campaign__content-text {padding:50px 0}
+.brand-campaign .campaign-women__item-1 {width:502px;margin-top:-50px}
+.brand-campaign .campaign-women__item-2 {width:461px;margin-top:-300px;margin-left:739px}
+.brand-campaign .campaign-women__item-3 {width:501px}
+.brand-campaign .campaign-women__item-4 {width:502px;margin-top:-50px}
+.brand-campaign .campaign-women__item-5 {width:502px;margin-top:-300px;margin-left:700px}
+.brand-campaign .campaign-women__item-6 {width:502px}
+.brand-campaign .campaign-women__item-7 {width:551px;margin-top:-200px;margin-left:649px}
+.brand-campaign .campaign-women__item-8 {width:428px;margin-top:-250px}
+.brand-campaign .campaign-women__item-9 {width:554px;margin-top:50px}
+.brand-campaign .campaign-women__item-10 {width:492px;margin-top:-750px;margin-left:708px}
+.brand-campaign .campaign-women__item-11 {width:492px;margin-top:50px;margin-left:708px}
+.brand-campaign .campaign-women__item-12 {width:492px;margin-top:-100px}
+.brand-campaign .campaign-women__item-13 {width:551px;margin-top:-200px;margin-left:649px}
+.brand-campaign .campaign-women__item-14 {width:424px;margin-top:-250px}
+.brand-campaign .campaign-women__item-15 {width:552px;margin-top:50px}
+.brand-campaign .campaign-women__item-16 {width:486px;margin-top:-750px;margin-left:708px}
+.brand-campaign .campaign-women__item-17 {width:448px;margin-top:50px;margin-left:708px}
+.brand-campaign .campaign-women__item-18 {width:488px;margin-top:-100px}
+.brand-campaign .campaign-acc .hazzys-sub__header {height:629px}
+.brand-campaign .campaign-acc .hazzys-sub__header-title {padding:235px 0 0}
+.brand-campaign .campaign-acc .hazzys-sub__header-title-summary {display:block;padding:45px 0 15px;color:#fff;font-size:20px;line-height:27px;font-family:'Noto Sans KR', 'Nanum Gothic';font-weight:400}
+.brand-campaign .campaign-acc__title-box {padding-top:100px;text-align:center;background:url(/static/renewal/images/hazzys/common/icon_campaign_acc_title.png) no-repeat center 50px}
+.brand-campaign .campaign-acc__title--pink {color:#f7afaa;margin-bottom:15px;font-size:38px;font-weight:700;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';letter-spacing:.03em}
+.brand-campaign .campaign-acc__summary {color:#091431;font-size:22px;font-weight:500;line-height:34px;letter-spacing:-.055em}
+.brand-campaign .campaign-acc__title-text {padding-top:20px;color:#091431;font-size:16px;line-height:30px;letter-spacing:-.075em}
+.brand-campaign .campaign-acc__list-item {position:relative;padding-bottom:40px}
+.brand-campaign .campaign-acc__list-etc {position:absolute;bottom:3px;left:0;text-align:center}
+.brand-campaign .campaign-acc__list-etc-category {display:block;color:#000;font-size:14px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';letter-spacing:.05em}
+.brand-campaign .campaign-acc__list-etc-title {color:#000;font-size:20px;font-weight:700;letter-spacing:.02em}
+.brand-campaign .campaign-acc__list-etc-shop {display:inline-block;padding:35px 0 2px;border-bottom:1px solid #000;color:#000;font-size:13px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:800;letter-spacing:.02em}
+.brand-campaign .campaign-acc__list-etc--right {right:0;left:inherit}
+.brand-campaign .campaign-acc__slide {position:relative}
+.brand-campaign .campaign-acc__slide-1 {position:relative;margin-left:600px}
+.brand-campaign .campaign-acc__slide-1 .campaign-acc__list-item {padding-bottom:0}
+.brand-campaign .campaign-acc__slide-2 {position:relative;width:600px}
+.brand-campaign .campaign-acc__slide-2 .campaign-acc__list-item {padding-bottom:0}
+.brand-campaign .campaign-acc__text-1 {padding-top:170px;width:600px;float:left}
+.brand-campaign .campaign-acc__text-2 {position:absolute;top:170px;left:700px;width:600px}
+.brand-campaign .campaign-acc__item-1 {width:502px;margin-top:-290px}
+.brand-campaign .campaign-acc__item-2 {width:502px;margin-top:-75px;margin-left:698px}
+.brand-campaign .campaign-acc__item-3 {width:502px;margin-top:-140px}
+.brand-campaign .campaign-acc__item-4 {width:469px;margin-top:-290px;margin-left:731px}
+.brand-campaign .campaign-acc__item-5 {width:425px;margin-top:-75px}
+.brand-campaign .campaign-acc__item-6 {width:469px;margin-top:-290px;margin-left:731px}
+.brand-campaign .campaign-acc__item-7 {width:501px;margin-top:-230px}
+.brand-campaign .campaign-acc__item-8 {width:427px;margin-top:-20px;margin-left:773px}
+.brand-campaign .campaign-acc__item-9 {width:501px;margin-top:-150px}
+.brand-campaign .campaign-acc__item-10 {width:511px;margin-top:-340px;margin-left:689px}
+.brand-campaign .campaign-acc__item-11 {width:511px;margin-top:0}
+.brand-campaign .campaign-acc__item-12 {width:512px;margin-top:-420px;margin-left:688px}
+.brand-campaign .campaign-acc__item-13 {width:510px;margin-top:0}
+.brand-campaign .campaign-acc__item-14 {width:510px;margin-top:-360px;margin-left:690px}
+.brand-campaign .campaign-acc__item-15 {width:502px;margin-top:-380px}
+.brand-campaign .campaign-acc__item-16 {width:502px;margin-top:50px}
+.brand-campaign .campaign-acc__item-17 {width:517px;margin-top:-330px;margin-left:683px}
+.brand-campaign .campaign-acc__item-18 {width:502px;margin-top:-110px}
+.brand-campaign .campaign-acc__item-19 {width:517px;margin-top:-150px;margin-left:683px}
+.brand-campaign .campaign-acc__item-20 {width:502px;margin-top:-230px}
+.brand-campaign .campaign-acc__movie {padding:30px 0 200px;text-align:center}
+.brand-campaign .campaign-acc__movie-summary {color:#091431;font-size:22px;font-weight:500;line-height:34px;letter-spacing:-.055em}
+.brand-campaign .campaign-acc__movie-title {padding:8px 0 30px;color:#091431;font-size:38px;font-weight:700;line-height:50px;letter-spacing:-.055em}
+.brand-campaign .campaign-acc__movie-box {display:block;position:relative;padding-bottom:56.25%}
+.brand-campaign .campaign-acc__movie-item {position:absolute;top:0;left:0;width:100%;height:100%}
+.brand-campaign .campaign-golf .hazzys-sub__header {height:628px}
+.brand-campaign .campaign-golf .hazzys-sub__header-title {padding:240px 0 0}
+.brand-campaign .campaign-golf .hazzys-sub__header-title-summary {display:block;padding:25px 0 15px;color:#fff;font-size:20px;line-height:27px;font-family:'Noto Sans KR', 'Nanum Gothic';font-weight:400}
+.brand-campaign .campaign-golf__list-item {position:relative;padding-bottom:40px}
+.brand-campaign .campaign-golf__list-etc {position:absolute;bottom:3px;left:0;text-align:center}
+.brand-campaign .campaign-golf__list-etc-category {display:block;color:#000;font-size:14px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';letter-spacing:.05em}
+.brand-campaign .campaign-golf__list-etc-title {color:#000;font-size:20px;font-weight:700;letter-spacing:.02em}
+.brand-campaign .campaign-golf__list-etc-shop {display:inline-block;padding:35px 0 2px;border-bottom:1px solid #000;color:#000;font-size:13px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:800;letter-spacing:.02em}
+.brand-campaign .campaign-golf__list-etc--right {right:0;left:inherit}
+.brand-campaign .campaign-golf__slide {position:relative}
+.brand-campaign .campaign-golf__slide-1 {position:relative;margin-left:600px}
+.brand-campaign .campaign-golf__slide-1 .campaign-golf__list-item {padding-bottom:0}
+.brand-campaign .campaign-golf__slide-2 {position:relative;width:600px}
+.brand-campaign .campaign-golf__slide-2 .campaign-golf__list-item {padding-bottom:0}
+.brand-campaign .campaign-golf__slide-2 .campaign-banner__slide-btn {right:0;left:inherit}
+.brand-campaign .campaign-golf__text-1 {padding-top:170px;width:600px;float:left}
+.brand-campaign .campaign-golf__text-2 {position:absolute;top:170px;left:700px;width:600px}
+.brand-campaign .campaign-golf__item-1 {width:503px;margin-top:30px}
+.brand-campaign .campaign-golf__item-2 {width:454px;margin-top:-250px;margin-left:746px}
+.brand-campaign .campaign-golf__item-3 {width:503px;margin-top:10px}
+.brand-campaign .campaign-golf__item-7 {width:426px;margin-top:60px;margin-left:774px}
+.brand-campaign .campaign-golf__item-8 {width:524px;margin-top:-310px}
+.brand-campaign .campaign-golf__item-9 {width:473px;margin-top:50px;margin-left:727px}
+.brand-campaign .campaign-golf__item-10 {width:526px;margin-top:-230px}
+.brand-campaign .campaign-golf__item-11 {width:440px;margin-top:-290px;margin-left:775px}
+.brand-campaign .campaign-beauty .hazzys-sub__header {height:628px}
+.brand-campaign .campaign-beauty .hazzys-sub__header-title {padding-top:72px;font-size:60px;line-height:58px;text-align:left}
+.brand-campaign .campaign-beauty .hazzys-sub__header-title,
+.brand-campaign .campaign-beauty .hazzys-sub__header-title--style-1 {font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';color:#f2f2f2}
+.brand-campaign .campaign-beauty .hazzys-sub__header-title--style-1 {font-weight:800}
+.brand-campaign .campaign-beauty .hazzys-sub__header-title--style-2 {display:block;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:400;color:#b9b9b9}
+.brand-campaign .campaign-beauty .brand-campaign__content-box {margin-top:140px}
+.brand-campaign .campaign-beauty .brand-campaign__content-box-2,
+.brand-campaign .campaign-beauty .brand-campaign__content-box-4 {margin-bottom:140px}
+.brand-campaign .campaign-beauty .brand-campaign__content-box-3 .brand-campaign__content-title {line-height:50px}
+.brand-campaign .campaign-beauty .brand-campaign__content-title--small {line-height:60px;font-weight:600}
+.brand-campaign .campaign-beauty .brand-campaign__content-title--small,
+.brand-campaign .campaign-beauty .main-title {font-size:22px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';color:#091431}
+.brand-campaign .campaign-beauty .main-title {padding-bottom:40px;font-weight:300}
+.brand-campaign .campaign-beauty .main-title--style-1 {display:block;padding-bottom:40px;line-height:55px;font-size:60px;font-weight:800}
+.brand-campaign .campaign-beauty .main-title--style-2 {display:block;font-size:30px;font-weight:700}
+.brand-campaign .campaign-beauty .main-title__figure {display:inline-block;float:right}
+.brand-campaign .campaign-beauty .video {display:block;text-align:center;padding-bottom:56.25%}
+.brand-campaign .campaign-beauty .video__item {position:absolute;top:0;left:0;width:100%;height:100%}
+.brand-campaign .campaign-beauty .container__list {position:relative;overflow:auto;clear:both}
+.brand-campaign .campaign-beauty .container__list-2 {height:1065px;margin:140px 0}
+.brand-campaign .campaign-beauty .container__list-2 .container__inner-1 .container__text {padding-top:130px}
+.brand-campaign .campaign-beauty .container__list-3 {height:990px}
+.brand-campaign .campaign-beauty .container__explain {float:left}
+.brand-campaign .campaign-beauty .container__figure,
+.brand-campaign .campaign-beauty .container__text {display:inline-block}
+.brand-campaign .campaign-beauty .container__inner-1 {width:546px;float:left}
+.brand-campaign .campaign-beauty .container__inner-2 {width:547px;float:right}
+.brand-campaign .campaign-beauty .container__inner-2 .container__text {position:absolute;top:50px;right:0;width:547px}
+.brand-campaign .campaign-beauty .container__inner-2 .container__figure {position:absolute;bottom:0;right:0}
+.brand-campaign .campaign-beauty .container__inner-3 .container__text {position:absolute;top:80px}
+.brand-campaign .campaign-beauty .container__qna {padding-bottom:40px;font-weight:300;font-size:16px;line-height:28px;letter-spacing:-.075em}
+.brand-campaign .campaign-beauty .container__qna--in {display:inline-block;padding-left:18px}
+.brand-campaign .campaign-beauty .container__qna--style-1 {font-weight:700}
+.brand-campaign .campaign-beauty .container__qna-question {padding-bottom:5px;color:#000}
+.brand-campaign .campaign-beauty .container__qna-answer {color:#595959}
+.brand-campaign .campaign-beauty__slide {position:relative}
+.brand-campaign .campaign-beauty__slide-1 {position:relative;margin-left:600px}
+.brand-campaign .campaign-beauty__slide-1 .campaign-beauty__list-item {padding-bottom:0}
+.brand-campaign .campaign-beauty__slide-2 {position:relative;width:600px}
+.brand-campaign .campaign-beauty__slide-2 .campaign-beauty__list-item {padding-bottom:0}
+.brand-campaign .campaign-beauty__slide-2 .campaign-banner__slide-btn {right:0;left:inherit}
+.brand-campaign .campaign-beauty__text-1 {padding-top:170px;width:600px;float:left}
+.brand-campaign .campaign-beauty__text-2 {position:absolute;top:170px;left:700px;width:600px}
+.brand-campaign .campaign-beauty__item {position:relative;padding-bottom:40px}
+.brand-campaign .campaign-beauty__item-1 {width:547px;margin-top:-100px;margin-left:685px}
+.brand-campaign .campaign-beauty__item-1 .campaign-beauty__list-etc {bottom:3px;left:42px}
+.brand-campaign .campaign-beauty__item-2 {width:424px;margin-top:-210px}
+.brand-campaign .campaign-beauty__item-2 .campaign-beauty__list-etc {bottom:3px;left:18px}
+.brand-campaign .campaign-beauty__item-3 {width:522px;margin-top:-100px;margin-left:680px}
+.brand-campaign .campaign-beauty__item-3 .campaign-beauty__list-etc {bottom:3px;left:13px}
+.brand-campaign .campaign-beauty__item-4 {width:488px;margin-top:-100px}
+.brand-campaign .campaign-beauty__item-4 .campaign-beauty__list-etc {bottom:100px;left:0}
+.brand-campaign .campaign-beauty__list-etc {position:absolute;text-align:center}
+.brand-campaign .campaign-beauty__list-etc-category {display:block;color:#000;font-size:14px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';letter-spacing:.05em}
+.brand-campaign .campaign-beauty__list-etc-title {color:#000;font-size:20px;font-weight:700;letter-spacing:.02em}
+.brand-campaign .campaign-beauty__list-etc-shop {display:inline-block;padding:35px 0 2px;border-bottom:1px solid #000;color:#000;font-size:13px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:800;letter-spacing:.02em}
+.brand-campaign .campaign-beauty__list-item {position:relative;padding-bottom:40px}
+.brand-campaign .campaign-beauty .slick-initialized .slick-slide {position:relative}
+.brand-campaign .campaign-london .hazzys-sub__header {height:802px}
+.brand-campaign .campaign-london .hazzys-sub__header-title {padding:310px 0 0}
+.brand-campaign .campaign-london .hazzys-sub__header-title-summary {display:block;padding:45px 0 15px;color:#fff;font-size:20px;line-height:27px;font-family:'Noto Sans KR', 'Nanum Gothic';font-weight:400}
+.brand-campaign .campaign-london .brand-campaign__content-box--white {padding:100px 0 180px}
+.brand-campaign .campaign-london__list-item {position:relative}
+.brand-campaign .campaign-london__list-etc {position:absolute;bottom:3px;left:0;text-align:center}
+.brand-campaign .campaign-london__list-etc-category {display:block;color:#000;font-size:14px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';letter-spacing:.05em}
+.brand-campaign .campaign-london__list-etc-title {color:#000;font-size:20px;font-weight:700;letter-spacing:.02em}
+.brand-campaign .campaign-london__list-etc-shop {display:inline-block;padding:35px 0 2px;border-bottom:1px solid #000;color:#000;font-size:13px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:800;letter-spacing:.02em}
+.brand-campaign .campaign-london__list-etc--right {right:0;left:inherit}
+.brand-campaign .campaign-london__slide {position:relative}
+.brand-campaign .campaign-london__slide-1 {position:relative;margin-left:600px}
+.brand-campaign .campaign-london__slide-1 .campaign-men__list-item {padding-bottom:0}
+.brand-campaign .campaign-london__slide-2 {position:relative;width:600px}
+.brand-campaign .campaign-london__slide-2 .campaign-men__list-item {padding-bottom:0}
+.brand-campaign .campaign-london__slide-2 .campaign-banner__slide-btn {right:0;left:inherit}
+.brand-campaign .campaign-london__text-1 {padding-top:170px;width:600px;float:left}
+.brand-campaign .campaign-london__text-2 {position:absolute;top:170px;left:700px;width:600px}
+.brand-campaign .campaign-london__item-1 {width:502px;margin-top:-50px}
+.brand-campaign .campaign-london__item-2 {width:461px;margin-top:-260px;margin-left:739px}
+.brand-campaign .campaign-london__item-3 {width:501px}
+.brand-campaign .campaign-london__item-4 {width:551px;margin-top:-50px;margin-left:649px}
+.brand-campaign .campaign-london__item-5 {width:428px;margin-top:-250px}
+.brand-campaign .campaign-london__item-6 {width:554px;margin-top:50px;margin-left:649px}
+.brand-campaign-18fw .dazed .hazzys-sub__header {height:629px}
+.brand-campaign-18fw .dazed .hazzys-sub__header-title {padding-top:200px}
+.brand-campaign-18fw .dazed .hazzys-sub__header-title--big {padding-bottom:40px}
+.brand-campaign-18fw .dazed .hazzys-sub__header-title-text {padding-top:15px;color:#fff;font-size:26px;line-height:26px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:400;letter-spacing:.05em}
+.brand-campaign-18fw .dazed .hazzys-sub__header .campaign-selectbox,
+.brand-campaign-18fw .dazed .hazzys-sub__header .campaign-selectbox__ul {width:190px}
+.brand-campaign-18fw .dazed .description {overflow:auto;text-align:left;clear:both;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign-18fw .dazed .description__content .img-2 {padding:0 105px}
+.brand-campaign-18fw .dazed .description__title-summary {padding-bottom:40px;font-size:34px;line-height:40px;letter-spacing:.02em;font-weight:700;color:#000}
+.brand-campaign-18fw .dazed .description__title-summary-text {font-size:15.5px;line-height:26px;font-weight:300}
+.brand-campaign-18fw .dazed .description__title-summary-text .description__content--style {display:inline-block;padding-top:15px}
+.brand-campaign-18fw .dazed .description__title-summary-text .description__content--style-1 {color:#595959}
+.brand-campaign-18fw .dazed .description__title-summary-text .description__content--style--in {padding-left:70px}
+.brand-campaign-18fw .dazed .container .description__title,
+.brand-campaign-18fw .dazed .container .figure {display:inline-block}
+.brand-campaign-18fw .dazed .container-main {text-align:center;padding:130px 0 0}
+.brand-campaign-18fw .dazed .container__list {display:block;overflow:auto}
+.brand-campaign-18fw .dazed .container__list-item-1 .container__inner-1 {padding-top:120px}
+.brand-campaign-18fw .dazed .container__list-item-1 .container__inner-3 {height:1370px}
+.brand-campaign-18fw .dazed .container__list-item-1 .container__inner-3 .description__title {padding-top:80px}
+.brand-campaign-18fw .dazed .container__list-item-1 .description__content {padding-top:95px}
+.brand-campaign-18fw .dazed .container__list-item-2 .container__inner-1 {height:1370px;padding-top:120px}
+.brand-campaign-18fw .dazed .container__list-item-2 .container__inner-1 .description__title {padding-top:80px}
+.brand-campaign-18fw .dazed .container__list-item-2 .container__inner-1 .description__content {padding-top:95px}
+.brand-campaign-18fw .dazed .container__list-item-2 .container__inner-3 {height:880px}
+.brand-campaign-18fw .dazed .container__list-item-2 .container__inner-3 .description__content {position:absolute;bottom:0;right:0}
+.brand-campaign-18fw .dazed .container__list-item-2 .container__inner-3:before {height:1000px}
+.brand-campaign-18fw .dazed .container__list-item-2 .container__inner-2 .img-2,
+.brand-campaign-18fw .dazed .container__list-item-2 .container__inner-3 .img-2 {padding:0 40px}
+.brand-campaign-18fw .dazed .container__inner {position:relative}
+.brand-campaign-18fw .dazed .container__inner-1 {height:1370px}
+.brand-campaign-18fw .dazed .container__inner-1 .figure {float:left}
+.brand-campaign-18fw .dazed .container__inner-1 .description__title {padding-top:80px}
+.brand-campaign-18fw .dazed .container__inner-2 {height:1000px;padding-top:120px}
+.brand-campaign-18fw .dazed .container__inner-2 .figure {float:right}
+.brand-campaign-18fw .dazed .container__inner-2 .description__title {float:left;width:650px}
+.brand-campaign-18fw .dazed .container__inner-2 .description__content {position:absolute;bottom:0;left:0}
+.brand-campaign-18fw .dazed .container__inner-3 .figure {float:left}
+.brand-campaign-18fw .dazed .container__inner-3__title {float:right;width:540px}
+.brand-campaign-18fw .dazed .container__inner-1 .description__title,
+.brand-campaign-18fw .dazed .container__inner-3 .description__title {float:right;width:540px;padding-left:110px}
+.brand-campaign-18fw .dazed .container__inner-1:before,
+.brand-campaign-18fw .dazed .container__inner-3:before {display:block;position:absolute;width:100%;height:785px;bottom:0;content:"";clear:both;background-color:#f2f2f2}
+.brand-campaign-18fw .smile .hazzys-sub__header {height:629px}
+.brand-campaign-18fw .smile .hazzys-sub__header-title {padding-top:200px}
+.brand-campaign-18fw .smile .hazzys-sub__header-title--big {padding-top:40px}
+.brand-campaign-18fw .smile .hazzys-sub__header-title-text {padding-top:15px;color:#fff;font-size:26px;line-height:26px;letter-spacing:.05em}
+.brand-campaign-18fw .smile .hazzys-sub__header .campaign-selectbox__link {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.brand-campaign-18fw .smile .brand-campaign__content .hazzys-container-box {height:1400px;padding:130px 0}
+.brand-campaign-18fw .smile .brand-campaign__content-box-1 .smile__text-1 {top:130px;left:654px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-1 .smile__text-2 {top:910px;left:0}
+.brand-campaign-18fw .smile .brand-campaign__content-box-1 .smile__item-1 {top:390px;left:820px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-1 .smile__item-2 {bottom:130px;left:30px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-1 .smile__figure-2 {position:absolute;bottom:130px;right:0}
+.brand-campaign-18fw .smile .brand-campaign__content-box-2 {background:#f5f5f5}
+.brand-campaign-18fw .smile .brand-campaign__content-box-2 .smile__text-1 {top:130px;left:0}
+.brand-campaign-18fw .smile .brand-campaign__content-box-2 .smile__text-2 {top:910px;left:654px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-2 .smile__item-1 {top:390px;left:0;width:520px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-2 .smile__item-1 .smile-link {display:inline-block;margin:0 20px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-2 .smile__item-2 {bottom:130px;left:800px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-2 .smile__figure-1 {padding-left:654px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-2 .smile__figure-2 {position:absolute;bottom:130px;left:0}
+.brand-campaign-18fw .smile .brand-campaign__content-box-3 .smile__text-1 {top:130px;left:654px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-3 .smile__text-2 {top:910px;left:0}
+.brand-campaign-18fw .smile .brand-campaign__content-box-3 .smile__item-1 {top:260px;left:820px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-3 .smile__item-2 {bottom:130px;left:30px}
+.brand-campaign-18fw .smile .brand-campaign__content-box-3 .smile__figure-2 {position:absolute;bottom:130px;right:0}
+.brand-campaign-18fw .smile .brand-campaign__content-box-4 {background:#f5f5f5}
+.brand-campaign-18fw .smile .brand-campaign__content-box-4 .hazzys-container-box {height:auto}
+.brand-campaign-18fw .smile .brand-campaign__content-box-4 .smile__item-1 {bottom:130px;left:820px}
+.brand-campaign-18fw .smile .smile__text {position:absolute}
+.brand-campaign-18fw .smile .smile__item {display:inline-block;position:absolute;text-align:center}
+.brand-campaign-18fw .smile .etc {padding-top:30px}
+.brand-campaign-18fw .smile .etc-name {color:#000;font-size:16px;font-weight:700;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';line-height:1}
+.brand-campaign-18fw .smile .etc-summary {display:block;padding:5px 0 20px;color:#666;font-size:16px}
+.brand-campaign-18fw .smile .etc-shop {display:inline-block;border-bottom:1px solid #000;font-size:13px;font-weight:600;letter-spacing:.02em}
+.brand-campaign-18fw .smile-title,
+.brand-campaign-18fw .smile .etc-shop {color:#000;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign-18fw .smile-title {padding-bottom:15px;font-size:30px;font-weight:800;line-height:40px}
+.brand-campaign-18fw .smile-summary {color:#000;font-size:23px;font-weight:300;line-height:30px;letter-spacing:-.075em}
+.brand-campaign-18fw .trench .hazzys-sub__header {height:629px}
+.brand-campaign-18fw .trench .hazzys-sub__header-title {padding-top:200px}
+.brand-campaign-18fw .trench .hazzys-sub__header-title--big {padding-top:40px}
+.brand-campaign-18fw .trench .hazzys-sub__header-title-text {padding-top:15px;color:#fff;font-size:26px;line-height:26px;letter-spacing:.05em}
+.brand-campaign-18fw .trench .hazzys-sub__header .campaign-selectbox__link {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.brand-campaign-18fw .trench .brand-campaign__content .hazzys-container-box {padding:130px 0}
+.brand-campaign-18fw .trench .brand-campaign__content-box-1 .hazzys-container-box {padding:130px 0 0}
+.brand-campaign-18fw .trench .brand-campaign__content-box-1 .trench-text {padding-top:0;padding-bottom:60px;text-align:center}
+.brand-campaign-18fw .trench .brand-campaign__content-box-2 {position:relative;background:#f5f5f5}
+.brand-campaign-18fw .trench .brand-campaign__content-box-2:before {display:block;position:absolute;top:0;left:0;width:100%;height:720px;background:#fff;content:""}
+.brand-campaign-18fw .trench .brand-campaign__content-box-2 .trench__text {top:130px;left:654px}
+.brand-campaign-18fw .trench .brand-campaign__content-box-2 .trench__item {bottom:690px;right:80px}
+.brand-campaign-18fw .trench .brand-campaign__content-box-2 .trench__figure-2 {padding-top:100px}
+.brand-campaign-18fw .trench .brand-campaign__content-box-2 .trench__figure-3 {position:absolute;top:976px;left:435px}
+.brand-campaign-18fw .trench .brand-campaign__content-box-2 .trench__figure-4 {position:absolute;top:976px;right:0}
+.brand-campaign-18fw .trench .brand-campaign__content-box-3 {position:relative;background:#f5f5f5}
+.brand-campaign-18fw .trench .brand-campaign__content-box-3:before {display:block;position:absolute;top:0;left:0;width:100%;height:720px;background:#fff;content:""}
+.brand-campaign-18fw .trench .brand-campaign__content-box-3 .trench__text {top:130px;left:654px}
+.brand-campaign-18fw .trench .brand-campaign__content-box-3 .trench__item {bottom:690px;right:80px}
+.brand-campaign-18fw .trench .brand-campaign__content-box-3 .trench__figure-2 {padding-top:100px}
+.brand-campaign-18fw .trench .brand-campaign__content-box-3 .trench__figure-3 {position:absolute;top:976px;left:435px}
+.brand-campaign-18fw .trench .brand-campaign__content-box-3 .trench__figure-4 {position:absolute;top:976px;right:0}
+.brand-campaign-18fw .trench .brand-campaign__content-box-4 .trench__figure-1 {padding-left:654px}
+.brand-campaign-18fw .trench .brand-campaign__content-box-4 .trench__text {top:130px;left:0}
+.brand-campaign-18fw .trench .brand-campaign__content-box-4 .trench__item {bottom:130px;left:80px}
+.brand-campaign-18fw .trench .trench__text {position:absolute}
+.brand-campaign-18fw .trench .trench__item {display:inline-block;position:absolute;text-align:center}
+.brand-campaign-18fw .trench .etc {padding-top:30px}
+.brand-campaign-18fw .trench .etc-shop {display:inline-block;border-bottom:1px solid #000;color:#000;font-size:13px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:600;letter-spacing:.02em}
+.brand-campaign-18fw .trench-summary {padding-top:80px;color:#000;font-size:23px;font-weight:300;line-height:30px;letter-spacing:-.075em}
+.brand-campaign-18fw .trench-title {padding-top:15px;color:#000;font-size:34px;font-weight:800;line-height:40px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign-18fw .trench-text {padding-top:30px;color:#000;font-size:16px;line-height:30px;letter-spacing:-.025em}
+.brand-campaign-18fw .moment .hazzys-sub__header {height:629px}
+.brand-campaign-18fw .moment .hazzys-sub__header-title {padding-top:200px}
+.brand-campaign-18fw .moment .hazzys-sub__header-title--small {color:#000}
+.brand-campaign-18fw .moment .hazzys-sub__header-title--big {padding-top:40px;color:#000}
+.brand-campaign-18fw .moment .hazzys-sub__header-title-text {padding-top:15px;color:#000;font-size:26px;line-height:26px;letter-spacing:.05em}
+.brand-campaign-18fw .moment .hazzys-sub__header .campaign-selectbox {width:240px}
+.brand-campaign-18fw .moment .hazzys-sub__header .campaign-selectbox__title {color:#000;border-bottom:1px solid #222}
+.brand-campaign-18fw .moment .hazzys-sub__header .campaign-selectbox__title:before {background:url(/static/renewal/images/hazzys/common/icon_arrow_campaign_bl_xsmall.png)}
+.brand-campaign-18fw .moment .hazzys-sub__header .campaign-selectbox__ul {border-bottom:1px solid #222}
+.brand-campaign-18fw .moment .hazzys-sub__header .campaign-selectbox__link {color:#000;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.brand-campaign-18fw .moment .brand-campaign__content .hazzys-container-box {padding:130px 0}
+.brand-campaign-18fw .moment .brand-campaign__content-box-1 .moment__text-1 {top:210px;left:654px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-1 .moment__item-1 {top:500px;left:654px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-1 .moment__item-2 {top:500px;left:954px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-2 {background:#f5f5f5}
+.brand-campaign-18fw .moment .brand-campaign__content-box-2 .moment__text-1 {top:210px;left:0}
+.brand-campaign-18fw .moment .brand-campaign__content-box-2 .moment__item-1 {top:500px;left:0}
+.brand-campaign-18fw .moment .brand-campaign__content-box-2 .moment__figure-1 {padding-left:654px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-3 {position:relative}
+.brand-campaign-18fw .moment .brand-campaign__content-box-3:before {display:block;position:absolute;bottom:0;left:0;width:100%;height:800px;background:#f5f5f5;content:""}
+.brand-campaign-18fw .moment .brand-campaign__content-box-3 .hazzys-container-box {height:1200px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-3 .moment__text-1 {top:260px;left:654px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-3 .moment__item-1 {bottom:0;left:0}
+.brand-campaign-18fw .moment .brand-campaign__content-box-3 .moment__item-2 {bottom:0;left:436px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-3 .moment__item-3 {bottom:0;right:0}
+.brand-campaign-18fw .moment .brand-campaign__content-box-4 {background:#f5f5f5}
+.brand-campaign-18fw .moment .brand-campaign__content-box-4 .moment__text-1 {top:210px;left:0}
+.brand-campaign-18fw .moment .brand-campaign__content-box-4 .moment__item-1 {top:500px;left:0}
+.brand-campaign-18fw .moment .brand-campaign__content-box-4 .moment__figure-1 {padding-left:654px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-5 .hazzys-container-box {height:1000px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-5 .moment__text-1 {top:230px;left:654px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-5 .moment__item-1 {top:760px;left:654px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-5 .moment__item-2 {top:760px;left:954px}
+.brand-campaign-18fw .moment .brand-campaign__content-box-6 {background:#f5f5f5}
+.brand-campaign-18fw .moment .brand-campaign__content-box-6 .moment__text-1 {top:230px;left:0}
+.brand-campaign-18fw .moment .brand-campaign__content-box-6 .moment__item-1 {top:700px;left:0}
+.brand-campaign-18fw .moment .brand-campaign__content-box-6 .moment__figure-1 {padding-left:654px}
+.brand-campaign-18fw .moment .moment__text {position:absolute}
+.brand-campaign-18fw .moment .moment__item {display:inline-block;position:absolute;text-align:center}
+.brand-campaign-18fw .moment .etc {padding-top:30px}
+.brand-campaign-18fw .moment .etc-name {color:#000;font-size:16px;font-weight:700;line-height:1}
+.brand-campaign-18fw .moment .etc-summary {display:block;padding:5px 0 20px;color:#666;font-size:16px}
+.brand-campaign-18fw .moment .etc-shop {display:inline-block;border-bottom:1px solid #000;color:#000;font-size:13px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:800;letter-spacing:.02em}
+.brand-campaign-18fw .moment-title {padding-bottom:15px;color:#000;font-size:30px;font-weight:900;line-height:40px;letter-spacing:-.05em}
+.brand-campaign-18fw .moment-summary {color:#000;font-size:16px;font-weight:300;line-height:30px;letter-spacing:-.025em}
+.brand-campaign-18fw .trench-men .hazzys-sub__header {height:629px}
+.brand-campaign-18fw .trench-men .hazzys-sub__header-title {padding-top:200px}
+.brand-campaign-18fw .trench-men .hazzys-sub__header-title--big {padding-top:40px}
+.brand-campaign-18fw .trench-men .hazzys-sub__header-title-text {padding-top:15px;color:#fff;font-size:26px;line-height:26px;letter-spacing:.05em}
+.brand-campaign-18fw .trench-men .hazzys-sub__header .campaign-selectbox__link {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.brand-campaign-18fw .trench-men .container__item {width:100%;clear:both;background-color:#f5f5f5}
+.brand-campaign-18fw .trench-men .container__item .hazzys-container-box {height:746px}
+.brand-campaign-18fw .trench-men .container__item-1 {padding-top:130px}
+.brand-campaign-18fw .trench-men .container__item-2 {padding:200px 0}
+.brand-campaign-18fw .trench-men .container__item-3 {padding-bottom:130px}
+.brand-campaign-18fw .trench-men .container__item-4 {padding:70px 0 200px}
+.brand-campaign-18fw .trench-men .container__item-2 .item-text,
+.brand-campaign-18fw .trench-men .container__item-4 .item-text {float:right;width:545px}
+.brand-campaign-18fw .trench-men .container__item-2 .item-figure,
+.brand-campaign-18fw .trench-men .container__item-4 .item-figure {float:left}
+.brand-campaign-18fw .trench-men .container__item-2 .trench__item,
+.brand-campaign-18fw .trench-men .container__item-4 .trench__item {position:absolute;left:930px;bottom:0}
+.brand-campaign-18fw .trench-men .item-text {float:left}
+.brand-campaign-18fw .trench-men .item-figure {float:right}
+.brand-campaign-18fw .trench-men .trench__item {display:inline-block;position:absolute;text-align:center;left:90px;bottom:0}
+.brand-campaign-18fw .trench-men .trench__link {display:inline-block}
+.brand-campaign-18fw .trench-men .etc {padding-top:30px}
+.brand-campaign-18fw .trench-men .etc-shop {display:inline-block;border-bottom:1px solid #000;color:#000;font-size:13px;font-weight:800;letter-spacing:.02em}
+.brand-campaign-18fw .trench-men .etc-shop,
+.brand-campaign-18fw .trench-men .main-title {font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';text-align:center}
+.brand-campaign-18fw .trench-men .main-title {padding:125px 0;color:#091431}
+.brand-campaign-18fw .trench-men .main-title--big {padding-bottom:23px;font-size:40px;font-weight:800;line-height:40px}
+.brand-campaign-18fw .trench-men .main-title-summary {padding-bottom:50px;font-size:25px;font-weight:400;letter-spacing:-.075em}
+.brand-campaign-18fw .trench-men .main-title .trench-text {padding-top:100px}
+.brand-campaign-18fw .trench-men .main-title--style {padding-bottom:70px}
+.brand-campaign-18fw .trench-men .item-text-summary {color:#000;font-size:23px;font-weight:300;line-height:27px;letter-spacing:-.075em}
+.brand-campaign-18fw .trench-men .item-text--big {padding-top:25px;color:#000;font-size:34px;font-weight:800;line-height:40px;font-family:'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign-18fw .enjoy .hazzys-sub__header {height:629px}
+.brand-campaign-18fw .enjoy .hazzys-sub__header-title {padding-top:200px}
+.brand-campaign-18fw .enjoy .hazzys-sub__header-title--big {padding-top:40px}
+.brand-campaign-18fw .enjoy .hazzys-sub__header-title-text {padding-top:15px;color:#fff;font-size:26px;line-height:26px;letter-spacing:.05em}
+.brand-campaign-18fw .enjoy .hazzys-sub__header .campaign-selectbox {width:226px}
+.brand-campaign-18fw .enjoy .hazzys-sub__header .campaign-selectbox__link {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.brand-campaign-18fw .enjoy .brand-campaign__content .hazzys-container-box {overflow:hidden;padding:130px 0}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box {position:relative;background:#f5f5f5}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box:before {position:absolute;top:0;left:0;width:100%;height:860px;background:#fff;content:""}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-1 .enjoy-text {padding-top:0;padding-bottom:60px;text-align:center}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-1 .enjoy__text {top:250px;left:654px}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-1 .slick-dots {position:absolute;top:260px;left:654px}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-2:before {height:760px}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-2 .enjoy-slide-model {margin-left:654px}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-2 .enjoy-text {padding-top:0;padding-bottom:60px;text-align:center}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-2 .enjoy__text {top:150px;left:0}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-2 .slick-dots {position:absolute;top:260px;left:-654px}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-3:before {height:760px}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-3 .enjoy-text {padding-top:0;padding-bottom:60px;text-align:center}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-3 .enjoy__text {top:150px;left:654px}
+.brand-campaign-18fw .enjoy .brand-campaign__content-box-3 .slick-dots {position:absolute;top:260px;left:654px}
+.brand-campaign-18fw .enjoy__text {position:absolute;top:130px}
+.brand-campaign-18fw .enjoy-slide-model {width:546px}
+.brand-campaign-18fw .enjoy-slide-product {margin:0 -7px;padding:80px 0 60px}
+.brand-campaign-18fw .enjoy-slide-product .enjoy-slide-item {padding:0 7px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.brand-campaign-18fw .enjoy-slide-product .enjoy__figure {position:relative}
+.brand-campaign-18fw .enjoy-slide-product .enjoy__figure:before {position:absolute;bottom:0;left:0;width:100%;height:290px;background:#fff;content:""}
+.brand-campaign-18fw .enjoy-slide-product .enjoy__image {position:relative}
+.brand-campaign-18fw .enjoy-slide-product .campaign-banner__slide-btn {position:absolute;bottom:70px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);background:url(/static/renewal/images/hazzys/common/btn_common_slider-gray.png) no-repeat 0 0;z-index:2}
+.brand-campaign-18fw .enjoy-slide-product .campaign-banner__slide-btn:after {display:block;clear:both;content:""}
+.brand-campaign-18fw .enjoy-slide-item {position:relative}
+.brand-campaign-18fw .enjoy .slick-dots {position:absolute;width:100%}
+.brand-campaign-18fw .enjoy .slick-dots li {float:left}
+.brand-campaign-18fw .enjoy .slick-dots .slick-active .enjoy__image {-webkit-filter:none;filter:none}
+.brand-campaign-18fw .enjoy .slick-dots-thum {display:block;width:100px;margin:0 1px;cursor:pointer}
+.brand-campaign-18fw .enjoy .slick-dots .enjoy__image {width:100%;-webkit-filter:grayscale(100%);filter:grayscale(100%)}
+.brand-campaign-18fw .enjoy .etc {position:absolute;left:0;right:0;bottom:45px;text-align:center}
+.brand-campaign-18fw .enjoy .etc-shop {display:inline-block;border-bottom:1px solid #000;color:#000;font-size:13px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:600;letter-spacing:.02em}
+.brand-campaign-18fw .enjoy-summary {padding-top:30px;color:#000;font-size:18px;line-height:30px;letter-spacing:-.025em}
+.brand-campaign-18fw .enjoy-title {padding-top:70px;color:#000;font-size:34px;font-weight:800;line-height:40px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign-18fw .enjoy-text {padding-bottom:90px;color:#000;font-size:18px;line-height:30px;letter-spacing:-.025em;text-align:center}
+.brand-campaign-18fw .trench-women .hazzys-sub__header {height:629px}
+.brand-campaign-18fw .trench-women .hazzys-sub__header-title {padding-top:200px}
+.brand-campaign-18fw .trench-women .hazzys-sub__header-title--big {padding-top:40px}
+.brand-campaign-18fw .trench-women .hazzys-sub__header-title-text {padding-top:15px;color:#fff;font-size:26px;line-height:26px;letter-spacing:.05em}
+.brand-campaign-18fw .trench-women .hazzys-sub__header .campaign-selectbox__link {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.brand-campaign-18fw .trench-women .container__box--gray {background:#f5f5f5}
+.brand-campaign-18fw .trench-women .container__box--gray:last-child {margin:0 0 -140px;}/* 2020-06-18 추가 */
+.brand-campaign-18fw .trench-women .container__item {width:100%;clear:both}
+.brand-campaign-18fw .trench-women .container__item .hazzys-container-box {height:746px}
+.brand-campaign-18fw .trench-women .container__item-1 {padding-top:130px}
+.brand-campaign-18fw .trench-women .container__item-2 {padding:200px 0}
+.brand-campaign-18fw .trench-women .container__item-3 {padding-bottom:130px}
+.brand-campaign-18fw .trench-women .container__item-4 {padding:70px 0 200px}
+.brand-campaign-18fw .trench-women .container__item-2 .item-text,
+.brand-campaign-18fw .trench-women .container__item-4 .item-text {float:right;width:545px}
+.brand-campaign-18fw .trench-women .container__item-2 .item-figure,
+.brand-campaign-18fw .trench-women .container__item-4 .item-figure {float:left}
+.brand-campaign-18fw .trench-women .container__item-2 .trench__item,
+.brand-campaign-18fw .trench-women .container__item-4 .trench__item {position:absolute;left:930px;bottom:0}
+.brand-campaign-18fw .trench-women .container__item-2 .trench__item-2,
+.brand-campaign-18fw .trench-women .container__item-4 .trench__item-2 {left:670px}
+.brand-campaign-18fw .trench-women .container__item-1 .trench__item-2,
+.brand-campaign-18fw .trench-women .container__item-3 .trench__item-2 {left:350px}
+.brand-campaign-18fw .trench-women .item-text {float:left}
+.brand-campaign-18fw .trench-women .item-figure {float:right}
+.brand-campaign-18fw .trench-women .trench__item {display:inline-block;position:absolute;text-align:center;left:90px;bottom:0}
+.brand-campaign-18fw .trench-women .trench__link {display:inline-block}
+.brand-campaign-18fw .trench-women .trench-text {margin-top:-5px;padding-top:0}
+.brand-campaign-18fw .trench-women .etc {padding-top:30px}
+.brand-campaign-18fw .trench-women .etc-shop {display:inline-block;border-bottom:1px solid #000;color:#000;font-size:13px;font-weight:800;letter-spacing:.02em}
+.brand-campaign-18fw .trench-women .etc-shop,
+.brand-campaign-18fw .trench-women .main-title {font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';text-align:center}
+.brand-campaign-18fw .trench-women .main-title {padding:125px 0;color:#091431}
+.brand-campaign-18fw .trench-women .main-title--big {padding-bottom:23px;font-size:40px;font-weight:800;line-height:40px}
+.brand-campaign-18fw .trench-women .main-title-summary {padding-bottom:50px;font-size:25px;font-weight:400;letter-spacing:-.075em}
+.brand-campaign-18fw .trench-women .main-title .trench-text {padding-top:100px}
+.brand-campaign-18fw .trench-women .main-title--style {padding-bottom:70px}
+.brand-campaign-18fw .trench-women .item-text-summary {color:#000;font-size:23px;font-weight:300;line-height:27px;letter-spacing:-.075em}
+.brand-campaign-18fw .trench-women .item-text--big {padding:25px 0 35px;color:#000;font-size:34px;font-weight:800;line-height:40px;font-family:'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign-19ss .were-two .hazzys-sub__header {height:629px}
+.brand-campaign-19ss .were-two .hazzys-sub__header-title {padding-top:200px}
+.brand-campaign-19ss .were-two .hazzys-sub__header-title--big {padding-top:40px}
+.brand-campaign-19ss .were-two .hazzys-sub__header-title-text {padding-top:15px;color:#fff;font-size:26px;line-height:26px;letter-spacing:.01em}
+.brand-campaign-19ss .were-two .hazzys-sub__header .campaign-selectbox__link {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.brand-campaign-19ss .were-two .container__box--gray {background:#f5f5f5}
+.brand-campaign-19ss .were-two .container__box--gray:last-child {margin:0 0 140px;}
+.brand-campaign-19ss .were-two .container__item {width:100%;clear:both}
+.brand-campaign-19ss .were-two .container__item .hazzys-container-box {height:746px}
+.brand-campaign-19ss .were-two .container__item-1 {padding-top:130px}
+.brand-campaign-19ss .were-two .container__item-2 {padding:200px 0}
+.brand-campaign-19ss .were-two .container__item-3 {padding-bottom:130px}
+.brand-campaign-19ss .were-two .container__item-4 {padding:70px 0 200px}
+.brand-campaign-19ss .were-two .container__item-2 .item-text,
+.brand-campaign-19ss .were-two .container__item-4 .item-text {float:right;width:545px}
+.brand-campaign-19ss .were-two .container__item-2 .item-figure,
+.brand-campaign-19ss .were-two .container__item-4 .item-figure {float:left}
+.brand-campaign-19ss .were-two .container__item-2 .were__item,
+.brand-campaign-19ss .were-two .container__item-4 .were__item {position:absolute;left:670px;bottom:0}
+.brand-campaign-19ss .were-two .container__item-2 .were__item-2,
+.brand-campaign-19ss .were-two .container__item-4 .were__item-2 {left:930px}
+.brand-campaign-19ss .were-two .container__item-1 .were__item-2,
+.brand-campaign-19ss .were-two .container__item-3 .were__item-2 {left:350px}
+.brand-campaign-19ss .were-two .item-text {float:left}
+.brand-campaign-19ss .were-two .item-figure {float:right}
+.brand-campaign-19ss .were-two .were__item {display:inline-block;position:absolute;text-align:center;left:90px;bottom:0}
+.brand-campaign-19ss .were-two .were__link {display:inline-block}
+.brand-campaign-19ss .were-two .were-summary {padding-top:80px;color:#000;font-size:23px;font-weight:300;line-height:30px;letter-spacing:-.075em}
+.brand-campaign-19ss .were-two .were-title {padding-top:15px;color:#000;font-size:34px;font-weight:800;line-height:40px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign-19ss .were-two .were-text {margin-top:-5px;padding-top:0;color:#000;font-size:16px;line-height:30px;letter-spacing:-.025em}
+.brand-campaign-19ss .were-two .etc {padding-top:30px}
+.brand-campaign-19ss .were-two .etc-shop {display:inline-block;border-bottom:1px solid #000;color:#000;font-size:13px;font-weight:800;letter-spacing:.02em}
+.brand-campaign-19ss .were-two .etc-shop,
+.brand-campaign-19ss .were-two .main-title {font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';text-align:center}
+.brand-campaign-19ss .were-two .main-title {padding:125px 0;color:#091431}
+.brand-campaign-19ss .were-two .main-title--big {padding-bottom:23px;font-size:40px;font-weight:800;line-height:40px}
+.brand-campaign-19ss .were-two .main-title-summary {padding-bottom:50px;font-size:25px;font-weight:400;letter-spacing:-.075em}
+.brand-campaign-19ss .were-two .main-title .were-text {padding-top:100px}
+.brand-campaign-19ss .were-two .main-title--style {padding-bottom:70px}
+.brand-campaign-19ss .were-two .item-text-summary {color:#000;font-size:23px;font-weight:300;line-height:27px;letter-spacing:-.075em}
+.brand-campaign-19ss .were-two .item-text--big {padding:25px 0 35px;color:#000;font-size:34px;font-weight:800;line-height:40px;font-family:'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign-19ss .new-collection .hazzys-sub__header {height:629px}
+.brand-campaign-19ss .new-collection .hazzys-sub__header-title {padding-top:200px}
+.brand-campaign-19ss .new-collection .hazzys-sub__header-title--big {padding-top:40px}
+.brand-campaign-19ss .new-collection .hazzys-sub__header-title-text {padding-top:15px;color:#fff;font-size:26px;line-height:26px;letter-spacing:.01em}
+.brand-campaign-19ss .new-collection .hazzys-sub__header .campaign-selectbox__link {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.brand-campaign-19ss .new-collection .container__box--gray {background:#f5f5f5}
+.brand-campaign-19ss .new-collection .container__box--gray:last-child {margin:0 0 -140px;}/* 2020-06-18 추가 */
+.brand-campaign-19ss .new-collection .container__item {width:100%;clear:both}
+.brand-campaign-19ss .new-collection .container__item .hazzys-container-box {height:746px}
+.brand-campaign-19ss .new-collection .container__item-1 {padding-top:130px}
+.brand-campaign-19ss .new-collection .container__item-2 {padding:200px 0}
+.brand-campaign-19ss .new-collection .container__item-3 {padding-bottom:130px}
+.brand-campaign-19ss .new-collection .container__item-4 {padding:70px 0 200px}
+.brand-campaign-19ss .new-collection .container__item-2 .item-text,
+.brand-campaign-19ss .new-collection .container__item-4 .item-text {float:right;width:545px}
+.brand-campaign-19ss .new-collection .container__item-2 .item-figure,
+.brand-campaign-19ss .new-collection .container__item-4 .item-figure {float:left}
+.brand-campaign-19ss .new-collection .container__item-2 .collection__item,
+.brand-campaign-19ss .new-collection .container__item-4 .collection__item {position:absolute;left:670px;bottom:0}
+.brand-campaign-19ss .new-collection .container__item-2 .collection__item-2,
+.brand-campaign-19ss .new-collection .container__item-4 .collection__item-2 {left:930px}
+.brand-campaign-19ss .new-collection .container__item-1 .collection__item-2,
+.brand-campaign-19ss .new-collection .container__item-3 .collection__item-2 {left:350px}
+.brand-campaign-19ss .new-collection .item-text {float:left}
+.brand-campaign-19ss .new-collection .item-figure {float:right}
+.brand-campaign-19ss .new-collection .collection__item {display:inline-block;position:absolute;text-align:center;left:90px;bottom:0}
+.brand-campaign-19ss .new-collection .collection__link {display:inline-block}
+.brand-campaign-19ss .new-collection .collection-summary {padding-top:80px;color:#000;font-size:23px;font-weight:300;line-height:30px;letter-spacing:-.075em}
+.brand-campaign-19ss .new-collection .collection-title {padding-top:15px;color:#000;font-size:34px;font-weight:800;line-height:40px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign-19ss .new-collection .collection-text {margin-top:-5px;padding-top:0;color:#000;font-size:16px;line-height:30px;letter-spacing:-.025em}
+.brand-campaign-19ss .new-collection .etc {padding-top:30px}
+.brand-campaign-19ss .new-collection .etc-shop {display:inline-block;border-bottom:1px solid #000;color:#000;font-size:13px;font-weight:800;letter-spacing:.02em}
+.brand-campaign-19ss .new-collection .etc-shop,
+.brand-campaign-19ss .new-collection .main-title {font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';text-align:center}
+.brand-campaign-19ss .new-collection .main-title {padding:125px 0;color:#091431}
+.brand-campaign-19ss .new-collection .main-title--big {padding-bottom:23px;font-size:40px;font-weight:800;line-height:40px}
+.brand-campaign-19ss .new-collection .main-title-summary {padding-bottom:50px;font-size:25px;font-weight:400;letter-spacing:-.075em}
+.brand-campaign-19ss .new-collection .main-title + figure {padding-top:57px;}
+.brand-campaign-19ss .new-collection .main-title .collection-text {padding-top:100px}
+.brand-campaign-19ss .new-collection .main-title--style {padding-bottom:70px}
+.brand-campaign-19ss .new-collection .item-text-summary {color:#000;font-size:23px;font-weight:300;line-height:27px;letter-spacing:-.075em}
+.brand-campaign-19ss .new-collection .item-text--big {padding:25px 0 35px;color:#000;font-size:34px;font-weight:800;line-height:40px;font-family:'Noto Sans KR', 'Nanum Gothic'}
+.brand-campaign-19ss .trad .hazzys-sub__header {height:629px}
+.brand-campaign-19ss .trad .hazzys-sub__header-title {padding-top:200px}
+.brand-campaign-19ss .trad .hazzys-sub__header-title--small {color:#000}
+.brand-campaign-19ss .trad .hazzys-sub__header-title--big {padding-top:40px;color:#000}
+.brand-campaign-19ss .trad .hazzys-sub__header-title-text {padding-top:15px;color:#000;font-size:26px;line-height:26px;letter-spacing:.05em}
+.brand-campaign-19ss .trad .hazzys-sub__header .campaign-selectbox {width:226px}
+.brand-campaign-19ss .trad .hazzys-sub__header .campaign-selectbox__title {color:#000;border-bottom:1px solid #222}
+.brand-campaign-19ss .trad .hazzys-sub__header .campaign-selectbox__title:before {background:url(/static/renewal/images/hazzys/common/icon_arrow_campaign_bl_xsmall.png)}
+.brand-campaign-19ss .trad .hazzys-sub__header .campaign-selectbox__ul {border-bottom:1px solid #222}
+.brand-campaign-19ss .trad .hazzys-sub__header .campaign-selectbox__link {color:#000;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.brand-campaign-19ss .trad .brand-campaign__content .hazzys-container-box {padding:130px 0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-1 {text-align:center}
+.brand-campaign-19ss .trad .brand-campaign__content-box-1 .trad__figure-1 {display:block;text-align:center}
+.brand-campaign-19ss .trad .brand-campaign__content-box-1 .trad__text-1 {text-align:center;padding:30px 0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-1 .trad__wrap {display:inline-block}
+.brand-campaign-19ss .trad .brand-campaign__content-box-1 .trad__wrap:after {display:block;clear:both;content:""}
+.brand-campaign-19ss .trad .brand-campaign__content-box-1 .trad__item {float:left;position:inherit;margin:0 4px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-2 {background:#f5f5f5}
+.brand-campaign-19ss .trad .brand-campaign__content-box-2 .trad__text-1 {top:210px;left:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-2 .trad__item-1 {top:500px;left:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-2 .trad__item-2 {top:500px;left:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-2 .trad__item-3 {top:1180px;right:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-2 .trad__item-4 {top:1180px;right:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-2 .trad__figure-1 {padding-left:654px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-2 .trad__figure-2 {padding-top:50px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__item-1 {top:400px;left:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__item-2 {top:400px;left:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__item-3 {top:1180px;right:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__item-4 {top:1180px;right:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__item-5 {bottom:500px;left:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__item-6 {bottom:500px;left:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__item-7 {bottom:180px;left:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__item-8 {bottom:180px;left:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__figure-1 {padding-left:654px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__figure-2 {padding-top:50px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-3 .trad__figure-3 {padding-top:50px;padding-left:654px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 {background:#f5f5f5}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__text-1 {top:130px;left:654px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__item-1 {top:400px;right:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__item-2 {top:400px;right:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__item-3 {top:960px;left:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__item-4 {top:960px;left:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__item-5 {top:1360px;left:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__item-6 {top:1360px;left:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__item-7 {bottom:500px;right:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__item-8 {bottom:500px;right:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__item-9 {bottom:190px;right:280px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__item-10 {bottom:190px;right:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__figure-3 {padding-top:50px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-4 .trad__figure-2 {padding-top:50px;padding-left:654px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-5 .hazzys-container-box {height:1170px;margin-top:-50px;padding:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-5 .campaign-video__movie {padding:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-5 .trad__item-1 {top:670px;left:0}
+.brand-campaign-19ss .trad .brand-campaign__content-box-5 .trad__item-2 {top:670px;left:455px}
+.brand-campaign-19ss .trad .brand-campaign__content-box-5 .trad__item-3 {top:670px;right:0}
+.brand-campaign-19ss .trad .trad__text {position:absolute;font-size:16px;line-height:30px;letter-spacing:-.025em}
+.brand-campaign-19ss .trad .trad__item {display:inline-block;position:absolute;text-align:center}
+.brand-campaign-19ss .trad .etc {padding-top:30px}
+.brand-campaign-19ss .trad .etc-shop {display:inline-block;border-bottom:1px solid #000;color:#000;font-size:13px;font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic';font-weight:600;letter-spacing:.02em}
+.brand-campaign-19ss .trad-title {padding-bottom:15px;color:#000;font-size:30px;font-weight:900;line-height:40px;letter-spacing:-.05em}
+.brand-campaign-19ss .trad-summary {padding:30px 0;color:#000;font-size:16px;font-weight:300;line-height:30px;letter-spacing:-.025em}

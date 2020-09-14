@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/colehaan/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/colehaan/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/colehaan/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/colehaan/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/colehaan/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/colehaan/slick.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/colehaan/ui_style.js"></script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/colehaan/layout.js"></script>
+	<!-- // 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+			<script>headerFn('#header')</script>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="main_area">
+				<div class="full_slide">
+					<button type="button" class="slick-swipe-prev"><span>PREV</span></button>
+					<div class="inner">
+						<div class="slideItem"><a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/colehaan/temp/temp_main_man.jpg" alt=""/></span></a></div>
+					</div>
+					<button type="button" class="slick-swipe-next"><span>NEXT</span></button>
+				</div>
+			</div>
+
+			<div class="main_area02">
+				<div class="bannerList">
+					<div class="full_banner ani">
+						<div class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/colehaan/temp/temp_main03.png" alt=""/></div>
+						<div class="info">
+							<strong class="name">너에게 사뿐사뿐 걸어가</strong>
+							<div class="txt">Dual density 쿠셔닝으로 가장 편한 샌들을 추구합니다.</div>
+							<div class="detailBtn">
+								<a href="#">여성 샌들 구매하기</a>
+							</div>
+						</div>
+					</div>
+					<div class="full_banner ani">
+						<div class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/colehaan/temp/temp_main04.png" alt=""/></div>
+						<div class="info">
+							<strong class="name">Going Somewhere?</strong>
+							<div class="txt">통기성과 유연성을 장착한 ZEROGRAND All-Day Runner가 당신을 그 곳으로 더욱 빠르게 데려다 줍니다.</div>
+							<div class="detailBtn">
+								<a href="#">ZG All-day RUNNER 구매</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+	<!-- //container -->
+
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>footerFn('#footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+
+var mainTopSlideFn = new slickFnc('.main_area .full_slide .inner', {
+	dots : true,
+	prevArrow: ".main_area .slick-swipe-prev",
+	nextArrow: ".main_area .slick-swipe-next",
+	infinite: true,
+	slidesToShow: 1,
+	autoplay: true
+});
+
+var mainSnsSlideFn = new slickFnc('.mainSnsWrap .prod_slide .slide_wrap', {
+	slidesToShow: 5,
+	slidesToScroll: 1
+});
+
+</script>
+
+</body>
+</html>

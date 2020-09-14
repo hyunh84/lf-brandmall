@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+
+<title>CHAMPION</title>
+<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/champion/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/champion/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/champion/app.css" />
+
+<script src="../../../webapp/WEB-INF/static/brandmall/js/champion/jquery-1.9.1.min.js"></script>
+<script src="../../../webapp/WEB-INF/static/brandmall/js/champion/swiper.min.js"></script>
+<script src="../../../webapp/WEB-INF/static/brandmall/js/champion/ui_style.js"></script>
+
+
+<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+<script src="../../../webapp/WEB-INF/static/brandmall/js/champion/layout.js"></script>
+<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="header" >
+		<a href="#" class="btnGoBak"><span>뒤로가기</span></a>
+		<h1 class="logo"><a href="#"><img src="../../../webapp/WEB-INF/static/brandmall/images/champion/logo.png" alt="Champoion" /></a></h1>
+		<div class="utilBox">
+			<button class="btnSearch"><span>검색</span></button>
+			<button class="gnbChampOpen"><span>메뉴</span></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- GNB -->
+	<div class="champGnb">
+		<script type="text/javascript">createGnb('.champGnb');</script>
+	</div>
+	<!-- //GNB -->
+
+	<!-- 검색 팝업 -->
+	<article class="topSearchWrap">
+		<label class="searchIptBox">
+			<input type="text" />
+			<button type="button" class="del"><span>삭제</span></button>
+			<button type="button" class="confirm"><span>검색</span></button>
+		</label>
+		<div class="innerBox">
+			<div class="recomWordBox">
+				<strong>추천 검색어</strong>
+				<ul>
+					<li><a href="#"><em>1</em>키즈 백팩</a></li>
+					<li><a href="#"><em>2</em>조거 팬츠</a></li>
+					<li><a href="#"><em>3</em>모자</a></li>
+					<li><a href="#"><em>4</em>리버스 위브</a></li>
+					<li><a href="#"><em>5</em>후드티셔츠</a></li>
+				</ul>
+			</div>
+			<div class="recomWordBox02">
+				<strong>최근 검색어</strong>
+				<ul>
+					<li><a href="#">조거 팬츠</a></li>
+					<li><a href="#">챔피온 화이트로고 모자</a></li>
+					<li><a href="#">짚업 후드 여성 모노그램</a></li>
+					<li><a href="#">카키 조거팬츠 리버스 위브 남성 스프링시즌 세일 화이트 자수 / 카키 조거팬츠 리버스 위브 남성 스프링시즌 세일 화이트 자수</a></li>
+					<li><a href="#">키즈 양말</a></li>
+				</ul>
+			</div>
+		</div>
+		<button type="button" class="btnSearchClose"></button>
+	</article>
+	<!-- //검색 팝업 -->
+
+	<!-- container -->
+	<section id="container">
+		
+		<div class="contents" >
+		
+			
+		</div>
+
+	</section>
+	<!-- container -->
+
+	<!-- 상단으로 가기 -->	
+	<button type="button" class="btnGoTop"><span>위로가기</span></button>
+	<!-- // 상단으로 가기 -->
+	
+	<!-- bottom quick menu -->
+	<nav class="quickNavWrap">
+		<ul>
+			<li class="home on"><a href="#">홈</a></li>
+			<li class="like"><a href="#">좋아요</a></li>
+			<li class="recent"><a href="#">최근본</a></li>
+			<li class="basket"><a href="#">쇼핑팩</a></li>
+			<li class="my"><a href="#">마이</a></li>
+		</ul>
+	</nav>
+	<!-- bottom quick menu -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="menu">
+			<ul>
+				<li><a href="#;">로그인</a></li>
+				<li><a href="#">PC버전</a></li>
+				<li><a href="#">STORE</a></li>
+				<li><a href="#">공지사항</a></li>
+			</ul>
+		</div>
+		<div class="copyright">
+			<div class="info">
+				<div class="inner">
+					<span>서울 강남구 언주로 870</span>
+					<span>(주)LF</span>
+					<span>대표이사 오규식</span>
+					<br>
+					<span>연락처:1544-5114 (유료)</span>
+					<span>사업자등록번호: 211-87-87724</span>
+					<br>
+					<span>통신판매업신고:제2010-서울강남-00066호</span>
+				</div>
+			</div>
+			<div class="link">
+				<a href="#">소비자피해보상 보험확인</a>
+				<a href="#">사업자 정보확인</a><br> 
+				<a href="#">이용약관</a>
+				<a href="#"><strong>개인정보 처리방침</strong></a>
+					
+			</div>
+			<span class="txt">COPYRIGHT © 1990-2018 TNGT ALL RIGHTS RESERVED.</span>
+		</div>
+	</footer>
+	<!--// footer -->
+</div>
+<!-- //wrap -->
+
+
+<script>
+if($('#header .headCateNav').length) {
+	headCateNaviFnc();
+}
+</script>
+
+</body>
+</html>

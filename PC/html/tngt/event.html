@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/slick.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/ui_style.js"></script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/layout.js"></script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<div class="header_inner">
+			<script>
+				headerFn('#header .header_inner');
+			</script>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="pageTitBox">
+				<h2 class="pageTitle">공지사항</h2>
+			</div>
+
+			<div class="editViewWrap">
+
+<style>
+.tngt_evt190424_bar{display:inline-block;width:1px;height:84px;background:#ffffff;}
+.tngt_evt190424_top_btn{position:fixed;z-index:100;bottom:40px;left:calc(100% - 80px);}
+.tngt_evt190424_topmnu{display:inline-block;width:250px;height:95px;line-height:95px;color:#ffffff;font-size:18px;text-decoration:none;vertical-align:bottom;background:#183b66;}
+.tngt_evt190424_topmnu > span{color:#fcfe79;}
+.tngt_evt190424_img_center{position:absolute;top:0;left:50%;margin-left:-960px;}
+</style>
+				
+				<div style="font-family:'Noto Sans KR',sans-serif;font-size:14px;color:#ffffff;">
+					<div style="min-width:1200px;width:100%;text-align:center;overflow:hidden;">
+						<div style="position:relative;height:810px;">
+							<div class="tngt_evt190424_img_center"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_event_top.png" style="width:1920px;"></div>
+						</div>
+						<!-- MENU START -->
+						<div style="background:#183b66;padding:10px 0;margin-top:-3px;">
+							<a href="javascript:onClickMnu('01');" class="tngt_evt190424_topmnu" style="line-height:23px;"><br><b>박보검 이미지</b><br><span>한정판 마우스 패드 <b>500개</b></span></a>
+						<div class="tngt_evt190424_bar"></div>
+							<a href="javascript:onClickMnu('02');" class="tngt_evt190424_topmnu" style="color: rgb(255, 255, 255); background-color: rgb(24, 59, 102);"><b>여행지원금</b> <span style="color: rgb(252, 254, 121);"><b>50만원</b></span></a>
+						<div class="tngt_evt190424_bar"></div>
+							<a href="javascript:onClickMnu('03');" class="tngt_evt190424_topmnu" style="color: rgb(255, 255, 255); background-color: rgb(24, 59, 102);"><b>박보검</b> <span style="color: rgb(252, 254, 121);">친필싸인 티셔츠 <b>10개</b></span></a>
+						<div class="tngt_evt190424_bar"></div>
+							<a href="javascript:onClickMnu('04');" class="tngt_evt190424_topmnu" style="color: rgb(255, 255, 255); background-color: rgb(24, 59, 102);"><b>디뮤지엄</b> <span style="color: rgb(252, 254, 121);">전시관람권 <b>10개</b></span></a>
+						</div>
+						<div id="id_event_01" style="position:relative;height:643px;">
+							<div class="tngt_evt190424_img_center"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_event01.png" style="width:1920px;"></div>
+						</div>
+						<div id="id_event_02" style="position:relative;height:1036px;vertical-align:top;">
+							<div class="tngt_evt190424_img_center"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_event02.png" style="width:1920px;"></div>
+						</div>
+						<div id="id_event_03" style="position:relative;height:1698px;">
+							<div class="tngt_evt190424_img_center"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_event03.png" style="width:1920px;"></div>
+						</div>
+						<div id="id_event_04" style="position:relative;height:867px;">
+							<div class="tngt_evt190424_img_center"><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_event04.png" style="width:1920px;"></div>
+						</div>
+					</div>
+				</div>
+
+<script language="javascript">
+function onClickTop(){
+	$('html, body').animate({scrollTop : 0}, 400);
+}
+function onClickMnu(p_id){
+	var offset = $("#id_event_" + p_id).offset();
+	$('html, body').animate({scrollTop : offset.top - 110}, 400);
+}
+$(document).ready(function(){
+	$(".tngt_evt190424_topmnu").hover(function(){ 
+		$(this).css("color","#183b66");
+		$(this).find("span").css("color","#183b66");
+		$(this).css("background-color","#fcfe79");
+	}, function(){ 
+		$(this).css("color","#ffffff");
+		$(this).find("span").css("color","#fcfe79");
+		$(this).css("background-color","#183b66");
+	});
+	setInterval(function(){
+		var top = $('html, body').scrollTop();
+		if(top > 800){
+			$("#id_top_btn").show();
+		}else{
+			$("#id_top_btn").hide();
+		}
+	}, 500);
+});
+</script>
+
+			</div>
+
+			<div class="replyWrap">
+				<div class="regReplyBox">
+					<div class="textArea">
+						<textarea>여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다. 여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.</textarea>
+					</div>
+					<div class="btnRegReply">
+						<button type="button" class="confirm">입력</button>
+					</div>
+				</div>
+
+				<div class="viewReplyBox">
+					<div class="replyCount">댓글수 <em class="num">20</em></div>
+
+					<div class="viewReplyList">
+						<ul>
+							<li>
+								<span class="userName">빅토리아</span>
+								<span class="date">2019/03/11</span>
+
+								<div class="replyCont">
+									<div class="replyTxt">
+										여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다. 여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.
+									</div>
+
+									<div class="utilBtn">
+										<button type="button">수정</button>
+										<button type="button">삭제</button>
+									</div>
+								</div>
+
+								<div class="regReplyBox disabled">
+									<div class="textArea">
+										<textarea>여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다. 여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.</textarea>
+									</div>
+									<div class="btnRegReply">
+										<button type="button" class="cancle">취소</button>
+										<button type="button" class="confirm">입력</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="userName">빅토리아</span>
+								<span class="date">2019/03/11</span>
+
+								<div class="replyCont">
+									<div class="replyTxt">
+										여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다. 여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.
+									</div>
+
+									<div class="utilBtn">
+										<button type="button">수정</button>
+										<button type="button">삭제</button>
+									</div>
+								</div>
+
+								<div class="regReplyBox disabled">
+									<div class="textArea">
+										<textarea>여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다. 여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.</textarea>
+									</div>
+									<div class="btnRegReply">
+										<button type="button" class="cancle">취소</button>
+										<button type="button" class="confirm">입력</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="userName">빅토리아</span>
+								<span class="date">2019/03/11</span>
+
+								<div class="replyCont disabled">
+									<div class="replyTxt">
+										여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다. 여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.
+									</div>
+
+									<div class="utilBtn">
+										<button type="button">수정</button>
+										<button type="button">삭제</button>
+									</div>
+								</div>
+
+								<div class="regReplyBox">
+									<div class="textArea">
+										<textarea>여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다. 여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다. 댓글은 최대 1000자 입력이 가능합니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.여기는 이벤트 응원 댓글을 남기는 공간입니다.</textarea>
+									</div>
+									<div class="btnRegReply">
+										<button type="button" class="cancle">취소</button>
+										<button type="button" class="confirm">입력</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<div class="more"><button type="button">이전댓글 보기</button></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pageBtnWrap">
+				<div class="inner">
+					<a href="#" class="prev"><span>이전</span></a>
+					<a href="#" class="list"><span>목록</span></a>
+					<a href="#" class="next"><span>다음</span></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>
+			footerFn('#footer');
+		</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

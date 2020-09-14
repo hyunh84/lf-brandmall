@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/swiper.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/ui_style.js"></script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/layout.js"></script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<div class="header_inner">
+			<script>headerFn('.header_inner', 'PROMOTION');</script>
+		</div>
+		
+		<article class="topSearchWrap">
+			<script>createSearch('.topSearchWrap');</script>
+		</article>
+	</header>
+	<!-- //header -->
+
+	<!-- quick menu -->
+	<nav class="quickNavWrap">
+		<script>createQuickNavFn('.quickNavWrap');</script>
+	</nav>
+	<!-- // quick menu -->
+
+	<!-- GNB -->
+	<nav class="tngtGnbWrap">
+		<script>createGnbFn('.tngtGnbWrap');</script>
+	</nav>
+	<!-- // GNB -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="evtDetailTopWrap">
+				<div class="img"><span><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_poll03.png"></span></div>
+				
+				<div class="evtCopy">
+					<div class="date"><span>2019/02/15</span></div>
+					<strong>TNGT 트렌치코트로 간절기에도 무너지지 않는 스타일 코디</strong>
+				</div>
+				
+				<div class="evtUtilBox">
+					<div class="inner">
+						<button type="button" class="fb"><em>페이스북</em></button>
+						<button type="button" class="kakao"><em>카카오</em></button>
+						<button type="button" class="url"><em>URL</em></button>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="editViewWrap">
+				<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_img_event.png">
+			</div>
+
+			<div class="pageBtnWrap">
+				<div class="inner">
+					<a href="#" class="prev"><span>이전</span></a>
+					<a href="#" class="list"><span>목록</span></a>
+					<a href="#" class="next"><span>다음</span></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>footerFn('#footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+
+<script type="text/javascript">
+var startTouch = {};
+var deltaTouch = {};
+var pollSlideFn = function() {
+	var pollSlideBox = $('.pollSlideBox');
+	var swiperWrapper = $('.swiperWrapper', pollSlideBox);
+	var swiperSlide = $('.swiperSlide', swiperWrapper);
+	var swipeIcon = $('.hand_swipe', swiperSlide);
+	var itemTotlal = swiperSlide.length;
+	var itemDiff = swiperWrapper.outerHeight();
+	var movDiff;
+	var chDiff;
+	var nowIndex = 0;
+	var targetIndex = 0;
+
+	var transitionFn = function(i, diff, speed) {
+		swiperSlide.eq(i).css({
+			'top' : diff,
+			'transition-property' : 'top',
+			'transition-duration' : speed + 'ms' || '600ms',
+			'transition-timing-function' : 'ease'
+		});
+	}
+
+	swiperSlide.bind('transitionend', function() {
+		// if(nowIndex == 0) {
+		// 	swipeIcon.fadeIn();
+		// }else{
+		// 	swipeIcon.hide();
+		// }
+	});
+
+
+	pollSlideBox.bind('touchstart', function(e) {
+		var touches = event.touches[0];
+
+		chDiff = 0;
+		startTouch = {
+			x: touches.pageX,
+			y: touches.pageY
+		};
+
+		var deltaTouch = {};
+	});
+	pollSlideBox.bind('touchmove', function(e) {
+		e.preventDefault();
+		var touches = event.touches[0];
+
+		deltaTouch = {
+			x: touches.pageX - startTouch.x,
+			y: touches.pageY - startTouch.y
+		};
+
+		if(deltaTouch.y > 0 && nowIndex > 0) {
+			// console.log('touchmove down');
+			targetIndex = nowIndex - 1;
+			chDiff = Math.abs(deltaTouch.y) - itemDiff >= 0 ? 0 : Math.abs(deltaTouch.y) - itemDiff;
+			movDiff = 0;
+		}else if(deltaTouch.y < 0 && nowIndex < itemTotlal - 1){
+			// console.log('touchmove up');
+			targetIndex = nowIndex;
+			chDiff = deltaTouch.y;
+			movDiff = itemDiff;
+		}else if(nowIndex == 0){
+			// console.log('nowIndex == 0');
+			targetIndex = nowIndex;
+			movDiff = 0;
+			chDiff = 0;
+		}else if(nowIndex == itemTotlal - 1){
+			// console.log('nowIndex == itemTotlal - 1');
+			targetIndex = nowIndex;
+			movDiff = 0;
+			chDiff = 0;
+		}
+
+		transitionFn(targetIndex, chDiff, 0);
+	});
+	pollSlideBox.bind('touchend', function(e) {
+		e.preventDefault();
+
+		// console.log('touchend movDiff = ', movDiff);
+		if(Math.abs(deltaTouch.y) > 30) {
+			transitionFn(targetIndex, -movDiff, 600);
+			nowIndex = targetIndex;
+		}
+
+		if(deltaTouch.y < 0 && nowIndex < itemTotlal - 1){
+			nowIndex = targetIndex + 1;
+		}else{
+			nowIndex = targetIndex;
+		}
+		swiperSlide.removeClass('active').eq(nowIndex).addClass('active');
+
+	});
+}
+
+pollSlideFn();
+</script>
+
+</body>
+</html>

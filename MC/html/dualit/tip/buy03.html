@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/dualit/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/dualit/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/dualit/app.css" />
+
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/dualit/jquery-1.9.1.min.js"></script>
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/dualit/swiper.min.js"></script>
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/dualit/ui_style.js"></script>
+
+	
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/dualit/layout.js"></script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<div class="header_inner">
+			<script>
+				headerFn('#header .header_inner');
+			</script>
+		</div>
+
+		<!-- GNB -->
+		<nav class="hazzysGnbWrap">
+		<script>
+			createGnbFn('.hazzysGnbWrap');
+		</script>
+		</nav>
+		<!-- // GNB -->
+
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="subCateViewWrap">
+				<div class="inner">
+					<button type="button" class="btnOpenCate">브랜드</button>
+					<div class="cateListBox">
+						<div class="cmtSlideWrap">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide"><a href="#">전체</a></li>
+								<li class="swiper-slide"><a href="#">제품구매 가이드</a></li>
+								<li class="swiper-slide"><a href="#">제품사용 주의사항</a></li>
+								<li class="swiper-slide active"><a href="#">레시피</a></li>
+							</ul>
+						</div>
+						<div class="cmtSlideWrap">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide active"><a href="#">전체</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tipGuideWrap">
+				<div class="inner">
+					<div class="tipVisualTopWrap">
+						<span class="cate">커피머신</span>
+						<strong class="tit">딱 맞는 커피머신 고르기</strong>
+						<div class="desc">
+							커피머신 구매 시, 선호하는 커피 종류, 사용빈도,<br />그리고 추출량 등을 고려할 필요가 있다.
+						</div>
+
+						<span class="img">
+							<img src="../../../webapp/WEB-INF/static/brandmall/images/dualit/tip/tip_top_visual_buy03.png" alt="" />
+						</span>
+
+					</div>
+
+					<div class="tipInfoWrap">
+						<dl class="infoBox03">
+							<dt>종류 </dt>
+							<dd>
+								<span class="tit">전자동 커피머신</span>
+								<div class="txt">원두를 분쇄한 후 자동으로 눌러담아 컵에 에스프레소를 내려주는 커피머신이다.</div>
+							</dd>
+							<dd>
+								<span class="tit">에스프레소 커피머신</span>
+								<div class="txt">
+									뜨거운 물을 정확한 압력으로 필터를 통해 내려 풍부하고 진한 크리마가 담긴 완벽한 에스프레소를 만들어낸다.<br />
+									이미 분쇄된 커피를 사용하거나 그라인더가 있다면 원두를 사서 직접 분쇄해도 된다.<br />
+									에스프레소 머신에 따라 라떼와 카푸치노용 밀크 스티밍(steaming)과 프로딩(frothing)기능이 있는 경우 커피 선택의 폭이 더 다양해진다.
+								</div>
+							</dd>
+							<dd>
+								<span class="tit">필터 커피머신</span>
+								<div class="txt">
+									커피머신이 물을 가열해 분쇄된 커피가 채워진 필터로 내린다.<br />
+									물이 아래에 있는 유리 용기에 떨어져 모이면 유리 용기를 들어 블랙 커피를 따른다.<br />
+									유리 용기는 보통 핫 플레이트 위에 놓여 있어 보온이 유지된다.
+								</div>
+							</dd>
+							<dd>
+								<span class="tit">포드(Pod) 또는 캡슐 머신</span>
+								<div class="txt">
+									포드나 캡슐 머신은 커피 원두를 미리 갈아 담은 캡슐을 사용한다.
+									커피머신이 캡슐을 찢고 뜨거운 물을 가해 커피를 추출한다.
+									구매하는 커피머신에 따라 호환되는 캡슐이 특정 브랜드로 제한될 수도 있다.
+								</div>
+							</dd>
+						</dl>
+						<dl class="infoBox04">
+							<dt>출력</dt>
+							<dd>
+								와트(W)로 표시된 커피머신의 출력이 높을 수록 물을 더 빨리 끓일 수 있다.
+							</dd>
+						</dl>
+						<dl class="infoBox04">
+							<dt>자동 전원차단</dt>
+							<dd>
+								일정 시간 사용하지 않을 경우 커피 머신이 자동으로 꺼져 전력 사용량을 절감하고 기계 고장을 방지하는데 도움이 된다.
+							</dd>
+						</dl>
+						<dl class="infoBox04">
+							<dt>스팀 파이프</dt>
+							<dd>
+								스팀 파이프나 프로더(frother)가 장착되어 있으면 마끼아또, 카푸치노 및 라떼 등 다양한 커피를 즐길 수 있다.
+							</dd>
+						</dl>
+						<dl class="infoBox04">
+							<dt>발열 소자</dt>
+							<dd>
+								커피숍에서처럼 많은 양의 물을 가열해야 하는 커피머신 시스템에는 보통 보일러가 장착되어 있다.<br />
+								서모블록 가열 시스템은 최적 온도(90~95°C)로 물을 빠르게 가열한다.
+								서모블록 시스템은 물 가열이나 스팀 발생 기능을 모두 지원할 수 있다.
+							</dd>
+						</dl>
+						<dl class="infoBox04">
+							<dt>사용 편의성</dt>
+							<dd>
+								커피를 가장 빠르게 내리는 방법은 포드(Pod)와 캡슐 머신이다.
+								커피 제조 프로그램을 선택할 수 있고 터치 버튼으로 컵 크기를 선택할 수있는 자동 머신이 작동하기가 더 쉽고 빠르다.
+							</dd>
+						</dl>
+						<dl class="infoBox04">
+							<dt>크기와 무게</dt>
+							<dd>
+								커피머신의 크기는 다양하지만, 보통 캡슐 머신의 크기가 더 작다.
+								전자동 커피머신 등 일부 제품은 무거워서 옮기기 쉽지 않음을 유의해야 한다.
+							</dd>
+						</dl>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="itemListWrap02">
+				<strong class="tit">국문 English 공백 포함 30자 최대 2줄 노출 국문 English 공백 포함 30자 최대 2줄 노출</strong>
+				<div class="inner">
+					<ul>
+						<li>
+							<a href="#" class="prdCardBox">
+								<span class="img">
+									<img src="../../../webapp/WEB-INF/static/brandmall/images/dualit/temp/temp_product01.jpg">
+								</span>
+								<div class="info">
+									<span class="name">한글 English 공백 포함 22자 2줄 노출 그 이상은 한글 English 공백 포함 22자 2줄 노출 그 이상은</span>
+									<span class="price">
+										<b class="per">28%</b>
+										<em class="sale">351,200</em>
+										<span class="net">439,000</span>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="prdCardBox">
+								<span class="img">
+									<img src="../../../webapp/WEB-INF/static/brandmall/images/dualit/temp/temp_product02.jpg">
+								</span>
+								<div class="info">
+									<span class="name">한글 English 공백 포함 22자 2줄 노출 그 이상은 한글 English 공백 포함 22자 2줄 노출 그 이상은</span>
+									<span class="price">
+										<b class="per">28%</b>
+										<em class="sale">351,200</em>
+										<span class="net">439,000</span>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="prdCardBox">
+								<span class="img">
+									<img src="../../../webapp/WEB-INF/static/brandmall/images/dualit/temp/temp_product03.jpg">
+								</span>
+								<div class="info">
+									<span class="name">한글 English 공백 포함 22자 2줄 노출 그 이상은 한글 English 공백 포함 22자 2줄 노출 그 이상은</span>
+									<span class="price">
+										<b class="per">28%</b>
+										<em class="sale">351,200</em>
+										<span class="net">439,000</span>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="prdCardBox">
+								<span class="img">
+									<img src="../../../webapp/WEB-INF/static/brandmall/images/dualit/temp/temp_product04.jpg">
+								</span>
+								<div class="info">
+									<span class="name">한글 English 공백 포함 22자 2줄 노출 그 이상은 한글 English 공백 포함 22자 2줄 노출 그 이상은</span>
+									<span class="price">
+										<b class="per">28%</b>
+										<em class="sale">351,200</em>
+										<span class="net">439,000</span>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="prdCardBox">
+								<span class="img">
+									<img src="../../../webapp/WEB-INF/static/brandmall/images/dualit/temp/temp_product01.jpg">
+								</span>
+								<div class="info">
+									<span class="name">한글 English 공백 포함 22자 2줄 노출 그 이상은 한글 English 공백 포함 22자 2줄 노출 그 이상은</span>
+									<span class="price">
+										<b class="per">28%</b>
+										<em class="sale">351,200</em>
+										<span class="net">439,000</span>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="prdCardBox">
+								<span class="img">
+									<img src="../../../webapp/WEB-INF/static/brandmall/images/dualit/temp/temp_product02.jpg">
+								</span>
+								<div class="info">
+									<span class="name">한글 English 공백 포함 22자 2줄 노출 그 이상은 한글 English 공백 포함 22자 2줄 노출 그 이상은</span>
+									<span class="price">
+										<b class="per">28%</b>
+										<em class="sale">351,200</em>
+										<span class="net">439,000</span>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="prdCardBox">
+								<span class="img">
+									<img src="../../../webapp/WEB-INF/static/brandmall/images/dualit/temp/temp_product03.jpg">
+								</span>
+								<div class="info">
+									<span class="name">한글 English 공백 포함 22자 2줄 노출 그 이상은 한글 English 공백 포함 22자 2줄 노출 그 이상은</span>
+									<span class="price">
+										<b class="per">28%</b>
+										<em class="sale">351,200</em>
+										<span class="net">439,000</span>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="prdCardBox">
+								<span class="img">
+									<img src="../../../webapp/WEB-INF/static/brandmall/images/dualit/temp/temp_product04.jpg">
+								</span>
+								<div class="info">
+									<span class="name">한글 English 공백 포함 22자 2줄 노출 그 이상은 한글 English 공백 포함 22자 2줄 노출 그 이상은</span>
+									<span class="price">
+										<b class="per">28%</b>
+										<em class="sale">351,200</em>
+										<span class="net">439,000</span>
+									</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>
+			footerFn('#footer');
+		</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+<script type="text/javascript">
+subCategorySlide();
+</script>
+</body>
+</html>

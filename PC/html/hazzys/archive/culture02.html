@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name02="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/hazzys/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/hazzys/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/hazzys/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/hazzys/app.css" />
+	
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/hazzys/jquery-1.9.1.min.js"></script>
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/hazzys/slick.min.js"></script>
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/hazzys/ui_style.js"></script>
+	
+	<!-- archive 개편 -->
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/hazzys/archive.css" />
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/hazzys/jquery.masonry.min.js"></script>
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/hazzys/archive_style.js"></script>
+	<!-- //archive 개편 -->
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/hazzys/layout.js"></script>
+	<!-- // 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body id="hazzys-archive">
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header" class="v02">
+		<div class="header_inner">
+			<script>headerFn('.header_inner')</script>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="hazzys-archive-contents">
+
+				<!-- archive - top visual -->
+				<div class="topVisualWrap" style="background-image:url('../../../webapp/WEB-INF/static/brandmall/images/hazzys/archive/top_visual_archive03.jpg');">
+					<div class="descript"><em>CULTURE</em> British Style, For your Urban Life</div>
+				</div>
+				<!-- // archive - top visual -->
+				
+				<!-- archive - tab -->
+				<div class="archiveTabWrap">
+					<ul>
+						<li><a href="#">FASHION COLLABORATION</a></li>
+						<li class="active"><a href="#">ART COLLABORATION</a></li>
+					</ul>
+				</div>
+				<!-- // archive - tab -->
+
+				<!-- archive-tab-contents -->
+				<div class="archive-tab-contents">
+					
+					<div class="archive-title-box">
+						<strong>ART COLLABORATION</strong>
+					</div>
+					
+					<div class="archive-list-wrap">
+						<ul class="grid">
+							<li class="grid-item">
+								<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/archive/art_collaboration01.jpg" alt="" />
+								<a href="#" data-layer-key="art_collaboration01"><span>헤지스 신진작가 공모전</span></a>
+							</li>
+							<li class="grid-item">
+								<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/archive/art_collaboration02.jpg" alt="" />
+								<a href="#" data-layer-key="art_collaboration02"><span>HAZZYS X UV ,정재형, 유희열</span></a>
+							</li>
+							<li class="grid-item">
+								<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/archive/art_collaboration03.jpg" alt="">
+								<a href="#" data-layer-key="art_collaboration03"><span>HAZZYS x문학동네</span></a>
+							</li>
+							<li class="grid-item">
+								<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/archive/art_collaboration04.jpg" alt="" />
+								<a href="#" data-layer-key="art_collaboration04"><span>HAZZYS CULTURE CLUB</span></a>
+							</li>
+							<li class="grid-item">
+								<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/archive/art_collaboration05.jpg" alt="" />
+								<a href="#" data-layer-key="art_collaboration05"><span>런던 아트 프로젝트</span></a>
+							</li>
+							<li class="grid-item">
+								<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/archive/art_collaboration06.jpg" alt="" />
+								<a href="#" data-layer-key="art_collaboration06"><span>A Story of Shine on CLASSIC</span></a>
+							</li>
+							<li class="grid-item">
+								<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/archive/art_collaboration07.jpg" alt="" />
+								<a href="#" data-layer-key="art_collaboration07"><span>위대한 탄생</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // archive-tab-contents -->
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>footerFn('#footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+
+<!-- Archive - script -->
+<script type="text/javascript">
+	$(window).load(function() {
+		$('.grid').masonry({
+			itemSelector: '.grid-item',
+			gutter : 20
+		});
+	});
+	
+	/* 패션 콜라보 - 팝업 내용 */
+	var archiveLayerInfo = {
+		'art_collaboration01' : {
+			'title' : '헤지스 신진작가 공모전'
+			, 'desc' : '창조적인 영감과 열정 넘치는 신진작가를 발굴하고 그들의 작품 활동을 지지하기 위해 신진작가 공모전을 개최했다. 2011년과 2012년 두 해에 걸쳐 개최한 신진작가 공모전에는 순수미술, 팝아트, 포토그래피, 일러스트, 설치미술, 건축, 디지털 영상 등 장르를 불문하고 다양한 영역에서 활동하는 보석같은 작가들이 참여했다. 1등 수상 작가인 이의연과 차미란은 헤지스 런던 레시던시 프로그램에 참여해 전세계 작가들과 교류하며 작품활동을 계속하는 한편 런던에서의 문화 경험에서 영감 받은 헤지스 아이템들을 출시하기도 했다. 2011년 1기 신진작가 공모전 수상 작가는 이의연, 박진숙, 신아미, 강은수 2012년 2기 수상 작가는 차미란, 김수지, 조은이, 이지원이 선정됐다.'
+			, 'image' : ['art_collaboration01_01.jpg', 'art_collaboration01_02.jpg', 'art_collaboration01_03.jpg', 'art_collaboration01_04.jpg', 'art_collaboration01_05.jpg']
+		},
+		'art_collaboration02' : {
+			'title' : 'HAZZYS X UV ,정재형, 유희열'
+			, 'desc' : 'UV, 유희열, 정재형이 헤지스와 만나 유쾌한 감성의 브랜디드 뮤직 콘텐츠를 만들어 냈다. 영국에서 올 로케로 촬영한 뮤직 비디오 ‘Who am I’는 UV 특유의 B 급 유머코드와 유희열, 정재형의 피처링에 힙입어 각 종 음원 차트에서 1위를 차지하는 기염을 토했다. 네 명의 뮤지션이 만들어 내는 런던 감성의 음악과 뮤직비디오는 헤지스가 추구하는 클래식 감성의 쿨 트위스트와 만나 재기발랄한 감성을 선보였고 이들과 함께한 패션화보에서 그들의 유쾌한 매력은 더욱 빛난다. 앞선 감각의 10대에서부터 40대 고객까지 폭 넓은 사랑과 지지를 받은 덕에 네이버, 네이트 등 포털 검색어 1위에 헤지스 이름을 올리기도 했다.'
+			, 'image' : ['art_collaboration02_01.jpg', 'art_collaboration02_02.jpg', 'art_collaboration02_03.jpg', 'art_collaboration02_04.jpg', 'art_collaboration02_05.jpg', 'art_collaboration02_06.jpg']
+		},
+		'art_collaboration03' : {
+			'title' : 'HAZZYS x문학동네'
+			, 'desc' : '헤지스 명동 플래그십 스토어 ‘스페이스  H’는 쇼핑과 문화를 동시에 즐길 수 있는 복합문화 플레이스다. 1층에 자리한 문학동네의 북카페 ‘카페콤마’와 헤지스의 협업은 김영하, 은희경, 이현호 등을 비롯한 당대 최고의 소설가와 시인의 북토크로 탄생했다. 2018년 12월, 박준, 김민정 시인의 낭독회로 시작한 스페이스 H 북토크는 광고인, 인문학자 등으로 스피커의 범위를 점차 넓혀가며 매월 1회씩 현대인의 지적 욕망을 다채롭게 채워주고 있다.'
+			, 'image' : ['art_collaboration03_01.jpg', 'art_collaboration03_02.jpg', 'art_collaboration03_03.jpg', 'art_collaboration03_04.jpg', 'art_collaboration03_05.jpg']
+		},
+		'art_collaboration04' : {
+			'title' : 'HAZZYS CULTURE CLUB'
+			, 'desc' : '헤지스 컬처클럽은 브랜드가 지향하는 가치와 문화를 오롯이 즐기며 브랜드를 특별히 경험하고 그 경험을 나누는 클럽이다. 2007년 9월, 헤지스 컬처 클럽 1기 발대식을 시작으로 2012년까지 총 9개 기수와 헤지스 컬처 플러스팀이 활동했으며, 헤지스 컬처클럽 1기 모집 때에는 100명 선발에 5천명이 훌쩍 넘는 숫자가 지원해 홈페이지가 일시적으로 다운되는 등 잠재고객의 열렬한 지지를 받았다. 50:1의 경쟁률을 뚫고 선발된 클럽 멤버들은 브랜드가 추구하는 브리티시 컬처 체험-로잉, 승마, 아트체험, 애프터눈 티문화, 영국 영화 관람-과 사회공헌 활동, 패션 화보 촬영, 출사 여행 등을 즐기며 헤지스 스타일을 깊이 있게 경험하고 품평회 참석을 통해 다음 시즌 출시될 헤지스를 가장 먼저 만나보는 기회를 가졌다. 헤지스 컬처클럽의 다양한 활동 내역은 네이버 까페에서 만나볼 수 있다.'
+			, 'image' : ['art_collaboration04_01.jpg', 'art_collaboration04_02.jpg', 'art_collaboration04_03.jpg', 'art_collaboration04_04.jpg', 'art_collaboration04_05.jpg', 'art_collaboration04_06.jpg', 'art_collaboration04_07.jpg', 'art_collaboration04_08.jpg', 'art_collaboration04_09.jpg', 'art_collaboration04_10.jpg']
+		},
+		'art_collaboration05' : {
+			'title' : '런던 아트 프로젝트'
+			, 'desc' : '문화 올림픽을 표방한 ‘2012 런던올림픽’을 기념하고 영국여왕 즉위60주년 다이아몬드 쥬빌레를 축하하기 위해 ‘헤지스 런던 아트 프로젝트’를 진행했다. 헤지스는 한국의 유망 작가들이 전세계 아티스트와 교류하며 자유로운 창작활동에 매진할 수 있도록 런던 중심가에 위치한 알링턴하우스에 ‘헤지스 아트 스튜디오’를 열었다. 미술 작가 이기일과 김아영, 이중근, 김하영, 노석미, 이의연, 차미란을 비롯해 배우 유아인이 헤지스의 후원 속에 런던 알링턴하우스에 체류하며 런던과 런던 올림픽, 그리고 헤지스에서 영감 받은 작업을 이어갔다. 레지던시 프로그램에 참여한 작가들의 작품은 헤지스의 의류와 악세서리, 다양한 굿즈로 제작되었으며, 리미티드 에디션으로 출시되자마자 완판 기록을 세웠다. 배우 유아인이 현대 미술 작가 이기일과 함께 전세계에서 참여한 에너지 넘치는 작가들과 교감하며 경험한 특별한 런던 체험기는 M-net의 <런치 마이 라이프>로 방송되었다.'
+			, 'image' : ['art_collaboration05_01.jpg', 'art_collaboration05_02.jpg', 'art_collaboration05_03.jpg', 'art_collaboration05_04.jpg', 'art_collaboration05_05.jpg', 'art_collaboration05_06.jpg']
+		},
+		'art_collaboration06' : {
+			'title' : 'A Story of Shine on CLASSIC'
+			, 'desc' : '헤지스가 추구하는 가치와 라이프스타일을 한 권의 스토리 북으로 만들어냈다. 전통에 기반하여 보다 현대적인 가치를 제안하는 스타일리시 트래디셔널 캐쥬얼을 표현한 ‘Shine on Classic’. 일러스트 작가 김지혁은 클래식한 전통에 기반한 브랜드 헤지스를, ‘헤지스 샤인 피플’의 12가지 이야기와 라이프스타일로 표현했다.'
+			, 'image' : ['art_collaboration06_01.jpg', 'art_collaboration06_02.jpg', 'art_collaboration06_03.jpg', 'art_collaboration06_04.jpg', 'art_collaboration06_05.jpg']
+		},
+		'art_collaboration07' : {
+			'title' : '위대한 탄생'
+			, 'desc' : 'MBC <스타오디션- 위대한 탄생>과 헤지스가 함께 했다. <위대한 탄생>에 출연한 응시자들은 자신의 개성에 어울리는 헤지스로 스타일링하고 무대에 올랐으며, TOP 7까지 올라간 참여자들은 스페셜 화보 촬영도 함께 했다. <위대한 탄생2>에 출연한 TOP 10 후보들은 헤지스 명동 플래그십 ‘1만번째 고객 방문 이벤트’에도 참여하여 팬들과 뜻 깊은 시간을 가졌다.'
+			, 'image' : ['art_collaboration07_01.jpg', 'history_pop2012_02_02.jpg', 'history_pop2012_02_03.jpg', 'history_pop2012_02_04.jpg', 'history_pop2012_02_05.jpg', 'history_pop2012_02_06.jpg']
+		}
+		
+	}
+	/* // 패션 콜라보 - 팝업 내용 */
+
+</script>
+<!-- // Archive - script -->
+
+</body>
+</html>

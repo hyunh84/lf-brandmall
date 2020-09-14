@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/hazzys/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/hazzys/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/hazzys/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/hazzys/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/hazzys/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/hazzys/slick.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/hazzys/ui_style.js"></script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/hazzys/layout.js"></script>
+	<!-- // 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header" class="v02">
+		<div class="header_inner">
+			<script>headerFn('.header_inner')</script>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="subVisualWrap">
+				<div class="visual">
+					<span class="img"><img src="http://www.hazzys.com/upload/editor/5646e05d036749139057afb5239b0e83.jpg" alt=""/></span>
+				</div>
+			</div>
+
+			<div class="LBookWrwap">
+				<div class="full_slide">
+					<button type="button" class="slick-swipe-prev"><span>PREV</span></button>
+					<div class="inner">
+						<div class="slideItem"><a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_lookbook01.jpg"/></span></a></div>
+						<div class="slideItem"><a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_lookbook02.jpg"/></span></a></div>
+						<div class="slideItem"><a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_lookbook03.jpg"/></span></a></div>
+					</div>
+					<button type="button" class="slick-swipe-next"><span>NEXT</span></button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>footerFn('#footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+var lookbookSlide = new slickFnc('.LBookWrwap .full_slide .inner', {
+	prevArrow: ".slick-swipe-prev",
+	nextArrow: ".slick-swipe-next",
+	infinite: true,
+	slidesToShow: 1,
+	autoplay: true
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+@charset "utf-8";
+@import url("font.css");
+
+/**********************************************************
+	상품상세 및 마이페이지 공통하면 reset 필요 내용 layout.css에 선언
+**********************************************************/
+body, pre, textarea, select, button, input {font-family:'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif;}
+strong {font-weight:800;}
+a {color:#030303;}
+::-webkit-input-placeholder {color:#ccc;}
+:-ms-input-placeholder {color:#ccc;}
+::placeholder {color:#ccc;}
+input::-ms-clear{display:none;}
+input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !important;pointer-events:none;position:absolute;right:0;}
+
+#wrap {overflow:hidden;position:relative;min-height:100%;}
+#wrap.pop {height:100%;overflow:hidden;}
+
+/**********************************************************
+	BRAND MALL - LAYOUT
+**********************************************************/
+/* header */
+#header {position:fixed;top:0;left:0;right:0;z-index:260;}
+
+#header .top_banner {position:relative;height:50px;}
+#header .top_banner a {display:block;padding:0 20px;}
+#header .top_banner a .tit {display:inline-block;overflow:hidden;max-width:60vw;line-height:50px;font-size:12px;font-weight:500;color:#000;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;}
+#header .top_banner a .more {display:inline-block;position:relative;padding:0 7px 0 0;font-size:9px;color:#000;vertical-align:middle;border-bottom:1px solid #000;}
+#header .top_banner a .more:after {display:block;content:"";position:absolute;right:0;top:50%;width:4px;height:6px;margin:-3px 0 0;background:url('../../images/dualit/btn_more_arrow.png') no-repeat center;background-size:100% auto;}
+#header .top_banner button {position:absolute;right:0;top:0;width:50px;height:50px;background:url('../../images/dualit/btn_close01.png') no-repeat center;background-size:15px auto;}
+#header .top_banner button span {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+
+#header .header_inner {position:relative;background-color:#000;z-index:1;}
+#header .header_inner:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;line-height:0;}
+#header .header_inner .logo {height:60px;text-align:center;}
+#header .header_inner .logo a {display:inline-block;width:104px;height:60px;vertical-align:top;background:url('../../images/dualit/gnb-logo.png') no-repeat center;background-size:auto 20px;}
+#header .header_inner .logo a em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+
+#header .btnGnb {position:absolute;left:0;top:0;width:60px;height:60px;}
+#header .btnGnb:before {display:block;content:"";position:absolute;left:50%;top:50%;width:26px;height:2px;margin:-1px 0 0 -15px;border:2px solid #000;border-top:none;background-color:#fff;transform-origin:center 1px;transform:rotate(0);transition:transform .8s ease;}
+#header .btnGnb:after {display:block;content:"";position:absolute;left:50%;top:50%;width:26px;height:2px;margin:-1px 0 0 -15px;border:2px solid #000;border-top:none;background-color:#fff;transform-origin:center 1px;transform:rotate(0);transition:transform .8s ease;}
+#header .btnGnb span {display:block;position:absolute;left:50%;top:50%;width:26px;height:20px;margin:-10px 0 0 -13px;}
+#header .btnGnb span:before {display:block;content:"";position:absolute;left:50%;top:0;width:26px;height:2px;background-color:#fff;transform:translate(-50%, 0);transition:width 0.6s ease;}
+#header .btnGnb span:after {display:block;content:"";position:absolute;left:50%;bottom:0;width:26px;height:2px;background-color:#fff;transform:translate(-50%, 0);transition:width 0.6s ease;}
+#header .btnGnb span em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+#header .header_inner .btnCart {position:absolute;top:0;right:0;width:60px;height:60px;background:url('../../images/dualit/btn_cart.png') no-repeat center;background-size:24px auto;}
+#header .header_inner .btnCart em {position:absolute;left:50%;top:24px;font-size:11px;font-weight:500;color:#fff;transform:translate(-50%, 0);}
+#header .header_inner .btnCart span {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+
+#header.gnbOpen .top_banner {display:none !important;}
+#header.gnbOpen .btnGnb {left:auto;right:0}
+#header.gnbOpen .btnGnb:before {transform:rotate(45deg);}
+#header.gnbOpen .btnGnb:after {transform:rotate(-45deg);}
+#header.gnbOpen .btnGnb span:before {width:0;}
+#header.gnbOpen .btnGnb span:after {width:0;}
+#header.gnbOpen .btnCart {display:none;}
+
+/* gnb */
+.dualitGnbWrap {display:none;overflow:hidden;position:fixed;top:0;left:0;right:0;height:0;box-sizing:border-box;height:100%;padding:60px 0 0;text-align:center;background-color:#fff;}
+.dualitGnbWrap.subOpen {z-index:2;}
+.dualitGnbWrap .mainGnb {overflow-x:hidden;overflow-y:auto;position:relative;height:100%;}
+.dualitGnbWrap .mainGnb .gnbList {position:relative;min-height:100%;}
+.dualitGnbWrap .mainGnb .gnbList > ul {padding:60px 0 70px;}
+.dualitGnbWrap .mainGnb .gnbList > ul > li {margin:30px 0 0;}
+.dualitGnbWrap .mainGnb .gnbList > ul > li:first-child {margin:0;}
+.dualitGnbWrap .mainGnb .gnbList > ul > li > a {display:block;padding:10px 0;color:#0a253e;font-size:15px;font-weight:700;letter-spacing:.05em;}
+.dualitGnbWrap .mainGnb .gnbList .gnbUtil {position:absolute;left:0;right:0;bottom:0;height:50px;}
+.dualitGnbWrap .mainGnb .gnbList .gnbUtil a {display:inline-block;position:relative;width:100px;line-height:50px;font-size:14px;color:#888;}
+.dualitGnbWrap .mainGnb .gnbList .gnbUtil a + a:after {display:block;content:"";position:absolute;left:-2px;top:50%;width:1px;height:14px;margin:-7px 0 0;background-color:#888;}
+.dualitGnbWrap .subGnb {overflow-x:hidden;overflow-y:auto;position:fixed;left:-100%;top:0;bottom:0;width:100%;background-color:#fff;z-index:2;transition:left .6s ease;}
+.dualitGnbWrap .subGnb strong {display:block;position:absolute;left:0;right:0;top:0;height:60px;line-height:60px;font-size:17px;font-weight:500;letter-spacing:1.7px;color:#fff;background-color:#000;}
+.dualitGnbWrap .subGnb > ul {padding:60px 0 70px;}
+.dualitGnbWrap .subGnb > ul > li {margin:30px 0 0;}
+.dualitGnbWrap .subGnb > ul > li a {display:block;padding:10px 0;color:#0a253e;font-size:15px;font-weight:700;color:#000;letter-spacing:.05em;}
+.dualitGnbWrap .subGnb .btnGnbPrev {position:absolute;left:0;top:0;width:60px;height:60px;}
+.dualitGnbWrap .subGnb .btnGnbPrev:after {display:block;content:"";position:absolute;left:50%;top:50%;width:12px;height:12px;border-left:2px solid #fff;border-top:2px solid #fff;transform-origin:center;transform:translate(-50%, -50%) rotate(-45deg);}
+.dualitGnbWrap .subGnb .btnGnbPrev em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+.dualitGnbWrap .subGnb .btnGnbClose {position:absolute;right:0;top:0;width:60px;height:60px;}
+.dualitGnbWrap .subGnb .btnGnbClose:before {display:block;content:"";position:absolute;left:50%;top:50%;width:26px;height:2px;border:2px solid #000;border-top:none;background-color:#fff;transform-origin:center 1px;transform:translate(-50%, -50%) rotate(45deg);}
+.dualitGnbWrap .subGnb .btnGnbClose:after {display:block;content:"";position:absolute;left:50%;top:50%;width:26px;height:2px;border:2px solid #000;border-top:none;background-color:#fff;transform-origin:center 1px;transform:translate(-50%, -50%) rotate(-45deg);}
+.dualitGnbWrap .subGnb .btnGnbClose em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+
+#container {padding:60px 0;}
+
+/* footer */
+#footer {padding:0;background-color:#383838;}
+#footer .menu {position:relative;background-color:#404040;}
+#footer .menu ul {overflow:hidden;}
+#footer .menu li {position:relative;float:left;width:25%;}
+#footer .menu li a {display:block;height:20px;padding:15px 0;font-size:13px;color:#fff;text-align:center;line-height:20px;}
+#footer .menu li:before {position:absolute;top:18px;left:0;width:1px;height:14px;background-color:#5c5c5c;content:'';}
+#footer .menu li:first-child:before {display:none;}
+#footer .copyright {padding:20px;}
+#footer .copyright .info {overflow:hidden;}
+#footer .copyright .info .inner {margin:0 -5px;}
+#footer .copyright .info span {display:inline-block;position:relative;height:14px;padding:0 5px;font-size:12px;color:#9b9b9b;line-height:14px;white-space:nowrap;}
+#footer .copyright .info span:before {position:absolute;top:3px;left:-1px;width:1px;height:9px;background-color:#585858;content:'';}
+#footer .copyright .link {margin-top:15px;}
+#footer .copyright .link a {display:inline-block;position:relative;height:12px;margin:10px 0;padding:0 8px;font-size:12px;color:#e1e1e1;line-height:10px;letter-spacing:-0.3px;}
+#footer .copyright .link a:before {position:absolute;top:2px;left:-2px;width:1px;height:9px;background-color:#585858;content:'';}
+#footer .copyright .link a:first-child,
+#footer .copyright .link br + a {padding-left:0;}
+#footer .copyright .link a:first-child:before,
+#footer .copyright .link br + a:before {display:none;}
+#footer .copyright .txt {display:block;margin-top:15px;margin-bottom:7px !important;font-size:12px !important;color:#7f7f7f !important;line-height:16px;}
+
+/**********************************************************
+	LF MALL 사용 화면
+**********************************************************/
+/* 브랜드몰 공통화면 */
+.dualit .ui_header {display: none !important;}
+.dualit #header .logo {float:none;width:auto;margin:0 auto;}
+.dualit #header nav.dualitGnbWrap {background:#fff;z-index:0;}
+.dualit #header nav.dualitGnbWrap ul {display:block;height:auto;}
+.dualit #header nav.dualitGnbWrap ul li {display:block;}
+
+/* 주문배송조회 */
+.dualit .lf_tab_block_new {top:55px;}
+.dualit #contents {margin:111px 0 0;padding:10px 0 0;background-color:#eee;}
+.dualit #contents #container {padding:0;}
+.dualit #contents .search-box02 {padding:10px;}
+
+/*주문취소 */
+.dualit #contents.orderStep {background-color:#fff;}
+
+/* 보유쿠폰 */
+.dualit .lf_tab_block_new + #contents {margin:111px 0 50px !important;}
+
+/* 최근본상품 / 위시리스트 */
+.dualit .roll-content-area {margin:111px 0 0 !important;}
+.dualit #combine-order-wrap {margin:55px 0 0 !important;}
+
+/* 상품평 */
+.dualit .productContents .roll-content-area {margin:10px 0 !important;}
+
+/* 이용약관 팝업 */
+.dualit #pop-wrap #wrapper #container {padding:0;}
+.dualit #pop-wrap #wrapper #container .terms_area {padding:50px 20px;}
+
+/* 회원정보 */
+.dualit #wrapper .lf_2829 .myinfo-area {margin:55px 0 0 !important;}
+.login_area .btn {border:1px solid #242424 !important; background-color:#242424 !important;}
+
+/* 상품평 */
+.dualit .mypage-user-review {padding-top: 61px !important;}

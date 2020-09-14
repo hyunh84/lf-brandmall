@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/colehaan/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/colehaan/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/colehaan/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/colehaan/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/colehaan/swiper.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/colehaan/ui_style.js"></script>
+
+	
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/colehaan/layout.js"></script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<script>
+			headerFn('#header');
+		</script>
+	</header>
+	<!-- //header -->
+
+	<!-- gnb -->
+	<nav class="colehaanGnbWrap">
+		<script>
+			createGnbFn('.colehaanGnbWrap');
+		</script>
+	</nav>
+	<!-- // gnb -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="pageTitleBox">
+				<h2 class="pageTitle">About COLE HAAN</h2>
+			</div>
+
+			<div class="aboutWrap">
+				<strong class="tit">BRAND STORY</strong>
+				<div class="aboutConts">
+
+					<div class="aboutCopy">
+						콜한은 약&nbsp;100여 년 가까운 시간 동안<br>
+						혁신적인 스타일을 선보이며 제화 업계에<br>
+						상징적인 브랜드로 성장했습니다.&nbsp;<br>
+						1928년 미국에서 설립 이래,<br>
+						시대를 초월한 디자인과 편안한 발을 위한<br>
+						고집스러운 장인 정신은 지금까지도<br>
+						콜한이 자랑하는 유산입니다.
+					</div>
+					<div class="aboutImg"><img src="../../webapp/WEB-INF/static/brandmall/images/colehaan/about01.png" alt=""></div>
+					<div class="aboutCopy">
+						현대적이면서도 클래식한 디자인으로<br>
+						전 세계 사람의 마음을 사로잡은 콜한은 더 나아가 글로벌<br>
+						라이프스타일 브랜드로서 성장하기 위해 오늘도 <br>
+						노력합니다.
+					</div>
+					<div class="aboutImg"><img src="../../webapp/WEB-INF/static/brandmall/images/colehaan/about02.png" alt="" style="width:46%;"></div>
+					
+					<strong class="tit">GRAND.ØS</strong>
+					<div class="aboutCopy">
+						일하고, 움직이고, 탐구하는<br>
+						콜한의 고객을 위하여 우리는 항상<br>
+						새로운 기능과 새로운 스타일의 상품을 만듭니다. 
+					</div>
+					<div class="aboutImg"><img src="../../webapp/WEB-INF/static/brandmall/images/colehaan/about03.png" alt="" style="width:67%;"></div>
+				</div>
+				<div class="copy">
+					장인정신과 시대를 뛰어넘는 스타일,<br>
+					디자인 혁신을 통해 항상 전문적이고 새로운 기술을<br>
+					활용하여 기능과 우아함 두 가지 모두를 충족시키는 제품을<br>
+					제공합니다.
+				</div>
+			</div>
+
+		</div>
+
+		<!-- 탑으로 이동 -->
+		<a class="btn-top">상단으로 이동</a>
+		<!-- // 탑으로 이동 -->
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>
+			footerFn('#footer');
+		</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+var collectionslide = new cmtSwiperFn01('.collectSlideWrap', {
+	prevButton : '.collectSlideWrap .swiper-prev',
+	nextButton : '.collectSlideWrap .swiper-next',
+});
+</script>
+</body>
+</html>

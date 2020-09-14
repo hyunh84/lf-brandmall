@@ -1,0 +1,71 @@
+
+@charset "utf-8";
+@import url("font.css");
+
+/**********************************************************
+	상품상세 및 마이페이지 공통하면 reset 필요 내용 layout.css에 선언
+**********************************************************/
+body, pre, textarea, select, button, input {font-family:'Nunito Sans', 'Noto Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif !important;}
+strong {font-weight:700;}
+a {color:#030303;}
+/* ::-webkit-input-placeholder {color:#ccc;}
+:-ms-input-placeholder {color:#ccc;}
+::placeholder {color:#ccc;}
+input::-ms-clear{display:none;}
+input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !important;pointer-events:none;position:absolute;right:0;} */
+
+#wrap {overflow:hidden;position:relative;min-height:100%;}
+#wrap.pop {height:100%;overflow:hidden;}
+
+/**********************************************************
+	BRAND MALL - LAYOUT
+**********************************************************/
+/* header */
+#header {position:fixed;top:0;left:0;right:0;z-index:260;}
+
+
+#container {padding:53px 0 60px;}
+
+/* footer */
+#footer {position:relative;padding:0;background-color:#383838;}
+#footer .menu {position:relative;background-color:#404040;}
+#footer .menu ul {overflow:hidden;}
+#footer .menu li {position:relative;float:left;width:25%;}
+#footer .menu li a {display:block;height:20px;padding:15px 0;font-size:13px;color:#fff;text-align:center;line-height:20px;}
+#footer .menu li:before {position:absolute;top:18px;left:0;width:1px;height:14px;background-color:#5c5c5c;content:'';}
+#footer .menu li:first-child:before {display:none;}
+#footer .copyright {padding:20px;}
+#footer .copyright .info {overflow:hidden;}
+#footer .copyright .info .inner {margin:0 -5px;}
+#footer .copyright .info span {display:inline-block;position:relative;height:14px;padding:0 5px;font-size:12px;color:#9b9b9b;line-height:14px;white-space:nowrap;}
+#footer .copyright .info span:before {position:absolute;top:3px;left:-1px;width:1px;height:9px;background-color:#585858;content:'';}
+#footer .copyright .link {margin-top:15px;}
+#footer .copyright .link a {display:inline-block;position:relative;height:12px;margin:10px 0;padding:0 8px;font-size:12px;color:#e1e1e1;line-height:10px;letter-spacing:-0.3px;}
+#footer .copyright .link a:before {position:absolute;top:2px;left:-2px;width:1px;height:9px;background-color:#585858;content:'';}
+#footer .copyright .link a:first-child,
+#footer .copyright .link br + a {padding-left:0;}
+#footer .copyright .link a:first-child:before,
+#footer .copyright .link br + a:before {display:none;}
+#footer .copyright .txt {display:block;margin-top:15px;margin-bottom:7px !important;font-size:12px !important;color:#7f7f7f !important;line-height:16px;}
+
+#footer .copyright .sel_box {overflow:hidden;position:absolute;right:8px;bottom:52px;width:126px;padding:96px 0 0;z-index:10;}
+#footer .copyright .sel_box button {display:block;position:relative;z-index:10;width:100%;height:48px;padding-left:15px;font-size:12px;color:#fff;border:0 none;line-height:48px;text-align:left;background-color:#383838;}
+#footer .copyright .sel_box button:before {position:absolute;bottom:10px;left:15px;width:96px;height:1px;background-color:#fff;opacity:0.4;content:'';}
+#footer .copyright .sel_box button:after {position:absolute;top:21px;right:15px;width:11px;height:6px;background:url('../../images/hazzys/icon_arrow_white_small.png') no-repeat 0 0;background-size:11px 6px;content:'';transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
+#footer .copyright .sel_box ul {position:absolute;bottom:-96px;left:0;width:100%;background-color:#262626;transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
+#footer .copyright .sel_box ul li a {display:block;position:relative;height:48px;padding-left:15px;font-size:12px;color:#fff;border:0 none;line-height:48px;text-align:left;}
+#footer .copyright .sel_box button.on {background-color:#262626;}
+#footer .copyright .sel_box button.on:before {display:none;}
+#footer .copyright .sel_box button.on:after {-webkit-transform:rotate(180deg);transform:rotate(180deg);}
+#footer .copyright .sel_box button.on + ul {-webkit-transform:translateY(-144px);transform:translateY(-144px);}
+
+#footer .site-footer__menu-list {position:relative;border-bottom:1px solid #777;letter-spacing:.1em;-webkit-box-sizing:border-box;box-sizing:border-box}
+#footer .site-footer__menu-link {display:block;position:relative;z-index:10;padding:20px 35px;background-color:#222;color:#fff;font-size:17px;opacity:.5;}
+#footer .site-footer__menu-link:after {position:absolute;top:26px;right:30px;width:11px;height:7px;background:url('../../images/hazzys/common/icon_arrow_campaign_xsmall.png') no-repeat 0 0;background-size:11px 7px;content:'';transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
+#footer .site-footer__menu-list .site-footer__lang {display:none;position:absolute;z-index:5;bottom:-100%;left:0;width:100%;background-color:#222;opacity:0;}
+#footer .site-footer__menu-list.on .site-footer__menu-link:after {-webkit-transform:rotate(180deg);transform:rotate(180deg);}
+#footer .site-footer__menu-list.on .site-footer__lang {display:block;bottom:100%;opacity:1;}
+#footer .site-footer__menu-list .site-footer__lang .site-footer__menu-link:after {display:none;}
+
+#footer .site-footer__copy {padding:14px 0;background:#1b1b1b;text-align:center}
+#footer .site-footer__copy-text {color:#fff;font-size:10px;letter-spacing:.08em;opacity:.1}

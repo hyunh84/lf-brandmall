@@ -1,0 +1,122 @@
+@charset "utf-8";
+@import url("font.css");
+
+/**********************************************************
+	상품상세 및 마이페이지 공통하면 reset 필요 내용 layout.css에 선언
+**********************************************************/
+body, pre, textarea, select, button, input {font-family:'WorkSans','Noto Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif !important;}
+strong {font-weight:800;}
+a {color:#000;}
+.font2 {font-family:'Spectral', 'NanumMyeongjo', 'Noto Sans KR', sans-serif , Dotum, Arial !important;}
+/* ::-webkit-input-placeholder {color:#ccc;}
+:-ms-input-placeholder {color:#ccc;}
+::placeholder {color:#ccc;}
+input::-ms-clear{display:none;}
+input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !important;pointer-events:none;position:absolute;right:0;} */
+
+#wrap {overflow:hidden;position:relative;min-height:100%;}
+#wrap.pop {height:100%;overflow:hidden;}
+
+/**********************************************************
+	BRAND MALL - LAYOUT
+**********************************************************/
+/* header */
+#header {position:fixed;top:0;left:0;right:0;border-bottom:1px solid #d8d8d8;z-index:50;}
+#header .top_banner {display:block;position:relative;border-bottom:1px solid #d8d8d8;background-color:#f4f4f4;}
+#header .top_banner .cmtSlideWrap {overflow:hidden;margin:0 50px;}
+#header .top_banner .cmtSlideWrap .swiper-wrapper .swiper-slide span {display:block;overflow:hidden;height:36px;line-height:36px;font-size:12px;text-align:center;white-space:nowrap;text-overflow:ellipsis;}
+#header .top_banner .swiper-prev {position:absolute;left:14px;top:0;width:36px;height:36px;background:url('../../images/colehaan/btn_slide_small_prev.png') no-repeat center;background-size:6px auto;}
+#header .top_banner .swiper-prev em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+#header .top_banner .swiper-next {position:absolute;right:14px;top:0;width:36px;height:36px;background:url('../../images/colehaan/btn_slide_small_next.png') no-repeat center;background-size:6px auto;}
+#header .top_banner .swiper-next em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+
+
+#header .header_inner {position:relative;padding:0 15px 15px;background-color:#fff;}
+
+#header .logo {padding:25px 0 0;text-align:center;}
+#header .logo a {display:inline-block;height:15px;vertical-align:top;}
+#header .logo a img {height:100%;vertical-align:top;}
+
+#header .hUtil {position:relative;margin:22px -15px 0 0;padding:0 80px 0 0;height:100%;vertical-align:top;}
+#header .hUtil .hSearchBox {position:relative;box-sizing:border-box;width:100%;padding:0 0 0 20px;border-bottom:2px solid #000;}
+#header .hUtil .hSearchBox:before {display:block;content:"";position:absolute;left:0;top:50%;width:15px;height:15px;background:url('../../images/colehaan/bg_btn_sch.png') no-repeat center;background-size:auto 15px;transform:translate(0, -50%);}
+#header .hUtil .hSearchBox input[type="text"] {width:100%;padding:0;}
+#header .hUtil .cart {position:absolute;right:42px;top:2px;width:37px;height:25px;background:url('../../images/colehaan/bg_btn_cart.png') no-repeat center;background-size:15px  auto;}
+#header .hUtil .cart em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+#header .hUtil .btnOpenGnb {position:absolute;right:5px;top:2px;width:37px;height:25px;background:url('../../images/colehaan/bg_btn_gnb.png') no-repeat center;background-size:15px  auto;}
+#header .hUtil .btnOpenGnb em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+
+/* gnb */
+.colehaanGnbWrap {position:fixed;top:0;left:-100%;bottom:0;width:100%;background-color:rgba(0, 0, 0, 0);z-index:55;transition:left .7s ease, background-color .7s ease;}
+.colehaanGnbWrap .inner {position:relative;box-sizing:border-box;width:80%;height:100%;padding:60px 0 0;background-color:#fff;}
+.colehaanGnbWrap .inner > strong {display:block;position:absolute;left:0;top:0;right:0;height:59px;padding:0 15px;line-height:59px;font-size:11px;font-weight:400;color:#5d5a52;text-align:right;border-bottom:1px solid #d8d8d8;}
+.colehaanGnbWrap .gnb {position:relative;overflow-x:hidden;overflow-y:auto;height:100%;}
+.colehaanGnbWrap .gnbList {padding:15px 0;margin:0 15px;}
+.colehaanGnbWrap .gnbList > ul > li > a {display:block;position:relative;padding:12px 14px 12px 0;line-height:20px;font-size:14px;font-weight:700;}
+.colehaanGnbWrap .gnbList > ul > li > a:after {display:block;content:"";position:absolute;right:0;top:14px;width:9px;height:14px;background:url('../../images/colehaan/btn_gnb_more.png') no-repeat center;background-size:9px auto;}
+.colehaanGnbWrap .subDepth02 {position:fixed;top:0;left:-100%;bottom:0;width:80%;padding:60px 0 0;background-color:#fff;z-index:1;transition:left .7s ease;}
+.colehaanGnbWrap .subDepth02 > strong {display:block;position:absolute;left:0;top:0;right:0;height:59px;padding:0 15px;line-height:59px;font-size:11px;font-weight:400;color:#5d5a52;text-align:right;border-bottom:1px solid #d8d8d8;}
+.colehaanGnbWrap .subDepth02 .depthInner {position:relative;overflow-x:hidden;overflow-y:auto;height:100%}
+.colehaanGnbWrap .subDepth02 .cateList {padding:15px 0;margin:0 15px;}
+.colehaanGnbWrap .subDepth02 .cateList > ul > li > a {display:block;position:relative;padding:12px 14px 12px 0;line-height:20px;font-size:14px;font-weight:700;}
+.colehaanGnbWrap .subDepth02 .cateList > ul > li > a:after {display:block;content:"";position:absolute;right:0;top:14px;width:9px;height:14px;background:url('../../images/colehaan/btn_gnb_more.png') no-repeat center;background-size:9px auto;}
+.colehaanGnbWrap .subDepth02 .subList {padding:15px 0;margin:0 15px;border-top:1px solid #d8d8d8;}
+.colehaanGnbWrap .subDepth02 .subList > ul > li > a {display:block;position:relative;padding:12px 14px 12px 0;line-height:20px;font-size:12px;font-weight:400;}
+.colehaanGnbWrap .subDepth02 .subList > ul > li > a:after {display:block;content:"";position:absolute;right:0;top:14px;width:9px;height:14px;background:url('../../images/colehaan/btn_gnb_more02.png') no-repeat center;background-size:9px auto;}
+.colehaanGnbWrap .subDepth02 .gnbPrev {position:absolute;left:0;top:0;width:40px;height:60px;background:url('../../images/colehaan/btn_gnb_prev.png') no-repeat center;background-size:9px auto;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.colehaanGnbWrap .subDepth02 .gnbPrev em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+.colehaanGnbWrap .gnbUtil {padding:15px 0;margin:0 15px;border-top:1px solid #d8d8d8;}
+.colehaanGnbWrap .gnbUtil > ul > li > a {display:block;padding:12px 0;line-height:20px;font-size:12px;font-weight:400;}
+.colehaanGnbWrap .closeGnb {position:absolute;right:0;top:0;width:20%;height:100%;background:url('../../images/colehaan/btn_close_white.png') no-repeat center 25px;background-size:15px auto;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.colehaanGnbWrap .closeGnb em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+
+#container {padding:145px 0 60px;}
+#container > .btn-top { z-index: 50;overflow:hidden;position:fixed;right:0;bottom:0;width:42px;height:42px;padding:15px;background:url('../../images/colehaan/btn_top_s.png') no-repeat 15px 15px;background-size:42px 42px;white-space:nowrap;text-indent:200%;}
+
+/* footer */
+#footer {padding:0 0 57px;}
+#footer .btn-back {z-index: 50;overflow:hidden;position:fixed;left:0;bottom:0;width:42px;height:42px;padding:15px;background:url('../../images/colehaan/btn-back.png') no-repeat 15px 15px;background-size:42px 42px;white-space:nowrap;text-indent:200%;}
+#footer .btn-back2 {overflow: hidden;position: fixed;left: 0;bottom: 63px;width: 42px;height: 42px;padding: 15px;background: url('../../images/colehaan/btn-back.png') no-repeat 15px 15px;background-size: 42px 42px;white-space: nowrap;text-indent: 200%;z-index: 5;}
+/* #footer .menu {position:relative;background-color:#404040;}
+#footer .menu ul {overflow:hidden;}
+#footer .menu li {position:relative;float:left;width:25%;}
+#footer .menu li a {display:block;height:20px;padding:15px 0;font-size:13px;color:#fff;text-align:center;line-height:20px;}
+#footer .menu li:before {position:absolute;top:18px;left:0;width:1px;height:14px;background-color:#5c5c5c;content:'';}
+#footer .menu li:first-child:before {display:none;} */
+#footer .copyright {padding:20px 10px;background-color:#383838;}
+#footer .copyright .info {overflow:hidden;}
+#footer .copyright .info .inner {margin:0 -5px;}
+#footer .copyright .info span {display:inline-block;position:relative;height:14px;padding:0 5px;font-size:12px;color:#9b9b9b;line-height:14px;white-space:nowrap;}
+#footer .copyright .info span:before {position:absolute;top:3px;left:-1px;width:1px;height:9px;background-color:#585858;content:'';}
+#footer .copyright .link {margin:15px 0 0 5px;}
+#footer .copyright .link a {display:inline-block;position:relative;height:12px;margin:10px 0;padding:0 8px;font-size:12px;color:#e1e1e1;line-height:10px;letter-spacing:-0.3px;}
+#footer .copyright .link a:before {position:absolute;top:2px;left:-2px;width:1px;height:9px;background-color:#585858;content:'';}
+#footer .copyright .link a:first-child,
+#footer .copyright .link br + a {padding-left:0;}
+#footer .copyright .link a:first-child:before,
+#footer .copyright .link br + a:before {display:none;}
+#footer .copyright .txt {display:block;margin-top:15px;margin-bottom:7px !important;font-size:12px !important;color:#7f7f7f !important;line-height:16px;}
+
+#footer .footer-contact .contact-box {background-color:#c5d3d9;padding:35px 15px;word-break:keep-all;}
+#footer .footer-contact .contact-box + .contact-box {margin-top:3px;}
+#footer .footer-contact .contact-box h3 {padding-bottom:10px;font-size:25px;font-weight:800;color:#000;line-height:20px;font-family:'Spectral', 'NanumMyeongjo', 'Noto Sans KR', sans-serif , Dotum, Arial !important;}
+#footer .footer-contact .contact-box dl {min-height:47px;margin-top:15px;padding-left:62px;color:#000;}
+#footer .footer-contact .contact-box dl.info_call {background:url('../../images/colehaan/common/icon_contact_call.png') no-repeat 0 0;background-size:47px 47px;}
+#footer .footer-contact .contact-box dl.info_insta {padding-top:5px;background:url('../../images/colehaan/common/icon_contact_sns.png') no-repeat 0 0;background-size:47px 47px;}
+#footer .footer-contact .contact-box dl dt {font-size:18px;font-weight:600;line-height:16px;}
+#footer .footer-contact .contact-box dl dt span {font-size:11px;font-weight:normal;vertical-align:middle;}
+#footer .footer-contact .contact-box dl dd {margin-top:5px;font-size:11px;line-height:17px;}
+#footer .footer-contact .contact-box .contact-btn {display:block;position:relative;font-size:14px;font-weight:800;color:#000;}
+#footer .footer-contact .contact-box .contact-btn:before {position:absolute;top:3px;right:0;width:10px;height:10px;background:url('../../images/colehaan/common/btn_spread.png') no-repeat 0 0;background-size:10px 20px;content:'';}
+#footer .footer-contact .contact-box ul {display:none;margin-top:8px;}
+#footer .footer-contact .contact-box ul li a {display:block;font-size:13px;color:#000;line-height:30px;}
+#footer .footer-contact .contact-box ul + .contact-btn {margin-top:16px;}
+#footer .footer-contact .contact-box .contact-btn.active:before {background-position:0 -10px;}
+#footer .footer-contact .contact-box .contact-btn.active + ul {display:block;}
+
+#footer .footer-util {padding:40px 0;text-align:center;}
+#footer .footer-util .util-menu li {display:inline-block;height:10px;padding:0 14px;border-left:1px solid #5d5a52;}
+#footer .footer-util .util-menu li:first-child {border-left:none;}
+#footer .footer-util .util-menu li a {font-size:11px;color:#5d5a52;line-height:10px;letter-spacing:-0.5px;vertical-align:top;}
+#footer .footer-util .copy {display:block;margin-top:26px;font-size:12px;color:#5d5a52;line-height:9px;}
+#footer .footer-util .btn-top {display:inline-block;width:175px;margin-top:25px;padding-top:160px;border-bottom:2px solid #000;background:url('../../images/colehaan/common/btn_top.png') no-repeat 50% 0;background-size:175px auto;font-size:13px;font-weight:800;color:#000;line-height:24px;}

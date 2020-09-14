@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/jquery-1.9.1.min.js">
+					</script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/swiper.min.js">
+					</script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/ui_style.js">
+					</script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/layout.js">
+					</script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<div class="header_inner">
+			<script>headerFn('.header_inner', 'CATALOGUE');</script>
+		</div>
+		
+		<article class="topSearchWrap">
+			<script>createSearch('.topSearchWrap');</script>
+		</article>
+	</header>
+	<!-- //header -->
+
+	<!-- quick menu -->
+	<nav class="quickNavWrap">
+		<script>createQuickNavFn('.quickNavWrap');</script>
+	</nav>
+	<!-- // quick menu -->
+
+	<!-- GNB -->
+	<nav class="tngtGnbWrap">
+		<script>createGnbFn('.tngtGnbWrap');</script>
+	</nav>
+	<!-- // GNB -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="evtDetailTopWrap">
+				<div class="img"><span><img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_poll03.png"></span></div>
+				
+				<div class="evtCopy">
+					<div class="date"><span>2019/02/15</span></div>
+					<strong>TNGT 트렌치코트로 간절기에도 무너지지 않는 스타일 코디</strong>
+				</div>
+				
+				<div class="evtUtilBox">
+					<div class="inner">
+						<button type="button" class="fb"><em>페이스북</em></button>
+						<button type="button" class="kakao"><em>카카오</em></button>
+						<button type="button" class="url"><em>URL</em></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="editViewWrap04">
+					<p><br></p><p style="text-align: center;"><br></p><p style="text-align: center;"><img class="txc-image" style="clear: none; float: none;" src="http://m.tngt.co.kr/upload/editor/c004c7ae557a4479ac272314742a9d04.jpg"></p><p style="text-align: center;"><br></p><p><br></p><div class="video" style="display: none;">
+						<span>
+							<iframe id="player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/?rel=0&amp;showinfo=0&amp;ecver=2&amp;enablejsapi=1&amp;origin=http%3A%2F%2Flocalhost%3A9999&amp;widgetid=1"></iframe>
+						</span>
+					</div>
+			</div>
+
+			<div class="pageBtnWrap">
+				<div class="inner">
+					<a href="#" class="prev">
+					<span>이전</span>
+					</a>
+					<a href="#" class="list">
+					<span>목록</span>
+					</a>
+					<a href="#" class="next">
+					<span>다음</span>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>footerFn('#footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script>
+var subCateMenu = new cmtSwiperFn02('.cateSwipeWrap02 .cmtSlideWrap');
+var idx = $('.cateSwipeWrap02').find('li.active').index();
+subCateMenu.slideTo(idx);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/daks/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/daks/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/daks/app.css" />
+
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/daks/jquery-1.9.1.min.js"></script>
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/daks/swiper.min.js"></script>
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/daks/ui_style.js"></script>
+
+	
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/daks/layout.js"></script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<!-- <div class="top_banner">
+			<a href="#"><span><img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_top_banner.jpg" onload="mainTopBanner(this);"></span></a>
+		</div> -->
+
+		<div class="header_inner">
+			<script>
+				headerFn('#header .header_inner');
+			</script>
+		</div>
+
+		<!-- GNB -->
+		<nav class="daksGnbWrap">
+		<script>
+			createGnbFn('.daksGnbWrap');
+		</script>
+		</nav>
+		<!-- // GNB -->
+
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="subCateViewWrap">
+				<div class="inner">
+					<button type="button" class="btnOpenCate">GIFT</button>
+					<div class="cateListBox">
+						<div class="cmtSlideWrap">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<a href="#"><span>GIFT</span>'S HOME</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#">남성선물</a>
+								</li>
+								<li class="swiper-slide active">
+									<a href="#">여성선물</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#">ACC선물</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#">GOLF선물</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="editViewWrap">
+
+				<!-- 어드민 등록영역 -->
+				<div class="iconic-view">
+					<div class="brand-campaign">
+						<style>
+							p {margin:0; padding: 0 !important; text-align: left;}
+				
+							.brand-list:after {display: table; clear: both; content: "";}
+							.brand-clear-fix:after {display: table; clear: both; content: "";}
+				
+							.brand-container {position: relative;}
+							.brand-box {position:relative;}
+							.brand-area {position: relative;}
+				
+							.page-header {position: relative !important; padding-top: 162% !important; background-image:url(http://dpa.daks.co.kr/upload/editor/0384e57ae9bb480e83fe2781eb29f3ed.jpg)}
+				
+							.category {position: absolute; top: 6px; right: 0; width: 10px;}
+				
+							.brand-campaign__contents {margin: 0; padding: 0;}
+				
+							.brand-campaign__contents--1 p,
+							.brand-campaign__contents--2 p,
+							.brand-campaign__contents--3 p,
+							.brand-campaign__contents--4 p {color: #000; font-size: 13px !important; line-height: 1.6 !important; letter-spacing:-1.5px; text-align: center !important;}
+				
+							.brand-campaign__contents--1 {padding:16% 0; text-align: center;}
+							.brand-campaign__contents--1 h3 {color: #222; font-size: 25px !important; line-height: 1;}
+							.brand-campaign__contents--1 .text1 {margin-top:4%; color: #000; font-weight: 400; font-size: 15px; line-height: 1.6;}
+							.brand-campaign__contents--1 .text1 strong {font-weight: 700;}
+							.brand-campaign__contents--1 .figure1,
+							.brand-campaign__contents--1 .figure2 {padding: 16% 0 0 0;}
+							.brand-campaign__contents--1 .text2 {margin-top:6%; color: #000; font-weight: 300; font-size: 13px; line-height: 1.6;}
+				
+							.brand-campaign__contents--2 {padding:16% 0; background: #f1faff; text-align: center;}
+							.brand-campaign__contents--2 .text1 {margin-top:6%; color: #000; font-weight: 300; font-size: 13px; line-height: 1.6;}
+				
+							.brand-campaign__contents--3 {padding:16% 0 0; text-align: center;}
+							.brand-campaign__contents--3 .text1 {margin:6%; color: #000; font-weight: 400; font-size: 14px; line-height: 1.6;}
+							.brand-campaign__contents--3 .figure1,
+							.brand-campaign__contents--3 .figure2 {padding: 16% 0 0 0;}
+							.brand-campaign__contents--3 .text2 {margin-top:4%; color: #222; font-weight: 400; font-size: 13px; line-height: 1.6;}
+							.brand-campaign__contents--3 .text2 strong {font-weight: 700;}
+							.brand-campaign__contents--3 ul {margin-top: 10%; padding: 0 2%;}
+							.brand-campaign__contents--3 ul:after {display: table; clear: both; content: "";}
+							.brand-campaign__contents--3 li {float:left; width: 50%; padding: 0 2%; box-sizing: border-box;}
+							.brand-campaign__contents--3 ul figcaption {margin-top: 4%; color: #222; font-size: 12px; letter-spacing:-1px;}
+							.brand-campaign__contents--3 ul figcaption strong {font-weight: 700;}
+						</style>
+						<header class="page-header">
+							<div class="page-header__container">
+								<h2 class="page-header__title">
+									한 여름의 COOL한<br>
+									SWEET DREAM
+								</h2>
+								<p class="page-header__summary">
+									DAKS LADIES 인견 파자마 출시
+								</p>
+							</div>
+							<span class="page-header__scroll" style="position: absolute; left: 0; bottom: 5.35055%; width: 100%;padding-bottom: 20px; color: #fff; font-size: 15px; font-weight: 700; font-family: 'Nunito Sans'; text-align: center;">
+									SCROLL
+									<span class="page-header__scroll-arrow" style="display: block; position: absolute; left: 0; right: 0; bottom: 0; width: 16px; height: 9px; margin-left: auto; margin-right: auto; background-image: url(/upload/editor/men_icon_iconic_scroll.png); background-repeat: no-repeat; background-position: 50%;
+					background-size: 100% auto; content: '';"></span>
+								</span>
+						</header>
+				
+						<div class="brand-campaign">
+							<section class="brand-campaign__container">
+								<div class="brand-campaign__contents brand-campaign__contents--1">
+									<div class="brand-container">
+										<h3>
+											세상에서 제일 편한 잠옷
+										</h3>
+				
+										<p class="text1">
+											DAKS SUMMER PAJAMA 시리즈 출시<br>
+											<strong>이번 시즌엔 인견이다!</strong>
+										</p>
+				
+										<figure class="figure1">
+											<img src="http://dpa.daks.co.kr/upload/editor/483a7b47b76f4413b82986689aadbda0.jpg" alt="선물하기에도 좋은 시원하고 부드러운 잠옷한벌">
+										</figure>
+				
+										<figure class="figure2">
+											<img src="http://dpa.daks.co.kr/upload/editor/b27850a7ea54466a93511d33b1ac66cc.jpg" alt="Item 01 여성 상하의 SET UP">
+										</figure>
+				
+										<p class="text2">
+											상하의를 분리하여 입는 것을 선호하시는 분들께<br>
+											파자마 셋업 세트를 추천드립니다.<br>
+											테일러드 카라형의 편안한 실루엣과 클래식한  체크 패턴이<br>
+											조화롭게 어우러지고 밑단의 플라워 패턴이<br>
+											여성스러운 무드를 선사합니다.<br>
+											어머님/시어머님, 가족과 소중한 분들께<br>
+											선물하기에도 매우 좋은 아이템입니다.
+										</p>
+									</div>
+								</div>
+				
+								<div class="brand-campaign__contents brand-campaign__contents--2">
+									<div class="brand-container">
+										<figure class="figure1">
+											<img src="http://dpa.daks.co.kr/upload/editor/87ca04f1ffb849f48d777f028851552c.jpg" alt="원피스 파자마">
+										</figure>
+				
+										<p class="text1">
+											간편하게 하나만 입는 것을 선호하시는 분들께<br>
+											원피스형 파자마를 추천드립니다.<br>
+											반소매로 어깨와 팔 부분을 커버해 주어 착용감이 좋고<br>
+											가슴 부분의 셔링 디테일이 편안한 실루엣을 보장해 줍니다.<br>
+											클래식한 체크 패턴과 밑단의 플라워가<br>
+											로맨틱한 무드를 선사합니다.
+										</p>
+									</div>
+								</div>
+				
+								<div class="brand-campaign__contents brand-campaign__contents--3">
+									<div class="brand-container">
+										<h3>
+											<img src="http://dpa.daks.co.kr/upload/editor/7b20becf8e7e40b3b096c3d554f1f1e2.jpg" alt="FABRIC">
+										</h3>
+				
+										<p class="text1">
+											풍기에서 생산된 인견 소재로 터치감만으로도<br>
+											시원한 쿨링감을 느끼실 수 있는 핫 썸머용 인견<br>
+											자카드 원단입니다. 부드러우면서도 가슬가슬한<br>
+											소재감으로 몸에 덜 달라붙어 청량함을 느낄 수 있습니다.
+										</p>
+				
+										<figure class="figure1">
+											<img src="http://dpa.daks.co.kr/upload/editor/88419e2e2db44cb0beb6b1c69f421416.jpg" alt="">
+				
+											<figcaption>
+												<strong>[ SET-UP ]</strong><br>
+												테일러드 카라형의 편안한 네크 디자인
+											</figcaption>
+										</figure>
+				
+										<ul>
+											<li>
+												<figure>
+													<img src="http://dpa.daks.co.kr/upload/editor/5d2ae249641f408e988b820b28b59f6b.jpg" alt="">
+				
+													<figcaption>
+														<strong>[ DRESS ]</strong><br>
+														러블리한 프릴<br>
+														디테일의 네크 디자인
+													</figcaption>
+												</figure>
+											</li>
+											<li>
+												<figure>
+													<img src="http://dpa.daks.co.kr/upload/editor/5929c251e8d142ad802b258e39e13f45.jpg" alt="">
+				
+													<figcaption>
+														밑단 보더의 플라워 프린트로<br>
+														여성스럽고 화사한<br>
+														포인트가 됩니다.
+													</figcaption>
+												</figure>
+											</li>
+										</ul>
+				
+										<figure class="figure2">
+											<img src="http://dpa.daks.co.kr/upload/editor/6b7da39272434913b6fdc00be6b16bb2.jpg" alt="SIZE &amp; CARE">
+										</figure>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+				<!-- // 어드민 등록영역 -->
+
+			</div>
+
+			<div class="relatePrdWrap">
+				<div class="relateFilter">
+					<div class="filterBtn">
+						<span>필터</span>
+						<button type="button" onclick="openLayerFullFn('#filterCategory');">카테고리</button>
+						<button type="button" onclick="openLayerFullFn('#filterMoney');">가격</button>
+						<button type="button" onclick="openLayerFullFn('#filterGender');">성별</button>
+					</div>
+				</div>
+
+				<div class="resualtInfo">
+					<div class="itemTotal">
+						<span class="num"><em>102</em> Products</span>
+					</div>
+
+					<div class="sortBox">
+						<select class="selectItem02">
+							<option selected="">신상품순</option>
+							<option>인기순</option>
+							<option>높은 가격순</option>
+							<option>낮은 가격순</option>
+							<option>할인율 높은순</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="itemListWrap">
+					<div class="inner">
+						<ul>
+							<li>
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product01.jpg">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product02.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product03.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em> 
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product04.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> 
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product01.jpg">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product02.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product03.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em> 
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product04.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> 
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product01.jpg">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product02.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product03.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em> 
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product04.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> 
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product01.jpg">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product02.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product03.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em> 
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product04.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> 
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product01.jpg">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product02.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product03.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em> 
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product04.jpg">
+									</span>
+									<div class="info">
+										<span class="name02">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> 
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>
+			footerFn('#footer');
+		</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<article class="layerFullWrap" id="filterCategory">
+	<header>
+		<h1>카테고리</h1>
+	</header>
+
+	<div class="layerConts">
+		<div class="relateFilterOpt">
+			<ul>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>전체</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>여성 하의</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>여성 상의</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>남성 하의</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>남성 상의</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>여성 아우터</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>남성 아우터</span>
+					</label>
+				</li>
+			</ul>
+			<button type="button" class="clearCheck">전체해제</button>
+		</div>
+	</div>
+	<div class="layerBtnBox">
+		<button type="button" class="layerBtn">결과보기</button>
+	</div>
+	<button type="button" class="btnCloseLayer" onclick="closeLayerFullFn('#filterCategory');"><em>닫기</em></button>
+</article>
+
+<article class="layerFullWrap" id="filterMoney">
+	<header>
+		<h1>가격</h1>
+	</header>
+
+	<div class="layerConts">
+		<div class="relateFilterOpt">
+			<ul>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>전체</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>10만원 미만</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>10만원 ~ 20만원</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>20만원 ~ 30만원</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>30만원 ~ 40만원</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>40만원 ~ 50만원</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>50만원 이상</span>
+					</label>
+				</li>
+			</ul>
+			<button type="button" class="clearCheck">전체해제</button>
+		</div>
+	</div>
+	<div class="layerBtnBox">
+		<button type="button" class="layerBtn">결과보기</button>
+	</div>
+	<button type="button" class="btnCloseLayer" onclick="closeLayerFullFn('#filterMoney');"><em>닫기</em></button>
+</article>
+
+<article class="layerFullWrap" id="filterGender">
+	<header>
+		<h1>성별</h1>
+	</header>
+
+	<div class="layerConts">
+		<div class="relateFilterOpt">
+			<ul>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>전체</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>남성</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox"/>
+						<span>여성</span>
+					</label>
+				</li>
+			</ul>
+			<button type="button" class="clearCheck">전체해제</button>
+		</div>
+	</div>
+	<div class="layerBtnBox">
+		<button type="button" class="layerBtn">결과보기</button>
+	</div>
+	<button type="button" class="btnCloseLayer" onclick="closeLayerFullFn('#filterGender');"><em>닫기</em></button>
+</article>
+
+<script type="text/javascript">
+	subCategorySlide();
+</script>
+</body>
+</html>

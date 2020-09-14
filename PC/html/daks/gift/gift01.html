@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/daks/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/daks/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/daks/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/daks/app.css" />
+
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/daks/jquery-1.9.1.min.js"></script>
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/daks/slick.min.js"></script>
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/daks/ui_style.js"></script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../../webapp/WEB-INF/static/brandmall/js/daks/layout.js"></script>
+	<!-- // 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<div class="header_inner">
+			<script>headerFn('.header_inner')</script>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="editViewWrap">
+				
+				<!-- 어드민 등록 소스 -->
+				<section id="site-content" class="site__container">
+					<style>
+						.page-header {height: 600px; background: url(http://dpa.daks.co.kr/upload/editor/5fa583ea42aa4a91be14514570a2c785.jpg) no-repeat 50%;}
+						.page-header__title { overflow: hidden; position: absolute; width: 1px; height: 1px; padding: 0; border: 0; white-space: nowrap; clip: rect(0, 0, 0, 0); clip-path: inset(50%);}
+						.brand-campaign__contents {box-sizing: border-box;}
+						.brand-container {position:relative; width: 1200px; margin: 0 auto; box-sizing: border-box;}
+						.brand-text {color:#000; font-size: 26px; line-height: 1.4;}
+						.brand-list:after {display: table; clear: both; content: "";}
+						.brand-clear-fix:after {display:table; clear:both; content:"";}
+						.brand-box {position: relative;}
+						.brand-area {position: relative;}
+						p {margin: 0;padding: 0; text-align: left;}
+				
+						.category {position: absolute; top: 6px; right: 0;}
+						.text {display: block; padding-left: 16px; color: #fff; font-weight: 400; font-size: 22px; line-height: 1.6; text-align: left;}
+						.text:before {position:absolute; top:0; left:0; color: #fff; font-weight: 400; font-size: 22px; content: "#"}
+				
+						h3 {text-align: left;}
+				
+				
+						.brand-campaign__contents--1 {position: relative;}
+						.brand-campaign__contents--1:before {position:absolute; top:1508px; right:0; width: 50%; height: 1015px; background: #e9f5ff; content: "";}
+						.brand-campaign__contents--1:after {position:absolute; top:1508px; right:50%; width: 100px; height: 1015px; margin-right: 595px; background: #e9f5ff; content: "";}
+						.brand-campaign__contents--1 .brand-container {position:relative; z-index:100; padding:160px 0 0; text-align: center; line-height: 1.6;}
+						.brand-campaign__contents--1 h3 {color: #222 !important; font-weight: 700 !important; font-size: 40px !important; text-align: center;}
+						.brand-campaign__contents--1 h3 strong {font-size: 50px !important;}
+						.brand-campaign__contents--1 .text1 {padding-top: 56px; color:#000 !important; font-weight: 400 !important; font-size: 24px !important; line-height: 1.6 !important; text-align: center;}
+						.brand-campaign__contents--1 .text1 span {display: block; padding-top: 28px; color: #89a5d3 !important; font-weight: 700 !important; font-size: 30px !important;}
+						.brand-campaign__contents--1 .brand-content {position:relative; margin-top: 200px;}
+						.brand-campaign__contents--1 figure {position: relative; z-index:100;}
+						.brand-campaign__contents--1 h4 {position: absolute; top: 278px; left: 714px; z-index:100; color: #2c6ebf !important; font-weight:400 !important; font-size: 80px !important; opacity: .45 !important; text-align: left !important; line-height: 1.2;}
+						.brand-campaign__contents--1 h4 strong {font-weight: 700 !important;}
+						.brand-campaign__contents--1 .text2 {position:absolute; top:500px; left:534px; z-index:100; width: 666px !important; padding: 120px 0 !important; background: #fff6f2 !important; color: #222 !important; font-weight: 400 !important; font-size: 26px !important; line-height: 1.6 !important; text-align: center !important; box-sizing: border-box !important; letter-spacing:-1px;}
+				
+				
+						.brand-campaign__contents--2 .brand-container {padding: 250px 0 0;}
+						.brand-campaign__contents--2 .brand-content {position:relative; margin-top: 200px;}
+						.brand-campaign__contents--2 figure {position: relative; z-index:100;}
+						.brand-campaign__contents--2 h4 {position: absolute; top: 278px; left: 80px; z-index:100; color: #2c6ebf !important; font-weight:400 !important; font-size: 80px !important; opacity: .45 !important; text-align: left !important; line-height: 1.2;}
+						.brand-campaign__contents--2 h4 strong {font-weight: 700 !important;}
+						.brand-campaign__contents--2 .text2 {position:absolute; top:493px; left:0; z-index:100; width: 666px !important; padding: 120px 0 !important; background: #fff6f2 !important; color: #222 !important; font-weight: 400 !important; font-size: 26px !important; line-height: 1.6 !important; text-align: center !important; box-sizing: border-box !important; letter-spacing:-1px;}
+				
+						.brand-campaign__contents--3 {position: relative;}
+						.brand-campaign__contents--3:before {position:absolute; top:905px; left:0; width: 50%; height: 1015px; background: #e9f5ff; content: "";}
+						.brand-campaign__contents--3:after {position:absolute; top:905px; left:50%; width: 100px; height: 1015px; margin-left: 595px; background: #e9f5ff; content: "";}
+				
+						.brand-campaign__contents--3 .brand-container {position:relative; z-index:100; padding:160px 0 0; text-align: center; line-height: 1.6;}
+						.brand-campaign__contents--3 .brand-content {position:relative;}
+						.brand-campaign__contents--3 figure {position: relative; z-index:100;}
+						.brand-campaign__contents--3 h4 {position: absolute; top: 278px; left: 714px; z-index:100; color: #2c6ebf !important; font-weight:400 !important; font-size: 80px !important; opacity: .45 !important; text-align: left !important; line-height: 1.2;}
+						.brand-campaign__contents--3 h4 strong {font-weight: 700 !important;}
+						.brand-campaign__contents--3 .text2 {position:absolute; top:500px; left:534px; z-index:100; width: 666px !important; padding: 120px 0 !important; background: #fff6f2 !important; color: #222 !important; font-weight: 400 !important; font-size: 26px !important; line-height: 1.6 !important; text-align: center !important; box-sizing: border-box !important; letter-spacing:-1px;}
+				
+						.brand-campaign__contents--4 .brand-container {padding: 250px 0 0;}
+						.brand-campaign__contents--4 .brand-content {position:relative;}
+						.brand-campaign__contents--4 figure {position: relative; z-index:100;}
+						.brand-campaign__contents--4 h4 {position: absolute; top: 278px; left: 80px; z-index:100; color: #2c6ebf !important; font-weight:400 !important; font-size: 80px !important; opacity: .45 !important; text-align: left !important; line-height: 1.2;}
+						.brand-campaign__contents--4 h4 strong {font-weight: 700 !important;}
+						.brand-campaign__contents--4 .text2 {position:absolute; top:493px; left:0; z-index:100; width: 666px !important; padding: 120px 0 !important; background: #fff6f2 !important; color: #222 !important; font-weight: 400 !important; font-size: 26px !important; line-height: 1.6 !important; text-align: center !important; box-sizing: border-box !important; letter-spacing:-1px;}
+					</style>
+				
+					<header class="page-header">
+						<div class="page-header__container">
+							<h2 class="page-header__title">
+								이 여름, 다시 쿠바에 가고싶다
+							</h2>
+						</div>
+					</header>
+				
+					<div class="brand-campaign">
+						<section class="brand-campaign__container">
+							<div class="brand-campaign__contents brand-campaign__contents--1">
+								<div class="brand-container">
+									<div class="brand-box">
+										<h3>
+											닥스와 함께 가는 랜선 여행<br>
+											<strong>- 쿠바편 -</strong>
+										</h3>
+				
+										<p class="text1">
+											여행이나 휴가도 마음 편히 다니지 못하는 요즘,<br>
+											그래도 기분만큼은 여행자처럼 보냈으면 좋겠습니다!<br>
+				
+											<span>
+												DAKS MEN의 20 S/S SUMMER TRAVEL TO 쿠바,<br>
+												닥스와 함께 올 여름 휴가를 즐겨보세요.
+											</span>
+										</p>
+				
+										<div class="brand-content">
+											<figure>
+												<img src="http://dpa.daks.co.kr/upload/editor/44a2bab8924f47cfb17eea34239fe5a2.jpg" alt="">
+											</figure>
+				
+											<h4>
+												아침은<br>
+												<strong>시원하니까</strong>
+											</h4>
+				
+											<p class="text2">
+												쿠바의 아침은 상쾌하다. 말레콘(Malecon) 해안을 따라<br>
+												즐기는 아침의 얼굴은 비록 세련되지는 못하지만 어딘가<br>
+												대도시에서 느낄 수 없는 자연스러움이 가득하다.<br>
+												'아이스 아메리카노'를 한 잔 마시면 좋겠지만<br>
+												아쉽게 쿠바에는 그런 메뉴가 없다!
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+				
+							<div class="brand-campaign__contents brand-campaign__contents--2">
+								<div class="brand-container">
+									<div class="brand-box">
+										<div class="brand-content">
+											<figure>
+												<img src="http://dpa.daks.co.kr/upload/editor/ebcef1687fda4e22b04b61df28b9d41d.jpg" alt="">
+											</figure>
+				
+											<h4>
+												구김살 없이<br>
+												<strong>멀리 떠나자</strong>
+											</h4>
+				
+											<p class="text2">
+												쿠바는 하바나(Havana)만 있는게 아니다. 2시간 남짓한<br>
+												거리를 차로 이동하면 쿠바의 최대 휴양지, 바라데로가<br>
+												기다리고 있다. 빈티지 카를 빌리고 떠나는 근교 여행이라,<br>
+												어딘가 기대되지만 마음의 준비는 단단히 할 것!<br>
+												안착감이 그리 좋지는 않으니까
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+				
+							<div class="brand-campaign__contents brand-campaign__contents--3">
+								<div class="brand-container">
+									<div class="brand-box">
+										<div class="brand-content">
+											<figure>
+												<img src="http://dpa.daks.co.kr/upload/editor/f8a5b941b5d144f281b5e1a1d2e1b119.jpg" alt="">
+											</figure>
+				
+											<h4>
+												지상낙원이<br>
+												<strong>내 눈 앞에</strong>
+											</h4>
+				
+											<p class="text2">
+												여행의 이유에 거창한 미사여구는 필요 없다.<br>
+												쉬려고 온 거다.<br>
+												나시오날 데 쿠바(Nacional de Cuba) 호텔에서<br>
+												수영을 하고 가벼운 마음으로 피자에 맥주 한 모금<br>
+												시원하게 마셔보자. 몸의 긴장이 풀리기 시작한다.<br>
+												그 때, 지상낙원이 보이는 거다.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+				
+							<div class="brand-campaign__contents brand-campaign__contents--4">
+								<div class="brand-container">
+									<div class="brand-box">
+										<div class="brand-content">
+											<figure>
+												<img src="http://dpa.daks.co.kr/upload/editor/768239f104aa46efb40d35072d4835a5.jpg" alt="">
+											</figure>
+				
+											<h4>
+												마지막 춤을<br>
+												<strong>나와 함께</strong>
+											</h4>
+				
+											<p class="text2">
+												마지막 밤이다. 영화 '부에나 비스타 소셜 클럽'<br>
+												(Buena Vista Social Club)의 배경이 된 클럽 공연을<br>
+												절대 놓칠 순 없다. 제일 단정한 옷을 챙겨 입되,<br>
+												겸손 없이 분위기에 따라 취해 보자.<br>
+												밴드 음악에 맞춰 춤추고 있는 사람들을 보면서!<br>
+												Salud!
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</section>
+				<!-- //어드민 등록 소스 -->
+
+			</div>
+
+			<div class="relatePrdWrap">
+				<div class="relateSortBox">
+					<div class="sortOptBtn">
+						<button type="button">카테고리</button>
+						<button type="button">가격</button>
+						<button type="button">성별</button>
+					</div>
+					<div class="sortOptSelect">
+						<div class="optListBox">
+							<div class="optList">
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>전체</span>
+								</label>
+								<label class="dsigChk checked">
+									<input type="checkbox">
+									<span>팬츠</span>
+								</label>
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>코트</span>
+								</label>
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>자켓</span>
+								</label>
+								<label class="dsigChk checked">
+									<input type="checkbox">
+									<span>팬츠</span>
+								</label>
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>코트</span>
+								</label>
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>자켓</span>
+								</label>
+								<label class="dsigChk checked">
+									<input type="checkbox">
+									<span>팬츠</span>
+								</label>
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>코트</span>
+								</label>
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>자켓</span>
+								</label>
+								<label class="dsigChk checked">
+									<input type="checkbox">
+									<span>팬츠</span>
+								</label>
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>코트</span>
+								</label>
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>자켓</span>
+								</label>
+								<label class="dsigChk checked">
+									<input type="checkbox">
+									<span>팬츠</span>
+								</label>
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>코트</span>
+								</label>
+								<label class="dsigChk">
+									<input type="checkbox">
+									<span>자켓</span>
+								</label>
+							</div>
+							<div class="optList">
+								<label class="dsigRadio checked">
+									<input type="radio">
+									<span>전체</span>
+								</label>
+								<label class="dsigRadio">
+									<input type="radio">
+									<span>10만원 미만</span>
+								</label>
+								<label class="dsigRadio">
+									<input type="radio">
+									<span>10만원 ~ 20만원</span>
+								</label>
+								<label class="dsigRadio">
+									<input type="radio">
+									<span>20만원 ~ 30만원</span>
+								</label>
+								<label class="dsigRadio">
+									<input type="radio">
+									<span>30만원 ~ 50만원</span>
+								</label>
+								<label class="dsigRadio">
+									<input type="radio">
+									<span>50만원 이상</span>
+								</label>
+							</div>
+							<div class="optList">
+								<label class="dsigRadio">
+									<input type="radio">
+									<span>전체</span>
+								</label>
+								<label class="dsigRadio checked">
+									<input type="radio">
+									<span>남성</span>
+								</label>
+								<label class="dsigRadio">
+									<input type="radio">
+									<span>여성</span>
+								</label>
+							</div>
+						</div> 
+						<div class="optTags">
+							<a href="#">남성</a>
+							<a href="#">팬츠</a>
+							<a href="#">코트</a>
+							<a href="#">10만원 ~ 20만원</a>
+						</div>
+						<div class="optConfirmBox">
+							<button type="button" class="cancle">전체해제</button>
+							<button type="button" class="confirm">결과보기</button>
+						</div>
+					</div>
+
+					<div class="sortBox">
+						<span class="selectWrap02">
+							<button type="button">신상품순</button>
+							<div class="optList">
+								<ul>
+									<li class="selected"><a href="#">신상품순</a></li>
+									<li><a href="#">인기순</a></li>
+									<li><a href="#">높은 가격순</a></li>
+									<li><a href="#">낮은 가격순</a></li>
+									<li><a href="#">할인율 높은순</a></li>
+								</ul>
+							</div>
+						</span>
+					</div>
+				</div>
+
+				<div class="itemListWrap">
+					<div class="inner">
+						<ul>
+							<li>
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product01.jpg">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product02.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product03.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em> 
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product04.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> 
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product01.jpg">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product02.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product03.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em> 
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product04.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> 
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product01.jpg">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product02.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product03.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em> 
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product04.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> 
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product01.jpg">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product02.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product03.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em> 
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product04.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> 
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox soldout">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product01.jpg">
+										<span class="sold_out"><em>SOLD OUT</em></span>
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+											<b class="per">28%</b>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product02.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em>
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_product03.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<b class="per">28%</b>
+											<em class="sale">351,200</em> 
+											<span class="net">439,000</span>
+										</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="prdCardBox">
+									<span class="img">
+										<img src="../../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_product04.jpg">
+									</span>
+									<div class="info">
+										<span class="name">네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓 네이비 패턴 캐주얼자켓</span>
+										<span class="price">
+											<em class="sale">351,200</em> 
+										</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>footerFn('#footer', '1');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+relateFilterFn();
+</script>
+
+</body>
+</html>

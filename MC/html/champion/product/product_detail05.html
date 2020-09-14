@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+
+<title>CHAMPION</title>
+<!-- 브랜드몰 공통소스 -->
+<script type="text/javascript" src="/ux/brand/champion-mc/webapp/WEB-INF/static/renewal/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/ux/brand/champion-mc/webapp/WEB-INF/static/renewal/js/swiper.min.js"></script>
+<!-- <script type="text/javascript" src="https://m.tngt.co.kr/static/js/lf/common.util.js"></script> -->
+<link rel="stylesheet" type="text/css" href="https://m.tngt.co.kr/static/css/brand_tngt.css">
+<link rel="stylesheet" type="text/css" href="https://m.tngt.co.kr/static/css/w.css">
+<!-- <link rel="stylesheet" type="text/css" href="https://m.tngt.co.kr/static/css/font.css">
+<link rel="stylesheet" type="text/css" href="https://m.tngt.co.kr/static/css/common.css" >
+<link rel="stylesheet" type="text/css" href="https://m.tngt.co.kr/static/css/member.css">
+<link rel="stylesheet" type="text/css" href="https://m.tngt.co.kr/static/renewal/css/common.css" > -->
+<link rel="stylesheet" type="text/css" href="//m.tngt.co.kr/static/css/swiper.min.css">
+<!-- // 브랜드몰 공통소스 -->
+
+<!-- 퍼블리싱에서만 사용 -->
+<script type="text/javascript" src="/ux/brand/champion-mc/webapp/WEB-INF/static/renewal/js/champion/layout.js"></script>
+<!-- // 퍼블리싱에서만 사용 -->
+
+<!-- champion 소스 -->
+<script type="text/javascript" src="/ux/brand/champion-mc/webapp/WEB-INF/static/renewal/js/champion/ui_style.js"></script>
+<link rel="stylesheet" type="text/css" href="/ux/brand/champion-mc/webapp/WEB-INF/static/renewal/css/champion/layout_pub.css" />
+<link rel="stylesheet" type="text/css" href="/ux/brand/champion-mc/webapp/WEB-INF/static/renewal/css/champion/app_pub.css" />
+<!-- // champion 소스 -->
+
+<style type="text/css">
+#wrap.prdt_detail_wrap {background-color:#eee;}
+
+.prdt_detail .benefit_artbx .detail_lst {padding:16px 0 17px 0;border-top:1px solid #e9e9e9;}
+.prdt_detail .benefit_artbx .detail_lst .your-mileage .tit strong{color:#000;}
+.prdt_detail .benefit_artbx .detail_lst .your-mileage .info {color:#000;}
+.prdt_detail .benefit_artbx .info .ly_btn_after_wrap {position:relative;}
+.prdt_detail .benefit_artbx .info .ly_btn_after_wrap .btn_more_view {top:-13px;}
+
+.prdt_detail .benefit_artbx .detail_lst + .wrap_toggle {margin:0;}
+
+/*LFML-43764*/
+.prdt_detail .detail_lst>li.your-mileage {border-top:1px solid #eee; padding:16px 0 7px; margin-top:5px;}
+.prdt_detail .detail_lst>li.your-mileage .tit {color:#212121; font-size:14px;}
+.prdt_detail .detail_lst>li.your-mileage .info {color:#212121; font-size:14px;}
+.prdt_detail .detail_lst>li.your-mileage .detail_lst ins {font-size:14px;}
+.prdt_detail .detail_lst>li.your-mileage .btn_more_view {top:19px!important;}
+.your-mileage .ly_graybx {width:275px;}
+.your-mileage .ly-guide-list {border-top:1px solid #eee; margin:15px 15px 0; padding:15px 0 0; font-weight:normal; color:#888; font-size:12px;}
+.your-mileage .ly-guide-list li {position:relative; padding-left:10px; white-space: normal!important; line-height:1.6;}
+.your-mileage .ly-guide-list li::before {content:'-'; position:absolute; top:0; left:0;}
+.your-mileage .ly_info_lst {display:flex; align-items: center; justify-content: space-between; }
+.your-mileage .ly_info_lst dt, 
+.your-mileage .ly_info_lst dd {line-height:1.4; color:#212121; font-size:13px; float:none;}
+
+
+</style>
+
+
+<script>
+
+	//toggle script
+	var toggleLayer = function(el){
+		var bOn = false;
+		if($(el).hasClass('on')){
+			$(el).removeClass('on');
+		}else{
+			$(el).addClass('on');
+			bOn = true;
+		}
+		$(el).parent().find('.wrap_toggle_ctns').slideToggle(200);
+		
+		if ($(el).parent('#installmentDiv').length == 1) {
+			sendTagAjaxProduct('_A019_E057', '0', (bOn?'0':'1'));
+		} else {
+			sendTagAjaxProduct('_A019_E073', '0', (bOn?'0':'1'));
+		}
+		
+	}
+
+	function popupBenefit(obj, id) {
+
+		$('#' + id).show();
+
+	}
+
+
+	function closeLayer(obj, id) {
+		$('#' + id).hide();
+		// $(obj).parent().css("display", "none");
+		// $(obj).parent().parent().removeClass("on");
+		// $(obj).parent().parent().find(":button").removeClass("on");
+	}
+
+</script>
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap" class="prdt_detail_wrap">
+	<!-- header -->
+	<header id="header" >
+		<a href="#" class="btnGoBak"><span>뒤로가기</span></a>
+		<h1 class="logo"><a href="#"><img src="/ux/brand/champion-mc/webapp/WEB-INF/static/renewal/images/champion/logo.png" alt="Champoion" /></a></h1>
+		<div class="utilBox">
+			<button class="btnSearch"><span>검색</span></button>
+			<button class="gnbChampOpen"><span>메뉴</span></button>
+		</div>
+		
+		<div class="headCateNav">
+			<script type="text/javascript">createHeaderCate('.headCateNav');</script>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- GNB -->
+	<nav class="gnb">
+		<script type="text/javascript">createGnb('.gnb');</script>
+	</nav>
+	<!-- //GNB -->
+
+	<!-- 검색 팝업 -->
+	<article class="topSearchWrap">
+		<script type="text/javascript">createSearch('.topSearchWrap');</script>
+	</article>
+	<!-- //검색 팝업 -->
+
+	<!-- container -->
+	<section id="container" class="ver02"> 
+
+		<!-- content -->
+		<div id="content" class="prdt_detail">
+
+			<!-- top_banner -->
+			<div class="top_banner">
+	
+				<div class="card_template2 tmpl_10 swiper-container swiper-container-10 swiper-container-horizontal swiper-container-android">
+					<ul class="template swiper-wrapper" >
+						<li class="swiper-slide">
+							<span class="ic_dt_view ic">
+								<a href="javascript:void(0);"></a>
+							</span>
+							<!-- onclick event 추가해야 함 zoomin -->
+							<img class="swipe-image" src="//img.lfmall.co.kr/file/product/prd/TG/2020/640/TGJU0A702BK_00.jpg" style="width:100%">
+						</li>
+						
+						<li class="swiper-slide">
+							<span class="ic_dt_view ic">
+								<a href="javascript:void(0);"></a>
+							</span>
+							<!-- onclick event 추가해야 함 zoomin -->
+							<img class="swipe-image" src="//img.lfmall.co.kr/file/product/prd/TG/2020/640/TGJU0A702BK_01.jpg" style="width:100%">
+						</li>
+						<li class="swiper-slide">
+							<span class="ic_dt_view ic">
+								<a href="javascript:void(0);"></a>
+							</span>
+							<!-- onclick event 추가해야 함 zoomin -->
+							<img class="swipe-image" src="//img.lfmall.co.kr/file/product/prd/TG/2020/640/TGJU0A702BK_02.jpg" style="width:100%">
+						</li>
+						<li class="swiper-slide">
+							<span class="ic_dt_view ic">
+								<a href="javascript:void(0);"></a>
+							</span>
+							<!-- onclick event 추가해야 함 zoomin -->
+							<img class="swipe-image" src="//img.lfmall.co.kr/file/product/prd/TG/2020/640/TGJU0A702BK_03.jpg" style="width:100%">
+						</li>
+					</ul>
+
+					<div>
+						<div class="pagenation swiper-pagination swiper-pagination-clickable swiper-pagination-bullets" id="paginator-10" style=""><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+					</div>
+
+					<div>
+						<script type="text/javascript">
+							var swiperName = ".swiper-container-" + "10";
+							var paginatorId = "#paginator-" + "10";
+							var swiper = new Swiper(swiperName, {
+								pagination: '.swiper-pagination',
+								paginationElement: 'a',
+								paginationHide: false,
+								slidesPerView: '1',
+								paginationClickable: true,
+								loop: true,
+								preloadImages: false,
+								lazyLoading: true,
+			
+								onInit: function (mySwiper) {
+									$(paginatorId).show();
+								}
+							});
+						</script>
+					</div>
+				</div>
+				<!--<strong class="prdt_price" th:text="${#numbers.formatInteger(productDetail.salePrice,3,'COMMA')}" style="z-index:100">0<span class="blind">원</span></strong>-->
+				
+				<ul class="etc_btn" style="z-index:100">
+					<li>
+						<button type="button" class="btn_share" onclick="openSnsShare(this);"><span class="sp">공유하기</span></button>
+					</li>
+					<li>
+						<button type="button" id="wish-TGJU0A702BK" class="btn_wish" onclick="clickWish('TGJU0A702BK');">
+							<span class="sp">위시리스트에 담기</span>
+							<span class="count">274</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<!-- // top_banner -->
+
+			<!-- brand_artbx -->
+			<div class="brand_artbx">
+				<h2 class="name">
+					<span class="brand" id="brandLink" onclick="linkToBrand('1878','콜한','1','false','81.0.4044');">COLE HAAN</span>
+				</h2>
+				<p class="prdt_tit">[Cloudfeel Laca up Espadrille] 화이트 여자 스니커즈 [WIDTH:B]</p>
+				<p class="md_comment" id="marketingPhrase"></p>
+			</div>
+			<!-- // brand_artbx -->
+			
+			<!-- 색상 및 사이즈 -->
+			<div class="size_artbx">
+				<ul class="detail_lst">
+					<li>
+						<div class="tit">색상</div>
+						<div class="info">
+							<div class="circ_rdo_group">
+								<div class="inp_wrap">
+									<input type="radio" name="acolor" id="acolor1" style="background: url(//img.lfmall.co.kr/file/product/prd/C017/2020/color/CHSO0F166BK_00.jpg);" onclick="javascript:linkToOtherProductDetail('CHSO0F166BK','03', 'WE00021', 'LF_FORMAL', 'othercolor', undefined, undefined, '&amp;etag1=009_A020_E059&amp;etag2=0&amp;etag3=0&amp;etag4=CHSO0F166WT');">
+									<label for="acolor1">BLACK</label>
+								</div>
+								<div class="inp_wrap">
+									<input type="radio" name="acolor" id="acolor2" style="background: url(//img.lfmall.co.kr/file/product/prd/C017/2020/color/CHSO0F166WT_00.jpg);" onclick="javascript:;" checked="checked">
+									<label for="acolor2">WHITE</label>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="tit">사이즈</div>
+						<div class="info">
+							<div class="btn_wrap" id="sizeChartDiv" style="display: block;"><button type="button" class="chart" onclick="sizeChart.openSizeReviewChartWindow();">조견표</button></div>
+							<p class="size">
+								<span>050(220)</span><span>055(225)</span><span>060(230)</span><span>065(235)</span><span>070(240)</span><span>075(245)</span><span>080(250)</span><span>085(255)</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- // 색상 및 사이즈 -->
+
+			<!-- 구매혜택 -->
+			<div class="benefit_artbx">
+				<div class="benefits-price-notify">
+					<div class="prod-price">
+						<span class="sale-amount">27%</span>
+						<span class="first-price">899,550원</span>
+						<span class="last-price">592,000원</span>
+						<span class="last-price-info">
+							<button class="ui-btn-type-ico act-open-ly" onclick="popupBenefit(this, 'priceInfoGuide');"><span class="blind">가격안내</span></button>
+						</span>
+					</div>
+					<!-- 가격안내 레이어 -->
+					<div id="benefitPointLayer" class="ly-common-wrap ly-benefit-info" style="display: none;">
+						<div class="ly-common-container">
+							<div class="ly-common-content">
+								<div class="ly-tbl-box only-save">
+									<div class="ly-tbl-cell">적립예정</div>
+									<div class="ly-tbl-cell"><strong>5,555M</strong></div>
+								</div>
+							</div>
+							<div class="ly-close-x">
+								<button class="ui-btn-type-ico act-close-ly" onclick="closeLayer(this, 'benefitPointLayer');"><span class="blind">닫기</span></button>
+							</div>
+						</div>
+					</div>
+					<!-- 가격안내 레이어 -->
+					<div id="priceInfoGuide" class="ly-common-wrap ly-benefit-info" style="display: none;">
+						<div class="ly-common-container">
+							<h3 class="ly-common-ttl">가격 안내</h3>
+							<div class="ly-common-content">
+								<div class="ly-tbl-box">
+									<div class="ly-tbl-cell">즉시할인 10%</div>
+									<div class="ly-tbl-cell"><span>-69,500원</span></div>
+								</div>
+								<div class="ly-tbl-box">
+									<div class="ly-tbl-cell">일반쿠폰 5%</div>
+									<div class="ly-tbl-cell"><span>-31,280원</span></div>
+								</div>
+								<div class="ly-tbl-box sum-benefit-fee">
+									<div class="ly-tbl-cell">할인가</div>
+									<div class="ly-tbl-cell"><strong>594,220원</strong></div>
+								</div>
+								<div class="ly-tbl-box">
+									<div class="ly-tbl-cell">적립예정</div>
+									<div class="ly-tbl-cell"><strong>5,555M</strong></div>
+								</div>
+								<p class="benefit-price-info">
+									상품에 기본 할인이 적용된 가격입니다.<br />
+									주문서에서 더 큰 할인을 받아보세요!
+								</p>
+							</div>
+							<div class="ly-close-x">
+								<button class="ui-btn-type-ico act-close-ly" onclick="closeLayer(this, 'priceInfoGuide');"><span class="blind">닫기</span></button>
+							</div>
+						</div>
+					</div>
+					<div class="your-max-benefit-price">
+						<span>홍길동님의 최대 혜택가</span>
+						<p class="max-last-price">
+							<strong>505,090원</strong>
+							<span class="last-price-info">
+								<button class="ui-btn-type-ico act-open-ly" onclick="popupBenefit(this, 'priceInfoGuide02');"><span class="blind">혜택가 보기</span></button>
+							</span>
+						</p>
+					</div>
+					<div id="priceInfoGuide02" class="ly-common-wrap ly-benefit-info your-max-price" style="display: none;">
+						<div class="ly-common-container">
+							<h3 class="ly-common-ttl">
+								가격 안내
+								<span class="user-grade black">BLACK R</span>
+								<!-- 등급 표시
+								<span class="user-grade black">BLACK R</span>
+								<span class="user-grade black">BLACK S</span>
+								<span class="user-grade purple">PURPLE</span>
+								<span class="user-grade red">RED</span>
+								<span class="user-grade blue">BLUE</span>
+								<span class="user-grade white">WHITE</span>
+								<span class="user-grade">일반</span> -->
+							</h3>
+							<div class="ly-common-content">
+								<div class="ly-tbl-box">
+									<div class="ly-tbl-cell">즉시할인 10%</div>
+									<div class="ly-tbl-cell"><span>-69,500원</span></div>
+								</div>
+								<div class="ly-tbl-box">
+									<div class="ly-tbl-cell">일반쿠폰 5%</div>
+									<div class="ly-tbl-cell"><span>-31,280원</span></div>
+								</div>
+								<div class="ly-tbl-box">
+									<div class="ly-tbl-cell">플러스쿠폰 5%</div>
+									<div class="ly-tbl-cell"><span>-31,280원</span></div>
+								</div>
+								<div class="ly-tbl-box sum-benefit-fee">
+									<div class="ly-tbl-cell">최대 할인가</div>
+									<div class="ly-tbl-cell"><strong>594,220원</strong></div>
+								</div>
+								<div class="ly-tbl-box">
+									<div class="ly-tbl-cell">적립예정</div>
+									<div class="ly-tbl-cell"><strong>5,555M</strong></div>
+								</div>
+								<p class="benefit-price-info">
+									고객님의 보유 마일리지를 제외한 최대 할인 가격입니다.
+									상품 1개 기준으로 적용된 금액입니다.
+								</p>
+							</div>
+							<div class="ly-close-x">
+								<button class="ui-btn-type-ico act-close-ly" onclick="closeLayer(this, 'priceInfoGuide02');"><span class="blind">닫기</span></button>
+							</div>
+						</div>
+					</div>
+
+					<!-- LFML-44288 로그인 전 가격혜택 안내 추가 -->
+					<!-- <div class="your-max-benefit-price">
+						<a href="#"><span class="best-price-comment"><strong>로그인</strong> 후 최적가를 확인하세요</span></a>
+					</div> -->
+					<!-- <div class="first-buy-chance">
+						<a href="#"><span>첫구매 1만원 쿠폰 + 앱 다운 1만 마일리지 지급</span></a>
+					</div> -->
+
+				</div>
+				<!-- //LFML-31919 -->
+
+				<div class="detail_lst">
+					<div class="your-mileage">
+						<div class="tit"> <strong>적립혜택</strong> </div>
+						<div class="info">최대 <ins>15,010</ins>M 적립예정
+							<div class="ly_btn_after_wrap">
+								<button type="button" class="btn_more_view" onclick="popupBenefit(this, 'benefintPointInfo');">
+									<span class="sp">적립혜택 자세히 보기</span>
+								</button>
+
+								<div id="benefintPointInfo" class="ly_graybx" style="top:20px;left:-15px; display:none;"> 
+									<strong class="ly_gtit">적립혜택</strong>
+									<div class="ly_gcont">
+										<div class="scrlbx">
+											<dl class="ly_info_lst"> 
+												<dt><strong>Platinum</strong> (5%)</dt>
+												<dd>15,010M 적립예정</dd> 
+											</dl>
+										</div>
+										<ul class="ly-guide-list">
+											<li>LF 브랜드 상품 구매 시, 등급별 마일리지 적립혜택을 드립니다.</li>
+											<li>로그인여부 및 최종 결제금액에 따라 적립금액이 달라질 수 있습니다.</li>
+											<li>등급별 적립혜택 :
+												<p>S-Platinum (5%) / Paltinum (5%) / Gold (4%) / Silver (4%) / Black (3%) / Purple (2%) / Red (1%)</p>
+											</li>
+										</ul>
+									</div> 
+									<button type="button" class="btn_ly_cls" onclick="closeLayer(this, 'benefintPointInfo')"><span class="sp">레이어 닫기</span></button>
+								</div><!--//자사상품 즉시 사용 Y-->
+								<div class="ly_graybx" style="top:20px;left:-15px; display:none;"> 
+									<strong class="ly_gtit">적립혜택</strong>
+									<div class="ly_gcont">
+										<div class="scrlbx">
+											<dl class="ly_info_lst"> 
+												<dt><strong>Platinum (5%)</strong> +<br>이벤트 적립 (2%)</dt>
+												<dd>15,010M 적립예정</dd> 
+											</dl>
+										</div>
+										<ul class="ly-guide-list">
+											<li>LF 브랜드 상품 구매 시, 등급별 마일리지 적립혜택을 드립니다.</li>
+											<li>로그인여부 및 최종 결제금액에 따라 적립금액이 달라질 수 있습니다.</li>
+											<li>등급별 적립혜택 :
+												<p>S-Platinum (5%) / Paltinum (5%) / Gold (4%) / Silver (4%) / Black (3%) / Purple (2%) / Red (1%)</p>
+											</li>
+										</ul>
+									</div> 
+									<button type="button" class="btn_ly_cls" onclick="closeLayer(this, 'benefintPointInfo')"><span class="sp">레이어 닫기</span></button>
+								</div><!--//자사상품 즉시 사용 N-->
+								<div class="ly_graybx" style="top:20px;left:-15px; display:none;"> 
+									<strong class="ly_gtit">적립혜택</strong>
+									<div class="ly_gcont">
+										<div class="scrlbx">
+											<dl class="ly_info_lst"> 
+												<dt>이벤트 적립 (7%)</dt>
+												<dd>1,600원 적립예정</dd> 
+											</dl>
+										</div>
+										<ul class="ly-guide-list">
+											<li>입점사 상품 구매 시, 상품별 적립금 혜택을 드립니다.</li>
+											<li>최종 결제금액에 따라 적립예정금액이 달라질 수 있습니다</li>
+										</ul>
+									</div> 
+									<button type="button" class="btn_ly_cls" onclick="closeLayer(this)"><span class="sp">레이어 닫기</span></button>
+								</div>
+							</div><!--//입점상품-->
+						</div>
+					</div>
+				</div>
+
+				<div class="wrap_toggle" id="installmentDiv">
+					<div class="title_toggle card_benefit" onclick="toggleLayer(this)">
+						<p class="tit"><span>카드혜택</span></p>
+						<p class="max_term"> KB국민카드 5%, 삼성카드 5% 청구할인<br> <span>무이자 최대 6개월 (카드사별 상이)</span> </p> <span class="arrow"></span>
+					</div>
+					<div class="wrap_toggle_ctns cart_wrap">
+						<h3 class="card_benefit_kind">청구할인</h3><br> <img src="http://img.lfmall.co.kr/file/WAS/apps/2013/image/frontoffice/promotion/card/img_kb.jpg" alt="KB국민카드">
+						<div class="claimDiscount_card_info">
+							<ul class="bu_lst">
+								<li>KB국민카드 10만원이상 결제시, 5% 청구할인 (최대 1만원 할인)</li>
+								<li>기간 : 2019.06.01 00:00 ~ 2019.06.30 23:59</li>
+								<li>1일 1회만 적용 가능</li>
+								<li>1인 1개의 KB국민카드 사용 가능</li>
+								<li>법인, 선불, 기프트카드 제외</li>
+								<li>삼성페이, 네이버페이, 카카오페이, 페이코, 페이나우 등 모든 간편결제 제외</li>
+							</ul>
+						</div> <img src="http://img.lfmall.co.kr/file/WAS/apps/2013/image/frontoffice/promotion/card/img_samsung.jpg" alt="삼성카드">
+						<div class="claimDiscount_card_info">
+							<ul class="bu_lst">
+								<li>삼성카드 10만원이상 결제시, 5% 청구할인 (최대 1만원 할인)</li>
+								<li>기간 : 2019.06.11 00:00 ~ 2019.06.30 23:59</li>
+								<li>1일 1회만 적용 가능</li>
+								<li>1인 1개의 삼성카드 사용 가능</li>
+								<li>체크, 법인, 선불, 충전, 기프트, 올앳카드 제외</li>
+								<li>삼성페이 외 모든 간편결제 제외</li>
+							</ul>
+						</div> <!-- 무이자 혜택 -->
+						<h3 class="card_benefit_kind">무이자혜택</h3><br> <strong class="card_tit card36">신한카드 무이자할부 안내</strong>
+						<ul class="bu_lst">
+							<li>2~5개월 (5만원이상 결제시, 패밀리카드, 신한BC 제외)</li>
+							<li>신한BC, 법인, 체크, 기프트 (※카카오페이, 페이나우, 페이코 제외)</li>
+						</ul> <strong class="card_tit card35">삼성카드 무이자할부 안내</strong>
+						<ul class="bu_lst">
+							<li>2~6개월 (5만원이상 결제시)</li>
+							<li>올앳, 법인, 체크, 기프트 (※카카오페이, 페이나우, 페이코 제외)</li>
+						</ul> <strong class="card_tit card32">현대카드 무이자할부 안내</strong>
+						<ul class="bu_lst">
+							<li>2~5개월 (5만원이상 결제시)</li>
+							<li>하이브리드, 법인, 체크, 기프트 (※카카오페이, 페이나우, 페이코 제외)</li>
+						</ul> <strong class="card_tit card34">BC카드 무이자할부 안내</strong>
+						<ul class="bu_lst">
+							<li>2~6개월 (5만원이상 결제시, 하나BC 제외)</li>
+							<li>법인, 체크, 기프트 (※카카오페이, 네이버페이, 페이나우, 페이코 제외)</li>
+						</ul> <strong class="card_tit card33">국민카드 무이자할부 안내</strong>
+						<ul class="bu_lst">
+							<li>2~5개월 (5만원이상 결제시, 농협/국민BC 제외)</li>
+							<li>KB국민BC, 법인, 체크, 기프트 (※카카오페이, 페이나우, 페이코 제외)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="speedDelivery" id="speedDeliveryDiv">
+					<!-- LFML-37503 사이즈 구해드림 -->
+					<div class="wrap_toggle">
+						<div class="title_toggle on" onclick="toggleLayer(this)">
+							<p class="tit">무료배송</p>
+							<p class="txt">
+								</p><div class="size-find-delivery">
+									<span class="size-find-tag"><em>사이즈</em> 구해드림</span> 배송기간 <strong class="size-find-term">평균 3~4일</strong> 소요 <span>(주말 및 공휴일 제외)</span>
+								</div>
+							<p></p>
+							<span class="arrow"></span>
+						</div>
+						<div class="wrap_toggle_ctns" style="display: block;">
+							<p class="txt1">배송유형</p>
+							<p class="txt2">
+								택배배송 : LF에서 배송하는 <span class="size-find-tag"><em>사이즈</em> 구해드림</span> 상품으로 3~4일 배송기간 소요 (주말 및 공휴일 제외)
+							</p>
+						</div>
+					</div>
+					<!-- //LFML-37503 사이즈 구해드림 -->
+					<div class="wrap_toggle">
+						<div class="title_toggle on" onclick="toggleLayer(this)">
+							<p class="tit">무료배송</p>
+							<p class="txt"><strong>06/26(수)</strong> 도착예정 <span>(지금 결제 시)</span></p> <span class="arrow"></span>
+						</div>
+						<div class="wrap_toggle_ctns" style="display: block;">
+							<p class="txt1">15시 이전에 결제하시면 다음날에 받으실 수 있습니다.</p>
+							<p class="txt2">단 휴일/공휴일은 제외이며, 도서산간 및 일부 지역은 택배사 사정에 따라 배송이 늦어질 수 있습니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<ul class="rv_tab tmpl_406">
+				<li class="selected"><a href="javascript:;" onclick="getProductDescription(this)">상세정보</a></li>
+				<!--[D] 선택된 항목 li에 .selected 추가 -->
+				<li id="linkReviewTab">
+					<a href="javascript:;" onclick="getReviews('http://mapi.colehaan.co.kr', 'CHSO0F166WT', this);">상품평 <span class="num">(0)</span></a>
+				</li>
+			</ul>
+
+			<div class="detail_info_wrap" id="contentMain">
+				<span class="zoom_noti view" style="display: none;">
+					<img src="//img.lfmall.co.kr/file/product/size/zoom_noti.png">
+				</span>
+				
+				<!-- 동영상 재생 -->
+				
+			
+				<!--<h4 class="detail_tit">FULL SHOT</h4>-->
+			
+				<!-- 레거시 HTML 노출 코드 활용 : 개선필요여부 확인 -->
+				<!--<div class="cont" th:utext="${productDetail.htmlDesc}"></div>-->
+				<div class="cont">
+					<div id="lfpd-wrap-mobile">
+						<div class="ac mb30">
+							<img src="https://img.lfmall.co.kr/file/onul/2015/detail/Cole-Haan.jpg" width="100%" height="auto">
+						</div>
+			
+						<!-- 1.product full shot -->
+						<h4 class="detail_tit">PRODUCT</h4>
+						<div class="prod-description">
+							
+							<p class="mtx">세련된 펀칭 패턴이 돋보이며 에스파듀 밑창이 어우러져 포인트로 매치하기 좋은 스니커즈입니다.  </p>
+												
+							<p class="mtx">소가죽 소재로 부드럽고 고급스러운 터치감을 전해주며 캐주얼하게 연출하기 좋은 아이템입니다.</p>
+									
+							<div class="prod-img">
+								<img src="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_00.jpg" width="100%" height="auto" data-original="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_00.jpg" class="lazy_detail" style="display: inline;">
+							</div>
+									
+							<div class="prod-img">
+								<img src="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_01.jpg" width="100%" height="auto" data-original="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_01.jpg" class="lazy_detail" style="display: inline;">
+							</div>
+									
+							<div class="prod-img">
+								<img src="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_02.jpg" width="100%" height="auto" data-original="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_02.jpg" class="lazy_detail" style="display: inline;">
+							</div>
+									
+							<div class="prod-img">
+								<img src="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_D1.jpg" width="100%" height="auto" data-original="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_D1.jpg" class="lazy_detail" style="display: inline;">
+							</div>
+									
+							<div class="prod-img">
+								<img src="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_D2.jpg" width="100%" height="auto" data-original="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_D2.jpg" class="lazy_detail" style="display: inline;">
+							</div>
+									
+							<div class="prod-img">
+								<img src="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_D3.jpg" width="100%" height="auto" data-original="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_D3.jpg" class="lazy_detail" style="display: inline;">
+							</div>
+						</div>
+						<!-- 4.product label shot -->         
+						<h4 class="detail_tit">LABEL</h4>        
+						<div class="prod-label-img">  
+							<ul>
+								<li>
+									<span class="prod-img">
+										<img src="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_L0.jpg" width="100%" height="auto" data-original="https://img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_L0.jpg" class="lazy_detail" style="display: inline;">
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<!-- [D] border-top 필요없을 경우 bdt0 추가
+				<h4 class="detail_tit bdt0">TIP</h4>
+				-->
+				
+				<!--  LFML-25999 - sangyeol : 프로시저에서 HTML 생성으로 대체 
+				20190522 보다 낮으면 노출 해줘야함
+				<div class="cloth_detail" id="basicInfo"></div>
+				-->
+				<div class="cloth_detail" id="basicInfo"></div>
+				
+				<!-- KC인증 배너 -->
+				<div id="kcgbInfo"></div>
+				
+				<!-- 배송안내 배너 -->
+				<div class="cloth_detail" id="deliveryInfo"></div>
+		
+				<script type="text/javascript" src="//m.colehaan.co.kr/static/js/jquery/jquery.lazyload.js"></script>
+				<script src="//m.colehaan.co.kr/static/js/lf/product/detail/description.js"></script>
+				<script type="text/javascript">
+					var productId = "CHSO0F166WT";
+					var isTodaySpecial = false;
+					var imageHostUrl = null;
+					var isSetProduct = false;
+					var productDetail = {"id":"CHSO0F166WT","name":"[Cloudfeel Laca up Espadrille] \uD654\uC774\uD2B8 \uC5EC\uC790 \uC2A4\uB2C8\uCEE4\uC988 [WIDTH:B]","dealProduct":false,"dealMainProductId":null,"dealSailDisplayYn":false,"dealQty":0,"eventStartDt":null,"eventEndDt":null,"dealTitle":null,"dealKind":null,"dealImage":null,"lfProduct":true,"productStatus":4,"productSaleType":1,"properties":{"FLEXIBILITY":"99","STYLE_YEAR":"0","SEASON":"F","THICK":"99","WEIGHT":"215","TRANSPARENCY":"99","TOUCH":"99","LINING":"99"},"images":[{"type":"MAIN","displaySequence":0,"url":"http://img.lfmall.co.kr/file/product/prd/C017/2020/320/CHSO0F166WT_00.jpg?1586395798000","appImageUrl":"http://img.lfmall.co.kr/file/product/prd/C017/2020/~/CHSO0F166WT_00.jpg?1586395798000","imageUpdateYmdt":{"era":1,"dayOfMonth":9,"dayOfWeek":4,"dayOfYear":100,"weekOfWeekyear":15,"millisOfDay":5398000,"monthOfYear":4,"hourOfDay":1,"minuteOfHour":29,"secondOfMinute":58,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":5398,"minuteOfDay":89,"year":2020,"zone":{"fixed":true,"id":"UTC"},"millis":1586395798000,"chronology":{"zone":{"fixed":true,"id":"UTC"}},"equalNow":false,"beforeNow":true,"afterNow":false}},{"type":"MAIN","displaySequence":0,"url":"http://img.lfmall.co.kr/file/product/prd/C017/2020/320/CHSO0F166WT_01.jpg?1586395798000","appImageUrl":"http://img.lfmall.co.kr/file/product/prd/C017/2020/~/CHSO0F166WT_01.jpg?1586395798000","imageUpdateYmdt":{"era":1,"dayOfMonth":9,"dayOfWeek":4,"dayOfYear":100,"weekOfWeekyear":15,"millisOfDay":5398000,"monthOfYear":4,"hourOfDay":1,"minuteOfHour":29,"secondOfMinute":58,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":5398,"minuteOfDay":89,"year":2020,"zone":{"fixed":true,"id":"UTC"},"millis":1586395798000,"chronology":{"zone":{"fixed":true,"id":"UTC"}},"equalNow":false,"beforeNow":true,"afterNow":false}},{"type":"MAIN","displaySequence":0,"url":"http://img.lfmall.co.kr/file/product/prd/C017/2020/320/CHSO0F166WT_02.jpg?1586395798000","appImageUrl":"http://img.lfmall.co.kr/file/product/prd/C017/2020/~/CHSO0F166WT_02.jpg?1586395798000","imageUpdateYmdt":{"era":1,"dayOfMonth":9,"dayOfWeek":4,"dayOfYear":100,"weekOfWeekyear":15,"millisOfDay":5398000,"monthOfYear":4,"hourOfDay":1,"minuteOfHour":29,"secondOfMinute":58,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":5398,"minuteOfDay":89,"year":2020,"zone":{"fixed":true,"id":"UTC"},"millis":1586395798000,"chronology":{"zone":{"fixed":true,"id":"UTC"}},"equalNow":false,"beforeNow":true,"afterNow":false}},{"type":"MAIN","displaySequence":0,"url":"http://img.lfmall.co.kr/file/product/prd/C017/2020/320/CHSO0F166WT_D0.jpg?1586395798000","appImageUrl":"http://img.lfmall.co.kr/file/product/prd/C017/2020/~/CHSO0F166WT_D0.jpg?1586395798000","imageUpdateYmdt":{"era":1,"dayOfMonth":9,"dayOfWeek":4,"dayOfYear":100,"weekOfWeekyear":15,"millisOfDay":5398000,"monthOfYear":4,"hourOfDay":1,"minuteOfHour":29,"secondOfMinute":58,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":5398,"minuteOfDay":89,"year":2020,"zone":{"fixed":true,"id":"UTC"},"millis":1586395798000,"chronology":{"zone":{"fixed":true,"id":"UTC"}},"equalNow":false,"beforeNow":true,"afterNow":false}}],"originalPrice":179000,"originalSalePrice":179000,"originalDiscountRate":0,"salePrice":179000,"discountRate":0,"createYmdt":{"era":1,"dayOfMonth":30,"dayOfWeek":1,"dayOfYear":90,"weekOfWeekyear":14,"millisOfDay":57736000,"monthOfYear":3,"hourOfDay":16,"minuteOfHour":2,"secondOfMinute":16,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":57736,"minuteOfDay":962,"year":2020,"zone":{"fixed":true,"id":"UTC"},"millis":1585584136000,"chronology":{"zone":{"fixed":true,"id":"UTC"}},"equalNow":false,"beforeNow":true,"afterNow":false},"setProduct":false,"setProducts":[],"brand":{"id":"C017","name":"\uCF5C \uD55C","engName":"COLE HAAN","groupName":"COLE HAAN"},"brandGroup":{"id":1878,"name":"\uCF5C\uD55C","engName":"COLE HAAN","ownBrand":false},"genderType":2,"salePoint":16337,"salePriority":2147483647,"recentPriority":2147483647,"pricePriority":2147483647,"discountPriority":2147483647,"reviewPoint":0,"reviewPriority":2147483647,"recentPriorityMap":{},"salePointMap":{"1":163370,"2":163370,"3":163370,"4":163370,"5":20000000},"salePriorityMap":{},"sizes":[{"itemId":"CHSO0F166WT","value":"050","stock":1,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"055","stock":8,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"060","stock":13,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"065","stock":21,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"070","stock":19,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"075","stock":10,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"080","stock":8,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"085","stock":4,"name":null,"productId":null,"safeStock":0}],"setSizes":[],"filterSizes":[{"itemId":"CHSO0F166WT","value":"050","stock":1,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"055","stock":8,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"060","stock":13,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"065","stock":21,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"070","stock":19,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"075","stock":10,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"080","stock":8,"name":null,"productId":null,"safeStock":0},{"itemId":"CHSO0F166WT","value":"085","stock":4,"name":null,"productId":null,"safeStock":0}],"colors":["WHITE"],"colorFilters":["WHITE"],"heelSizes":[],"standardCategoryId":36663,"newStandardCategoryId":36663,"standardCategoryName":"\uC2A4\uB2C8\uCEE4\uC988","newStandardCategoryName":"\uC2A4\uB2C8\uCEE4\uC988","displayCategories":[{"id":80389,"parentId":80384,"name":"\uC2A4\uB2C8\uCEE4\uC988","version":2,"depth":3,"type":1,"properties":null},{"id":88843,"parentId":88693,"name":"\uC2A4\uB2C8\uCEE4\uC988","version":2,"depth":3,"type":4,"properties":null},{"id":80384,"parentId":80372,"name":"\uC5EC\uC131 \uC288\uC988","version":2,"depth":2,"type":1,"properties":null},{"id":80372,"parentId":0,"name":"\uC288\uC988","version":2,"depth":1,"type":1,"properties":null},{"id":88693,"parentId":88672,"name":"\uC5EC\uC131\uC288\uC988","version":2,"depth":2,"type":4,"properties":null},{"id":88672,"parentId":0,"name":"\uC288\uC988","version":2,"depth":1,"type":4,"properties":null}],"menus":[{"id":102,"name":"\uD648"},{"id":105,"name":"\uC7A1\uD654"},{"id":137,"name":"\uC288\uC988"},{"id":201,"name":"\uD648"},{"id":204,"name":"\uC7A1\uD654"},{"id":301,"name":"\uD648"},{"id":357,"name":"\uC288\uC988"},{"id":381,"name":"\uC288\uC988"},{"id":501,"name":"\uD648"},{"id":591,"name":"\uC288\uC988"},{"id":111,"name":"\uB77C\uC6C0\uC5D0\uB514\uC158"},{"id":116,"name":"RAUM EDITION"},{"id":223,"name":"RAUM EDITION"},{"id":334,"name":"RAUM EDITION"},{"id":391,"name":"\uB77C\uC6C0\uC5D0\uB514\uC158"},{"id":552,"name":"RAUM EDITION"}],"raumEdition":true,"aroundTheCorner":false,"atCorner":false,"newRaumEdition":false,"wish":false,"saleCount":2,"cartCount":5,"conversionRate":0.0,"deliveryFee":2500,"minOrderAmount":30000,"soldout":false,"todaySpecialSoldout":null,"soldoutDisplayYn":false,"todayDisplaySequence":0,"todayPrioritySaleCountRank":0,"todayPrioritySaleDiscountRank":0,"todayPriorityRank":0.0,"brandId":"C017","image":null,"season":"","normalCoupons":[],"plusCoupons":[],"plusAffiliateCoupons":[],"externalShopId":"LGF","itemkind":"7HBF","directUsePoint":false,"directUsePointForMobile":false,"pointRate":1.5,"mobilePointRate":1.5,"savePriceRate":0.0,"mobileSavePriceRate":0.0,"rank":"B","rankToInt":"3","imageUpdateYmdt":{"era":1,"dayOfMonth":9,"dayOfWeek":4,"dayOfYear":100,"weekOfWeekyear":15,"millisOfDay":5398000,"monthOfYear":4,"hourOfDay":1,"minuteOfHour":29,"secondOfMinute":58,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":5398,"minuteOfDay":89,"year":2020,"zone":{"fixed":true,"id":"UTC"},"millis":1586395798000,"chronology":{"zone":{"fixed":true,"id":"UTC"}},"equalNow":false,"beforeNow":true,"afterNow":false},"applyDiscount":{},"directAccessSalePrice":179000,"directAccessSalePriceDiscount":0,"withoutDirectAccessSalePrice":179000,"withoutDirectAccessSalePriceDiscount":0,"directAccessSalePriceForPc":179000,"directAccessSalePriceDiscountForPc":0,"withoutDirectAccessSalePriceForPc":179000,"withoutDirectAccessSalePriceDiscountForPc":0,"affiliateSalePrices":[],"colorCode":"WT","raum":false,"specialLine":false,"searchFields":["\uC5EC\uC131\uC288\uC988","\uC5EC\uC131\uC2E0\uBC1C","\uC5EC\uC790\uC288\uC988","\uC5EC\uC790\uC2E0\uBC1C","\uAC00\uC744","\uACA8\uC6B8"],"title":null,"differentColorProductIds":[],"badgeImage":null,"eventBadgeImage":null,"badgeImages":[],"eventBadgeImages":[],"hasImageUpdateYmdt":true,"esUpdateYmdt":null,"clickData":null,"reviewScore":0.0,"reviewCount":0,"ingredient":null,"description":null,"marketingPhrase":null,"specialLineType":null,"displayYn":true,"productProperties":[{"propertyValueId":13,"propertyId":3,"value":"\uC18C\uAC00\uC8FD","filterValue":"\uC18C\uAC00\uC8FD","useFilter":false},{"propertyValueId":18,"propertyId":3,"value":"\uD569\uC131\uC12C\uC720","filterValue":"\uD569\uC131\uC12C\uC720","useFilter":false},{"propertyValueId":96,"propertyId":21,"value":"1-3cm","filterValue":"1-3cm","useFilter":false}],"propertyValueIds":[13,18,96],"propertyFilterValueIds":[13,18,96],"standardCategories":[{"id":36663,"name":"\uC2A4\uB2C8\uCEE4\uC988","depth":3,"parentId":36443,"properties":[]},{"id":36443,"name":"\uC5EC\uC131\uC288\uC988","depth":2,"parentId":36386,"properties":[]},{"id":36386,"name":"\uC288\uC988","depth":1,"parentId":0,"properties":[]}],"necessaryPropertyIds":[3,21],"type":"10","buyAbleyn":"Y","exchangable":true,"returnable":true,"overseaDeliverable":false,"mileageDirectUsable":false,"minOrderQuantity":1,"maxOrderQuantity":20,"minOrderPrice":0,"materialDescription":"\uAC11\uD53C\uC18C\uC7AC-\uCC9C\uC5F0\uC18C\uAC00\uC8FD \uCC3D\uC18C\uC7AC-\uACE0\uBB34","warrantyDescription":"\uAD6C\uB9E4\uC77C\uB85C\uBD80\uD130 6\uAC1C\uC6D4\uAC04/ \uADF8 \uC678 \uAE30\uC900\uC740 \uAD00\uB828\uBC95 \uBC0F \uC18C\uBE44\uC790\uBD84\uC7C1\uD574\uACB0 \uADDC\uC815\uC5D0 \uB530\uB984","manufacturerName":null,"originCountryDescription":null,"deliveryReturnExchangeDescription":null,"descriptions":null,"sizeChartMap":null,"myCoupons":null,"sizesMap":null,"colorsMap":null,"itemStocks":[{"id":"CHSO0F166WT","name":"[Cloudfeel Laca up Espadrille] \uD654\uC774\uD2B8 \uC5EC\uC790 \uC2A4\uB2C8\uCEE4\uC988 [WIDTH:B]","sizes":[{"itemId":null,"value":"050","stock":1,"name":"050(220)","productId":"CHSO0F166WT","safeStock":0},{"itemId":null,"value":"055","stock":8,"name":"055(225)","productId":"CHSO0F166WT","safeStock":0},{"itemId":null,"value":"060","stock":13,"name":"060(230)","productId":"CHSO0F166WT","safeStock":0},{"itemId":null,"value":"065","stock":21,"name":"065(235)","productId":"CHSO0F166WT","safeStock":0},{"itemId":null,"value":"070","stock":19,"name":"070(240)","productId":"CHSO0F166WT","safeStock":0},{"itemId":null,"value":"075","stock":10,"name":"075(245)","productId":"CHSO0F166WT","safeStock":0},{"itemId":null,"value":"080","stock":8,"name":"080(250)","productId":"CHSO0F166WT","safeStock":0},{"itemId":null,"value":"085","stock":4,"name":"085(255)","productId":"CHSO0F166WT","safeStock":0}]}],"productCategory":{"categoryType":"11000","topCategoryId":80371,"topCategoryName":"\uC288\uC988","middleCategoryId":80372,"middleCategoryName":"\uC288\uC988","smallCategoryId":80384,"smallCategoryName":"\uC5EC\uC131 \uC288\uC988","detailCategoryId":80389,"detailCategoryName":"\uC2A4\uB2C8\uCEE4\uC988","productCategoryId":80389,"productCategoryName":"\uC2A4\uB2C8\uCEE4\uC988"},"templateType":"2","mdComment":null,"colorChips":[{"value":"BK","name":"BLACK","korName":null,"productId":"CHSO0F166BK","imageUrl":"//img.lfmall.co.kr/file/product/prd/C017/2020/color/CHSO0F166BK_00.jpg"},{"value":"WT","name":"WHITE","korName":null,"productId":"CHSO0F166WT","imageUrl":"//img.lfmall.co.kr/file/product/prd/C017/2020/color/CHSO0F166WT_00.jpg"}],"imageDescription":{"productId":"CHSO0F166WT","productImages":[{"type":"MAIN","displaySequence":1,"url":"/file/product/prd/C017/2020/640/CHSO0F166WT_00.jpg","appImageUrl":null,"imageUpdateYmdt":null},{"type":"MAIN","displaySequence":2,"url":"/file/product/prd/C017/2020/640/CHSO0F166WT_01.jpg","appImageUrl":null,"imageUpdateYmdt":null},{"type":"SUB","displaySequence":3,"url":"/file/product/prd/C017/2020/640/CHSO0F166WT_02.jpg","appImageUrl":null,"imageUpdateYmdt":null},{"type":"DETAIL","displaySequence":5,"url":"/file/product/prd/C017/2020/640/CHSO0F166WT_D0.jpg","appImageUrl":null,"imageUpdateYmdt":null},{"type":"DETAIL","displaySequence":6,"url":"/file/product/prd/C017/2020/640/CHSO0F166WT_D1.jpg","appImageUrl":null,"imageUpdateYmdt":null},{"type":"DETAIL","displaySequence":7,"url":"/file/product/prd/C017/2020/640/CHSO0F166WT_D2.jpg","appImageUrl":null,"imageUpdateYmdt":null},{"type":"DETAIL","displaySequence":8,"url":"/file/product/prd/C017/2020/640/CHSO0F166WT_D3.jpg","appImageUrl":null,"imageUpdateYmdt":null},{"type":"LABEL","displaySequence":27,"url":"/file/product/prd/C017/2020/640/CHSO0F166WT_L0.jpg","appImageUrl":null,"imageUpdateYmdt":null}],"additionalImages":null,"topType":null,"topContent":null,"bottomType":null,"bottomContent":null},"informationNotifications":null,"totalReviewCount":0,"seasonName":"\uD558\uBC18\uAE30","productWish":{"totalCount":3,"mineCount":0,"mine":false},"brandImageUrl":null,"youtubeUrl":"","todaySpecialProduct":{"todaySpecialId":0,"productId":null,"displaySequence":0,"salePlanQty":0,"maxOrderAbleQty":0,"saledInitQty":0,"specialPrice":0,"creatorId":null,"createDttm":null,"modifierId":null,"modifyDttm":null,"discountApplyQty":0,"soldQty":0,"todayStandardCategoryId":0,"soldOut":true},"snsEvent":null,"availableGift":"N","useOptionSet":"N","component":"N","badge":null,"eventBadge":null,"hasOfflineMend":"N","basicInfo":null,"giftCH":null,"appDownBtnDp":null,"ownProduct":"Y","setYn":"N","minOrdAmt":0,"familyMember":false,"clubLMember":false,"clubGMember":false,"groupCompanyMember":false,"saveMileage":0.0,"useBrandLink":false,"existOptions":false,"availableShopId":null,"orderable":true,"infoBanners":null,"bandBanners":[{"id":2899,"type":"PRODUCT_DETAIL_BAND","productSaleType":0,"displayConditionType":"ALL","backgroundType":null,"leftBackgroundColor":null,"rightBackgroundColor":null,"leftBackgroundImg":null,"rightBackgroundImg":null,"personalizedBenefitPlanId":0,"useable":true,"displaySequence":0,"displayStartYmdt":{"era":1,"dayOfMonth":1,"dayOfWeek":3,"dayOfYear":92,"weekOfWeekyear":14,"millisOfDay":0,"monthOfYear":4,"hourOfDay":0,"minuteOfHour":0,"secondOfMinute":0,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":0,"minuteOfDay":0,"year":2020,"zone":{"fixed":true,"id":"+09:00"},"millis":1585666800000,"chronology":{"zone":{"fixed":true,"id":"+09:00"}},"equalNow":false,"beforeNow":true,"afterNow":false},"displayEndYmdt":{"era":1,"dayOfMonth":1,"dayOfWeek":5,"dayOfYear":122,"weekOfWeekyear":18,"millisOfDay":0,"monthOfYear":5,"hourOfDay":0,"minuteOfHour":0,"secondOfMinute":0,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":0,"minuteOfDay":0,"year":2020,"zone":{"fixed":true,"id":"+09:00"},"millis":1588258800000,"chronology":{"zone":{"fixed":true,"id":"+09:00"}},"equalNow":false,"beforeNow":false,"afterNow":true},"bannerContents":[{"id":2904,"bannerId":2899,"displaySequence":0,"imageId":98274,"imageUrl":"/banner/2020/3/1585640875402.jpg","imageMobileUrl":"/banner/2020/3/1585640890011.jpg","imageWidth":940,"imageHeight":90,"targetPageType":5,"targetPageParameter":{"datacls":"52157"},"targetPageParameterForWeb":"&datacls=52157","planningId":52157}],"displayTargets":[],"disabledBannerId":null,"targetPlatformType":0,"displayVerticalType":"TITLE","productAdmin":null,"createYmdt":{"era":1,"dayOfMonth":31,"dayOfWeek":2,"dayOfYear":91,"weekOfWeekyear":14,"millisOfDay":60506000,"monthOfYear":3,"hourOfDay":16,"minuteOfHour":48,"secondOfMinute":26,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":60506,"minuteOfDay":1008,"year":2020,"zone":{"fixed":true,"id":"+09:00"},"millis":1585640906000,"chronology":{"zone":{"fixed":true,"id":"+09:00"}},"equalNow":false,"beforeNow":true,"afterNow":false},"creatorId":"yae","modifierId":"yae","modifyYmdt":{"era":1,"dayOfMonth":31,"dayOfWeek":2,"dayOfYear":91,"weekOfWeekyear":14,"millisOfDay":60818000,"monthOfYear":3,"hourOfDay":16,"minuteOfHour":53,"secondOfMinute":38,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":60818,"minuteOfDay":1013,"year":2020,"zone":{"fixed":true,"id":"+09:00"},"millis":1585641218000,"chronology":{"zone":{"fixed":true,"id":"+09:00"}},"equalNow":false,"beforeNow":true,"afterNow":false}}],"formalGb":"10","codYn":"N","prodSpecCd":10,"orderMakingRd":0,"deliveryMethod":10,"noticeMinOrdAmt":30000,"noticeProdPrice":179000,"noticeDeliveryFee":2500,"isAvatar":null,"secretProduct":false,"isNewOptionProduct":false,"detailSoldout":false,"brandGroupId":1878,"displayCategoryId":88672,"representImage":{"type":"MAIN","displaySequence":0,"url":"http://img.lfmall.co.kr/file/product/prd/C017/2020/320/CHSO0F166WT_00.jpg?1586395798000","appImageUrl":"http://img.lfmall.co.kr/file/product/prd/C017/2020/~/CHSO0F166WT_00.jpg?1586395798000","imageUpdateYmdt":{"era":1,"dayOfMonth":9,"dayOfWeek":4,"dayOfYear":100,"weekOfWeekyear":15,"millisOfDay":5398000,"monthOfYear":4,"hourOfDay":1,"minuteOfHour":29,"secondOfMinute":58,"millisOfSecond":0,"weekyear":2020,"yearOfEra":2020,"yearOfCentury":20,"centuryOfEra":20,"secondOfDay":5398,"minuteOfDay":89,"year":2020,"zone":{"fixed":true,"id":"UTC"},"millis":1586395798000,"chronology":{"zone":{"fixed":true,"id":"UTC"}},"equalNow":false,"beforeNow":true,"afterNow":false}},"totalStock":84,"brandName":"\uCF5C \uD55C","brandEngName":"COLE HAAN","genderName":"\uC5EC\uC790","fit":null};
+			
+					var param = "?productId=" + productId + "&isTodaySpecial=" + isTodaySpecial;
+					var description = new Description("http://mapi.colehaan.co.kr", "/api/products/detail/description"+param, imageHostUrl, isSetProduct, productDetail);
+			
+					$(document).ready(function(){
+					customDimensionObj = {};
+					customDimensionObj.pageTitle = 'productdetail';
+					customDimensionObj.productId = location.href.split('PROD_CD=')[1];
+					customDimensionObj.discount = Number($('.per > .tx').text());
+					customDimensionObj.value = Number($('.benefit_price ins').text().replace(',', ''));
+					customDimensionObj.brandId = $('.etc').attr('brand-id');
+			
+					gaPageView(customDimensionObj);
+					});
+				</script>
+			</div>
+
+			<div class="detail_info_wrap" id="appZoomIn">
+				<!-- 띠배너 작업으로 삭제-->
+				<!--     <div th:remove="tag" th:include="m2/products/detail/bandBanner"></div> -->
+			
+				<!-- 상품 정보 고시 -->
+				<!-- 상품정보고시 -->
+				<ul class="basic_artbx">
+					<li id="informationNotificationLi">
+						<!-- [D] 버튼 선택한 경우 클래스명 open 추가 -->
+						<h5><button type="button" class="basic_tit" onclick="informationNoticeLayer(this);">상품정보고시<span
+									class="sp"></span></button></h5> <!-- [D]버튼 클릭시 display:block -->
+						<div class="basic_cont" style="display:none;">
+							<style type="text/css">
+								/* 기존 테이블 형태 */
+								table.tbl-details {
+									margin-bottom: 50px;
+								}
+			
+								table.tbl-details td {
+									text-align: center;
+								}
+			
+								table.tbl-details p.txt-prt {
+									margin-bottom: 10px;
+									font-size: 14px;
+									font-weight: bold;
+									text-align: left;
+								}
+			
+								table.tbl-y {
+									width: 100%;
+									table-layout: fixed;
+									border: 1px solid #ccc;
+								}
+			
+								table.tbl-y th {
+									padding: 8px 0 7px 15px;
+									background-color: #eee;
+									border-bottom: 1px solid #ddd;
+									border-right: 1px solid #ccc;
+									font-size: 12px;
+									color: #666;
+									text-align: left;
+								}
+			
+								table.tbl-y td {
+									padding: 9px 0 9px 15px;
+									border-bottom: 1px solid #ddd;
+									font-size: 11px;
+									color: #666;
+									line-height: 18px;
+									word-wrap: break-word;
+									text-align: left;
+								}
+			
+								table.tbl-y td ul li {
+									padding-left: 7px;
+									background: url("http://img.lfmall.co.kr/file/WAS/apps/2013/image/frontoffice/common/ico/ico_rect_3x3.gif") no-repeat left 6px;
+									font-size: 11px;
+									text-align: left;
+								}
+			
+								table.tbl-y .last th,
+								table.tbl-y .last td {
+									border-bottom: 1px solid #ccc;
+								}
+							</style>
+							<style type="text/css">
+								table.tbl-details {
+									margin-bottom: 50px;
+								}
+			
+								table.tbl-details td {
+									text-align: center;
+								}
+			
+								table.tbl-details p.txt-prt {
+									margin-bottom: 10px;
+									font-size: 14px;
+									font-weight: bold;
+									text-align: left;
+								}
+			
+								table.tbl-y {
+									width: 100%;
+									table-layout: fixed;
+									border: 1px solid #ccc;
+								}
+			
+								table.tbl-y th {
+									padding: 8px 0 7px 15px;
+									background-color: #eee;
+									border-bottom: 1px solid #ddd;
+									border-right: 1px solid #ccc;
+									font-size: 12px;
+									color: #666;
+									text-align: left;
+								}
+			
+								table.tbl-y td {
+									padding: 9px 0 9px 15px;
+									border-bottom: 1px solid #ddd;
+									font-size: 11px;
+									color: #666;
+									line-height: 18px;
+									word-wrap: break-word;
+									text-align: left;
+								}
+			
+								table.tbl-y td ul li {
+									padding-left: 7px;
+									background: url(//www.lfmall.co.kr/file/WAS/apps/2013/image/frontoffice/common/ico/ico_rect_3x3.gif) no-repeat left 6px;
+									font-size: 11px;
+									text-align: left;
+								}
+			
+								table.tbl-y .last th,
+								table.tbl-y .last td {
+									border-bottom: 1px solid #ccc;
+								}
+							</style>
+							<table class="tbl-details" width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tbody>
+									<tr>
+										<td>
+											<table class="tbl-y mb10" summary="">
+												<caption></caption>
+												<colgroup>
+													<col width="30%">
+													<col width="*">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>제품 소재(제품 주소재)</th>
+														<td>갑피소재-천연소가죽 창소재-고무
+														</td>
+													</tr>
+													<tr>
+														<th>색상</th>
+														<td>화이트
+														</td>
+													</tr>
+													<tr>
+														<th>치수</th>
+														<td>065기준 굽높이 2 cm (재는 위치에 따라 약간의 오차가 있을 수 있습니다.)
+														</td>
+													</tr>
+													<tr>
+														<th>제조사(수입자/병행수입)</th>
+														<td>LF
+														</td>
+													</tr>
+													<tr>
+														<th>제조국</th>
+														<td>베트남
+															* 제조국 정보는 최초 생산지 기준이며, 추가 생산이 이루어질 경우 제조국이 달라질 수 있습니다.
+														</td>
+													</tr>
+													<tr>
+														<th>취급시 주의사항</th>
+														<td>신발에 묻은 오염물을 부드러운 솔로 털어내거나 신발 클리너로 가죽의 오염 된 부분을 마른 헝겊으로 닦아주고 바람이 잘 통하는
+															곳에서 건조시키십시오.
+														</td>
+													</tr>
+													<tr>
+														<th>품질보증기준</th>
+														<td>구매일로부터 6개월간/ 그 외 기준은 관련법 및 소비자분쟁해결 규정에 따름
+														</td>
+													</tr>
+													<tr>
+														<th>A/S 책임자와 전화번호</th>
+														<td>LF 고객상담실 1544-5114
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<!-- 반품/교환 안내 -->
+					<li>
+						<h5><button type="button" class="basic_tit" onclick="informationNoticeLayer(this);">배송/교환/반품<span
+									class="sp"></span></button></h5>
+						<!-- [D]버튼 클릭시 display:block -->
+						<div class="basic_cont" style="display:none;">
+							<p class="der_change">배송</p>
+							<table class="de_change">
+								<caption></caption>
+								<colgroup>
+									<col width="30%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>배송 예정일</th>
+										<td>평균 <strong>2-3</strong>일 소요 (주말 및 공휴일 제외)</td>
+									</tr>
+									<tr>
+										<th>배송비</th>
+										<td>무료</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="der_info">* 도서산간지역은 배송일과 배송비가 추가 될 수 있습니다.</p>
+							<p class="der_change type2">교환/반품</p>
+							<table class="de_change">
+								<caption></caption>
+								<colgroup>
+									<col width="30%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>교환/반품<br>가능일</th>
+										<td>
+											단순변심 : 상품 수령 후 <strong>7</strong>일 이내<br>상품불량 : 상품 수령 후 <strong>3</strong>개월 이내<br>
+											<span class="gray">(불량을 발견한 날로부터 30일 이내)</span>
+										</td>
+									</tr>
+									<tr>
+										<th>교환/반품<br>배송비</th>
+										<td>
+											단순변심 : <strong>5,000</strong>원
+											<br>상품불량 : 무료
+										</td>
+									</tr>
+									<tr>
+										<th>교환/반품<br>불가사유</th>
+										<td>
+											<ul class="notype">
+												<li>상품 TAG이 제거되거나 상품박스가 훼손된 경우</li>
+												<li>상품 사용, 소비로 상품 가치가 현저히 감소한 경우</li>
+												<li>구성품을 분실한 경우</li>
+												<li>주문/제작 상품의 제작이 시작된 경우</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>교환/반품 신청</th>
+										<td>
+											교환/반품 신청은 <br>
+											<strong>마이페이지 - 주문/배송조회 화면에서</strong><br> 가능합니다.<br>
+											<p class="der_count">
+												<strong><a href="javascript:void(0);" onclick="moveToExchangeOrder();">주문/배송조회 화면
+														바로가기<span class="sp"></span></a></strong>
+											</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="der_change type2">환불</p>
+							<table class="de_change">
+								<caption></caption>
+								<colgroup>
+									<col width="30%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>
+											환불 소요기간<br>
+											<span class="gray02">(반품 승인일 기준)</span>
+										</th>
+										<td>
+											<ul class="excha">
+												<li><strong>신용카드</strong> : 3~7영업일 이내</li>
+												<li><strong>무통장 입금</strong> : 2~3영업일 이내 입력한 환불계좌로 입금</li>
+												<li><strong>휴대폰 결제</strong> : 통신사 사정에 따라 제 4~5영업일 이내 취소</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="der_info"><strong>* 반품 승인</strong> : 본사에서 반품상품의 검수가 끝나고 반품을 확정한 시점</p>
+							<p class="der_info02">반품 승인은 택배기사가 반품 상품 수거한 시점부터 평균 1~2일 소요됩니다.</p>
+							<p class="der_change type2">구매 확인 사항</p>
+							<ul class="notype">
+			
+								<li>상품 주문 후에는 사이즈, 색상 변경이 불가합니다.</li>
+								<li>제조국(원산지)은 1차 생산 기준으로 추가 생산 시 다른 국가에서 생산될 수 있습니다.</li>
+								<li>모니터 해상도에 따라 실제 상품과 약간의 색상차이가 있을 수 있습니다.</li>
+								<li>구매자가 미성년자인 경우 법정 대리인의 동의 여부에 따라 미성년자 또는 법정대리인이 구매를 취소할 수 있습니다.</li>
+							</ul>
+						</div>
+					</li>
+			
+			
+			
+			
+				</ul>
+				<script src="//m.colehaan.co.kr/static/js/lf/product/detail/informationNotice.js?param=202004240429"></script>
+				<script type="text/javascript">
+					var productId = "CHSO0F166WT";
+					var isSetProduct = false;
+			
+					var param = "?productId=" + productId;
+					var informationNotice = new InformationNotice("http://mapi.colehaan.co.kr", "/api/products/detail/informationNotice" + param, isSetProduct);
+				</script>
+			
+				<!-- 연관상품 -->
+				<!--<h4 class="detail_tit" th:if="${productDetail.type == '10'}">관련 컨텐츠</h4>-->
+			
+				<script src="//m.colehaan.co.kr/static/js/lf/product/detail/relateProducts.js?param=202004240429"></script>
+				<script type="text/javascript">
+					var productId = "CHSO0F166WT";
+					var todaySpecial = 0;
+					var siteCode = "03";
+					var seasonOffTarget = "N";
+					var shopId = "";
+					var isOutlet = false;
+					var relateProducts = new RelateProduct("http://mapi.colehaan.co.kr", "/api/products/detail/relate/product", productId, todaySpecial, siteCode, seasonOffTarget, shopId, isOutlet);
+				</script>
+				<!-- 브랜드 바로가기 -->
+				<!-- 브랜드몰 작업으로 삭제 
+				<th:block th:if="${productDetail.type == '10' && productDetail.brandGroup != null}">
+					<a href="javascript:;" class="brand_local"
+					th:onclick="|linkToBrand('${productDetail.brandGroup.id}','${productDetail.brandGroup.name}','${productDetail.productSaleType.code}','${userAgent.lfApp}','${userAgent.agentVersion}','${QSUtils.getQueryString((pageCode+'_A019_E079'), '0', '0',(#httpServletRequest))}');|">COLE HAAN<span
+							class="loc_txt">브랜드 바로가기</span></a>
+				</th:block>
+				-->
+				<!-- 최근 본 상품 -->
+				<div class="card_template_wrap">
+					<a href="javascript:;" class="card_header"
+						onclick="moveToProdPage('getTodayThisProductList','', '&amp;etag1=009_A019_E080&amp;etag2=0&amp;etag3=0&amp;etag4=CHSO0F166WT');sendGAMenuEvent('recent');">
+						<strong class="mtt">최근 본 상품</strong>
+						<span class="btn_more">전체</span>
+					</a>
+					<div class="card_template3 tmpl_20 swiper-container-recent-product swiper-container-horizontal swiper-container-android"
+						id="recnt_view_prod">
+						<ul class="template type4 swiper-wrapper">
+							<li class="swiper-slide swiper-slide-active"><a href="javascript:;"
+									onclick="moveToProdPage('getProductDetail','CHSO0F166WT', '&amp;etag1=009_A019_E081&amp;etag2=0&amp;etag3=CHSO0F166WT&amp;etag4=CHSO0F166WT')"><span
+										class="img_wrap"><img
+											src="//img.lfmall.co.kr/file/product/prd/C017/2020/640/CHSO0F166WT_00.jpg"></span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<script>
+					var recnt_prod_swiper = new Swiper('#recnt_view_prod', {
+						slidesPerView: 'auto'
+					});
+				</script>
+				<!-- 연관 기획전 -->
+				<!--    <div class="basic_artbx" id="relatePlanDiv">
+			
+				</div>
+				<script th:src="${@staticContentUrlUtils.getJsCssFullPath('/js/lf/product/detail/relatePlan.js')}"></script>
+				<script type="text/javascript" th:inline="javascript">    
+					var productId = /*CHSO0F166WT*/ "";
+					var siteCode = /*03*/ "";
+					var relatePlans = new RelatePlan(/*http://mapi.colehaan.co.kr*/ "", "/api/products/detail/relate/plan", productId, siteCode);
+					
+			
+				</script>-->
+			</div>
+
+		</div>
+		<!-- // content -->
+
+	</section>
+	<!-- container -->
+
+	<!-- 상단으로 가기 -->	
+	<button type="button" class="btnGoTop"><span>위로가기</span></button>
+	<!-- // 상단으로 가기 -->
+	
+	<!-- bottom quick menu -->
+	<nav class="quickNavWrap">
+		<ul>
+			<li class="home on"><a href="#">홈</a></li>
+			<li class="like"><a href="#">좋아요</a></li>
+			<li class="recent"><a href="#">최근본</a></li>
+			<li class="basket"><a href="#">쇼핑백</a></li>
+			<li class="my"><a href="#">마이</a></li>
+		</ul>
+	</nav>
+	<!-- bottom quick menu -->
+
+	<!-- footer -->
+	<footer id="footer" class="footer">
+		<script type="text/javascript">createFooter('.footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

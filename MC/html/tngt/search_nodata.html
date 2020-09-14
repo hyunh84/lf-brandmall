@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/jquery-1.9.1.min.js">
+					</script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/swiper.min.js">
+					</script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/ui_style.js">
+					</script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/layout.js">
+					</script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<div class="header_inner">
+			<script>headerFn('.header_inner', '검색');</script>
+		</div>
+		
+		<article class="topSearchWrap">
+			<script>createSearch('.topSearchWrap');</script>
+		</article>
+	</header>
+	<!-- //header -->
+
+	<!-- quick menu -->
+	<nav class="quickNavWrap">
+		<script>createQuickNavFn('.quickNavWrap');</script>
+	</nav>
+	<!-- // quick menu -->
+
+	<!-- GNB -->
+	<nav class="tngtGnbWrap">
+		<script>createGnbFn('.tngtGnbWrap');</script>
+	</nav>
+	<!-- // GNB -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="srchKeyWordWrap">
+				<strong class="keyword">"코트"</strong>
+			</div>
+
+			<div class="srchNodataWrap">
+				<strong class="tit">검색결과가 없습니다.</strong>
+				<p class="desc">다른 검색어를 입력해 보시기 바랍니다.</p>
+				<ul class="descNoti">
+					<li>상품이 품절되었거나, 노출이 제한된 상품일 수 있습니다.</li>
+					<li>검색어의 철자가 정확한지 확인해 보시기 바랍니다.</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>footerFn('#footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script>
+var subCateMenu = new cmtSwiperFn02('.cateSwipeWrap02 .cmtSlideWrap');
+var idx = $('.cateSwipeWrap02').find('li.active').index();
+subCateMenu.slideTo(idx);
+</script>
+
+</body>
+</html>

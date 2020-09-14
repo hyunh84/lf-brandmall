@@ -1,0 +1,140 @@
+var headerFn = function(target, subDepth) {
+	var html = '<h1 class="logo"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/dualit/dualit-logo.png" alt="DUALIT" /></a></h1>';
+	html += '<div class="util">';
+	html += '<span class="log">';
+	html += '<a href="#">로그인</a>';
+	html += '<a href="#">회원가입</a>';
+	html += '</span>';
+	html += '<div class="userInfo">';
+	html += '<a href="#" class="btn_cart">쇼핑백<em>0</em></a>';
+	html += '</div>';
+	html += '</div>';
+	html += '<nav class="gnb">';
+	html += '<ul>';
+	html += '<li><a href="#">브랜드</a>';
+	html += '<div class="subDepth">';
+	html += '<ul>';
+	html += '<li>';
+	html += '<a href="#">';
+	html += '<span>듀얼릿에 대해</span>';
+	html += '</a>';
+	html += '</li>';
+	html += '<li>';
+	html += '<a href="#">';
+	html += '<span>연혁</span>';
+	html += '</a>';
+	html += '</li>';
+	html += '<li>';
+	html += '<a href="#">';
+	html += '<span>철학</span>';
+	html += '</a>';
+	html += '</li>';
+	html += '<li>';
+	html += '<a href="#">';
+	html += '<span>수상내역</span>';
+	html += '</a>';
+	html += '</li>';
+	html += '<li>';
+	html += '<a href="#">';
+	html += '<span>뉴스</span>';
+	html += '</a>';
+	html += '</li>';
+	html += '</ul>';
+	html += '</div>';
+	html += '</li>';
+	html += '<li><a href="#">팁/가이드</a>';
+	html += '<div class="subDepth">';
+	html += '<ul>';
+	html += '<li>';
+	html += '<a href="">';
+	html += '<span>전체</span>';
+	html += '</a>';
+	html += '</li>';
+	html += '<li>';
+	html += '<a href="">';
+	html += '<span>제품구매 가이드</span>';
+	html += '</a>';
+	html += '</li>';
+	html += '<li>';
+	html += '<a href="">';
+	html += '<span>제품사용 주의사항</span>';
+	html += '</a>';
+	html += '</li>';
+	html += '<li>';
+	html += '<a href="">';
+	html += '<span>레시피</span>';
+	html += '</a>';
+	html += '</li>';
+	html += '</ul>';
+	html += '</div>';
+	html += '</li>';
+	html += '<li><a href="#">토스터/전기포트</a></li>';
+	html += '<li><a href="#">커피머신</a></li>';
+	html += '<li><a href="#">커피/티</a></li>';
+	html += '<li><a href="#">쿠킹가전</a></li>';
+	html += '</ul>';
+	html += '</nav>';
+
+	$(target).html(html);
+	if(subDepth === '1') {
+		$('img', target).each(function() {
+			console.log('aaa');
+			$(this).attr('src', $(this).attr('src').replace('../../webapp', '../../../webapp'));
+		});
+	}
+}
+
+var footerFn = function(target, subDepth) {
+	var html = '<button type="button" class="btn_top">TOP으로 이동</button>';
+	html += '<div class="footer_inner">';
+	html += '<ul class="terms">';
+	html += '<li><a href="#">이용약관</a></li>';
+	html += '<li><a href="#"><strong>개인정보처리방침</strong></a></li>';
+	html += '<li><a href="#">청소년보호정책</a></li>';
+	html += '<li><a href="#">공지사항</a></li>';
+	html += '<li><a href="#">LFMALL</a></li>';
+	html += '</ul>';
+	html += '<div class="copyright">';
+	html += '<span class="bar_none">사업자 등록번호 : 211-87-87724</span><span>통신판매업신고 : 제 2010-서울강남-00066호</span><a href="#">사업자 정보확인</a>';
+	html += '<br>';
+	html += '<span class="bar_none">대표전화 : 1544-5114</span><span>(유료)팩스 : 031-360-0003</span>';
+	html += '<br>';
+	html += '<span class="bar_none">서울 강남구 언주로 870</span><span>(주)LF</span><span>대표이사 오규식</span>';
+	html += '<br>';
+	html += '<span class="bar_none">COPYRIGHT &copy; 1990-2018 TNGT ALL RESERVED</span>';
+	html += '</div>';
+	html += '<div class="family">';
+	html += '<div class="familySelect">';
+	html += '<button type="button">FAMILY SITE</button>';
+	html += '<ul>';
+	html += '<li><a href="#">LF CORP</a></li>';
+	html += '<li><a href="#">JILL STUART</a></li>';
+	html += '<li><a href="#">LAFUMA</a></li>';
+	html += '<li><a href="#">TNGT</a></li>';
+	html += '<li><a href="#">DAKS</a></li>';
+	html += '<li><a href="#">MAESTRO</a></li>';
+	html += '<li><a href="#">BLUE LOUNGE MAESTRO</a></li>';
+	html += '<li><a href="#">A.T.CORNER</a></li>';
+	html += '<li><a href="#">LF MALL</a></li>';
+	html += '</ul>';
+	html += '</div>';
+	html += '</div>';
+	html += '</div>';
+	html += '<div class="footer_certify">';
+	html += '<ul>';
+	html += '<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/dualit/common/footer_copy_01.png" alt="사단법인한국온라인쇼핑협회"></a></li>';
+	html += '<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/dualit/common/footer_copy_02.png" alt="국세청 현금영수증 서비스"></a></li>';
+	html += '<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/dualit/common/footer_copy_03.png" alt="제품안전인증검색 불법제품신고센터"></a></li>';
+	html += '<li><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/dualit/common/footer_copy_04.png" alt="우리은행 채무지급보증안내"></a></li>';
+	html += '<li><a href="#" class="txt_link">서비스 가입사실 확인</a></li>';
+	html += '</ul>';
+	html += '</div>';
+
+	$(target).html(html);
+	if(subDepth === '1') {
+		$('img', target).each(function() {
+			console.log('aaa');
+			$(this).attr('src', $(this).attr('src').replace('../../webapp', '../../../webapp'));
+		});
+	}
+}

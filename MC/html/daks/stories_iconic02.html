@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/daks/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/daks/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/daks/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/daks/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/daks/swiper.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/daks/ui_style.js"></script>
+
+	
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/daks/layout.js"></script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<!-- <div class="top_banner">
+			<a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_top_banner.jpg" onload="mainTopBanner(this);"></span></a>
+		</div> -->
+
+		<div class="header_inner">
+			<script>
+				headerFn('#header .header_inner');
+			</script>
+		</div>
+
+		<!-- GNB -->
+		<nav class="daksGnbWrap">
+		<script>
+			createGnbFn('.daksGnbWrap');
+		</script>
+		</nav>
+		<!-- // GNB -->
+
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="subCateViewWrap">
+				<div class="inner">
+					<button type="button" class="btnOpenCate">STORIES</button>
+					<div class="cateListBox">
+						<div class="cmtSlideWrap">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<a href="#"><span>STORIES</span>'S HOME</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#">CAMPAIGN</a>
+								</li>
+								<li class="swiper-slide active">
+									<a href="#">DAKS ICONIC ITEM</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="editViewWrap">
+
+				<!-- 어드민 등록영역 -->
+				<div class="iconic-view">
+					<div class="brand-campaign">
+						<style>
+							p {margin:0; padding: 0 !important; text-align: left;}
+				
+							.brand-list:after {display: table; clear: both; content: "";}
+							.brand-clear-fix:after {display: table; clear: both; content: "";}
+				
+							.brand-container {position: relative;}
+							.brand-box {position:relative;}
+							.brand-area {position: relative;}
+				
+							.page-header {position: relative !important; padding-top: 162% !important; background-image:url(http://dpa.daks.co.kr/upload/editor/c36dd5bef5964d11926b8fae994503b3.jpg)}
+				
+							.category {position: absolute; top: 6px; right: 0; width: 10px;}
+				
+							.brand-campaign__contents {margin: 0; padding: 0;}
+				
+							.brand-line {padding: 0 8%;}
+							.brand-line div {padding-top:20%;background: url(http://dpa.daks.co.kr/upload/editor/a9bba6b7f57e4b98a9829f2ce1a7d783.jpg) repeat-x; background-size: auto 2px;}
+				
+							.brand-campaign__contents--1 p,
+							.brand-campaign__contents--2 p,
+							.brand-campaign__contents--3 p,
+							.brand-campaign__contents--4 p {color: #000; font-size: 12px !important; line-height: 1.6 !important; letter-spacing:-1.5px; text-align: center !important;}
+				
+							.brand-campaign__contents--1 {padding:0; text-align: center;}
+							.brand-campaign__contents--1 h4 {margin-top: 10%;}
+							.brand-campaign__contents--1 .text1 {position: absolute; top: 80%; left: 8%; color: #222; font-weight: 400; font-size: 12px !important; line-height: 1.4 !important;; letter-spacing:-2px; text-align: left !important;}
+							.brand-campaign__contents--1 .figure2 {padding: 16% 0 0 0;}
+				
+							.brand-campaign__contents--2 {padding:20% 0 0; text-align: center;}
+							.brand-campaign__contents--2 .text1 {margin-top:6%; color: #222; font-weight: 400; font-size: 12px !important;; line-height: 1.4 !important;; letter-spacing:-2px; text-align: left;}
+							.brand-campaign__contents--2 .figure1 {padding: 12% 0 0 0;}
+				
+							.brand-campaign__contents--3 {padding:20% 0 0; text-align: center;}
+							.brand-campaign__contents--3 .text1 {margin-top:6%; color: #222; font-weight: 400; font-size: 12px !important;; line-height: 1.4 !important;; letter-spacing:-2px; text-align: left;}
+							.brand-campaign__contents--3 .figure1 {padding: 12% 0 0 0;}
+				
+							.brand-campaign__contents--4 {padding:20% 0 0; text-align: center;}
+							.brand-campaign__contents--4 .text1 {position: absolute; top: 77.4%; left: 0; width: 100%; color: #222; font-weight: 400; font-size: 12px !important;; line-height: 1.4 !important;; letter-spacing:-2px; text-align: center;}
+							.brand-campaign__contents--4 .figure1 {padding: 12% 0 0 0;}
+				
+							.brand-campaign__contents--5 {padding:20% 0; text-align: center;}
+							.brand-campaign__contents--5 .text1 {position: absolute; top: 79%; left: 8%; color: #222; font-weight: 400; font-size: 12px !important;; line-height: 1.4 !important;; letter-spacing:-2px; text-align: left;}
+							.brand-campaign__contents--5 .figure1 {padding: 12% 0 0 0;}
+				
+						</style>
+						<header class="page-header">
+							<div class="page-header__container">
+								<h2 class="page-header__title">
+									DAKS GOLF<br>
+									더위를 식여줄<br>
+									Ice Acc
+								</h2>
+								<p class="page-header__summary">
+									20SS 여름 용품제안
+								</p>
+							</div>
+							<span class="page-header__scroll" style="position: absolute; left: 0; bottom: 5.35055%; width: 100%;padding-bottom: 20px; color: #fff; font-size: 15px; font-weight: 700; font-family: 'Nunito Sans'; text-align: center;">
+									SCROLL
+									<span class="page-header__scroll-arrow" style="display: block; position: absolute; left: 0; right: 0; bottom: 0; width: 16px; height: 9px; margin-left: auto; margin-right: auto; background-image: url(/upload/editor/men_icon_iconic_scroll.png); background-repeat: no-repeat; background-position: 50%;
+					background-size: 100% auto; content: '';"></span>
+								</span>
+						</header>
+				
+						<div class="brand-campaign">
+							<section class="brand-campaign__container">
+								<div class="brand-campaign__contents brand-campaign__contents--1">
+									<div class="brand-container">
+										<h3>
+											<img src="http://dpa.daks.co.kr/upload/editor/fc346bf8835c47bc8fab8d410e99ab2f.jpg" alt="DAKS GOLF 더위를 식혀줄 Ice 용품 제안">
+										</h3>
+				
+										<div class="brand-area">
+											<h4>
+												<img src="http://dpa.daks.co.kr/upload/editor/c5a65f6af24047a5877f95bf4dc08c53.jpg" alt="ICE BAG 얼음주머니">
+											</h4>
+				
+											<p class="text1">
+												야외에서 활동할 때 가지고 다니기<br>
+												좋은 사이즈로 얼음 물을 넣어 더위를<br>
+												식혀주는 아이템! 겨울에는 따뜻한 물을<br>
+												넣어 보온으로도 사용 가능하다.
+											</p>
+										</div>
+				
+										<figure class="figure2">
+											<img src="http://dpa.daks.co.kr/upload/editor/fdf61b8e63e74edb9a07d20d5ab09326.jpg" alt="">
+										</figure>
+									</div>
+								</div>
+				
+								<div class="brand-campaign__contents brand-campaign__contents--2">
+									<div class="brand-line">
+										<div></div>
+									</div>
+									<div class="brand-container">
+										<h3>
+											<img src="http://dpa.daks.co.kr/upload/editor/64c02127aba5442b8dc77bdf187dea37.jpg" alt="ICE COOLER 보냉백">
+										</h3>
+				
+										<p class="text1">
+											여름 라운딩이나 캠핑, 야외 나들이에<br>
+											아이스 쿨러 하나면 무더운 여름에도 든든하다.<br>
+											내부 안감 처리로 보냉백 같지 않아<br>
+											일상에서도 들고 싶은 ICE COOLER!
+										</p>
+				
+										<figure class="figure1">
+											<img src="http://dpa.daks.co.kr/upload/editor/52d13a75ecae47a1b1a395e27a68f6ad.jpg" alt="">
+										</figure>
+									</div>
+								</div>
+				
+								<div class="brand-campaign__contents brand-campaign__contents--3">
+									<div class="brand-line">
+										<div></div>
+									</div>
+									<div class="brand-container">
+										<h3>
+											<img src="http://dpa.daks.co.kr/upload/editor/97bb25e0c498495099182de9c6bee946.jpg" alt="ICE SCARF 아이스 스카프">
+										</h3>
+				
+										<p class="text1">
+											안 사본 사람은 있어도<br>
+											한번 써본 사람은 또 구매한다는 닥스 아이스 스카프!<br>
+											더울 때 핸드 선풍기 시원하지만 들고 다녀야 하니 불편함이 많다.<br>
+											아이스 스카프는 물에 적셔 목에 두르기만 하면<br>
+											되기 때문에 간편하면서도 시원하다.<br>
+											닥스 체크로 디자인까지 예쁘니 일석이조 아이템!
+										</p>
+				
+										<figure class="figure1">
+											<img src="http://dpa.daks.co.kr/upload/editor/cbd0fa8ad3dd48488ebf06c2d5f243bc.jpg" alt="">
+										</figure>
+									</div>
+								</div>
+				
+								<div class="brand-campaign__contents brand-campaign__contents--4">
+									<div class="brand-line">
+										<div></div>
+									</div>
+									<div class="brand-container">
+										<div class="brand-area">
+											<h3>
+												<img src="http://dpa.daks.co.kr/upload/editor/5c53462b1e5747cba9c678afb5010d36.jpg" alt="ICE / UV PROTECT ITEM">
+											</h3>
+				
+											<p class="text1">
+												라운딩이나 야외 활동 시 쉽게 태닝 되기 쉬운<br>
+												팔 부분을 자외선으로부터 보호해 주는 팔 토시와<br>
+												얼굴이 햇볕에 그을리는 것을 막아주는 다양한 디자인의 마스크!<br>
+												냉감 터치의 시원한 소재로 요즘 같은 일상에 매일 필요한 필수품!
+											</p>
+										</div>
+				
+										<figure class="figure1">
+											<img src="http://dpa.daks.co.kr/upload/editor/e64c5f99490e47fdb28101efd3a9721c.jpg" alt="">
+										</figure>
+									</div>
+								</div>
+				
+								<div class="brand-campaign__contents brand-campaign__contents--5">
+									<div class="brand-line">
+										<div></div>
+									</div>
+									<div class="brand-container">
+										<div class="brand-area">
+											<h3>
+												<img src="http://dpa.daks.co.kr/upload/editor/f9aee71178c74e0286ce76f472ee8a4b.jpg" alt="SUN CAP 여름 모자">
+											</h3>
+				
+											<p class="text1">
+												내리쬐는 태양을 피하는 가장 손쉬운 방법은<br>
+												챙이 넓은 모자를 쓰는 것이다.<br>
+												돌돌 말아 보관도 용이해 가방에 넣기 편리한 디자인과<br>
+												여름 라탄 소재로 스타일과 기능성을 동시에 만족시켜준다.
+											</p>
+										</div>
+				
+										<figure class="figure1">
+											<img src="http://dpa.daks.co.kr/upload/editor/c2a983ce83ed4a6b9db11d02af85d2b3.jpg" alt="">
+										</figure>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+				<!-- // 어드민 등록영역 -->
+
+			</div>
+
+			<div class="LBookWrwap">
+				<div class="cmtSlideWrap">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="#"><img src="http://m.hazzys.com/upload/hazzys/M0503/0bbbe78055d54d41bb635d17d866f0c6.jpg"></a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#"><img src="http://m.hazzys.com/upload/hazzys/M0503/5f928cf9cda54bdb8b7dca25b93c1739.jpg"></a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#"><img src="http://m.hazzys.com/upload/hazzys/M0503/99cd92c283e041b9a0eeb32bad9a8b0d.jpg"></a>
+						</li>
+					</ul>
+					<div class="swiper-ctrl">
+						<button type="button" class="swiper-prev"><em>이전</em></button>
+						<button type="button" class="swiper-next"><em>다음</em></button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>
+			footerFn('#footer');
+		</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+<script type="text/javascript">
+	subCategorySlide();
+
+	fullVisualSlide('.LBookWrwap', {
+		autoplay : false,
+		autoplayDisableOnInteraction : false,
+		pagination : null,
+		paginationClickable: false,
+		paginationBulletRender : null,
+		prevButton : '.LBookWrwap .swiper-prev',
+		nextButton : '.LBookWrwap .swiper-next'
+	});
+</script>
+</body>
+</html>

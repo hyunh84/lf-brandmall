@@ -1,0 +1,99 @@
+@charset "utf-8";
+@import url("font.css");
+
+/**********************************************************
+	상품상세 및 마이페이지 공통하면 reset 필요 내용 layout.css에 선언 
+**********************************************************/
+/* body, pre, textarea, select, button, input {font-family:'Montserrat', source-han-sans-korean, \\B098\B214\ACE0\B515, 'Noto Sans KR', 'Nanum Gothic', Dotum, Arial, sans-serif;} */
+body, pre, textarea, select, button, input {font-family:'Open Sans', 'Noto Sans KR', 'Nanum Gothic', Dotum, Arial, sans-serif !important;}
+strong {font-weight:700;}
+a {color:#030303;}
+/* ::-webkit-input-placeholder {color:#ccc;}
+:-ms-input-placeholder {color:#ccc;}
+::placeholder {color:#ccc;}
+input::-ms-clear{display:none;}
+input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !important;pointer-events:none;position:absolute;right:0;} */
+
+/**********************************************************
+	BRAND MALL - LAYOUT
+**********************************************************/
+#wrap {overflow:hidden;box-sizing:border-box;position:relative;min-width:1280px;height:100%;min-height:100%;height:auto !important;padding:100px 0 306px;}
+
+
+/* Header */
+#header {position:fixed;left:0;right:0;top:0;box-sizing:border-box;min-width:1280px;padding:0 50px;font-size:12px;border-bottom:1px solid #e6e6e6;background-color:#fff;z-index:260;}
+#header .top_banner {position:relative;margin:0 -50px;}
+#header .top_banner a {display:block;overflow:hidden;}
+#header .top_banner a span {display:inline-block;position:relative;left:50%;transform:translate(-50%, 0);vertical-align:top;}
+#header .top_banner > button {position:absolute;top:50%;right:20px;width:20px;height:20px;margin:-10px 0 0;background:url('../../images/maestro/btn_close_white.png') no-repeat center;}
+#header .top_banner > button em {display:block;position:absolute;overflow:hidden;width:0;height:0;line-height:0;color:transparent;}
+
+#header .header_inner {position:relative;box-sizing:border-box;max-width:1820px;margin:0 auto;}
+#header .header_inner:after {display:block;overflow:hidden;content:"";clear:both;width:0;height:0;line-height:0;}
+#header .header_inner .logo {float:left;}
+#header .header_inner .logo a {display:block;width:225px;padding:30px 0;line-height:0;}
+#header .header_inner .logo a img {width:100%;vertical-align:top;}
+
+#header .header_inner .util {overflow:hidden;position:absolute;right:0;top:0;}
+#header .header_inner .util a {display:inline-block;position:relative;padding:0 10px;line-height:34px;font-size:11px;color:#999;font-weight:300;}
+#header .header_inner .util a + a:after {display:block;content:"";position:absolute;left:-1px;top:50%;width:1px;height:10px;background-color:#999;transform:translate(0, -50%);}
+#header .header_inner .util .log {display:block;float:left;}
+#header .header_inner .util .userInfo {display:block;float:left;}
+#header .header_inner .util .userInfo .btn_cart {position:relative;padding:0 10px 0 35px;background:url('../../images/maestro/bg_header_cart.png') no-repeat 10px center;}
+#header .header_inner .util .userInfo .btn_cart:after {display:block;content:"";position:absolute;left:-1px;top:50%;width:1px;height:10px;background-color:#999;transform:translate(0, -50%);}
+#header .header_inner .util .userInfo .btn_cart em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+
+#header .header_inner .maestroGnbWrap {float:right;}
+#header .header_inner .maestroGnbWrap > ul > li {float:left;}
+#header .header_inner .maestroGnbWrap > ul > li > a {display:block;padding:39px 20px;line-height:0;}
+#header .header_inner .maestroGnbWrap > ul > li > a span {display:inline-block;line-height:20px;font-size:15px;font-weight:700;border-bottom:2px solid #fff;}
+#header .header_inner .maestroGnbWrap .subDepth02 {display:none;position:absolute;top:100%;left:50%;box-sizing:border-box;width:100vw;min-width:1280px;padding:30px 50px;border-bottom:1px solid #e6e6e6;background-color:#fff;transform:translate(-50%, 0);}
+#header .header_inner .maestroGnbWrap .subDepth02 > .subDepthIn {overflow:hidden;max-width:1820px;margin:0 auto;}
+#header .header_inner .maestroGnbWrap .subDepth02 > .subDepthIn > ul {float:left;}
+#header .header_inner .maestroGnbWrap .subDepth02 > .subDepthIn > ul li a {display:block;font-size:18px;font-weight:700;}
+#header .header_inner .maestroGnbWrap .subDepth02 > .subDepthIn > .gnbBanner {float:right;}
+#header .header_inner .maestroGnbWrap .subDepth02 > .subDepthIn > .gnbBanner a {display:block;float:left;margin:0 20px 0 0;}
+#header .header_inner .maestroGnbWrap .subDepth02 > .subDepthIn > .gnbBanner a:last-child {margin:0;}
+#header .header_inner .maestroGnbWrap > ul > li:hover > a span {border-bottom:2px solid #000;}
+
+
+/* Container */
+#container {padding:0 0 140px;}
+
+/* Footer */
+#wrap #footer {position:absolute;left:0;right:0;bottom:0;} /* brandmall - footer */
+#footer {padding-bottom:0 !important;background-color:#333;}
+#footer .btn_top {overflow:hidden;position:fixed;right:40px;bottom:40px;z-index:30;width:60px;height:25px;background:url('../../images/maestro/common/btn_page_top.png') no-repeat 0 0;background-size:100% 100%;white-space:nowrap;text-indent:200%;}
+#footer .footer_inner {position:relative;padding:40px 50px 32px;width:100%;min-width:1280px;max-width:1920px;margin:0 auto;box-sizing:border-box;}
+#footer .footer_inner .terms {overflow:hidden;}
+#footer .footer_inner .terms li {float:left;margin-left:40px;}
+#footer .footer_inner .terms li:first-child {margin-left:0;}
+#footer .footer_inner .terms li a {display:block;height:15px;font-size:13px;color:#fff;letter-spacing:-0.1px;line-height:15px;}
+
+#footer .footer_inner .copyright {margin-top:30px;}
+#footer .footer_inner .copyright span,
+#footer .footer_inner .copyright a {display:inline-block;height:12px;margin:7px 0;padding:0 11px 0 15px;border-left:1px solid #555;font-size:13px;color:#9a9a9a;line-height:10px;letter-spacing:-0.3px;vertical-align:top;}
+#footer .footer_inner .copyright span.bar_none {padding-left:0;border:0;}
+#footer .footer_inner .copyright a {position:relative;padding-right:10px;font-size:11px;background:url('../../images/maestro/common/btn_more_write.png') no-repeat 100% 2px;}
+#footer .footer_inner .copyright a:before {position:absolute;bottom:-5px;left:15px;width:77px;height:1px;background-color:#5c5c5c;content:'';}
+#footer .footer_inner .copyright a:hover {color:#fff;text-decoration:none !important;}
+
+#footer .footer_inner .family {position:absolute;top:10px;right:50px;}
+#footer .footer_inner .family:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;line-height:0;}
+#footer .footer_inner .family .familySelect {float:left;position:relative;padding:20px 16px;}
+#footer .footer_inner .family .familySelect button {display:block;position:relative;width:180px;height:32px;border-bottom:1px solid #9a9a9a;font-size:14px;color:#fff;line-height:32px;text-align:left;}
+#footer .footer_inner .family .familySelect button:before {position:absolute;top:12px;right:0;width:14px;height:7px;background:url('../../images/maestro/common/btn_select_black.png') no-repeat 0 0;content:'';-webkit-transform:rotate(0deg);transform:rotate(0deg);transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
+#footer .footer_inner .family .familySelect ul {display:none;position:absolute;bottom:60px;left:0;z-index:10;width:100%;background-color:#333;}
+#footer .footer_inner .family .familySelect ul li a {display:block;height:30px;padding:0 16px;font-size:14px;color:#fff;line-height:30px;}
+#footer .footer_inner .family .familySelect:hover button:before {-webkit-transform:rotate(180deg);transform:rotate(180deg);transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
+#footer .footer_inner .family .familySelect:hover ul {display:block;}
+
+#footer .footer_certify {background-color:#252525;}
+#footer .footer_certify ul {overflow:hidden;max-width:1920px;margin:0 auto;padding:30px 50px;box-sizing:border-box;}
+#footer .footer_certify li {float:left;margin-left:20px;height:25px;line-height:25px;}
+#footer .footer_certify li:first-child {margin-left:0;}
+#footer .footer_certify li a {display:inline-block;line-height:0;vertical-align:middle;}
+#footer .footer_certify li img {vertical-align:top;}
+#footer .footer_certify li .txt_link {position:relative;height:18px;padding:0 10px 3px 0;line-height:18px;font-size:11px;color:#9a9a9a;background:url('../../images/maestro/common/btn_more_write.png') no-repeat 100% 4px;}
+#footer .footer_certify li .txt_link:before {position:absolute;bottom:0;left:0;width:104px;height:1px;background-color:#5c5c5c;content:'';}
+#footer .footer_certify li:last-child {margin-left:10px;}

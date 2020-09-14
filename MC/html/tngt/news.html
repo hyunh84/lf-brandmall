@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/tngt/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/swiper.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/ui_style.js"></script>
+
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/tngt/layout.js"></script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<div class="header_inner">
+			<script>headerFn('.header_inner', 'NEWS');</script>
+		</div>
+		
+		<article class="topSearchWrap">
+			<script>createSearch('.topSearchWrap');</script>
+		</article>
+	</header>
+	<!-- //header -->
+
+	<!-- quick menu -->
+	<nav class="quickNavWrap">
+		<script>createQuickNavFn('.quickNavWrap');</script>
+	</nav>
+	<!-- // quick menu -->
+
+	<!-- GNB -->
+	<nav class="tngtGnbWrap">
+		<script>createGnbFn('.tngtGnbWrap');</script>
+	</nav>
+	<!-- // GNB -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="cateSwipeWrap02">
+				<div class="cmtSlideWrap">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><a href="#">ABOUT TNGT</a></li>
+						<li class="swiper-slide"><a href="#">ABOUT SIGNAL</a></li>
+						<li class="swiper-slide active"><a href="#">NEWS</a></li>
+						<li class="swiper-slide"><a href="#">CATALOGUE</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="clmnListBox">
+				<div class="inner">
+					<ul>
+						<li>
+							<a href="#" class="cardBox">
+								<span class="img">
+									<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_news01.jpg">
+								</span>
+								<div class="info">
+									<span class="name">박보검 2019 SS 화보</span>
+									<span class="date">2018/12/20</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="cardBox">
+								<span class="img">
+									<img src="../../webapp/WEB-INF/static/brandmall/images/tngt/temp/temp_news02.jpg">
+								</span>
+								<div class="info">
+									<span class="name">박보검 2019 SS 화보</span>
+									<span class="date">2018/12/20</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>footerFn('#footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script>
+var subCateMenu = new cmtSwiperFn02('.cateSwipeWrap02 .cmtSlideWrap');
+var idx = $('.cateSwipeWrap02').find('li.active').index();
+subCateMenu.slideTo(idx);
+</script>
+
+</body>
+</html>

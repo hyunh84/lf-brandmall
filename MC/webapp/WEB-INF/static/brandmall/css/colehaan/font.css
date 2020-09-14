@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/* noto-sans-kr-300 - latin */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		url('../../font/noto-sans-kr-v11-korean_latin-300.woff') format('woff'), /* Modern Browsers */
+		url('../../font/noto-sans-kr-v11-korean_latin-300.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-regular - latin */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url('../../font/noto-sans-kr-v11-korean_latin-regular.woff') format('woff'), /* Modern Browsers */
+		url('../../font/noto-sans-kr-v11-korean_latin-regular.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-500 - latin */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 500;
+	src: 
+		url('../../font/noto-sans-kr-v11-korean_latin-500.woff') format('woff'), /* Modern Browsers */
+		url('../../font/noto-sans-kr-v11-korean_latin-500.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-700 - latin */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		url('../../font/noto-sans-kr-v11-korean_latin-700.woff') format('woff'), /* Modern Browsers */
+		url('../../font/noto-sans-kr-v11-korean_latin-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+
+/* work-sans */
+@font-face {
+	font-family: 'WorkSans';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		url('../../font/WorkSans-Light.woff') format('woff');
+		
+}
+@font-face {
+	font-family: 'WorkSans';
+	font-style: normal;
+	font-weight: 400;
+	src:
+	url('../../font/WorkSans-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'WorkSans';
+	font-style: normal;
+	font-weight: 500;
+	src:
+	url('../../font/WorkSans-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'WorkSans';
+	font-style: normal;
+	font-weight: 700;
+	src:
+	url('../../font/WorkSans-Bold.woff') format('woff');
+}
+
+/* Spectral */
+@font-face {
+	font-family: 'Spectral';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		url('../../font/Spectral-Light.woff') format('woff'),
+		url('../../font/Spectral-Light.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Spectral';
+	font-style: normal;
+	font-weight: 400;
+	src:
+	url('../../font/Spectral-Regular.woff') format('woff'),
+	url('../../font/Spectral-Regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Spectral';
+	font-style: normal;
+	font-weight: 500;
+	src:
+	url('../../font/Spectral-Medium.woff') format('woff'),
+	url('../../font/Spectral-Medium.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Spectral';
+	font-style: normal;
+	font-weight: 700;
+	src:
+	url('../../font/Spectral-Bold.woff') format('woff'),
+	url('../../font/Spectral-Bold.woff2') format('woff2');
+}
+
+/* NanumMyeongjo */
+@font-face {
+	font-family: 'NanumMyeongjo';
+	font-style: normal;
+	font-weight: 300;
+	src:
+	url('../../font/NanumMyeongjo.woff') format('woff');
+}
+@font-face {
+	font-family: 'NanumMyeongjo';
+	font-style: normal;
+	font-weight: 400;
+	src:
+	url('../../font/NanumMyeongjo.woff') format('woff');
+}
+@font-face {
+	font-family: 'NanumMyeongjo';
+	font-style: normal;
+	font-weight: 500;
+	src:
+	url('../../font/NanumMyeongjoBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'NanumMyeongjo';
+	font-style: normal;
+	font-weight: 700;
+	src:
+	url('../../font/NanumMyeongjoBold.woff') format('woff');
+}

@@ -1,0 +1,349 @@
+@charset "utf-8";
+@import url('font.css');
+
+/**********************************************************
+	css 개발반영시 경로
+	/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/champion
+**********************************************************/
+/**********************************************************
+	reset
+**********************************************************/
+/* body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0;}
+fieldset,img{border:0 none;}
+dl,ul,ol,menu,li{list-style:none;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}
+input,select,textarea,button{vertical-align:middle;outline:none;}
+::-webkit-input-placeholder {color:#ccc;}
+:-ms-input-placeholder {color:#ccc;}
+::placeholder {color:#ccc;}
+input::-ms-clear{display:none;}
+input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !important;pointer-events:none;position:absolute;right:0;}
+img {vertical-align:top;}
+button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer;}
+body{word-break:keep-all;}
+body,th,td,input,select,textarea,button{font-size:13px;line-height:1.92;font-family:'Open Sans','Noto Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif;color:#030303;}
+a{color:#030303;text-decoration:none;}
+a:active, a:hover{text-decoration:none;}
+a:active{background-color:transparent;}
+address,caption,cite,code,dfn,em,var{font-style:normal;}
+table {border-collapse:collapse;border-spacing:0;}
+caption,legend,#skipNavi {width:0;height:0;line-height:0;overflow:hidden;visibility:hidden;font-size:0;}
+
+body {color:#131935;font-weight:400;font-family:'Knockout','NotoSans','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif !important;background-color:#fff;}
+pre, button, input, select, textarea {color:#131935;font-weight:400;font-family:'Knockout','NotoSans','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif !important;}
+strong {font-weight:800;}
+a {color:#131935;} */
+
+/**********************************************************
+	Layout - brand mall common
+**********************************************************/
+/* header */
+.header {overflow:hidden;position:fixed;top:0;left:0;width:100%;z-index:200;min-height:111px;font-family:'Open Sans','Noto Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif;}
+.header .top_banner {display:block;position:relative;background-color:#1c1c1c;}
+.header .top_banner a {display:block;position:relative;}
+.header .top_banner a img {position:absolute;top:0;left:50%;margin-left:-952px;}
+.header .top_banner button {overflow:hidden;position:absolute;top:50%;right:20px;width:20px;height:20px;margin-top:-30px;padding:20px;box-sizing:initial;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/common/btn_close_white.png') no-repeat 50% 50%;white-space:nowrap;text-indent:100%;}
+.header h1 {position:absolute;top:3px;left:0;z-index:15;width:80px;height:23px;margin:0;}
+.header h1 a {display:block;overflow:hidden;position:relative;width:80px;height:23px;padding:40px;white-space:nowrap;text-indent:200%;}
+.header h1 a:before {position:absolute;top:40px;left:40px;width:80px;height:23px;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/common/logo.png') no-repeat 0 0;content:'';}
+
+
+/* footer */
+#footer.footer,
+.footer {width:100%;padding-bottom:0 !important;background-color:#333;font-family:'Open Sans','Noto Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif;}
+.footer .btn_top {overflow:hidden;position:fixed;right:40px;bottom:40px;z-index:30;width:45px;height:45px;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/common/btn_top.png') no-repeat 0 0;white-space:nowrap;text-indent:200%;}
+.footer .footer_inner {position:relative;padding:40px 40px 32px;width:100%;min-width:1240px;max-width:1904px;margin:0 auto;box-sizing:border-box;}
+.footer .footer_inner .terms {overflow:hidden;}
+.footer .footer_inner .terms li {float:left;margin-left:40px;}
+.footer .footer_inner .terms li:first-child {margin-left:0;}
+.footer .footer_inner .terms li a {display:block;height:15px;font-size:13px;color:#fff;letter-spacing:-0.1px;line-height:13px;}
+#footer.footer .footer_inner .copyright,
+.footer .footer_inner .copyright {margin-top:30px;background-color:transparent;}
+.footer .footer_inner .copyright span,
+.footer .footer_inner .copyright a {display:inline-block;height:12px;margin:7px 0;padding:0 11px 0 15px;border-left:1px solid #555;font-size:13px;color:#9a9a9a;line-height:10px;letter-spacing:-0.3px;vertical-align:top;}
+.footer .footer_inner .copyright span.bar_none {padding-left:0;border:0;}
+.footer .footer_inner .copyright a {position:relative;padding-right:10px;font-size:11px;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/common/btn_more_write.png') no-repeat 100% 2px;}
+.footer .footer_inner .copyright a:before {position:absolute;bottom:-5px;left:15px;width:77px;height:1px;background-color:#5c5c5c;content:'';}
+.footer .footer_inner .copyright a:hover {color:#fff;text-decoration:none !important;}
+.footer .footer_inner .family {position:absolute;top:10px;right:40px;padding:20px 16px;}
+.footer .footer_inner .family button {display:block;position:relative;width:180px;height:32px;border-bottom:1px solid #9a9a9a;font-size:14px;color:#fff;line-height:32px;text-align:left;}
+.footer .footer_inner .family button:before {position:absolute;top:12px;right:0;width:14px;height:7px;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/common/btn_select_black.png') no-repeat 0 0;content:'';-webkit-transform:rotate(0deg);transform:rotate(0deg);transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
+.footer .footer_inner .family ul {display:none;position:absolute;bottom:60px;left:0;z-index:10;width:100%;background-color:#333;}
+.footer .footer_inner .family ul li a {display:block;height:30px;padding:0 16px;font-size:14px;color:#fff;line-height:30px;}
+.footer .footer_inner .family:hover button:before {-webkit-transform:rotate(180deg);transform:rotate(180deg);transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
+.footer .footer_inner .family:hover ul {display:block;}
+.footer .footer_certify {background-color:#252525;}
+.footer .footer_certify ul {overflow:hidden;max-width:1904px;margin:0 auto;padding:30px 40px;box-sizing:border-box;}
+.footer .footer_certify li {float:left;margin-left:20px;line-height:25px;}
+.footer .footer_certify li:first-child {margin-left:0;}
+.footer .footer_certify li img {vertical-align:middle;}
+.footer .footer_certify li .txt_link {position:relative;padding-right:10px;font-size:11px;color:#9a9a9a;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/common/btn_more_write.png') no-repeat 100% 4px;line-height:18px;}
+.footer .footer_certify li .txt_link:before {position:absolute;bottom:-5px;left:0;width:104px;height:1px;background-color:#5c5c5c;content:'';}
+.footer .footer_certify li:last-child {margin-left:10px;}
+
+/**********************************************************
+	Layout - champion
+**********************************************************/
+#wrap {overflow:hidden;min-width:1280px;padding:113px 0 0;}
+
+#header {position:fixed;left:0;right:0;top:0;color:#fff;font-size:13px !important;border-bottom:3px solid #e61937;background-color:#fff;z-index:200;}
+#header a:hover {text-decoration:none;}
+#header .headTop {overflow:hidden;position:relative;max-width:1760px;margin:0 auto;padding:0 25px;}
+#header .headTop .headCate {height:40px;}
+#header .headTop .headCate:after {display:block;content:"";clear:both;width:0;height:0;line-height:0;}
+#header .headTop .headCate a {display:inline-block;margin:0 0 0 36px;padding:10px 0;}
+#header .headTop .headCate a:first-child {margin:0;}
+#header .headTop .headCate a span {display:block;position:relative;height:20px;line-height:20px;}
+#header .headTop .headCate a:hover span {border-bottom:1px solid #131635;}
+#header .headTop .headCate a:hover span:after {display:block;content:"";position:absolute;right:-3px;top:-1px;width:3px;height:3px;border-radius:3px;background-color:#e61937;}
+#header .headTop .headUtil {overflow:hidden;position:absolute;right:25px;top:0;}
+#header .headTop .headUtil a {display:block;float:left;margin:0 40px 0;line-height:40px;font-size:12px;color:#767676;}
+#header .headTop .headUtil a:last-child {margin:0;}
+
+#header .headNav {background-color:#131635;}
+#header .headNavIn {position:relative;max-width:1760px;height:70px;margin:0 auto;padding:0 25px;}
+#header .headNavIn .logo {position:absolute;left:25px;top:0;width:auto;height:auto;margin:0;}
+#header .headNavIn .logo a {display:block;height:30px;padding:20px 0;width:auto;height:auto;line-height:0;text-indent:0;cursor:pointer;}
+#header .headNavIn .logo a:before {display:none;}
+#header .headNavIn .logo a img {vertical-align:top;}
+#header .headNavIn .headUtil {overflow:hidden;position:absolute;right:25px;top:0;height:30px;padding:20px 0;}
+#header .headNavIn .headUtil a {display:block;float:left;position:relative;width:60px;height:30px;}
+#header .headNavIn .headUtil a:after {display:block;content:"";position:absolute;left:0;top:50%;width:1px;height:22px;margin:-11px 0 0;background-color:#2b3671;}
+#header .headNavIn .headUtil a:first-child:after {display:none;}
+#header .headNavIn .headUtil a em {display:block;overflow:hidden;position:absolute;left:0;right:0;width:0;height:0;line-height:0;}
+#header .headNavIn .headUtil a.btnSearch {display:block;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/champion/ico_header_search.png') no-repeat center;}
+#header .headNavIn .headUtil a.btnBasket {display:block;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/champion/ico_header_basket.png') no-repeat center;}
+#header .headNavIn .headUtil a.btnBasket span {display:block;position:absolute;left:70%;bottom:2px;line-height:14px;font-size:12px;color:#e61937;}
+
+/* 상단 GNB 영역 */
+#header .gnb {width:1000px;margin:0 auto;}
+#header .gnb .depth01 {overflow:hidden;height:70px;text-align:center;}
+#header .gnb .depth01 li {display:inline-block;float:none;height:30px;padding:20px 25px;}
+#header .gnb .depth01 li a {display:block;position:relative;line-height:30px;font-size:18px;font-weight:800;color:#fff;}
+#header .gnb .depth01 li.active a:after{display:block;content:"";position:absolute;left:0;right:0;bottom:0px;height:2px;background-color:#fff;}
+#header .gnb .depth01 li.icoLine a {padding:0 23px 0 0;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/champion/ico_gnb_line.png') no-repeat right center;}
+#header .gnb .subGnb {display:none;position:fixed;left:0;right:0;top:110px;padding:70px 0;border-top:3px solid #e61937;background-color:#fff;}
+#header .gnb .subGnb:after {display:block;content:"";position:absolute;left:0;right:0;bottom:-9px;height:9px;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/champion/bg_search_shadow.png') repeat-x left top;}
+#header .gnb .subGnb > ul {overflow:hidden;width:1280px;margin:0 auto;}
+#header .gnb .subGnb > ul > li {position:relative;float:left;width:154px;}
+#header .gnb .subGnb > ul > li:after {display:block;content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background-color:#e7e7e7;}
+#header .gnb .subGnb > ul > li:first-child:after {display:none;}
+#header .gnb .subGnb > ul > li.reverse {width:202px}
+#header .gnb .subGnb > ul > li > a {display:block;padding:10px 10px 10px 25px;line-height:26px;font-size:22px;font-weight:800;color:#131635;}
+#header .gnb .subGnb > ul > li > ul > li > a {display:block;padding:20px 10px 0 25px;line-height:20px;font-size:15px;color:#767676;}
+#header .gnb .subGnb > ul > li > ul > li.active > a {color:#131635;} 
+
+/* 상단 통합 검색 */
+.topSearchWrap {display:none;position:fixed;top:113px;left:0;right:0;padding:30px 0 60px;background-color:#fff;z-index:200;}
+.topSearchWrap:after {display:block;content:"";position:absolute;left:0;right:0;bottom:-9px;height:9px;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/champion/bg_search_shadow.png') repeat-x left top;}
+.topSearchWrap .searchIptWrap {max-width:1280px;margin:0 auto;}
+.topSearchWrap .searchIptBox {display:block;position:relative;box-sizing:border-box;max-width:1000px;margin:0 auto;padding:0 100px 0 0;border-bottom:3px solid #131635;}
+.topSearchWrap .searchIptBox input[type="text"] {width:100%;height:70px;border:none;outline:none;}
+.topSearchWrap .searchIptBox .del {display:none;position:absolute;right:70px;top:50%;width:18px;height:18px;margin:-9px 0 0;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/champion/ico_del.png') no-repeat center;}.topSearchWrap .searchIptBox .del span {display:block;overflow:hidden;position:absolute;left:0;top:0;width:0;height:0;line-height:0;}
+.topSearchWrap .searchIptBox .confirm {position:absolute;right:0;top:50%;width:30px;height:30px;margin:-15px 0 0;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/champion/ico_search.png') no-repeat center;}
+.topSearchWrap .searchIptBox .confirm span {display:block;overflow:hidden;position:absolute;left:0;top:0;width:0;height:0;line-height:0;}
+
+.topSearchWrap > .innerBox {position:relative;min-width:619px;max-width:1150px;padding:0 25px 0 635px;margin:60px auto 0;}
+.topSearchWrap .recomWordWrap {overflow:hidden;position:absolute;left:25px;top:0;width:565px;}
+.topSearchWrap .recomWordWrap [class^="recomWordBox"] {float:left;width:252px;margin:0 61px 0 0;}
+.topSearchWrap .recomWordWrap [class^="recomWordBox"] strong {display:block;margin:0 0 10px;line-height:22px;font-size:18px;font-weight:800;}
+.topSearchWrap .recomWordWrap [class^="recomWordBox"]:last-child {margin:0;}
+.topSearchWrap .recomWordWrap [class^="recomWordBox"] ul li {border-bottom:1px solid #e7e7e7;}
+.topSearchWrap .recomWordWrap [class^="recomWordBox"] ul li a {display:block;overflow:hidden;position:relative;padding:22px 12px 22px 0;line-height:20px;font-size:14px;text-overflow:ellipsis;white-space:nowrap;}
+.topSearchWrap .recomWordWrap .recomWordBox02:after {display:block;content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background-color:#c8c8c8;}
+.topSearchWrap .recomWordWrap .recomWordBox02 ul li a {padding:22px 22px 22px 40px;}
+.topSearchWrap .recomWordWrap .recomWordBox02 ul li a:after {display:block;content:"";position:absolute;right:0;top:50%;width:15px;height:11px;margin:-8px0 0;background:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/champion/ico_link.png') no-repeat center;}
+.topSearchWrap .recomWordWrap .recomWordBox02 ul li a em {display:inline-block;position:absolute;left:0;top:50%;width:22px;height:22px;margin:-11px 0 0;line-height:22px;font-size:14px;font-style:italic;color:#fff;text-align:center;border-radius:11px;background-color:#131635;}
+.topSearchWrap .recomWordWrap .recomWordBox02 ul li:first-child a em {background-color:#e61937;}
+
+.topSearchWrap .recomPrdList {overflow:hidden;position:relative;width:100%;}
+.topSearchWrap .recomPrdList ul {overflow:hidden;width:1160px;margin:0 -10px 0 0;transform:translate(0, 0);transition-property:transform; transition-timing-function:ease;}
+.topSearchWrap .recomPrdList ul li {float:left;width:222px;margin:0 10px 0 0;}
+.topSearchWrap .recomPrdList .swipePrev,
+.topSearchWrap .recomPrdList .swipeNext {position:absolute;top:120px;width:40px;height:40px;background-image:url('/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/champion/btn_swipe.png');background-repeat:no-repeat;z-index:1;}
+.topSearchWrap .recomPrdList .swipePrev {left:0;background-position:0 -40px;}
+.topSearchWrap .recomPrdList .swipePrev.disabled {background-position:0 0;cursor:default;}
+.topSearchWrap .recomPrdList .swipeNext {right:0;background-position:-40px -40px;}
+.topSearchWrap .recomPrdList .swipeNext.disabled {background-position:-40px 0;cursor:default;}
+.topSearchWrap .recomPrdList .swipePrev span,
+.topSearchWrap .recomPrdList .swipeNext span {display:block;overflow:hidden;position:absolute;left:0;top:0;width:0;height:0;line-height:0;}
+
+.contents {padding:0 0 120px;}
+
+/* footer */
+#footer .footer_inner {position:relative;width:auto;max-width:1810px;min-width:auto;padding:40px 25px 32px;}
+#footer .footer_certify ul {width:auto;max-width:1810px;min-width:auto;padding:30px 25px;}
+#footer .fSnsBox {position:absolute;right:25px;top:40px;}
+#footer .fSnsBox a {display:inline-block;margin:0 0 0 15px;vertical-align:middle;}
+#footer .fSnsBox a:first-child {margin:0;}
+
+/* 브랜드몰 공통화면 */
+.champion_layout #wrapper {padding:113px 0 0;} 
+
+.champion_layout .zoomtracker {top: 68px !important;}
+
+/* 검색영역 브랜드 */
+.champion_layout [class^="prdCardWrap"] {display:block;}
+.champion_layout [class^="prdCardWrap"] .imgBox {position:relative;}
+.champion_layout [class^="prdCardWrap"] .imgBox .img {display:block;position:relative;}
+.champion_layout [class^="prdCardWrap"] .imgBox .img:after{display:block;content:"";position:absolute;left:0;top:0;right:0;bottom:0;background-color:rgba(0, 0, 0, 0.04);}
+.champion_layout [class^="prdCardWrap"] .imgBox .img img {width:100%;}
+.champion_layout [class^="prdCardWrap"] .imgBox [class^="rankFlag"] {position:absolute;right:0;bottom:0;z-index:1;}
+
+.champion_layout [class^="prdCardWrap"] .rankFlag {display:inline-block;width:50px;height:50px;line-height:50px;font-size:26px;font-style:italic;color:#fff;text-align:center;background-color:#131635;}
+.champion_layout [class^="prdCardWrap"] .rankFlag.best {background-color:#e61937;}
+.champion_layout [class^="prdCardWrap"] .rankFlag.ver02 {width:35px;height:35px;line-height:35px;font-size:16px;}
+
+.champion_layout [class^="prdCardWrap"] .prdInfo {height:153px;padding:20px 0 0;background-color:#fff;}
+.champion_layout [class^="prdCardWrap"] .prdInfo .prdNm {display:block;overflow:hidden;max-height:44px;line-height:22px;font-size:14px;font-weight:400;}
+.champion_layout [class^="prdCardWrap"] .prdInfo .prdPrice {margin:20px 0 0;}
+.champion_layout [class^="prdCardWrap"] .prdInfo .prdPrice .net {display:inline-block;margin:0 0 0 5px;line-height:22px;font-size:14px;color:#767676;text-decoration:line-through;}
+.champion_layout [class^="prdCardWrap"] .prdInfo .prdPrice .flagSale {display:inline-block;margin:0 6px 0 0;line-height:22px;font-size:18px;color:#e61937;}
+.champion_layout [class^="prdCardWrap"] .prdInfo .prdPrice .sale {display:inline-block;line-height:22px;font-size:18px;}
+
+.champion_layout .category_path>li {background:url(//img.lfmall.co.kr/file/WAS/apps/2017/pfront/arr_path.png) no-repeat 0 7px;}
+.champion_layout .category_path>li:first-child {background:none;}
+
+/* 상세 브랜드 챔피언 */
+/* product detail */
+.champion_layout .tab_cancel_info ul.type2 li {position:relative;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box {position:absolute;top:190px;left:0;padding-left:6px;box-sizing:border-box;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box>span {float:left;text-align:center;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span.pt15 {padding-top:15px;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span .txt_s {display:block;height:7px;font-size:9px;color:#3f5566;line-height:7px;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span .txt {display:block;font-size:11px;color:#717171;line-height:20px;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span .txt em {color:#373737;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span .txt_s+.txt {margin-top:10px;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span .btn_abs {display:inline-block;position:relative;border:1px solid #ddd;text-indent:0;font-size:11px;color:#666;line-height:30px;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span .btn_abs em {color:#000;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span b {display:block;height:10px;font-size:11px;font-weight:bold;color:#000;letter-spacing:-0.6px;line-height:10px;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span b em {color:#e0272b;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span .btn_abs+b {margin-top:10px;}
+.champion_layout .tab_cancel_info ul.type2 li .txt_box span b+.txt {margin-top:10px;}
+.champion_layout .order_step {position:relative;}
+.champion_layout .order_step .txt_box {position:absolute;top:168px;left:0;box-sizing:border-box;}
+.champion_layout .order_step .txt_box span {float:left;padding-left:35px;font-size:11px;color:#000;line-height:20px;text-align:left;}
+.champion_layout .order_step .txt_box span b {font-weight:bold;}
+.champion_layout .order_step .txt_box span em {color: #717171;}
+
+.champion_layout .ifr-login-wrap .tab-sty2-1.agr li {height:auto;padding:0 23px;}
+.champion_layout .ifr-login-wrap .tab-sty2-1.agr li a {height:auto;line-height:37px;}
+
+/* 쇼핑백 도움말 툴팁 위치수정 */
+.champion_layout .cartinfo {position:relative;transform:translate(0, 7px);}
+.champion_layout .cartinfo + .cbtn {position:relative;}
+
+/* mypage */
+.champion_layout .sys-btn-type1:active {background-color:#000;}
+
+/* 회원가입 탭 */
+.champion_layout ul.tab-sty2-1 li a {height:12px;}
+
+/* 공지사항 스타일 유지 */
+.champion-container .detail_cont {width:1240px;margin:0 auto;}
+
+/* runway */
+.champion-container .champion-runway__main>div {position:relative;}
+.champion-container .champion-runway__main>div h3 {position: relative;}
+
+/* slick */
+.champion-container .slick-dots {position:absolute;bottom:40px;width: 100%;
+    text-align: center;}
+.champion-container .slick-dots>li {display:inline-block;margin:0 7px;}
+.champion-container .slick-dots>li>button:before {content:'';display:block;width:10px;height:10px;text-align:center;opacity:.25;background:#fff;border-radius:50%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.champion-container .slick-dots>li.slick-active button:before {opacity:.75;background:#fff;}
+.champion-container .slick-dots>li>button {width:10px;height:10px;font-size:0;}
+.champion-container .champion-runway__main .champion-runway__list>div {position:relative;width:100%;height:900px;}
+.champion-container .champion-runway__main .champion-runway__list>div header {position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 2;}
+.champion-container .champion-runway__main .champion-runway__list>div figure {position:absolute;top:0;left:0;width:100%;z-index:1;}
+.champion-container .champion-runway__main .champion-runway__list>div figure img {width:100%;height:900px;}
+.champion-container .champion-runway__main .champion-runway__list>div header h3 {font-size:60px;}
+.champion-container .champion-runway__main .champion-runway__list>div header p {margin:33px 0 40px;font-size:26px;line-height:1.5;}
+.champion-container .champion-runway__main .champion-runway__list>div header a {display:inline-block;width:231px;height:60px;line-height:60px;font-size:18px;color:#fff;border:1px solid #fff;}
+/* common: notice */
+.champion-sub {}
+.champion-sub h2 {height:36px;margin:70px 0;font-weight:700;font-size:30px;color:#030303;line-height:28px;text-align:center;}
+.champion-sub .noti_list ul {width:1030px;margin:0 auto;border-bottom:1px solid #d3d3d3;}
+.champion-sub .noti_list li {overflow:hidden;padding:44px 20px;border-top:1px solid #d3d3d3;}
+.champion-sub .noti_list li a {overflow:hidden;float:left;max-width:870px;height:23px;border-bottom:1px solid #fff;font-weight:400;font-size:20px;color:#000;line-height:17px;white-space:nowrap;text-overflow:ellipsis;}
+.champion-sub .noti_list li a:hover {border-bottom:1px solid #030303;}
+.champion-sub .noti_list li .date {float:right;width:80px;height:22px;font-size:15px;color:#666;text-align:center;line-height:20px;}
+.champion-sub .util_top {margin:0 auto;padding-top:14px;}
+.champion-sub .util_top:after {display:block;clear:both;content:'';}
+.champion-sub .util_top .right {width:1240px;height:46px;margin:0 auto;padding-bottom:13px;}
+.champion-sub .util_top .right span {float:right;position:relative;right:-20px;}
+.champion-sub .util_top .right span:before {position:absolute;top:15px;right:75px;width:1px;height:14px;background-color:#ccc;content:'';}
+.champion-sub .util_top .right span.base {right:-20px;}
+.champion-sub .util_top .right span.base:before {display:none;}
+.champion-sub .util_top .right a {float:left;overflow:hidden;position:relative;height:46px;padding:0 20px;white-space:nowrap;text-indent:100px;}
+.champion-sub .util_top .right a:before {position:absolute;top:15px;left:20px;height:14px;background:url(/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/common/bg_news_util.png) no-repeat 0 0;content:'';}
+.champion-sub .util_top .right .fb {width:8px;}
+.champion-sub .util_top .right .fb:before {width:8px;background-position:0 0;}
+.champion-sub .util_top .right .lang {width:14px;}
+.champion-sub .util_top .right .lang:before {width:14px;background-position:-8px 0;}
+.champion-sub .util_top .right .menu {width:15px;margin-left:40px;}
+.champion-sub .util_top .right .menu:before {width:15px;background-position:-22px 0;}
+.champion-sub .util_top .right span.base .menu {margin-left:0;}
+.champion-sub .util_top .title {overflow:hidden;position:relative;height:500px;background-color:#1c1c1c;text-align:center;color:#fff;}
+.champion-sub .util_top .title img {position:absolute;top:0;left:50%;height:100%;margin-left:-952px;}
+.champion-sub .util_top .title .date {display:inline-block;position:relative;z-index:10;height:54px;margin-top:100px;padding:0 2px;border-top:4px solid #fff;font-size:18px;line-height:54px;}
+.champion-sub .util_top .title strong {display:block;position:relative;z-index:10;margin-top:25px;font-family:'Noto Sans KR';font-weight:400;font-size:55px;line-height:64px;}
+.champion-sub .util_top .title strong.en_only {font-size:78px;line-height:75px;}
+.champion-sub .util_top .title_notice {width:1240px;margin:0 auto;padding-top:68px;padding-bottom:120px;border-top:1px solid #d3d3d3;text-align:center;}
+.champion-sub .util_top .title_notice strong {display:block;overflow:hidden;height:50px;font-family:'Noto Sans KR' !important;font-size:42px;font-weight:400;color:#030303;line-height:36px;white-space:nowrap;text-overflow:ellipsis;}
+.champion-sub .util_top .title_notice .date {display:inline-block;height:14px;margin-top:34px;padding:12px 0;border-bottom:1px solid #1c1c1c;font-size:18px;font-weight:600;color:#030303;line-height:12px;}
+.champion-sub .util_detail {text-align:center;}
+.champion-sub .util_detail p {font-size:18px;font-weight:300;line-height:32px;}
+.champion-sub .util_detail p.title_img {display:block;overflow:hidden;position:relative;height:500px;}
+.champion-sub .util_detail p.title_img img {position:absolute;top:0;left:50%;margin-left:-960px;}
+.champion-sub .util_detail .img {display:inline-block;padding-top:72px;}
+.champion-sub .util_detail .img + p {padding-top:72px;}
+.champion-sub .util_detail .img img {max-width:100%;}
+.champion-sub .util_detail .btn_wrap {overflow:hidden;margin-top:140px;border-top:1px solid #e3e3e3;}
+.champion-sub .util_detail .btn_wrap a {float:left;width:33.3333%;height:80px;text-align:center;}
+.champion-sub .util_detail .btn_wrap a span {display:inline-block;height:14px;padding:33px 0;position:relative;font-weight:400;font-size:15px;color:#222;line-height:12px;}
+.champion-sub .util_detail .btn_wrap a span:before {position:absolute;top:33px;height:14px;background:url(/ux/brand/champion-pc/webapp/WEB-INF/static/renewal/images/common/bg_btn_list.png) no-repeat 0 0;content:'';}
+.champion-sub .util_detail .btn_wrap a.prev span {padding-left:20px;}
+.champion-sub .util_detail .btn_wrap a.list span {padding-left:24px;}
+.champion-sub .util_detail .btn_wrap a.next span {padding-right:20px;}
+.champion-sub .util_detail .btn_wrap a.prev span:before {left:0;width:9px;height:14px;background-position:0 0;}
+.champion-sub .util_detail .btn_wrap a.list span:before {left:0;width:14px;height:14px;background-position:-9px 0;}
+.champion-sub .util_detail .btn_wrap a.next span:before {right:0;width:9px;height:14px;background-position:-23px 0;}
+.champion-sub .util_detail .btn_wrap a.none span {display:none;}
+.champion-sub .util_detail .detail_cont + .detail_gray {margin-top:140px;}
+.champion-sub .util_detail .detail_gray + .btn_wrap {margin-top:0;}
+.champion-sub .util_detail .detail_gray + .btn_wrap.ty1 {margin-top:140px;}
+.champion-sub .util_detail .detail_gray {padding:120px 0 140px;background-color:#f2f2f2;text-align:center;}
+.champion-sub .util_detail .detail_gray .video_wrap {display:inline-block;width:100%;max-width:1240px;height:698px;}
+.champion-sub .util_detail .detail_gray .video_wrap iframe {width:100%;height:100%;}
+.champion-sub .util_detail h3 {height:24px;font-size:34px;color:#000;line-height:22px;}
+.champion-sub .util_detail .prod_list {width:1344px;margin-top:60px;text-align:center;}
+.champion-sub .util_detail .prod_list ul {display:inline-block;margin:0;}
+.champion-sub .util_detail .prod_list ul li {width:232px;margin:0 52px;}
+.champion-sub .util_detail .prod_list ul li img {width:232px;height:294px;}
+.champion-sub .util_detail .prod_list ul li .info {margin-top:20px;padding:0;text-align:left;}
+.champion-sub .util_detail .prod_list ul li .info .name {height:14px;font-size:14px;color:#222;line-height:12px;}
+.champion-sub .util_detail .prod_list ul li .info .price {margin-top:15px;font-size:14px;line-height:14px;}
+.champion-sub .util_detail .prod_list ul li .info .price em {font-size:16px;}
+.champion-sub .util_detail .prod_list ul li .info .price span {font-size:13px;}
+.champion-sub .care-wrap {padding-bottom:110px;}
+.champion-sub .care-wrap .tab_cancel_info {width:940px;margin:0 auto;position:relative;clear:both;}
+.champion-sub .care-wrap .tab_cancel_info ol {width:100%;position:absolute;left:0;top:0;z-index:2;}
+.champion-sub .care-wrap .tab_cancel_info ol li {width:33.3%;float:left;line-height:50px;height:50px;cursor:pointer;overflow:hidden;font-size:0;text-indent:-9000px;}
+.champion-sub .care-wrap .tab_cancel_info ul {width:100%;position:relative;z-index:1;}
+.champion-sub .care-wrap .tab_cancel_info ul li {width:100%;display:none;}
+.champion-sub .care-wrap .tab_cancel_info ul li.on {display:block;}
+.champion-sub .care-wrap .tab_cancel_info ul li .btn_abs {overflow:hidden;position:absolute;width:156px;height:30px;white-space:nowrap;text-indent:-200%;}
+.champion-sub .care-wrap .tab_cancel_info ul li .btn1 {left:81px;top:217px;}
+.champion-sub .care-wrap .tab_cancel_info ul li .btn2 {left:75px;top:217px;}
+.champion-sub .care-wrap .tab_cancel_info ul li .btn3 {left:259px;top:217px;}
+.champion-sub .care-wrap .care-area {width:940px;margin:0 auto;padding-bottom:60px;}
+.champion-sub .care-wrap .care-area:last-child {padding-bottom:0;}
+.champion-sub .care-wrap .care-area h3 {display:block;margin-bottom:20px;font-size:18px;font-weight:600;line-height:20px;}

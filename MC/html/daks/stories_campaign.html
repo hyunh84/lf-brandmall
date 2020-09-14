@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/daks/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/daks/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/daks/app.css" />
+
+	<script src="../../webapp/WEB-INF/static/brandmall/js/daks/jquery-1.9.1.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/daks/swiper.min.js"></script>
+	<script src="../../webapp/WEB-INF/static/brandmall/js/daks/ui_style.js"></script>
+
+	
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+	<script src="../../webapp/WEB-INF/static/brandmall/js/daks/layout.js"></script>
+	<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- header -->
+	<header id="header">
+		<!-- <div class="top_banner">
+			<a href="#"><span><img src="../../webapp/WEB-INF/static/brandmall/images/daks/temp/temp_top_banner.jpg" onload="mainTopBanner(this);"></span></a>
+		</div> -->
+
+		<div class="header_inner">
+			<script>
+				headerFn('#header .header_inner');
+			</script>
+		</div>
+
+		<!-- GNB -->
+		<nav class="daksGnbWrap">
+		<script>
+			createGnbFn('.daksGnbWrap');
+		</script>
+		</nav>
+		<!-- // GNB -->
+
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="content">
+
+			<div class="subCateViewWrap">
+				<div class="inner">
+					<button type="button" class="btnOpenCate">STORIES</button>
+					<div class="cateListBox">
+						<div class="cmtSlideWrap">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<a href="#"><span>STORIES</span>'S HOME</a>
+								</li>
+								<li class="swiper-slide active">
+									<a href="#">CAMPAIGN</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#">DAKS ICONIC ITEM</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cmpgWrap">
+				<a href="#"><span class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/daks/temp/img_stories_campaign01.jpg" alt=""></span></a>
+			</div>
+			<div class="cmpgWrap">
+				<a href="#"><span class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/daks/temp/img_stories_campaign02.jpg" alt=""></span></a>
+			</div>
+			<div class="cmpgWrap">
+				<a href="#"><span class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/daks/temp/img_stories_campaign03.jpg" alt=""></span></a>
+			</div>
+			<div class="cmpgWrap">
+				<a href="#"><span class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/daks/temp/img_stories_campaign04.jpg" alt=""></span></a>
+			</div>
+
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<script>
+			footerFn('#footer');
+		</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+<script type="text/javascript">
+	subCategorySlide();
+</script>
+</body>
+</html>

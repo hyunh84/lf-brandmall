@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import url("font.css");
+
+/**********************************************************
+	상품상세 및 마이페이지 공통하면 reset 필요 내용 layout.css에 선언
+**********************************************************/
+body, pre, textarea, select, button, input {font-weight:400;font-family:'WorkSans', 'Noto Sans KR', sans-serif , Dotum, Arial !important;}
+strong {font-weight:700;}
+a {color:#000;}
+.font2 {font-family:'Spectral', 'NanumMyeongjo', 'Noto Sans KR', sans-serif , Dotum, Arial !important;}
+/* ::-webkit-input-placeholder {color:#ccc;}
+:-ms-input-placeholder {color:#ccc;}
+::placeholder {color:#ccc;}
+input::-ms-clear{display:none;}
+input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !important;pointer-events:none;position:absolute;right:0;} */
+
+/**********************************************************
+	BRAND MALL - LAYOUT
+**********************************************************/
+#wrap {overflow:hidden;box-sizing:border-box;position:relative;min-width:1280px;height:100%;min-height:100%;height:auto !important;padding:108px 0 1102px;}
+
+/* Header */
+#header {position:fixed;left:0;right:0;top:0;box-sizing:border-box;min-width:1280px;padding:0 85px;border-bottom:1px solid #d9d9d9;background-color:#fff;z-index:200;}
+
+#header .headerTop {height:44px;margin:0 -85px;padding:0 85px;border-bottom:1px solid #d9d9d9;}
+#header .headerTop .inner {position:relative;max-width:1750px;margin:0 auto;}
+#header .header_inner {position:relative;max-width:1750px;margin:0 auto;}
+
+#header .headNoticeBox {width:388px;margin:0 auto;}
+#header .headNoticeBox .full_slide {position:relative;padding:0 44px;}
+#header .headNoticeBox .full_slide .slideItem {outline:none;}
+#header .headNoticeBox .full_slide .slideItem a {display:block;overflow:hidden;line-height:44px;font-size:12px;color:#5d5a52;text-align:center;text-overflow:ellipsis;white-space:nowrap;}
+#header .headNoticeBox .full_slide .slideItem span {display:block;overflow:hidden;line-height:44px;font-size:12px;color:#5d5a52;text-align:center;text-overflow:ellipsis;white-space:nowrap;}
+#header .headNoticeBox .full_slide .slick-prev {position:absolute;left:0;top:0;overflow:hidden;width:44px;height:44px;text-indent:-9999em;background:url('../../images/colehaan/btn_slide_small.png') no-repeat left top;}
+#header .headNoticeBox .full_slide .slick-next {position:absolute;right:0;top:0;overflow:hidden;width:44px;height:44px;text-indent:-9999em;background:url('../../images/colehaan/btn_slide_small.png') no-repeat right top;}
+
+#header .hUtil {position:absolute;right:0;top:0;}
+#header .hUtil a {display:inline-block;line-height:44px;font-size:12px;color:#5d5a52;vertical-align:top;}
+#header .hUtil a:hover {text-decoration:underline;}
+#header .hUtil a + a {margin:0 0 0 20px;}
+
+#header .logo {position:absolute;left:0;top:50%;margin:-9px 0 0;}
+#header .logo a {display:block;}
+#header .logo a img {vertical-align:top;}
+
+#header .gnbWrap {text-align:center;color:#000;}
+#header .gnbWrap > ul {display:inline-block;vertical-align:top;}
+#header .gnbWrap > ul > li {display:inline-block;vertical-align:middle;}
+#header .gnbWrap > ul > li > a {display:block;padding:16px 45px;}
+#header .gnbWrap > ul > li > a span {display:inline-block;position:relative;line-height:30px;font-size:15px;font-weight:700;}
+#header .gnbWrap > ul > li .depth02 {display:none;position:fixed;top:108px;left:0;width:100vw;min-width:1280px;padding:65px 0 35px;text-align:left;background-color:#fff;}
+#header .gnbWrap > ul > li .depth02 .subInner {overflow:hidden;box-sizing:border-box;max-width:1280px;padding:0 85px;margin:0 auto;}
+#header .gnbWrap > ul > li .depth02 .subInner .category {float:left;width:240px;margin:0 10px 0 0;}
+#header .gnbWrap > ul > li .depth02 .subInner .category ul li {margin:30px 0 0;}
+#header .gnbWrap > ul > li .depth02 .subInner .category ul li:first-child {margin:0;}
+#header .gnbWrap > ul > li .depth02 .subInner .category ul li a {line-height:20px;font-size:15px;font-weight:700;}
+#header .gnbWrap > ul > li .depth02 .subInner .item {float:left;}
+#header .gnbWrap > ul > li .depth02 .subInner .item ul li {margin:10px 0 0;}
+#header .gnbWrap > ul > li .depth02 .subInner .item ul li:first-child {margin:0;}
+#header .gnbWrap > ul > li .depth02 .subInner .item ul li a {display:block;line-height:20px;font-size:13px;}
+#header .gnbWrap > ul > li .depth02 .subInner .gnbBanner {float:right;width:575px;}
+#header .gnbWrap > ul > li .depth02 .subInner .gnbBanner a {display:block;float:left;}
+#header .gnbWrap > ul > li .depth02 .subInner .gnbBanner a + a {margin:0 0 0 25px;}
+#header .gnbWrap > ul > li:hover > a span:after {display:block;content:"";position:absolute;right:0;left:0;bottom:0;height:3px;background-color:#000;}
+#header .gnbWrap > ul > li:hover .depth02 {display:block;}
+#header .gnbWrap > ul > li:hover .depth02:after {display:block;content:"";position:absolute;left:0;right:0;bottom:-12px;height:12px;background:url('../../images/colehaan/gnb_shadow.png') repeat-x left top;}
+
+#header .hUtil02 {position:absolute;top:0;right:0;padding:15px 0;}
+#header .hUtil02 .hSearchBox {display:inline-block;position:relative;width:140px;padding:0 0 0 20px;border-bottom:2px solid #000;vertical-align:top;transition:width 0.8s ease;}
+#header .hUtil02 .hSearchBox:after {display:block;content:"";position:absolute;left:0;top:0;width:16px;height:30px;background:url('../../images/colehaan/icon-gnb-search.png') no-repeat center;}
+#header .hUtil02 .hSearchBox input[type="text"] {box-sizing:border-box;width:100%;height:30px;padding:0;}
+#header .hUtil02 .hSearchBox.active {width:200px;}
+#header .hUtil02 .cart {display:inline-block;width:30px;height:32px;background:url('../../images/colehaan/icon-gnb-basket.png') no-repeat center bottom;vertical-align:top;}
+#header .hUtil02 .cart em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
+
+/* Container */
+#container {padding:0 0 120px;}
+
+/* Footer */
+#wrap #footer {position:absolute;left:0;right:0;bottom:0;} /* brandmall - footer */
+#footer {padding-bottom:0 !important;background-color:#333;}
+#footer .btn_top {display:none;overflow:hidden;position:fixed;right:40px;bottom:40px;z-index:30;width:45px;height:45px;background:url('../../images/daks/common/btn_top.png') no-repeat 0 0;white-space:nowrap;text-indent:200%;}
+#footer .footer_inner {position:relative;padding:40px 85px 32px;width:100%;min-width:1280px;max-width:1920px;margin:0 auto;box-sizing:border-box;}
+#footer .footer_inner .terms {overflow:hidden;}
+#footer .footer_inner .terms li {float:left;margin-left:40px;}
+#footer .footer_inner .terms li:first-child {margin-left:0;}
+#footer .footer_inner .terms li a {display:block;height:15px;font-size:13px;color:#fff;letter-spacing:-0.1px;line-height:15px;}
+
+#footer .footer_inner .copyright span,
+#footer .footer_inner .copyright a {display:inline-block;height:12px;margin:7px 0;padding:0 11px 0 15px;border-left:1px solid #555;font-size:13px;color:#9a9a9a;line-height:10px;letter-spacing:-0.3px;vertical-align:top;}
+#footer .footer_inner .copyright span.bar_none {padding-left:0;border:0;}
+#footer .footer_inner .copyright a {position:relative;padding-right:10px;font-size:11px;background:url('../../images/daks/common/btn_more_write.png') no-repeat 100% 0;}
+#footer .footer_inner .copyright a:before {position:absolute;bottom:-5px;left:15px;width:77px;height:1px;background-color:#5c5c5c;content:'';}
+#footer .footer_inner .copyright a:hover {color:#fff;text-decoration:none !important;}
+
+#footer .footer_inner .family {position:absolute;top:10px;right:85px;}
+#footer .footer_inner .family:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;line-height:0;}
+#footer .footer_inner .family .familySelect {float:left;position:relative;padding:20px 16px;}
+#footer .footer_inner .family .familySelect button {display:block;position:relative;width:180px;height:32px;border-bottom:1px solid #9a9a9a;font-size:14px;color:#fff;line-height:32px;text-align:left;}
+#footer .footer_inner .family .familySelect button:before {position:absolute;top:12px;right:0;width:14px;height:7px;background:url('../../images/daks/common/btn_select_black.png') no-repeat 0 0;content:'';-webkit-transform:rotate(0deg);transform:rotate(0deg);transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
+#footer .footer_inner .family .familySelect ul {display:none;position:absolute;bottom:60px;left:0;z-index:10;width:100%;background-color:#333;}
+#footer .footer_inner .family .familySelect ul li a {display:block;height:30px;padding:0 16px;font-size:14px;color:#fff;line-height:30px;}
+#footer .footer_inner .family .familySelect:hover button:before {-webkit-transform:rotate(180deg);transform:rotate(180deg);transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
+#footer .footer_inner .family .familySelect:hover ul {display:block;}
+
+#footer .footer_certify {background-color:#252525;}
+#footer .footer_certify ul {overflow:hidden;max-width:1920px;margin:0 auto;padding:30px 85px;box-sizing:border-box;}
+#footer .footer_certify li {float:left;margin-left:20px;height:25px;line-height:25px;}
+#footer .footer_certify li:first-child {margin-left:0;}
+#footer .footer_certify li a {display:inline-block;line-height:0;vertical-align:middle;}
+#footer .footer_certify li img {vertical-align:top;}
+#footer .footer_certify li .txt_link {position:relative;height:18px;padding:0 10px 3px 0;line-height:18px;font-size:11px;color:#9a9a9a;background:url('../../images/daks/common/btn_more_write.png') no-repeat 100% 4px;}
+#footer .footer_certify li .txt_link:before {position:absolute;bottom:0;left:0;width:104px;height:1px;background-color:#5c5c5c;content:'';}
+#footer .footer_certify li:last-child {margin-left:10px;}
+
+#footer .footer_contact {padding:70px 85px;background-color:#c5d3d9;}
+#footer .footer_contact:after {display:block;clear:both;content:'';}
+#footer .footer_contact .inner {position:relative;max-width:1750px;margin:0 auto;}
+#footer .footer_contact h2 {display:block;font-size:36px;font-weight:800;line-height:46px;font-family:'Spectral', 'NanumMyeongjo', 'Noto Sans KR', sans-serif , Dotum, Arial !important;}
+#footer .footer_contact .contact_left {float:left;}
+#footer .footer_contact .contact_left dl {min-height:65px;margin-top:30px;padding-left:80px;color:#000;}
+#footer .footer_contact .contact_left dl.info_call {background:url('../../images/colehaan/common/icon_contact_call.png') no-repeat 0 0;}
+#footer .footer_contact .contact_left dl.info_insta {padding-top:9px;background:url('../../images/colehaan/common/icon_contact_sns.png') no-repeat 0 0;}
+#footer .footer_contact .contact_left dl dt {height:16px;font-family:'Work Sans';font-size:24px;line-height:16px;}
+#footer .footer_contact .contact_left dl dd {margin-top:12px;font-family:'Noto Sans KR';font-size:16px;line-height:18px;}
+#footer .footer_contact .contact_right {overflow:hidden;float:right;}
+#footer .footer_contact .contact_right dl {float:left;margin-left:117px;}
+#footer .footer_contact .contact_right dl:first-child {margin-left:0;}
+#footer .footer_contact .contact_right dl dt {padding-bottom:5px;font-family:'Work Sans';font-size:16px;font-weight:800;color:#000;line-height:11px;}
+#footer .footer_contact .contact_right dl dd a {display:block;margin-top:15px;height:20px;font-family:'Work Sans';font-size:12px;color:#000;line-height:18px;}
+
+#footer .footer-util {padding:60px 0;text-align:center;background-color:#fff;}
+#footer .footer-util .util-menu li {display:inline-block;padding:0 20px;border-left:1px solid #5d5a52;}
+#footer .footer-util .util-menu li:first-child {border-left:none;}
+#footer .footer-util .util-menu li a {display:block;line-height:14px;font-size:12px;color:#5d5a52;line-height:12px;}
+#footer .footer-util .copy {display:block;margin-top:40px;font-size:12px;color:#5d5a52;line-height:9px;}
+#footer .footer-util .btn-top {display:inline-block;width:205px;margin-top:40px;padding-top:195px;border-bottom:4px solid #000;background:url('../../images/colehaan/common/btn_top_colehaan.png') no-repeat 0 0;font-size:16px;font-weight:800;color:#000;line-height:24px;}
+
+
+/**********************************************************
+	LF MALL 사용 화면
+**********************************************************/
+/* 브랜드몰 공통화면 */
+.daks_layout #contents {padding:0 0 0;}
+.daks_layout #wrap #footer {position:static;}
+.daks_layout #footer {margin:0 !important;}
+.daks_layout #footer .footer_inner .copyright {background-color:transparent;}

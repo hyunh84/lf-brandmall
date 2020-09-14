@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<title>BRAND MALL</title>
+<script type="text/javascript" src="PC/webapp/WEB-INF/static/brandmall/js/tngt/jquery-1.9.1.min.js"></script>
+ 
+<style type="text/css">
+html, body {height:100%;}
+body {padding:0; margin:0; font-size:0.75em; font-family:dotum,"돋움"; color:#333333;}
+* {padding:0;margin:0;}
+
+#wrap {position:relative;height:100%;padding:0 0 0 203px;}
+#wrap .lnb {overflow:auto;position:absolute;left:0;top:0;bottom:0;width:200px;padding:3px 0;border-right:3px solid #000;background-color:#000;}
+#wrap .lnb ul {background-color:#fff;}
+#wrap .lnb ul li {border-top:1px solid #666;}
+#wrap .lnb ul li:first-child {border-top:none;}
+#wrap .lnb ul li a {display:block;padding:5px 10px;font-size:15px;font-weight:bold;color:#548bcc;text-decoration:none;}
+#wrap .lnb ul li a:hover {color:#fff;background-color:#548bcc;}
+#wrap .listView {position:relative;height:100%;}
+</style>
+
+<div id="wrap">
+	<div class="lnb">
+		<ul>
+			<li>
+				<a href="PC/fileList/fileList_maestro.html">MAESTRO-PC</a>
+			</li>
+			<li>
+				<a href="MC/fileList/fileList_maestro.html">MAESTRO-MC</a>
+			</li>
+			<li>
+				<a href="PC/fileList/fileList_colehaan.html">COLEHAAN-PC</a>
+			</li>
+			<li>
+				<a href="MC/fileList/fileList_colehaan.html">COLEHAAN-MC</a>
+			</li>
+			<li>
+				<a href="PC/fileList/fileList_daks.html">DAKS-PC</a>
+			</li>
+			<li>
+				<a href="MC/fileList/fileList_daks.html">DAKS-MC</a>
+			</li>
+			<li>
+				<a href="PC/fileList/fileList_champion.html">Champion-PC</a>
+			</li>
+			<li>
+				<a href="MC/fileList/fileList_champion.html">Champion-MC</a>
+			</li>
+			<li>
+				<a href="PC/fileList/fileList_dualit.html">DUALIT-PC</a>
+			</li>
+			<li>
+				<a href="MC/fileList/fileList_dualit.html">DUALIT-MC</a>
+			</li>
+			<li>
+				<a href="PC/fileList/fileList_hazzys.html">Hazzys-PC</a>
+			</li>
+			<li>
+				<a href="MC/fileList/fileList_hazzys.html">Hazzys-MC</a>
+			</li>
+			<li>
+				<a href="PC/fileList/fileList_tngt.html">TNGT-PC</a>
+			</li>
+			<li>
+				<a href="MC/fileList/fileList_tngt.html">TNGT-MC</a>
+			</li>
+		</ul>
+	</div>
+	<div class="listView">
+		<iframe src="" scrolling="auto" style="width:100%;height:100%;border:none;"></iframe>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	var currentUrl = $('.lnb a').eq(0).attr('href');
+
+	$('.listView iframe').attr('src', currentUrl);
+
+	$('.lnb a').click(function(e) {e.preventDefault();
+		var _this = $(this);
+		var url = _this.attr('href');
+		$('.listView iframe').attr('src', url);
+	});
+
+</script>
+
+</body>
+<>
