@@ -1,6 +1,6 @@
-var headerFn = function(target, title) {
+var headerFn = function(target, lang, depth) {
 	var html = '';
-	html += '<h1 class="logo"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/ic-logo.svg" alt="HAZZYS" /></a></h1>';
+	html += '<h1 class="logo"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/logo.svg" alt="HAZZYS" /></a></h1>';
 	html += '<button type="button" class="btnGnb"><span><em>메뉴열기</em></span></button>';
 	html += '<div class="headUtil">';
 	html += '<a href="#" class="icoSearch"><em>검색</em></a>';
@@ -8,6 +8,11 @@ var headerFn = function(target, title) {
 	html += '</div>';
 
 	$(target).html(html);
+	if(depth === '2') {
+		$('img', target).each(function() {
+			$(this).attr('src', $(this).attr('src').replace('../../webapp', '../../../webapp'));
+		});
+	}
 }
 
 var createGnbFn = function(target) {
@@ -21,8 +26,8 @@ var easyUtilFn = function(target) {
 	html += '<div class="easySect">';
 	html += '<strong>NEWS LETTER</strong>';
 	html += '<label class="easyEmail">';
-	html += '<span><span>이메일을 입력하세요</span></span>';
-	html += '<input type="text" />';
+	html += '<span class="placeholder"><span>이메일을 입력하세요</span></span>';
+	html += '<input type="email" />';
 	html += '</label>';
 	html += '</div>';
 	html += '<div class="easySect">';
@@ -79,7 +84,7 @@ var footerFn = function(target, lang) {
 	html += '<a href="#"><strong>개인정보 처리방침</strong></a>';
 	html += '</div>';
 	html += '</div>';
-	html += '<div class="langBox">';
+	html += '<div class="fLangBox">';
 	html += '<button><span>KOREAN</span></button>';
 	html += '<div class="langOpt">';
 	html += '<ul>';
