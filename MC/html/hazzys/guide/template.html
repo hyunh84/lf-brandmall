@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:700" />
 	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/hazzys/base.css" />
 	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/hazzys/layout.css" />
 	<link rel="stylesheet" type="text/css" href="../../../webapp/WEB-INF/static/brandmall/css/hazzys/app.css" />
@@ -21,294 +20,22 @@
 
 	<!-- header -->
 	<header id="header" >
-		<div class="top_banner">
-			<a href="#"><span><img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/temp/temp_top_banner.jpg" onload="mainTopBanner(this);"></span></a>
-		</div>
+		<!-- <div class="top_banner">
+			<a href="#"><span><img src="" onload="mainTopBanner(this);"></span></a>
+		</div> -->
 
 		<div class="header_inner">
-			<h1 class="logo"><a href="#"><em>HAZZYS</em></a></h1>
-			<button type="button" class="btnGnb">
-				<span><em>메뉴열기</em></span>
-			</button>
+			<h1 class="logo"><a href="#"><img src="../../../webapp/WEB-INF/static/brandmall/images/hazzys/ic-logo.svg" alt="HAZZYS" /></a></h1>
+			<button type="button" class="btnGnb"><span><em>메뉴열기</em></span></button>
 			<div class="headUtil">
-				<a href="#" class="icoStore"><em>STORE</em></a>
+				<a href="#" class="icoSearch"><em>검색</em></a>
 				<a href="#" class="icoCart"><em>장바구니</em></a>
 			</div>
 		</div>
 
 		<!-- GNB -->
 		<nav class="hazzysGnbWrap">
-			<div class="mainGnb">
-				<div class="gnbList">
-					<ul>
-						<li><a href="#">ARCHIVE</a>
-							<div class="subGnb">
-								<strong>ARCHIVE</strong>
-								<ul>
-									<li>
-										<a href="#">HERITAGE</a>
-									</li>
-									<li>
-										<a href="#">HISTORY</a>
-									</li>
-									<li>
-										<a href="#">CULTURE</a>
-									</li>
-									<li>
-										<a href="#">2020+</a>
-									</li>
-								</ul>
-								<button type="button" class="btnGnbPrev"><em>이전</em></button>
-								<button type="button" class="btnGnbClose"><em>닫기</em></button>
-							</div>
-						</li>
-						<li><a href="#">MEN</a>
-							<div class="subGnb">
-								<strong>MEN</strong>
-								<ul>
-									<li>
-										<a href="#"><span>MEN</span>'S HOME</a>
-									</li>
-									<li>
-										<a href="#">전체</a>
-									</li>
-									<li>
-										<a href="#">티셔츠</a>
-									</li>
-									<li>
-										<a href="#">점퍼</a>
-									</li>
-									<li>
-										<a href="#">코트</a>
-									</li>
-									<li>
-										<a href="#">셔츠</a>
-									</li>
-									<li>
-										<a href="#">팬츠</a>
-									</li>
-									<li>
-										<a href="#">수트/정장</a>
-									</li>
-									<li>
-										<a href="#">자켓/베스트</a>
-									</li>
-									<li>
-										<a href="#">언더/라운지웨어</a>
-									</li>
-									<li>
-										<a href="#">가디건</a>
-									</li>
-									<li>
-										<a href="#">니트/스웨터</a>
-									</li>
-								</ul>
-								<button type="button" class="btnGnbPrev"><em>이전</em></button>
-								<button type="button" class="btnGnbClose"><em>닫기</em></button>
-							</div>
-						</li>
-						<li><a href="#">WOMEN</a>
-							<div class="subGnb">
-								<strong>WOMEN</strong>
-								<ul>
-									<li>
-										<a href="#"><span>WOMEN</span>'S HOME</a>
-									</li>
-									<li>
-										<a href="#">전체</a>
-									</li>
-									<li>
-										<a href="#">가디건</a>
-									</li>
-									<li>
-										<a href="#">베스트</a>
-									</li>
-									<li>
-										<a href="#">자켓</a>
-									</li>
-									<li>
-										<a href="#">니트/스웨터</a>
-									</li>
-									<li>
-										<a href="#">점퍼</a>
-									</li>
-									<li>
-										<a href="#">코트</a>
-									</li>
-									<li>
-										<a href="#">티셔츠</a>
-									</li>
-									<li>
-										<a href="#">셔츠</a>
-									</li>
-									<li>
-										<a href="#">팬츠</a>
-									</li>
-									<li>
-										<a href="#">원피스</a>
-									</li>
-									<li>
-										<a href="#">스커트</a>
-									</li>
-									<li>
-										<a href="#">언더/라운지웨어</a>
-									</li>
-									<li>
-										<a href="#">여성비치웨어</a>
-									</li>
-								</ul>
-								<button type="button" class="btnGnbPrev"><em>이전</em></button>
-								<button type="button" class="btnGnbClose"><em>닫기</em></button>
-							</div>
-						</li>
-						<li><a href="#">ACC</a>
-							<div class="subGnb">
-								<strong>ACC</strong>
-								<ul>
-									<li>
-										<a href="#"><span>ACC</span>'S HOME</a>
-									</li>
-									<li>
-										<a href="#">전체</a>
-									</li>
-									<li>
-										<a href="#">여성가방</a>
-									</li>
-									<li>
-										<a href="#">여성지갑</a>
-									</li>
-									<li>
-										<a href="#">스카프/머플러</a>
-									</li>
-									<li>
-										<a href="#">남성가방</a>
-									</li>
-									<li>
-										<a href="#">남성지갑</a>
-									</li>
-									<li>
-										<a href="#">벨트</a>
-									</li>
-									<li>
-										<a href="#">양말</a>
-									</li>
-									<li>
-										<a href="#">장갑</a>
-									</li>
-									<li>
-										<a href="#">키링/키홀더</a>
-									</li>
-									<li>
-										<a href="#">모자</a>
-									</li>
-									<li>
-										<a href="#">기타ACC</a>
-									</li>
-									<li>
-										<a href="#">백팩</a>
-									</li>
-									<li>
-										<a href="#">여성 슈즈</a>
-									</li>
-									<li>
-										<a href="#">남성 슈즈</a>
-									</li>
-									<button type="button" class="btnGnbPrev"><em>이전</em></button>
-									<button type="button" class="btnGnbClose"><em>닫기</em></button>
-								</ul>
-							</div>
-						</li>
-						<li><a href="#">GOLF</a>
-							<div class="subGnb">
-								<strong>GOLF</strong>
-								<ul>
-									<li>
-										<a href="#"><span>GOLF</span>'S HOME</a>
-									</li>
-									<li>
-										<a href="#">전체</a>
-									</li>
-									<li>
-										<a href="#">남성 아우터</a>
-									</li>
-									<li>
-										<a href="#">남성 상의</a>
-									</li>
-									<li>
-										<a href="#">남성 하의</a>
-									</li>
-									<li>
-										<a href="#">여성 아우터</a>
-									</li>
-									<li>
-										<a href="#">여성 상의</a>
-									</li>
-									<li>
-										<a href="#">여성 하의</a>
-									</li>
-									<li>
-										<a href="#">골프용품</a>
-									</li>
-									<li>
-										<a href="#">골프가방</a>
-									</li>
-								</ul>
-								<button type="button" class="btnGnbPrev"><em>이전</em></button>
-								<button type="button" class="btnGnbClose"><em>닫기</em></button>
-							</div>
-						</li>
-						<li><a href="#">BEAUTY</a>
-							<div class="subGnb">
-								<strong>BEAUTY</strong>
-								<ul>
-									<li>
-										<a href="#"><span>BEAUTY</span>'S HOME</a>
-									</li>
-									<li>
-										<a href="#">전체</a>
-									</li>
-									<li>
-										<a href="#">스킨케어</a>
-									</li>
-									<li>
-										<a href="#">헤어/바디케어</a>
-									</li>
-									<li>
-										<a href="#">남성케어</a>
-									</li>
-								</ul>
-								<button type="button" class="btnGnbPrev"><em>이전</em></button>
-								<button type="button" class="btnGnbClose"><em>닫기</em></button>
-							</div>
-						</li>
-						<li><a href="#">STORIES</a>
-							<div class="subGnb">
-								<strong>STORIES</strong>
-								<ul>
-									<li>
-										<a href="#"><span>STORIES</span>'S HOME</a>
-									</li>
-									<li>
-										<a href="#">CAMPAIGN</a>
-									</li>
-									<li>
-										<a href="#">HAZZYS ICONIC ITEM</a>
-									</li>
-									<li>
-										<a href="#">SPECIAL EDITION</a>
-									</li>
-								</ul>
-								<button type="button" class="btnGnbPrev"><em>이전</em></button>
-								<button type="button" class="btnGnbClose"><em>닫기</em></button>
-							</div>
-						</li>
-					</ul>
-					<div class="gnbUtil">
-						<a href="">LOGIN</a>
-						<a href="">JOIN</a>
-					</div>
-				</div>
-			</div>
+			
 		</nav>
 		<!-- // GNB -->
 
@@ -325,25 +52,46 @@
 	</div>
 	<!-- //container -->
 
+	<article class="easyUtilWrap">
+		<div class="easySect">
+			<strong>NEWS LETTER</strong>
+			<label class="easyEmail">
+				<span><span>이메일을 입력하세요</span></span>
+				<input type="text" />
+			</label>
+		</div>
+		<div class="easySect">
+			<strong>FOLLOW HAZZYS</strong>
+			<div class="easySns">
+				<ul>
+					<li><a href="#" class="insta"><span>Men</span></a></li>
+					<li><a href="#" class="insta"><span>Golf</span></a></li>
+					<li><a href="#" class="insta"><span>Ladies</span></a></li>
+					<li><a href="#" class="insta"><span>Beauty</span></a></li>
+					<li><a href="#" class="insta"><span>Acc</span></a></li>
+					<li><a href="#" class="ytube"><span>HAZZYS OFFICIAL</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="easySect">
+			<p class="txtCopy">
+				헤지스가 처음이신가요.<br />
+				회원가입하고 더 많은 혜택을 받아보세요.
+			</p>
+			<a href="#" class="easySignUp">회원가입</a>
+		</div>
+	</article>
+
 	<!-- footer -->
 	<footer id="footer">
 		<div class="menu">
-			<ul>
-				<li><a href="#">로그인</a></li>
-				<!-- <li><a href="javascript:logout();sendTagAjax('_A089_E005', '0', '0');">로그아웃</a></li> -->
-				<li><a href="#">PC버전</a></li>
-				<li><a href="#">STORE</a></li>
-				<li><a href="#">공지사항</a></li>
-			</ul>
+			<a href="#">로그인</a>
+			<!-- <a href="javascript:logout();sendTagAjax('_A089_E005', '0', '0');">로그아웃</a></li> -->
+			<a href="#">PC버전</a>
+			<a href="#">STORE</a>
+			<a href="#">공지사항</a>
 		</div>
 		<div class="copyright">
-			<div class="sel_box">
-				<button type="button" class="">LANGUAGE</button>
-				<ul>
-					<li><a href="#">KOREAN</a></li>
-					<li><a href="#">ENGLISH</a></li>
-				</ul>
-			</div>
 			<div class="info">
 				<div class="inner">
 					<span>서울 강남구 언주로 870</span>
@@ -357,11 +105,23 @@
 				</div>
 			</div>
 			<div class="link">
-				<!-- a href="#" th:href="${usafeUrl + QSUtils.getQueryStringNotAppend((pageCode+'_A089_E396'), '0', '0',(#httpServletRequest))}">소비자피해보상 보험확인</a-->
-				<a href="#">소비자피해보상 보험확인</a>
-				<a href="#">사업자 정보확인</a><br> 
-				<a href="#">이용약관</a>
-				<a href="#"><strong>개인정보 처리방침</strong></a>
+				<div class="inner">
+					<!-- a href="#" th:href="${usafeUrl + QSUtils.getQueryStringNotAppend((pageCode+'_A089_E396'), '0', '0',(#httpServletRequest))}">소비자피해보상 보험확인</a-->
+					<a href="#">소비자피해보상 보험확인</a>
+					<a href="#">이용약관</a>
+					<br> 
+					<a href="#">사업자 정보확인</a>
+					<a href="#"><strong>개인정보 처리방침</strong></a>
+				</div>
+			</div>
+			<div class="langBox">
+				<button><span>KOREAN</span></button>
+				<div class="langOpt">
+					<ul>
+						<li class="select"><a href="#">KOREAN</a></li>
+						<li><a href="#">ENGLISH</a></li>
+					</ul>
+				</div>
 			</div>
 			<span class="txt">COPYRIGHT © 1990-2018 TNGT ALL RIGHTS RESERVED.</span>
 		</div>

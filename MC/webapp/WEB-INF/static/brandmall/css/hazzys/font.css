@@ -37,6 +37,47 @@
 		url('../../font/noto-sans-kr-v11-korean_latin-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
 }
 
+/* nunito-sans-300 - latin */
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+src:
+	url('../../font/Poppins/Poppins-Light.woff') format('woff');
+}
+/* nunito-sans-regular - latin */
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+src:
+	url('../../font/Poppins/Poppins-Regular.woff') format('woff');
+}
+/* nunito-sans-600 - latin */
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+/* font-weight: 600; */
+font-weight: 500;/* notosans kr font-weight 맞춤 */
+src:
+	url('../../font/Poppins/Poppins-Medium.woff') format('woff')
+}
+/* nunito-sans-700 - latin */
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+src:
+	url('../../font/Poppins/Poppins-Bold.woff') format('woff');
+/* nunito-sans-800 - latin */
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+src:
+	url('../../font/Poppins/Poppins-ExtraBold.woff') format('woff');
+}
+
 /* nunito-sans-200 - latin */
 @font-face {
 font-family: 'Nunito Sans';
@@ -85,18 +126,4 @@ font-style: normal;
 font-weight: 800;
 src:
 	url('../../font/nunito-sans-v4-latin-800.svg#NunitoSans') format('svg'); /* Legacy iOS */
-}
-
-/* Nanum Gothic 400 */
-@font-face {
-font-family: 'Nanum Gothic';
-font-style: normal;
-font-weight: 400;
-src: url('../../font/NanumGothic-Regular.eot'); /* IE9 Compat Modes */
-src: local('Nanum Gothic Regular'), local('NanumGothic-Regular'),
-	url('../../font/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	url('../../font/NanumGothic-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-	url('../../font/NanumGothic-Regular.woff') format('woff'), /* Modern Browsers */
-	url('../../font/NanumGothic-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-	url('../../font/NanumGothic-Regular.svg#NanumGothic') format('svg'); /* Legacy iOS */
 }

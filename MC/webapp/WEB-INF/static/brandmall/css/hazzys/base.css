@@ -10,7 +10,7 @@ ul, ol, li {list-style:none;}
 
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;margin:0;padding:0;}
 
-body {font-size:14px;line-height:18px;font-weight:400;color:#030303;-webkit-text-size-adjust:none;}
+body {font-size:14px;line-height:18px;font-weight:400;color:#000;-webkit-text-size-adjust:none;}
 
 /* pre, textarea, select {} */
 
@@ -20,7 +20,7 @@ form {margin:0;padding:0;}
 
 a, a:link, a:visited, a:active, a:hover,
 button, button:link, button:visited, button:active, button:hover,
-select, select:link, select:visited, select:active, select:hover {text-decoration:none;color:#030303;outline:none;}
+select, select:link, select:visited, select:active, select:hover {text-decoration:none;color:#000;outline:none;}
 
 input, button {padding:0;margin:0;border:0;font-size:13px;vertical-align:middle;background:none;-webkit-appearance:none;outline:none;}
 button, label {cursor:pointer;}
