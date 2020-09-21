@@ -3,7 +3,7 @@ var globalGnb;
 	document ready
 **********************************************************/
 $(document).ready(function() {
-
+	gnbFnc();
 });
 
 //design select - open
@@ -75,6 +75,78 @@ $(document).on('click', '.fLangBox > button', function(e) {
 **********************************************************/
 /* S :gnb */
 var gnbFnc = function() {
+	var gnbWrapper = $('.hazzysGnbWrap');
+	var innerBox = $('> .inner', gnbWrapper);
+	var btnClose = $('.closeGnb', gnbWrapper);
+	var items01 = $('.gnbMenu > ul > li > a', gnbWrapper);
+	var mainElLi = $('.gnbMenu > ul > li', gnbWrapper);
+	var assistItems01 = $('.assistMenu > ul > li > a', gnbWrapper);
+	var assistElLi = $('.assistMenu > ul > li', gnbWrapper);
+
+	$(document).on('click', '#header .btnGnb', function() {
+		gnbWrapper.css({
+			'left' : '0',
+			'background-color': 'rgba(255, 255, 255, 0.9)'
+		});
+	});
+
+	btnClose.on('click', function() {
+		gnbWrapper.css({
+			'left' : '-100%',
+			'background-color': 'rgba(255, 255, 255, 0)'
+		});
+	});
+
+	gnbWrapper.on('click', function() {
+		gnbWrapper.css({
+			'left' : '-100%',
+			'background-color': 'rgba(255, 255, 255, 0)'
+		});
+	});
+
+	innerBox.click(function(e) {e.stopPropagation();});
+
+	items01.click(function(e) {
+		var _this = $(this);
+		var _next = _this.next();
+		var _parent = _this.parent();
+
+		if(!_next.length) {
+			return;
+		}
+
+		e.preventDefault();
+		if(!_parent.hasClass('active')) {
+			mainElLi.removeClass('active').find('.depth02').slideUp(700);
+			assistElLi.removeClass('active').find('.depth02').slideUp(700);
+			_parent.addClass('active')
+			_next.slideDown(700);
+		}else{
+			_parent.removeClass('active')
+			_next.slideUp(700);
+		}
+	});
+	assistItems01.click(function(e) {
+		var _this = $(this);
+		var _next = _this.next();
+		var _parent = _this.parent();
+
+		if(!_next.length) {
+			return;
+		}
+
+		e.preventDefault();
+		if(!_parent.hasClass('active')) {
+			mainElLi.removeClass('active').find('.depth02').slideUp(700);
+			assistElLi.removeClass('active').find('.depth02').slideUp(700);
+			_parent.addClass('active');
+			_next.slideDown(700);
+		}else{
+			_parent.removeClass('active')
+			_next.slideUp(700);
+		}
+	});
+
 
 }
 /* E :gnb */
