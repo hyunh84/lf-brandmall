@@ -153,6 +153,66 @@ var createGnbFn = function(target) {
 	$(target).html(html);
 }
 
+var createSearchFn = function(target) {
+	var html = '';
+	html += '<div class="searchHeader">';
+	html += '<label class="iptSearch"><input type="text" placeholder="어떤 상품을 찾고 있나요?"/></label>';
+	html += '</div>';
+	html += '<div class="schContent">';
+	html += '<div class="rcmWordBox">';
+	html += '<div class="titBox">';
+	html += '<strong>헤지스 추천 검색어</strong>';
+	html += '</div>';
+	html += '<div class="rcmInner">';
+	html += '<ul>';
+	html += '<li><a href="#">#남성지갑</a></li>';
+	html += '<li><a href="#">#피즈피즈피즈</a></li>';
+	html += '<li><a href="#">#여성가디건</a></li>';
+	html += '<li><a href="#">#남성긴팔티</a></li>';
+	html += '<li class="active"><a href="#">#숄더백</a></li>';
+	html += '<li><a href="#">#여성신발</a></li>';
+	html += '<li><a href="#">#피즈피즈피즈</a></li>';
+	html += '<li><a href="#">#피즈피즈피즈</a></li>';
+	html += '<li><a href="#">#피즈피즈피즈</a></li>';
+	html += '</ul>';
+	html += '</div>';
+	html += '</div>';
+	html += '<div class="rctWordBox">';
+	html += '<div class="titBox">';
+	html += '<strong>최근 검색어</strong>';
+	html += '<button type="button" class="allDel">전체삭제</button>';
+	html += '</div>';
+	html += '<div class="rctInner">';
+	html += '<ul class="swiper-wrapper">';
+	html += '<li class="swiper-slide">';
+	html += '<a href="#">남성지갑</a>';
+	html += '<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>';
+	html += '</li>';
+	html += '<li class="swiper-slide">';
+	html += '<a href="#">피즈피즈피즈</a>';
+	html += '<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>';
+	html += '</li>';
+	html += '<li class="swiper-slide">';
+	html += '<a href="#">여성가디건</a>';
+	html += '<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>';
+	html += '</li>';
+	html += '<li class="swiper-slide">';
+	html += '<a href="#">여성가디건</a>';
+	html += '<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>';
+	html += '</li>';
+	html += '<li class="swiper-slide">';
+	html += '<a href="#">여성가디건</a>';
+	html += '<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>';
+	html += '</li>';
+	html += '</ul>';
+	html += '</div>';
+	html += '</div>';
+	html += '</div>';
+	html += '<a href="#" class="schGoBack"><em>뒤로가기</em></a>';
+
+	$(target).html(html);
+}
+
 var easyUtilFn = function(target) {
 	var html = '';
 	html += '<div class="easySect">';

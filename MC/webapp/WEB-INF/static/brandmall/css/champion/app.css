@@ -23,6 +23,23 @@
 .mainConts .promoMain03 .imgTitle {display:block;height:100px;text-align:center;}
 .mainConts .promoMain03 .imgTitle img {width:auto;height:100%;}
 
+/* 프로모션 슬라이드 */
+.mainConts .promoSlideMain {margin:50px 0 0;}
+.mainConts .promoSlideMain:first-child {margin:0;}
+.mainConts .promoSlideMain > strong {display:block;line-height:32px;font-size:30px;font-weight:800;text-align:center;}
+.mainConts .promoSlideMain .swiperCmpt {overflow:hidden;position:relative;transition:height .7s ease;}
+/* .mainConts .promoSlideMain .swiperCmpt .swiper-prev {top:26vw;transform:translate(0, 0);}
+.mainConts .promoSlideMain .swiperCmpt .swiper-next {top:26vw;transform:translate(0, 0);} */
+.mainConts .promoSlideMain .swiperCmpt .swiper-wrapper {width:10000em;}
+.mainConts .promoSlideMain .swiperCmpt .swiper-wrapper .swiper-slide img {max-width:100%;}
+.mainConts .promoSlideMain .swiperCmpt .swiper-indecate {position:absolute;left:50%;bottom:25px;line-height:0;transform:translate(-50%, 0);z-index:1;}
+.mainConts .promoSlideMain .swiperCmpt .swiper-indecate .swiper-pagination-bullet {display:inline-block;width:6px;height:6px;margin:0 0 0 10px;border-radius:3px;border:none !important;background-color:rgba(19, 22, 53, 0.2) !important;}
+.mainConts .promoSlideMain .swiperCmpt .swiper-indecate .swiper-pagination-bullet.swiper-pagination-bullet-active {background-color:#131635 !important;}
+.mainConts .promoSlideMain .videoMain {width:100%;height:80vw;}
+.mainConts .promoSlideMain .videoMain .video {width:100%;height:100%;background-color:#000;}
+.mainConts .promoSlideMain .videoMain iframe,
+.mainConts .promoSlideMain .videoMain video {width:100%;height:100%;}
+
 /* 유투브 영역 */
 .mainConts .videoMain {width:100%;height:56.2666vw;}
 .mainConts .videoMain .video {width:100%;height:100%;}

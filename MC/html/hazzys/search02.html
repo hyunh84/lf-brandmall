@@ -27,10 +27,9 @@
 	<header id="header">
 	
 
-		<div class="header_inner">
-			<script>
-				headerFn('#header .header_inner');
-			</script>
+		<div class="header_search">
+			<a href="#" class="schGoBack"><em>뒤로가기</em></a>
+			<label class="iptSearch"><input type="text" value="남성반팔티" /></label>
 		</div>
 	</header>
 	<!-- //header -->
@@ -44,27 +43,47 @@
 	<!-- // GNB -->
 
 	<!-- SearchWrap -->
-	<article class="topSearchWrap">
+	<article class="topSearchWrap02">
 		<script>
-			createSearchFn('.topSearchWrap');
+			createSearchFn('.topSearchWrap02');
 		</script>
 	</article>
 	<!-- // SearchWrap -->
+
 
 	<!-- container -->
 	<div id="container">
 		<div class="content">
 
-		
+			<div class="noSchResult">
+				<strong class="tit">검색결과가 없습니다.</strong>
+				<p class="copy">
+					다른 검색어를 입력하시거나 <br />철자와 띄어쓰기를 확인해보세요.
+				</p>
+			</div>
+
+			<div class="rcmWordBox">
+				<div class="titBox">
+					<strong>이런 검색어는 어떠세요?</strong>
+				</div>
+				<div class="rcmInner">
+					<ul>
+						<li><a href="#">#남성지갑</a></li>
+						<li><a href="#">#피즈피즈피즈</a></li>
+						<li><a href="#">#여성가디건</a></li>
+						<li><a href="#">#남성긴팔티</a></li>
+						<li class="active"><a href="#">#숄더백</a></li>
+						<li><a href="#">#여성신발</a></li>
+						<li><a href="#">#피즈피즈피즈</a></li>
+						<li><a href="#">#피즈피즈피즈</a></li>
+						<li><a href="#">#피즈피즈피즈</a></li>
+					</ul>
+				</div>
+			</div>
+
 		</div>
 	</div>
 	<!-- //container -->
-
-	<article class="easyUtilWrap">
-		<script>
-			easyUtilFn('.easyUtilWrap');
-		</script>
-	</article>
 
 	<!-- footer -->
 	<footer id="footer">
@@ -76,6 +95,18 @@
 </div>
 <!-- //wrap -->
 <script type="text/javascript">
+var rctWordBox;
+
+rctWordBox = new categorySwiperFn('.rctWordBox .rctInner', {spaceBetween:4});
+
+$('.iptSearch input[type="text"]').focusin(function() {
+	var schLayerWrap = $('.schLayerWrap');
+	schLayerWrap.show();
+	rctWordBox.update();
+}).focusout(function() {
+	var schLayerWrap = $('.schLayerWrap');
+	schLayerWrap.hide();
+});
 </script>
 </body>
 </html>

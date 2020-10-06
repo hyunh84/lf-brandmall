@@ -19,7 +19,7 @@
 <div id="wrap">
 
 	<!-- header -->
-	<header id="header" >
+	<header id="header">
 		<!-- <div class="top_banner">
 			<a href="#"><span><img src="" onload="mainTopBanner(this);"></span></a>
 		</div> -->
@@ -182,7 +182,84 @@
 		</div>
 	</nav>
 	<!-- // GNB -->
-	
+
+	<!-- SearchWrap -->
+	<article class="topSearchWrap">
+		<div class="searchHeader">
+			<label class="iptSearch"><input type="text" placeholder="어떤 상품을 찾고 있나요?" /></label>
+		</div>
+
+		<div class="schContent">
+			<div class="rcmWordBox">
+				<div class="titBox">
+					<strong>헤지스 추천 검색어</strong>
+				</div>
+				<div class="rcmInner">
+					<ul>
+						<li><a href="#">#남성지갑</a></li>
+						<li><a href="#">#피즈피즈피즈</a></li>
+						<li><a href="#">#여성가디건</a></li>
+						<li><a href="#">#남성긴팔티</a></li>
+						<li class="active"><a href="#">#숄더백</a></li>
+						<li><a href="#">#여성신발</a></li>
+						<li><a href="#">#피즈피즈피즈</a></li>
+						<li><a href="#">#피즈피즈피즈</a></li>
+						<li><a href="#">#피즈피즈피즈</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="rctWordBox">
+				<div class="titBox">
+					<strong>최근 검색어</strong>
+					<button type="button" class="allDel">전체삭제</button>
+				</div>
+				<div class="rctInner">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="#">남성지갑</a>
+							<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>
+						</li>
+						<li class="swiper-slide">
+							<a href="#">피즈피즈피즈</a>
+							<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>
+						</li>
+						<li class="swiper-slide">
+							<a href="#">여성가디건</a>
+							<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>
+						</li>
+						<li class="swiper-slide">
+							<a href="#">여성가디건</a>
+							<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>
+						</li>
+						<li class="swiper-slide">
+							<a href="#">여성가디건</a>
+							<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+			<!-- 최근검색어 추가 예제로 넣음 -->
+			<button type="button" class="aaa">최근검색어 추가</button>
+			<script>
+				$(document).ready(function() {
+					$('.aaa').click(function() {
+						var html = '';
+						html += '<li class="swiper-slide">';
+						html += '<a href="#">여성가디건</a>';
+						html += '<button type="button" onclick="rctWordFn.removeItem(this);"><em>삭제</em></button>';
+						html += '</li>';
+						if($('.rctWordBox .rctInner').is(':hidden')) {$('.rctWordBox .rctInner').show();}
+						rctWordFn.appendItem(html);
+					})
+				});
+			</script>
+			<!-- //최근검색어 추가 예제로 넣음 -->
+		</div>
+		<a href="#" class="schGoBack"><em>뒤로가기</em></a>
+	</article>
+	<!-- // SearchWrap -->
 
 	<!-- container -->
 	<div id="container">

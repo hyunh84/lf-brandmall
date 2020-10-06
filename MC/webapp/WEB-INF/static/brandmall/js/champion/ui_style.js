@@ -19,6 +19,10 @@ $(document).ready(function() {
 		topNotiSlideFnc();
 	}
 
+	if($('.promoSlideMain').length) {
+		promoSlideFnc();
+	}
+
 	if($('.rankMain').length) {
 		mainRankNavFnc();
 	}
@@ -328,6 +332,38 @@ var mainMagazineFnc = function() {
 		},
 		pagination : '.magazineMain .swiper-indecate',
 		paginationType : 'bullets'
+	});
+
+	$('.swiper-prev', wrapper).click(function() {
+		slideLib.slidePrev();
+	});
+	$('.swiper-next', wrapper).click(function() {
+		slideLib.slideNext();
+	});
+}
+
+/* Promotion - slide */
+var promoSlideFnc = function() {
+	var wrapper = $('.promoSlideMain');
+	var slideWrap = $('.swiperCmpt', wrapper);
+
+	var slideLib = new Swiper(slideWrap, {
+		loop:true,
+		onInit : function(swiper) {
+			// var realIndex = $('.swiper-slide', slideWrap).eq(swiper.activeIndex).data('swiper-slide-index');
+			// console.log(realIndex);
+			if(swiper.slides.length <= 1) {
+				$('.swiper-prev', wrapper).hide();
+				$('.swiper-next', wrapper).hide();
+				swiper.detachEvents();
+			}
+			slideWrap.css({'height' : $('.swiper-slide', slideWrap).eq(swiper.activeIndex).outerHeight()});
+		},
+		onTransitionStart : function(swiper) {
+			var realIndex = $('.swiper-slide', slideWrap).eq(swiper.activeIndex).data('swiper-slide-index');
+			console.log(realIndex);
+			slideWrap.css({'height' : $('.swiper-slide', slideWrap).eq(swiper.activeIndex).outerHeight()});
+		}
 	});
 
 	$('.swiper-prev', wrapper).click(function() {
