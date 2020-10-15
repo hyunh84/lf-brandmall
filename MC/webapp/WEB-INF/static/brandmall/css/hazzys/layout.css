@@ -13,14 +13,14 @@ a {color:#000;}
 input::-ms-clear{display:none;}
 input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !important;pointer-events:none;position:absolute;right:0;}
 
-#wrap {overflow:hidden;position:relative;min-height:100%;}
+#wrap {overflow:hidden;position:relative;box-sizing:border-box;min-height:100%;padding:0 0 339px;}
 #wrap.pop {height:100%;overflow:hidden;}
 
 /**********************************************************
 	BRAND MALL - LAYOUT
 **********************************************************/
 /* header */
-#header {position:fixed;top:0;left:0;right:0;background:#fff;z-index:260;}
+#header {position:fixed;top:0;left:0;right:0;background-color:#fff;z-index:260;}
 #header .header_inner {position:relative;padding:18px 0 17px;border-bottom:1px solid #f5f5f5;}
 #header .logo {line-height:0;text-align:center;}
 #header .logo a {display:inline-block;height:17px;}
@@ -33,26 +33,37 @@ input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !import
 #header .headUtil > a {display:inline-block;vertical-align:top;}
 #header .headUtil > a em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
 #header .headUtil .icoSearch {width:44px;height:44px;background:url('../../images/hazzys/ic-search.svg') no-repeat center;background-size:20px;}
-#header .headUtil .icoCart {width:44px;height:44px;background:url('../../images/hazzys/ic-shoppingbag.svg') no-repeat center;background-size:20px;}
+#header .headUtil .icoCart {position:relative;width:44px;height:44px;background:url('../../images/hazzys/ic-shoppingbag.svg') no-repeat center;background-size:20px;}
+#header .headUtil .icoCart span {display:block;position:absolute;right:7px;top:10px;width:14px;height:14px;font-size:8px;line-height:14px;color:#fff;text-align:center;border:1px solid #fff;border-radius:100%;background-color:#000;}
+
+#header.ver02 {background-color:transparent;}
+#header.ver02 .header_inner {border-bottom:none;}
+#header.ver02 .logo a {background:url('../../images/hazzys/logo-w.svg') no-repeat center;background-size:auto 100%;}
+#header.ver02 .logo a img {opacity:0;}
+#header.ver02 .btnGnb {background:url('../../images/hazzys/ic-menu-wh.svg') no-repeat center;background-size:16px 12px;}
+#header.ver02 .headUtil .icoSearch {width:44px;height:44px;background:url('../../images/hazzys/ic-search-wh.svg') no-repeat center;background-size:20px;}
+#header.ver02 .headUtil .icoCart {width:44px;height:44px;background:url('../../images/hazzys/ic-shoppingbag-wh.svg') no-repeat center;background-size:20px;}
+#header.ver02 .headUtil .icoCart span {border:1px solid #000;}
 
 /* gnb */
 .hazzysGnbWrap {position:fixed;left:-100%;top:0;bottom:0;width:100%;background-color:rgba(255, 255, 255, 0);z-index:300;transition:left .7s ease, background-color .7s ease;}
 .hazzysGnbWrap > .inner {position:relative;width:80%;height:100%;}
 .hazzysGnbWrap > .inner .closeGnb {position:absolute;right:0;top:0;width:50px;height:50px;background:url('../../images/hazzys/ic-close.svg') no-repeat center;}
 .hazzysGnbWrap > .inner .closeGnb em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
-.hazzysGnbWrap .logInfoBox {box-sizing:border-box;height:190px;padding:50px 0 0 38px;background-color:#ffef95;}
+.hazzysGnbWrap .logInfoBox {box-sizing:border-box;height:190px;padding:50px 0 0 38px;background-color:#f5f5f5;}
 .hazzysGnbWrap .logInfoBox .logoTxt {display:block;width:81px;height:12px;background:url('../../images/hazzys/logo.svg') no-repeat center;background-size:81px auto;}
 .hazzysGnbWrap .logInfoBox .logoTxt em {display:block;overflow:hidden;width:0;height:0;line-height:0;}
 .hazzysGnbWrap .logInfoBox .logCopy {margin:13px 0 0;font-size:13px;}
 .hazzysGnbWrap .logInfoBox .logCopy em {font-weight:700;}
 .hazzysGnbWrap .logInfoBox .btnLog {margin:15px 0 0;}
 .hazzysGnbWrap .logInfoBox .btnLog a {display:inline-block;box-sizing:border-box;width:90px;height:36px;line-height:34px;font-size:11px;vertical-align:middle;}
+.hazzysGnbWrap .logInfoBox .btnLog a + a {margin:0 0 0 5px;}
 .hazzysGnbWrap .logInfoBox .btnLog .btnLogin {color:#fff;text-align:center;border:1px solid #000;background-color:#000;}
 .hazzysGnbWrap .logInfoBox .btnLog .btnLogin span {display:inline-block;padding:0 0 0 17px;background:url('../../images/hazzys/ic-lock.svg') no-repeat left center;background-size:14px 15px;}
 .hazzysGnbWrap .logInfoBox .btnLog .btnMy {color:#fff;text-align:center;border:1px solid #000;background-color:#000;}
 .hazzysGnbWrap .logInfoBox .btnLog .btnMy span {display:inline-block;padding:0 0 0 17px;background:url('../../images/hazzys/ic-my.svg') no-repeat left center;background-size:14px 15px;}
-.hazzysGnbWrap .logInfoBox .btnLog .btnJoin {color:#000;text-align:center;border:1px solid #000;background-color:#ffef95;}
-.hazzysGnbWrap .logInfoBox .btnLog .btnLogout {color:#000;text-align:center;border:1px solid #000;background-color:#ffef95;}
+.hazzysGnbWrap .logInfoBox .btnLog .btnJoin {color:#000;text-align:center;border:1px solid #000;background-color:#f5f5f5;}
+.hazzysGnbWrap .logInfoBox .btnLog .btnLogout {color:#000;text-align:center;border:1px solid #000;background-color:#f5f5f5;}
 
 .hazzysGnbWrap .gnbWrap {overflow-x:hidden;overflow-y:auto;position:absolute;top:190px;left:0;right:0;bottom:0;padding:0 15px 0 38px;color:#fff;background-color:#000;}
 .hazzysGnbWrap .gnbWrap a {display:block;position:relative;color:#fff;}
@@ -84,8 +95,8 @@ input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !import
 #container {padding:53px 0 60px;}
 
 /* footer contents */
-[class^="easyUtilWrap"] {padding:20px 18px;background-color:#ffef95;}
-[class^="easyUtilWrap"] .easySect {padding:30px 0;border-top:1px solid #d6c97c;}
+[class^="easyUtilWrap"] {padding:20px 18px;background-color:#f5f5f5;}
+[class^="easyUtilWrap"] .easySect {padding:30px 0;border-top:1px solid #ccc;}
 [class^="easyUtilWrap"] .easySect:first-child {border-top:none;}
 [class^="easyUtilWrap"] .easySect strong {display:block;margin:0 0 15px;font-size:16px;font-weight:500;color:#000;text-align:center;}
 [class^="easyUtilWrap"] .easySect .easyEmail {display:block;position:relative;text-align:center;}
@@ -94,6 +105,7 @@ input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !import
 [class^="easyUtilWrap"] .easySect .easyEmail .placeholder span:after {display:block;content:"*";position:absolute;right:-10px;top:50%;margin:-10px 0 0;line-height:15px;font-weight:500;}
 [class^="easyUtilWrap"] .easySect .easyEmail input[type="email"],
 [class^="easyUtilWrap"] .easySect .easyEmail input[type="text"] {box-sizing:border-box;width:100%;height:48px;text-align:center;border:2px solid #000;background-color:transparent;}
+[class^="easyUtilWrap"] .easySect .btnSubscribe {width:100%;height:44px;font-size:15px;font-weight:500;border:2px solid #000;text-align:center;}
 [class^="easyUtilWrap"] .easySect .easySns {overflow:hidden;padding:0 30px;}
 [class^="easyUtilWrap"] .easySect .easySns ul {overflow:hidden;}
 [class^="easyUtilWrap"] .easySect .easySns ul li {float:left;width:50%;margin:20px 0 0;}
@@ -103,10 +115,11 @@ input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !import
 [class^="easyUtilWrap"] .easySect .easySns ul li a.ytube {background-image:url('../../images/hazzys/ic-youtube.svg');background-size:19px 15px;}
 [class^="easyUtilWrap"] .easySect .easySns ul li a span {display:inline-block;line-height:16px;font-size:13px;border-bottom:1px solid #000;vertical-align:top;}
 [class^="easyUtilWrap"] .easySect .txtCopy {margin:0 0 25px;line-height:22px;color:#000;text-align:center;}
+[class^="easyUtilWrap"] .easySect .txtCopy em {font-weight:700;}
 [class^="easyUtilWrap"] .easySect .easySignUp {display:block;line-height:48px;color:#fff;text-align:center;background-color:#000;}
 
 /* footer */
-#footer {overflow:hidden;position:relative;padding:15px 18px 66px;line-height:20px;font-size:12px;color:#787878;background-color:#151515;}
+#footer {overflow:hidden;position:absolute;left:0;right:0;bottom:0;height:324px;padding:15px 18px 0;line-height:20px;font-size:12px;color:#787878;background-color:#151515;}
 #footer .menu {position:relative;margin:0 0 0 -30px;padding:15px 0;}
 #footer .menu > a {display:inline-block;margin:0 0 0 30px;color:#ccc;}
 #footer .menu:after {display:block;content:"";position:absolute;left:-18px;right:-18px;bottom:0;height:1px;background-color:#323232;}

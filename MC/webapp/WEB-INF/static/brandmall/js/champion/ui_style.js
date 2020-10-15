@@ -50,7 +50,7 @@ $(document).on('click', '.btnGoTop', function() {
 })
 
 //design select - open
-$(document).on('click', '.selectWrap > button', function(e) {e.stopPropagation();
+$(document).on('click', '[class^="selectWrap"] > button', function(e) {e.stopPropagation();
 	var _this = $(this);
 	var _optBox = _this.next();
 	
@@ -62,10 +62,10 @@ $(document).on('click', '.selectWrap > button', function(e) {e.stopPropagation()
 	}
 });
 //design select - select value
-$(document).on('click', '.selectWrap .optList ul li a', function(e) {e.preventDefault();
+$(document).on('click', '[class^="selectWrap"]  .optList ul li a', function(e) {e.preventDefault();
 	var _this = $(this);
 	var _li = _this.parent();
-	var _viewTxt = _this.parents('.selectWrap').find('> button');
+	var _viewTxt = _this.parents('[class^="selectWrap"] ').find('> button');
 	
 	if(!_li.hasClass('selected')) {
 		_viewTxt.text(_this.text()).next().find('li').removeClass('selected');

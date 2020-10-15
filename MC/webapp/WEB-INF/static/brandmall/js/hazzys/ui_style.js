@@ -9,6 +9,10 @@ var rctWordFn;//검색영역 내부 최근검색어 슬라이드
 $(document).ready(function() {
 	gnbFnc();
 
+	if($('#header').hasClass('ver02')) {
+		mainScrollFn();
+	}
+
 	if($('.topSearchWrap02').length) {//검색결과 페이지 화면
 		$('#container').css({'padding-top' : '81px'});
 	}
@@ -110,7 +114,6 @@ var subCategorySlide = function() {
 		if(_cateList.is(':hidden')) {
 			_cateList.show();
 			$.each(cateListFn, function(i, fnc) {
-				// console.log(i, '  =  ', val);
 				var activeIndex = $('.subCateViewWrap .cmtSlideWrap').eq(i).find('.active').index();
 				fnc.update();
 				fnc.slideTo(activeIndex);
@@ -188,7 +191,9 @@ $(document).on('click', '[class^="topSearchWrap"] .schGoBack', function(e) {e.pr
 		if(schContent.is(':visible')) {
 			schContent.hide();
 			topSearchWrap.css({'height' : 'auto'});
-		}
+		}else if(schContent.is(':hidden')){
+			history.back();
+ 		}
 	}
 });
 
@@ -255,39 +260,105 @@ $(document).on('click', '.fLangBox > button', function(e) {
 	}
 }); 
 
+// like button
+$(document).on('click', '.btnLike', function() {
+	var _this = $(this);
+	if(_this.hasClass('active')) {
+		_this.removeClass('active');
+	}else{
+		_this.addClass('active');
+	}
+});
+
+/**********************************************************
+ main
+**********************************************************/
+/* HEADER SCROLL */
+var mainScrollFn = function() {
+	var header = $('#header');
+	var inner = $('.header_inner', header)
+
+	$('#container').css({'padding-top' : '0'});
+
+	$(window).scroll(function() {
+		var winSt = $(window).scrollTop();
+
+		if(winSt > 0) {
+			header.removeClass('ver02').css({'background-color' : 'rgba(255, 255, 255, 0.9)'});
+		}else{
+			header.addClass('ver02').css({'background-color' : 'transparent'});
+		}
+	});
+}
+
+/* REVIEW */
+var mainReviewFn = function() {
+	var isLoaded = true;
+	var reviewWrap = $('.mainReviewWRap');
+	var rollingLib = [];
+	var nowIdx;
+	var oldIdx;
+	
+	var reviewSlide = new cmtSwiperFn01(reviewWrap, {
+		autoplay:null,
+		pagination : null,
+		nextButton : '.mainReviewWRap .swiper-next',
+		prevButton : '.mainReviewWRap .swiper-prev',
+		onInit : function(swiper) {
+			nowIdx = swiper.activeIndex;
+			isLoaded = false;
+		},
+		onTransitionEnd : function(swiper) {
+			oldIdx = nowIdx;
+			nowIdx = swiper.activeIndex;
+			if(!isLoaded) {
+				rollingLib[oldIdx].stopAutoplay();
+				rollingLib[oldIdx].slideTo(1, 1);
+
+				rollingLib[nowIdx].startAutoplay();
+			}
+		}
+	});
+
+	$('.reviewRolling').each(function(i) {
+		rollingLib[i] = new Swiper($(this).find('> .inner'), {
+			direction: 'vertical',
+			height : 71,
+			loop : true,
+			autoplay:3000,
+			speed : 1000
+		});
+		if(nowIdx !== i) {
+			rollingLib[i].stopAutoplay();
+		}
+	});
+
+}
+
 /**********************************************************
 	Campaign
 **********************************************************/
 var cmpgListFn = function(target) {
-	var listEnd = false;
+	var nowIdx;
+	var innerCmpgFn = [];
 	var winH;
 	var targetEl = $(target);
-	var cmtSlideWrap = $('.cmtSlideWrap', targetEl);
-	var swiperWrapper = $('.swiper-wrapper', cmtSlideWrap);
-	var swiperSlide = $('.swiper-slide', swiperWrapper);
-	var swiperItemNum = swiperSlide.length;
+	var cmtSlideWrap = $('> .cmtSlideWrap', targetEl);
+	var swiperWrapper = $(' > .swiper-wrapper', cmtSlideWrap);
+	var swiperSlide = $(' > .swiper-slide', swiperWrapper);
 	var goToFirst = $('.goToFirst button', targetEl);
-	// var cmpgInnerList = $('.cmpgInnerList', targetEl);
 	var toastBox = $('.swiper-toast', targetEl);
+	var innerCmpgListBox = $('.innerCmpgListBox', targetEl);
+	var innerSlideBox = $('.innerSlideBox', innerCmpgListBox);
 
 	var setItemCalc = function() {
 		winH = window.innerHeight;
-		swiperSlide.each(function(i) {
-			if(i < swiperItemNum - 1) {
-				$(this).css({
-					'height' : winH - 53
-				})
-			}
-			if(listEnd) {
-				swiperWrapper.css({
-					'height' : 'auto'
-				});
-			}else{
-				swiperWrapper.css({
-					'height' : winH - 53
-				});
-			}
-		});
+		if(nowIdx === 0) {
+			swiperWrapper.css({
+				'height' : winH - 53
+			});
+		}
+		swiperSlide.eq(0).css({'height' : winH - 53});
 	}
 
 	var slideLib = new cmtSwiperFn01(targetEl, {
@@ -295,26 +366,38 @@ var cmpgListFn = function(target) {
 		pagination : null,
 		autoplay : null,
 		onInit : function(swiper) {
-			setItemCalc();
+			nowIdx = swiper.activeIndex;
+			winH = window.innerHeight;
+			swiperWrapper.css({
+				'height' : nowIdx === 0 ? winH - 53 : swiperSlide.eq(nowIdx).outerHeight()
+			});
+			if(nowIdx === 0) swiperSlide.eq(0).css({'height' : winH - 53});
 		},
 		onSlideChangeEnd : function(swiper) {
+			nowIdx = swiper.activeIndex;
 			if(toastBox.is(':visible')) toastBox.fadeOut(700);
-			if(swiper.isEnd && !listEnd) {
-				listEnd = true;
-				swiperWrapper.css({
-					'height' : 'auto'
-				});
-				return;
-			}else if(!swiper.isEnd && listEnd) {
-				listEnd = false;
-				swiperWrapper.css({
-					'height' : winH - 53
-				});
-			}
+
+			swiperWrapper.css({
+				'height' : swiperSlide.eq(nowIdx).outerHeight()
+			})
 		},
 		onTransitionStart : function() {
 			$('body, html').animate({scrollTop : 0}, 1);
+		},
+		onResize : function() {
+			console.log('resize')
 		}
+	});
+
+	innerSlideBox.each(function(i) {
+		var nextBtn = $(this).find('.swiper-next');
+		var prevBtn = $(this).find('.swiper-prev');
+	
+		innerCmpgFn[i] = new Swiper($(this), {
+			loop : true,
+			nextButton : nextBtn,
+			prevButton : prevBtn
+		});
 	});
 
 	$(window).resize(function() {

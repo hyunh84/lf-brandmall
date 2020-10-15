@@ -58,32 +58,25 @@
 							<input type="hidden" name="search_lat" value="37.5280161">
 							<input type="hidden" name="search_lng" value="127.0341297">
 							<input type="hidden" name="search_brand" value="TNGT">
-							<div class="lf-store-search__form-type-brand">
+							<div class="lf-store-search__form-type-store">
 								<!--<div class="lf-store-search__form-type">-->
 								<fieldset class="lf-store-search__form-field">
 									<legend class="lf-store-search__form-title">매장형태 선택</legend>
-									<div id="typeDiv" class="lf-store-search__form-select lf-store-search__form-select--store-type">
-										<div class="lf-store-select">
-											<select name="store_type" class="lf-store-select__selectbox">
-												<option value="" selected="">매장형태</option>
-												<option value="A">백화점</option>
-												<option value="B">일반가두매장</option>
-												<option value="C">상설할인매장</option>
-												<option value="D">할인점입점</option>
-												<option value="E">종합가두매장</option>
-											</select>
-										</div>
-									</div>
+									<div id="kondaDiv" class="lf-store-search__form-select lf-store-search__form-select--store-type"><div class="lf-store-select"><select name="store_konda" class="lf-store-select__selectbox"><option value="" selected="">매장형태</option><option value="10">가두점</option><option value="20">백화점</option><option value="25">백화점아울렛</option><option value="70">쇼핑몰</option><option value="90">면세점</option></select></div></div>
 								</fieldset>
 								<fieldset class="lf-store-search__form-field lf-store-search__form-field--brand">
 									<legend class="lf-store-search__check-title">브랜드 선택</legend>
-									<div id="brandDiv" class="lf-store-search__form-select lf-store-search__form-select--store-brand">
-										<div class="lf-store-select">
-											<select name="store_brand" class="lf-store-select__selectbox">
-												<option value="TG" selected="">TNGT</option>
-											</select>
-										</div>
-									</div>
+									<div id="brandDiv" class="lf-store-search__form-select lf-store-search__form-select--store-brand"><div class="lf-store-select"><select name="store_brand" class="lf-store-select__selectbox"><option value="" selected="">브랜드</option><option value="2B">HAZZYS MEN</option><option value="2C">HAZZYS LADIES</option><option value="5B">HAZZYS ACCESSORIES</option><option value="7B">HAZZYS GOLF</option><option value="CZ">HAZZYS MEN RULE 429</option><option value="HK">HAZZYS LADIES SHOES</option></select></div></div>
+								</fieldset>
+							</div>
+							<div class="lf-store-search__form-type-brand">
+								<fieldset class="lf-store-search__form-field lf-store-search__form-field--kvgr4">
+									<legend class="lf-store-search__form-title">단독/종합 선택</legend>
+									<div id="kvgr4Div" class="lf-store-search__form-select lf-store-search__form-select--store-kvgr4"><div class="lf-store-select"><select name="store_kvgr4" class="lf-store-select__selectbox"><option value="" selected="">단독/종합</option><option value="10">종합</option><option value="20">단독</option></select></div></div>
+								</fieldset>
+								<fieldset class="lf-store-search__form-field lf-store-search__form-field--kdgrp">
+									<legend class="lf-store-search__check-title">일반/아울렛 선택</legend>
+									<div id="kdgrpDiv" class="lf-store-search__form-select lf-store-search__form-select--store-kdgrp"><div class="lf-store-select"><select name="store_kdgrp" class="lf-store-select__selectbox"><option value="" selected="">일반/아울렛</option><option value="10">일반</option><option value="20">아울렛</option></select></div></div>
 								</fieldset>
 							</div>
 							<div class="lf-store-search__form-sido-gugun">

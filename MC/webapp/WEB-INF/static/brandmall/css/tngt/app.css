@@ -444,7 +444,7 @@
 .lf-store-search__item--active:before{border-color:#d9232e}
 .lf-store-search__item--active:after{border-top-color:#d9232e}
 .lf-store-search__item+.lf-store-search__item{border-top:1px solid #ebebeb}
-.lf-store-search__map-infowindow {padding:0 20px;}
+/* .lf-store-search__map-infowindow {padding:0 20px;} */
 .lf-store-search__map-infowindow--hidden{position:absolute;top:0;left:0;width:100%;z-index:-1}
 .lf-store-search__map-container{height:250px}
 .lf-store-search__infowindow{position:relative;z-index:40;margin:0;padding:0 20px 20px;border-top:2px solid #333;background:#fff;font-size:14px;line-height:20px}

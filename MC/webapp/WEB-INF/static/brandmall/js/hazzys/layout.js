@@ -4,7 +4,7 @@ var headerFn = function(target, lang, depth) {
 	html += '<button type="button" class="btnGnb"><span><em>메뉴열기</em></span></button>';
 	html += '<div class="headUtil">';
 	html += '<a href="#" class="icoSearch"><em>검색</em></a>';
-	html += '<a href="#" class="icoCart"><em>장바구니</em></a>';
+	html += '<a href="#" class="icoCart"><em>장바구니</em><span>10</span></a>';
 	html += '</div>';
 
 	$(target).html(html);

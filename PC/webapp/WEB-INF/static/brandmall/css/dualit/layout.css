@@ -140,3 +140,6 @@ body.dualit_layout,
 .dualit_layout .order_step .txt_box span {float:left;padding-left:35px;font-size:11px;color:#000;line-height:20px;text-align:left;}
 .dualit_layout .order_step .txt_box span b {font-weight:bold;}
 .dualit_layout .order_step .txt_box span em {color: #717171;}
+
+.dualit_layout ul.tab-sty2-1 li a {height:12px;}
+.dualit_layout a.btn_bg_blue {color:#fff;}

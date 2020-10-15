@@ -29,7 +29,7 @@
 			<button type="button" class="btnGnb"><span><em>메뉴열기</em></span></button>
 			<div class="headUtil">
 				<a href="#" class="icoSearch"><em>검색</em></a>
-				<a href="#" class="icoCart"><em>장바구니</em></a>
+				<a href="#" class="icoCart"><em>장바구니</em><span>10</span></a>
 			</div>
 		</div>
 	</header>
@@ -271,11 +271,12 @@
 
 	<article class="easyUtilWrap">
 		<div class="easySect">
-			<strong>NEWS LETTER</strong>
+			<button type="button" class="btnSubscribe">뉴스레터 구독하기</button>
+			<!-- <strong>NEWS LETTER</strong>
 			<label class="easyEmail">
 				<span class="placeholder"><span>이메일을 입력하세요</span></span>
 				<input type="email" />
-			</label>
+			</label> -->
 		</div>
 		<div class="easySect">
 			<strong>FOLLOW HAZZYS</strong>
@@ -293,7 +294,7 @@
 		<div class="easySect">
 			<p class="txtCopy">
 				헤지스가 처음이신가요.<br />
-				회원가입하고 더 많은 혜택을 받아보세요.
+				<em>회원가입하고 더 많은 혜택을</em> 받아보세요.
 			</p>
 			<a href="#" class="easySignUp">회원가입</a>
 		</div>
@@ -347,5 +348,49 @@
 </div>
 <!-- //wrap -->
 
+<!-- 메인 배너 팝업 -->
+<article id="newsSubscribe" class="layerWrap">
+	<header>
+		<h1>뉴스레터</h1>
+	</header>
+	<div class="layerConts">
+		<div class="applySubscribe">
+			<div class="iptEmail error">
+				<strong>이메일</strong>
+				<input type="email" />
+			</div>
+			<div class="errorCopy">유효한 이메일을 입력해 주세요.</div>
+			<div class="agreeSubscribe">
+				<div class="agreeItem">
+					<label class="chkItem">
+						<input type="checkbox" />
+						<span>뉴스레터 구독을 신청함으로써 헤지스가 <em>개인정보를 수집 및 이용</em>하는 것에 동의합니다.</span>
+					</label>
+					<a href="#" class="agreeDetail">자세히보기</a>
+				</div>
+				<div class="agreeItem">
+					<label class="chkItem">
+						<input type="checkbox" />
+						<span>본인은 뉴스레터를 구독하고 헤지스가 제공하는 <em>서비스, 제품 소개 또는 이벤트</em>에 관한 정보를 수신하는 것에 동의합니다.</span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="layerBtnBox subScribeBtn">
+		<button type="button" class="btnCmn">구독신청</button>
+	</div>
+	
+	<button type="button" class="btnLayerClose" onclick="closeLayerFn('#newsSubscribe')"><em>닫기</em></button>
+</article>
+<!-- // 메인 배너 팝업 -->
+
+
+<script>
+	$('.btnSubscribe').click(function() {
+		openLayerFn('#newsSubscribe');
+	});
+</script>
 </body>
 </html>

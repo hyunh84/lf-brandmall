@@ -4,9 +4,9 @@
 /**********************************************************
 	상품상세 및 마이페이지 공통하면 reset 필요 내용 layout.css에 선언
 **********************************************************/
-body, pre, textarea, select, button, input {font-family:'Nunito Sans', 'Noto Sans KR', 'Nanum Gothic', Dotum, Arial, sans-serif !important;}
+body, pre, textarea, select, button, input {font-family:'Poppins', 'Noto Sans KR','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo', sans-serif !important;}
 strong {font-weight:700;}
-a {color:#030303;}
+a {color:#000;}
 /* ::-webkit-input-placeholder {color:#ccc;}
 :-ms-input-placeholder {color:#ccc;}
 ::placeholder {color:#ccc;}
@@ -20,42 +20,87 @@ input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !import
 :lang(en) #wrap {padding:221px 0 155px;}
 
 /* Header */
-#header {position:fixed;left:0;right:0;top:0;box-sizing:border-box;min-width:1200px;padding:0 30px;border-bottom:1px solid #d3d3d3;background-color:#fff;z-index:200;}
+#header {position:fixed;left:0;right:0;top:0;box-sizing:border-box;min-width:1280px;padding:0 20px;background-color:#fff;z-index:200;}
+#header .logo {display:block;width:120px;height:90px;margin:0 auto;background:url('../../images/hazzys/logo.png') no-repeat center;}
+#header .logo em {display:block;overflow:hidden;width:0;height:0;padding:0;margin:0;line-height:0;}
 
+#header .gnbWrap {margin:0 -20px;background-color:#000;}
+#header .gnbWrap.on:before {display:block;content:"";position:absolute;left:0;right:0;top:100%;height:58px;border-bottom:1px solid #ccc;background-color:#fff;}
+#header .gnbWrap .gnbInner {box-sizing:border-box;min-width:1280px;max-width:1920px;padding:0 20px;margin:0 auto;}
+#header .gnbWrap .gnbInner:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;margin:0;padding:0;line-height:0;}
+#header .gnbWrap .gnbBox {float:left;position:relative;}
+#header .gnbWrap .gnbBox > ul:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;margin:0;padding:0;line-height:0;}
+#header .gnbWrap .gnbBox > ul > li {float:left;margin:0 50px 0 0;}
+#header .gnbWrap .gnbBox > ul > li:last-child {margin:0 30px 0 0;}
+#header .gnbWrap .gnbBox > ul > li > a {display:block;line-height:52px;font-size:14px;font-weight:500;color:#fff;}
+#header .gnbWrap .gnbBox > ul > li:hover > a {position:relative;font-weight:700;color:#ffef95;}
+#header .gnbWrap .gnbBox > ul > li:hover > a:after {display:block;content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background-color:#ffef95;}
+#header .gnbWrap .gnbBox .depth02 {display:none;position:absolute;left:0;top:100%;}
+#header .gnbWrap .gnbBox .depth02 ul {width:1240px;}
+#header .gnbWrap .gnbBox .depth02 ul:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;margin:0;padding:0;line-height:0;}
+#header .gnbWrap .gnbBox .depth02 ul li {float:left;}
+#header .gnbWrap .gnbBox .depth02 ul li a {display:block;margin:0 25px 0 0;padding:19px 0;line-height:20px;}
+#header .gnbWrap .gnbBox .depth02 ul li a:hover {color:#999;}
+#header .gnbWrap .gnbBox .depth02 ul li a:hover span {border-bottom:1px solid #999;}
+#header .gnbWrap .assistMenu {position:relative;float:left;margin:0 0 0 30px;}
+#header .gnbWrap .assistMenu:after {display:block;content:"";position:absolute;left:-30px;top:50%;width:2px;height:14px;margin:-7px 0 0;background-color:rgba(120, 120, 120, 0.43);}
+#header .gnbWrap .assistMenu > ul:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;margin:0;padding:0;line-height:0;}
+#header .gnbWrap .assistMenu > ul > li {float:left;margin:0 50px 0 0;}
+#header .gnbWrap .assistMenu > ul > li:last-child {margin:0;}
+#header .gnbWrap .assistMenu > ul > li > a {display:block;line-height:52px;font-size:12px;font-weight:500;color:rgba(255, 255, 255, 0.7);}
+#header .gnbWrap .assistMenu > ul > li:hover > a {position:relative;font-weight:700;color:#ffef95;}
+#header .gnbWrap .assistMenu > ul > li:hover > a:after {display:block;content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background-color:#ffef95;}
+#header .gnbWrap .assistMenu .depth02 {display:none;position:absolute;left:0;top:100%;}
+#header .gnbWrap .assistMenu .depth02 ul {width:1000px;}
+#header .gnbWrap .assistMenu .depth02 ul:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;margin:0;padding:0;line-height:0;}
+#header .gnbWrap .assistMenu .depth02 ul li {float:left;}
+#header .gnbWrap .assistMenu .depth02 ul li a {display:block;margin:0 25px 0 0;padding:19px 0;line-height:20px;}
+#header .gnbWrap .assistMenu .depth02 ul li a span {display:block;}
+#header .gnbWrap .assistMenu .depth02 ul li a:hover {color:#999;}
+#header .gnbWrap .assistMenu .depth02 ul li a:hover span {border-bottom:1px solid #999;}
+
+#header .util {position:absolute;right:20px;top:15px;}
+#header .util a {position:relative;line-height:22px;font-size:12px;font-weight:500;color:#999;}
+#header .util a + a {margin:0 0 0 20px;}
+#header .util a + a:before {display:block;content:"";position:absolute;left:-9px;top:50%;width:1px;height:10px;margin:-5px 0 0;background-color:#ccc;}
+#header .util .btn_cart {padding:0 0 0 21px;background:url('../../images/hazzys/ic-shoppingbag.png') no-repeat left center;}
+#header .util .btn_cart em {display:block;position:absolute;left:-9999em;overflow:hidden;width:0;height:0;padding:0;margin:0;line-height:0;}
 
 /* Container */
 #container {padding:0 0 140px;}
 
 /* Footer */
 #wrap #footer {position:absolute;left:0;right:0;bottom:0;} /* brandmall - footer */
-#footer {padding-bottom:0 !important;background-color:#333;}
+#footer {padding-bottom:0 !important;background-color:#f5f5f5;}
 #footer .btn_top {overflow:hidden;position:fixed;right:40px;bottom:40px;z-index:30;width:45px;height:45px;background:url('../../images/hazzys/common/btn_top.png') no-repeat 0 0;white-space:nowrap;text-indent:200%;}
-#footer .footer_inner {position:relative;padding:40px 40px 32px;width:100%;min-width:1200px;max-width:1920px;margin:0 auto;box-sizing:border-box;}
+#footer .footer_inner {position:relative;min-width:1280px;max-width:1920px;padding:40px 20px 32px;margin:0 auto;box-sizing:border-box;}
 #footer .footer_inner .terms {overflow:hidden;}
 #footer .footer_inner .terms li {float:left;margin-left:40px;}
 #footer .footer_inner .terms li:first-child {margin-left:0;}
-#footer .footer_inner .terms li a {display:block;height:15px;font-size:13px;color:#fff;letter-spacing:-0.1px;line-height:15px;}
+#footer .footer_inner .terms li a {display:block;height:15px;font-size:13px;font-weight:500;color:#323232;letter-spacing:-0.1px;line-height:15px;}
 
 #footer .footer_inner .copyright {margin-top:30px;}
 #footer .footer_inner .copyright span,
-#footer .footer_inner .copyright a {display:inline-block;height:12px;margin:7px 0;padding:0 11px 0 15px;border-left:1px solid #555;font-size:13px;color:#9a9a9a;line-height:10px;letter-spacing:-0.3px;vertical-align:top;}
+#footer .footer_inner .copyright a {display:inline-block;height:12px;margin:7px 0;padding:0 11px 0 15px;border-left:1px solid #555;font-size:13px;color:#323232;line-height:10px;letter-spacing:-0.3px;vertical-align:top;}
 #footer .footer_inner .copyright span.bar_none {padding-left:0;border:0;}
 #footer .footer_inner .copyright a {position:relative;padding-right:10px;font-size:11px;background:url('../../images/hazzys/common/btn_more_write.png') no-repeat 100% 2px;}
 #footer .footer_inner .copyright a:before {position:absolute;bottom:-5px;left:15px;width:77px;height:1px;background-color:#5c5c5c;content:'';}
-#footer .footer_inner .copyright a:hover {color:#fff;text-decoration:none !important;}
+#footer .footer_inner .copyright a:hover {color:#323232;text-decoration:none !important;}
 
-#footer .footer_inner .family {position:absolute;top:10px;right:40px;}
+#footer .footer_inner .family {position:absolute;top:10px;right:100px;}
 #footer .footer_inner .family:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;line-height:0;}
-#footer .footer_inner .family .familySelect {float:left;position:relative;padding:20px 16px;}
-#footer .footer_inner .family .familySelect button {display:block;position:relative;width:180px;height:32px;border-bottom:1px solid #9a9a9a;font-size:14px;color:#fff;line-height:32px;text-align:left;}
-#footer .footer_inner .family .familySelect button:before {position:absolute;top:12px;right:0;width:14px;height:7px;background:url('../../images/hazzys/common/btn_select_black.png') no-repeat 0 0;content:'';-webkit-transform:rotate(0deg);transform:rotate(0deg);transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
-#footer .footer_inner .family .familySelect ul {display:none;position:absolute;bottom:60px;left:0;z-index:10;width:100%;background-color:#333;}
-#footer .footer_inner .family .familySelect ul li a {display:block;height:30px;padding:0 16px;font-size:14px;color:#fff;line-height:30px;}
-#footer .footer_inner .family .familySelect:hover button:before {-webkit-transform:rotate(180deg);transform:rotate(180deg);transition:transform .3s ease,-webkit-transform .3s ease;transition:transform .3s ease;transition:-webkit-transform .3s ease;-webkit-transition:-webkit-transform .3s ease;}
+#footer .footer_inner .family .familySelect {float:left;position:relative;padding:20px 0;}
+#footer .footer_inner .family .familySelect + .familySelect {margin:0 0 0 20px;}
+#footer .footer_inner .family .familySelect button {display:block;height:32px;padding:0 20px 0 0;font-size:14px;font-weight:500;color:#323232;line-height:32px;text-align:left;}
+#footer .footer_inner .family .familySelect button span {display:inline-block;position:relative;line-height:20px;border-bottom:1px solid #323232;}
+#footer .footer_inner .family .familySelect button span:before {display:block;content:"";position:absolute;right:-20px;top:50%;margin:-2px 0 0;border-top:4px solid #787878;border-left:4px solid transparent;border-right:4px solid transparent;}
+#footer .footer_inner .family .familySelect ul {display:none;position:absolute;bottom:60px;left:0;z-index:10;box-sizing:borderbox;border:1px solid #ccc;background-color:#fff;}
+#footer .footer_inner .family .familySelect ul li a {display:block;height:30px;padding:0 16px;font-size:11px;color:#787878;line-height:30px;white-space:nowrap;}
+#footer .footer_inner .family .familySelect:hover button span:before {border-top:none;border-bottom:4px solid #787878;}
 #footer .footer_inner .family .familySelect:hover ul {display:block;}
 
 #footer .footer_certify {background-color:#252525;}
-#footer .footer_certify ul {overflow:hidden;max-width:1904px;margin:0 auto;padding:30px 40px;box-sizing:border-box;}
+#footer .footer_certify ul {overflow:hidden;min-width:1280px;max-width:1920px;padding:30px 20px;margin:0 auto;box-sizing:border-box;}
 #footer .footer_certify li {float:left;margin-left:20px;height:25px;line-height:25px;}
 #footer .footer_certify li:first-child {margin-left:0;}
 #footer .footer_certify li a {display:inline-block;line-height:0;vertical-align:middle;}
@@ -63,11 +108,6 @@ input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !import
 #footer .footer_certify li .txt_link {position:relative;height:18px;padding:0 10px 3px 0;line-height:18px;font-size:11px;color:#9a9a9a;background:url('../../images/hazzys/common/btn_more_write.png') no-repeat 100% 4px;}
 #footer .footer_certify li .txt_link:before {position:absolute;bottom:0;left:0;width:104px;height:1px;background-color:#5c5c5c;content:'';}
 #footer .footer_certify li:last-child {margin-left:10px;}
-
-/* Footer - 영문 */
-#footer.eng .footer_inner {max-width:1120px;padding:27px 0;}
-#footer.eng .footer-logo {display:block;width:54px;height:47px;margin:0 auto;text-align:center;}
-#footer.eng .footer-copy {padding: 15px 0;color: gray;text-align: center;background: #252525;}
 
 /**********************************************************
 	LF MALL 사용 화면

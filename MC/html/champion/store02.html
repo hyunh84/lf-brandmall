@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+
+<title>CHAMPION</title>
+<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/champion/base.css" />
+<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/champion/layout.css" />
+<link rel="stylesheet" type="text/css" href="../../webapp/WEB-INF/static/brandmall/css/champion/app.css" />
+
+<script src="../../webapp/WEB-INF/static/brandmall/js/champion/jquery-1.9.1.min.js"></script>
+<script src="../../webapp/WEB-INF/static/brandmall/js/champion/swiper.min.js"></script>
+<script src="../../webapp/WEB-INF/static/brandmall/js/champion/ui_style.js"></script>
+
+
+<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+<script src="../../webapp/WEB-INF/static/brandmall/js/champion/layout.js"></script>
+<!-- 퍼블화면용 개발에서 사용하지 마세요! -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<header id="header" >
+		<a href="#" class="btnGoBak"><span>뒤로가기</span></a>
+		<h1 class="logo"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/champion/logo.png" alt="Champoion" /></a></h1>
+		<div class="utilBox">
+			<button class="btnSearch"><span>검색</span></button>
+			<button class="gnbChampOpen"><span>메뉴</span></button>
+		</div>
+		
+		<div class="headCateNav">
+			<script type="text/javascript">createHeaderCate('.headCateNav');</script>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- GNB -->
+	<div class="champGnb">
+		<script type="text/javascript">createGnb('.champGnb');</script>
+	</div>
+	<!-- //GNB -->
+
+	<!-- 검색 팝업 -->
+	<article class="topSearchWrap">
+		<script type="text/javascript">createSearch('.topSearchWrap');</script>
+	</article>
+	<!-- //검색 팝업 -->
+
+	<!-- container -->
+	<section id="container" class="ver02"> 
+
+		<div class="contents">
+
+			<div class="reverseEditWrap">
+				<div class="img"><img src="../../webapp/WEB-INF/static/brandmall/images/champion/store_visual.jpg" alt="STORE FINDER 지역별 가장 가까운 챔피온 매장을 찾으실 수 있습니다."></div>
+			</div>
+
+			<div class="storeWrap02">
+				<div class="inner">
+					<div class="storeSchBox">
+						
+						<span class="selectWrap02" style="width:100%;">
+							<button type="button" style="width:100%;">서울</button>
+							<div class="optList">
+								<ul>
+									<li class="selected"><a href="#">서울</a></li>
+									<li><a href="#">대전</a></li>
+									<li><a href="#">인천</a></li>
+								</ul>
+							</div>
+						</span>
+
+						<span class="iptSchItem">
+							<input type="text" title="매장이름 입력" placeholder="매장명을 입력해주세요" />
+							<button type="button">검색</button>
+						</span>
+
+						<div class="storeListInfo">
+							48개의 매장 정보가 있습니다.
+						</div>
+
+						<div class="storeListBox">
+							<table>
+								<caption>챔피언 매장 정보</caption>
+								<colgroup>
+									<col style="width:35%;" />
+									<col style="widows: 30%;" />
+									<col style="width:35%;" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>매장명</th>
+										<th>지역</th>
+										<th>매장유형</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="storeName">압구정</td>
+										<td>서울</td>
+										<td>백화점/쇼핑몰</td>
+									</tr>
+									<tr>
+										<td class="storeName">압구정</td>
+										<td>서울</td>
+										<td>백화점/쇼핑몰</td>
+									</tr>
+									<tr>
+										<td class="storeName">압구정</td>
+										<td>서울</td>
+										<td>백화점/쇼핑몰</td>
+									</tr>
+									<tr>
+										<td class="storeName">압구정</td>
+										<td>서울</td>
+										<td>백화점/쇼핑몰</td>
+									</tr>
+									<tr>
+										<td class="storeName">압구정</td>
+										<td>서울</td>
+										<td>백화점/쇼핑몰</td>
+									</tr>
+									<tr>
+										<td class="storeName">압구정</td>
+										<td>서울</td>
+										<td>백화점/쇼핑몰</td>
+									</tr>
+									<tr>
+										<td class="storeName">압구정</td>
+										<td>서울</td>
+										<td>백화점/쇼핑몰</td>
+									</tr>
+									<tr>
+										<td class="storeName">압구정</td>
+										<td>서울</td>
+										<td>백화점/쇼핑몰</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<button type="button" class="storeMore"><span>더보기(20)</span></button>
+						</div>
+	
+					</div>
+				</div>
+
+
+			</div>
+			
+		</div>
+
+	</section>
+	<!-- container -->
+
+	<!-- 상단으로 가기 -->	
+	<button type="button" class="btnGoTop"><span>위로가기</span></button>
+	<!-- // 상단으로 가기 -->
+	
+	<!-- bottom quick menu -->
+	<nav class="quickNavWrap">
+		<ul>
+			<li class="home on"><a href="#">홈</a></li>
+			<li class="like"><a href="#">좋아요</a></li>
+			<li class="recent"><a href="#">최근본</a></li>
+			<li class="basket"><a href="#">쇼핑백</a></li>
+			<li class="my"><a href="#">마이</a></li>
+		</ul>
+	</nav>
+	<!-- bottom quick menu -->
+
+	<!-- footer -->
+	<footer id="footer" class="footer">
+		<script type="text/javascript">createFooter('.footer');</script>
+	</footer>
+	<!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script>
+if($('#header .headCateNav').length) {
+	headCateNaviFnc();
+}
+</script>
+
+</body>
+</html>

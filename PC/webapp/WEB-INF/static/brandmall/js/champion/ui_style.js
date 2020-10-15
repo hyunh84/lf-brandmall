@@ -314,6 +314,35 @@ var mainMagazineFnc = function() {
 	});
 }
 
+var mainPromoFnc = function() {
+	var wrapper = $('.promoSlideWrap');
+	var promSlideBox = $('.promSlideBox', wrapper);
+	var slideWrap = $('.swipeCmpt', promSlideBox);
+	var btnPrev = $('.swipePrev', wrapper);
+	var btnNext = $('.swipeNext', wrapper);
+
+	slideWrap.on({
+		'init' : function (event, slick) { 
+			// console.log('init');
+			// $('.mazList', wrapper).append('<div class="paging"><span class="nowNum">' + (slick.currentSlide + 1) + '</span>/' + slick.slideCount + '</div>');
+		},
+		'afterChange' : function(event, slick) {
+			// console.log('beforeChange');
+			// var paging = $('.paging', wrapper);
+			// $('.mazList', wrapper).append('<div class="paging"><span class="nowNum">' + (slick.currentSlide + 1) + '</span>/' + slick.slideCount + '</div>');
+		}
+	});
+
+	slideWrap.slick({
+		initialSlide : 0,
+		// infinite : false,
+		swipe : false,
+		dots: true,
+		prevArrow : btnPrev,
+		nextArrow : btnNext
+	});
+}
+
 /* 메인 띠 배너 이미지 높이 체크 */
 var mainCalcH = function(target) {
 	console.log('main banner height calc fnc');
