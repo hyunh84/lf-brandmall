@@ -537,3 +537,14 @@ var closeLayerFn = function(target) {
 	$('#wrap').removeClass('pop');
 	$('html, body').animate({scrollTop : layerScrollT}, 1);
 }
+
+/* like toast popup */
+var likeToastFn = function() {
+	var likeToastWrap = $('.likeToastWrap');
+	console.log(likeToastWrap)
+	likeToastWrap.fadeIn(700);
+
+	setTimeout(function() {
+		likeToastWrap.fadeOut(700);
+	}, 1700);
+}

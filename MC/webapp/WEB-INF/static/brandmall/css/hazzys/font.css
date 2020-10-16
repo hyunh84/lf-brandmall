@@ -69,6 +69,7 @@ font-style: normal;
 font-weight: 700;
 src:
 	url('../../font/Poppins/Poppins-Bold.woff') format('woff');
+}
 /* nunito-sans-800 - latin */
 @font-face {
 font-family: 'Poppins';

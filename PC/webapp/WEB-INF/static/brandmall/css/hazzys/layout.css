@@ -16,8 +16,8 @@ input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !import
 /**********************************************************
 	BRAND MALL - LAYOUT
 **********************************************************/
-#wrap {overflow:hidden;box-sizing:border-box;position:relative;min-width:1200px;height:100%;min-height:100%;height:auto !important;padding:220px 0 306px;}
-:lang(en) #wrap {padding:221px 0 155px;}
+#wrap {overflow:hidden;box-sizing:border-box;position:relative;min-width:1200px;height:100%;min-height:100%;height:auto !important;padding:142px 0 306px;}
+:lang(en) #wrap {padding:142px 0 155px;}
 
 /* Header */
 #header {position:fixed;left:0;right:0;top:0;box-sizing:border-box;min-width:1280px;padding:0 20px;background-color:#fff;z-index:200;}
@@ -30,9 +30,9 @@ input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !import
 #header .gnbWrap .gnbInner:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;margin:0;padding:0;line-height:0;}
 #header .gnbWrap .gnbBox {float:left;position:relative;}
 #header .gnbWrap .gnbBox > ul:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;margin:0;padding:0;line-height:0;}
-#header .gnbWrap .gnbBox > ul > li {float:left;margin:0 50px 0 0;}
+#header .gnbWrap .gnbBox > ul > li {float:left;margin:0 45px 0 0;}
 #header .gnbWrap .gnbBox > ul > li:last-child {margin:0 30px 0 0;}
-#header .gnbWrap .gnbBox > ul > li > a {display:block;line-height:52px;font-size:14px;font-weight:500;color:#fff;}
+#header .gnbWrap .gnbBox > ul > li > a {display:block;width:55px;line-height:52px;font-size:14px;font-weight:500;color:#fff;text-align:center;}
 #header .gnbWrap .gnbBox > ul > li:hover > a {position:relative;font-weight:700;color:#ffef95;}
 #header .gnbWrap .gnbBox > ul > li:hover > a:after {display:block;content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background-color:#ffef95;}
 #header .gnbWrap .gnbBox .depth02 {display:none;position:absolute;left:0;top:100%;}
@@ -45,9 +45,9 @@ input::-webkit-contacts-auto-fill-button {visibility:hidden;display:none !import
 #header .gnbWrap .assistMenu {position:relative;float:left;margin:0 0 0 30px;}
 #header .gnbWrap .assistMenu:after {display:block;content:"";position:absolute;left:-30px;top:50%;width:2px;height:14px;margin:-7px 0 0;background-color:rgba(120, 120, 120, 0.43);}
 #header .gnbWrap .assistMenu > ul:after {display:block;content:"";clear:both;overflow:hidden;width:0;height:0;margin:0;padding:0;line-height:0;}
-#header .gnbWrap .assistMenu > ul > li {float:left;margin:0 50px 0 0;}
+#header .gnbWrap .assistMenu > ul > li {float:left;margin:0 40px 0 0;}
 #header .gnbWrap .assistMenu > ul > li:last-child {margin:0;}
-#header .gnbWrap .assistMenu > ul > li > a {display:block;line-height:52px;font-size:12px;font-weight:500;color:rgba(255, 255, 255, 0.7);}
+#header .gnbWrap .assistMenu > ul > li > a {display:block;width:70px;line-height:52px;font-size:12px;font-weight:500;color:rgba(255, 255, 255, 0.7);text-align:center;white-space:nowrap;}
 #header .gnbWrap .assistMenu > ul > li:hover > a {position:relative;font-weight:700;color:#ffef95;}
 #header .gnbWrap .assistMenu > ul > li:hover > a:after {display:block;content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background-color:#ffef95;}
 #header .gnbWrap .assistMenu .depth02 {display:none;position:absolute;left:0;top:100%;}

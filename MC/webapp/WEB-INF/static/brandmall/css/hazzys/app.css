@@ -27,7 +27,7 @@
 .mainRankWrap .rank li {position:relative;padding:10px 0;border-bottom:1px solid #f5f5f5;}
 .mainRankWrap .rank li:first-child {border-top:1px solid #f5f5f5;}
 .mainRankWrap .rank li .prdCardBox02 {padding:0 50px 0 80px;}
-.mainRankWrap .rank li .btnLike {position:absolute;right:8px;top:50%;width:36px;height:36px;background-image:url('../../images/hazzys/ico_like.png');background-repeat:no-repeat;background-position:left top;transform:translate(0, -50%);}
+.mainRankWrap .rank li .btnLike {position:absolute;right:8px;top:50%;width:36px;height:36px;background-image:url('../../images/hazzys/ico_like.png');background-repeat:no-repeat;background-position:left top;background-size:36px auto;transform:translate(0, -50%);}
 .mainRankWrap .rank li .btnLike span {display:block;overflow:hidden;width:0;height:0;margin:0;padding:0;line-height:0;}
 .mainRankWrap .rank li .btnLike.active {background-position:left bottom;}
 .mainRankWrap .cmtSlideWrap {padding:0 0 60px;}
@@ -232,7 +232,7 @@ button[class^="btnCmn"] {height:48px;}
 
 /* 상품 카드 스타일 */
 [class^="prdCardBox"] {display:block;}
-[class^="prdCardBox"] .img {display:block;position:relative;}
+[class^="prdCardBox"] .img {display:block;overflow:hidden;position:relative;height:60vw;}
 [class^="prdCardBox"] .img:before {display:block;content:"";position:absolute;left:0;top:0;right:0;bottom:0;background-color:rgba(0, 0, 0, 0.04);}
 [class^="prdCardBox"] .img img {width:100%;}
 [class^="prdCardBox"] .rankFlag {display:block;position:absolute;left:0;top:0;width:25px;height:25px;line-height:25px;font-size:13px;font-style:italic;color:#fff;text-align:center;background-color:rgba(50, 50, 50, 0.7);}
@@ -244,9 +244,8 @@ button[class^="btnCmn"] {height:48px;}
 [class^="prdCardBox"] .info .price .sale {display:inline-block;font-size:15px;color:#000;vertical-align:middle;}
 [class^="prdCardBox"] .info .price .per {display:inline-block;font-size:15px;font-weight:400;color:#4d7ab0;vertical-align:middle;}
 
-
 .prdCardBox02 {overflow:hidden;position:relative;min-height:86px;padding:0 0 0 80px;}
-.prdCardBox02 .img {position:absolute;left:0;top:0;width:68px;}
+.prdCardBox02 .img {position:absolute;left:0;top:0;width:68px;height:auto;}
 .prdCardBox02 .img:before {background-color:rgba(0, 0, 0, 0.1);}
 .prdCardBox02 .info {min-height:initial;padding:12px 0 0;margin:0;}
 .prdCardBox02 .info .price {margin:5px 0 0;}
@@ -366,6 +365,17 @@ button[class^="btnCmn"] {height:48px;}
 [class^="layerWrap"] .applySubscribe .agreeSubscribe .agreeItem:first-child {margin:0;}
 [class^="layerWrap"] .applySubscribe .agreeSubscribe .agreeItem .agreeDetail {display:inline-block;margin:0 0 0 30px;font-size:13px;color: #787878;border-bottom:1px solid #787878;}
 [class^="layerWrap"] .subScribeBtn {padding:20px 30px 60px;}
+
+/* like toast popup */
+[class="likeToastWrap"] {display:none;position:fixed;left:0;top:0;right:0;bottom:0;z-index:300;}
+[class="likeToastWrap"] .inner {position:absolute;top:50%;left:50%;width:90%;color:#fff;background-color:rgba(0,0,0,.9);transform:translate(-50%, -50%);}
+[class="likeToastWrap"] .likeConts {padding:30px 24px;text-align:center;}
+[class="likeToastWrap"] .likeConts .txt {line-height:22px;font-size:15px;font-weight:400;}
+[class="likeToastWrap"] .likeConts .txt em {display:inline-block;position:relative;padding:0 0 0 30px;color:#dd4132;font-size:15px;font-weight:400;}
+[class="likeToastWrap"] .likeConts .txt em:before {display:block;content:"";position:absolute;top:0;left:0;width:23px;height:22px;background:url('../../images/hazzys/ico_like02.png') no-repeat center;background-size:100% auto;}
+[class="likeToastWrap"] .likeConts .btnLink {margin:15px 0 0;padding:15px 0 0;border-top:1px solid #54585a;}
+[class="likeToastWrap"] .likeConts .btnLink a {display:inline-block;position:relative;padding:0 15px 0 0;color:#fff;}
+[class="likeToastWrap"] .likeConts .btnLink a:after {display:block;content:"";position:absolute;right:0;top:50%;width:4px;height:4px;border-right:1px solid #fff;border-bottom:1px solid #fff;transform:rotate(-45deg) translate(0, -50%);transform-origin:50% 50%}
 
 /**********************************************************
 	brand mall 공통화면 소스

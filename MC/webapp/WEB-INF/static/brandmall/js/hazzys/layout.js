@@ -3,7 +3,17 @@ var headerFn = function(target, lang, depth) {
 	html += '<h1 class="logo"><a href="#"><img src="../../webapp/WEB-INF/static/brandmall/images/hazzys/logo.svg" alt="HAZZYS" /></a></h1>';
 	html += '<button type="button" class="btnGnb"><span><em>메뉴열기</em></span></button>';
 	html += '<div class="headUtil">';
-	html += '<a href="#" class="icoSearch"><em>검색</em></a>';
+	html += '<span class="icoSearchCase">';
+	html += '<a href="#" class="icoSearch">';
+	html += '<em>검색</em>';
+	html += '</a>';
+	html += '<div class="notiTipCase">';
+	html += '<div class="inner">';
+	html += '검색 기능이 추가되었어요.';
+	html += '<button type="button"><em>닫기</em></button>';
+	html += '</div>';
+	html += '</div>';
+	html += '</span>';
 	html += '<a href="#" class="icoCart"><em>장바구니</em><span>10</span></a>';
 	html += '</div>';
 

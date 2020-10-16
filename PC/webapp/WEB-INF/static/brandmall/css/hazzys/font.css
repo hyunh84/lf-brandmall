@@ -37,7 +37,8 @@
 		url('../../font/noto-sans-kr-v11-korean_latin-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
 }
 
-/* nunito-sans-300 - latin */
+
+/* Poppins-300 */
 @font-face {
 font-family: 'Poppins';
 font-style: normal;
@@ -45,7 +46,8 @@ font-weight: 300;
 src:
 	url('../../font/Poppins/Poppins-Light.woff') format('woff');
 }
-/* nunito-sans-regular - latin */
+
+/* Poppins-regular */
 @font-face {
 font-family: 'Poppins';
 font-style: normal;
@@ -53,7 +55,8 @@ font-weight: 400;
 src:
 	url('../../font/Poppins/Poppins-Regular.woff') format('woff');
 }
-/* nunito-sans-600 - latin */
+
+/* Poppins-600 */
 @font-face {
 font-family: 'Poppins';
 font-style: normal;
@@ -62,14 +65,17 @@ font-weight: 500;/* notosans kr font-weight 맞춤 */
 src:
 	url('../../font/Poppins/Poppins-Medium.woff') format('woff')
 }
-/* nunito-sans-700 - latin */
+
+/* Poppins-700 */
 @font-face {
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
 src:
-	url('../../font/Poppins/Poppins-Bold.woff') format('woff');
-/* nunito-sans-800 - latin */
+url('../../font/Poppins/Poppins-Bold.woff') format('woff');
+}
+
+/* Poppins-800 */
 @font-face {
 font-family: 'Poppins';
 font-style: normal;
